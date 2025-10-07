@@ -31,11 +31,6 @@ export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
   const router = useRouter();
   const firestore = useFirestore();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const resultsCollection = useMemoFirebase(() => {
     if (!user || !firestore) return null;
@@ -63,7 +58,7 @@ export default function DashboardPage() {
     }
   }, [user, isUserLoading, router]);
 
-  if (!isClient || isUserLoading || isResultsLoading || !user) {
+  if (isUserLoading || isResultsLoading || !user) {
     return <Loading />;
   }
 
