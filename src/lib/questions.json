@@ -234,7 +234,240 @@
     "correctOptionId": "a",
     "explanation": "'Comme' est utilisé ici pour signifier 'de la manière que'."
   },
-
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Quel âge ______-vous ?",
+    "options": [
+      { "id": "a", "text": "êtes" },
+      { "id": "b", "text": "avez" },
+      { "id": "c", "text": "allez" },
+      { "id": "d", "text": "faites" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Pour demander l'âge, on utilise le verbe 'avoir'. La forme correcte pour 'vous' est 'avez'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Ce sont ______ livres.",
+    "options": [
+      { "id": "a", "text": "des" },
+      { "id": "b", "text": "les" },
+      { "id": "c", "text": "de" },
+      { "id": "d", "text": "du" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "L'article indéfini pluriel 'des' est utilisé ici."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Elle vient ______ Portugal.",
+    "options": [
+      { "id": "a", "text": "de" },
+      { "id": "b", "text": "du" },
+      { "id": "c", "text": "de la" },
+      { "id": "d", "text": "des" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "On utilise 'du' (de + le) devant un nom de pays masculin qui commence par une consonne."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Je vais au marché pour ______ des fruits.",
+    "options": [
+      { "id": "a", "text": "achète" },
+      { "id": "b", "text": "acheter" },
+      { "id": "c", "text": "acheté" },
+      { "id": "d", "text": "achètes" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Après la préposition 'pour', on utilise le verbe à l'infinitif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "C'est l'étudiant ______ les résultats sont excellents.",
+    "options": [
+      { "id": "a", "text": "qui" },
+      { "id": "b", "text": "que" },
+      { "id": "c", "text": "dont" },
+      { "id": "d", "text": "où" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Dont' remplace 'de qui' ou 'de quoi'. Ici, il remplace 'les résultats de l'étudiant'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Je pense que tu ______ raison.",
+    "options": [
+      { "id": "a", "text": "as" },
+      { "id": "b", "text": "aies" },
+      { "id": "c", "text": "auras" },
+      { "id": "d", "text": "avais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Après 'penser que' exprimant une opinion ou une certitude, on utilise l'indicatif. Le subjonctif s'utilise après 'ne pas penser que'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il a plu toute la nuit, si bien qu'au matin, la rivière ______.",
+    "options": [
+      { "id": "a", "text": "débordait" },
+      { "id": "b", "text": "a débordé" },
+      { "id": "c", "text": "déborderait" },
+      { "id": "d", "text": "eût débordé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "L'imparfait ('débordait') est utilisé pour décrire une situation ou un état qui dure dans le passé, conséquence de l'action ponctuelle ('a plu')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il a regretté ______ si tard.",
+    "options": [
+      { "id": "a", "text": "d'être parti" },
+      { "id": "b", "text": "être parti" },
+      { "id": "c", "text": "qu'il est parti" },
+      { "id": "d", "text": "de partir" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'regretter' peut être suivi de 'de' + infinitif passé pour exprimer un regret sur une action passée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il s'agit d'une occasion ______ il faut absolument profiter.",
+    "options": [
+      { "id": "a", "text": "que" },
+      { "id": "b", "text": "laquelle" },
+      { "id": "c", "text": "qui" },
+      { "id": "d", "text": "dont" }
+    ],
+    "correctOptionId": "d",
+    "explanation": "On utilise 'dont' car le verbe est 'profiter de quelque chose'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Je voudrais ______ café, s'il vous plaît.",
+    "options": [
+      { "id": "a", "text": "un" },
+      { "id": "b", "text": "le" },
+      { "id": "c", "text": "de" },
+      { "id": "d", "text": "du" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "On utilise l'article indéfini 'un' pour demander une quantité non spécifique mais comptable (une tasse de café)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Ma voiture est ______ que la tienne.",
+    "options": [
+      { "id": "a", "text": "plus rapide" },
+      { "id": "b", "text": "plus vite" },
+      { "id": "c", "text": "le plus rapide" },
+      { "id": "d", "text": "aussi vite" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Pour comparer avec un adjectif (rapide), la structure est 'plus + adjectif + que'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Je ne savais pas qu'il ______ déjà parti.",
+    "options": [
+      { "id": "a", "text": "est" },
+      { "id": "b", "text": "était" },
+      { "id": "c", "text": "soit" },
+      { "id": "d", "text": "fût" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Après 'savoir que' à la forme négative et au passé (imparfait), on maintient la concordance des temps avec l'indicatif. L'action ('était parti') est antérieure à l'action de savoir."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Pourvu que tu ______ la vérité !",
+    "options": [
+      { "id": "a", "text": "dis" },
+      { "id": "b", "text": "diras" },
+      { "id": "c", "text": "dises" },
+      { "id": "d", "text": "disais" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La locution 'Pourvu que' exprime un souhait ou une condition et est toujours suivie du subjonctif. 'Dises' est la forme correcte pour 'tu' au subjonctif présent."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Ils ______ de Paris.",
+    "options": [
+      { "id": "a", "text": "vient" },
+      { "id": "b", "text": "venons" },
+      { "id": "c", "text": "viennent" },
+      { "id": "d", "text": "viens" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le verbe 'venir' conjugué à la troisième personne du pluriel (ils) au présent de l'indicatif est 'viennent'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Il y a ______ de bruit ici.",
+    "options": [
+      { "id": "a", "text": "trop" },
+      { "id": "b", "text": "beaucoup" },
+      { "id": "c", "text": "très" },
+      { "id": "d", "text": "assez" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Trop de' est utilisé pour indiquer une quantité excessive. 'Beaucoup de' est possible, mais 'trop' correspond mieux à une plainte implicite."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Pendant que tu ______, je préparerai le dîner.",
+    "options": [
+      { "id": "a", "text": "dormiras" },
+      { "id": "b", "text": "dors" },
+      { "id": "c", "text": "as dormi" },
+      { "id": "d", "text": "dormirais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Quand on exprime deux actions futures simultanées avec 'pendant que', les deux verbes sont au futur simple."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "C'est en ______ qu'on devient forgeron.",
+    "options": [
+      { "id": "a", "text": "forgeant" },
+      { "id": "b", "text": "forger" },
+      { "id": "c", "text": "forgé" },
+      { "id": "d", "text": "forge" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "C'est un proverbe qui utilise le gérondif ('en' + participe présent) pour exprimer la manière ou le moyen."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Ce tableau, ______ je l'ai vu, est une pure merveille.",
+    "options": [
+      { "id": "a", "text": "tel que" },
+      { "id": "b", "text": "au point que" },
+      { "id": "c", "text": "si bien que" },
+      { "id": "d", "text": "pour que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Tel que' est utilisé pour introduire un exemple ou une précision. Ici, 'tel que je l'ai vu' signifie 'dans l'état où je l'ai vu'."
+  },
   {
     "section": "reading",
     "difficulty": "A1",
@@ -550,3 +783,5 @@
     "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
   }
 ]
+
+    
