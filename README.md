@@ -1,6 +1,6 @@
 # TCF Prep App
 
-This is a Next.js application designed to help users prepare for the Test de Connaissance du Français (TCF). It includes training modules, practice tests, and progress tracking, all powered by Firebase.
+This not  is a Next.js application designed to help users prepare for the Test de Connaissance du Français (TCF). It includes training modules, practice tests, and progress tracking, all powered by Firebase.
 
 This project was bootstrapped with Firebase Studio.
 
