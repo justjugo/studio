@@ -1,5 +1,5 @@
 export interface Question {
-  id: number;
+  id?: number; // Made id optional as it's not in the JSON for local usage
   section: 'listening' | 'reading' | 'structure';
   difficulty: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
   questionText?: string;
@@ -9,6 +9,7 @@ export interface Question {
     text: string;
   }[];
   correctOptionId: string;
+  explanation?: string; // made explanation optional
   explanationVideoUrl?: string;
 }
 

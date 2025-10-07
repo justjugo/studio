@@ -1,10 +1,9 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useParams } from 'next/navigation';
-import { collection, query, where } from 'firebase/firestore';
-import { useCollection, useFirestore, useMemoFirebase } from '@/firebase';
+import { seedQuestions } from '@/lib/seed-data';
 import type { Question } from '@/lib/types';
 import Loading from '@/app/loading';
 import { Header } from '@/components/layout/Header';
@@ -29,14 +28,15 @@ export default function TrainingSessionPage() {
     const params = useParams();
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const section = sectionMap[sectionSlug];
-    const firestore = useFirestore();
 
-    const questionsQuery = useMemoFirebase(() => {
-        if (!firestore || !section) return null;
-        return query(collection(firestore, 'questions'), where('section', '==', section));
-    }, [firestore, section]);
-
-    const { data: questions, isLoading } = useCollection<Omit<Question, 'id'>>(questionsQuery);
+    const [isLoading, setIsLoading] = useState(false); // Simulating loading state if needed in future
+    
+    const questions = useMemo(() => {
+        if (!section) return [];
+        // The type assertion is safe because seedQuestions now comes from a JSON file
+        // that matches the expected structure. We filter based on the section from the URL.
+        return (seedQuestions as Question[]).filter(q => q.section === section);
+    }, [section]);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -78,12 +78,12 @@ export default function TrainingSessionPage() {
                         <CardHeader>
                             <CardTitle>No Questions Found</CardTitle>
                             <CardDescription>
-                                There are no questions available for this section yet.
+                                There are no questions available for this section yet. Check your `questions.json` file.
                             </CardDescription>
                         </CardHeader>
                          <CardContent>
                             <Button asChild>
-                                <Link href="/admin">Seed Questions</Link>
+                                <Link href="/training">Back to Training</Link>
                             </Button>
                         </CardContent>
                     </Card>
