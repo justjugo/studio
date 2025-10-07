@@ -47,9 +47,9 @@ export default function ResultsPage() {
               <div className="flex items-center gap-4">
                 <p className="text-xl">Estimated Level:</p>
                 <Badge
-                  className={`px-4 py-2 text-xl text-primary-foreground ${cectrl.color}`}
+                  className={`px-4 py-2 text-xl text-primary-foreground ${cecrl.color}`}
                 >
-                  {cectrl.level}
+                  {cecrl.level}
                 </Badge>
               </div>
               <div className="w-full max-w-sm space-y-2">
