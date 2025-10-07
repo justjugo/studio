@@ -30,6 +30,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  devIndicators: {
+    allowedDevOrigins: [
+        // Allow requests from the Google Cloud Workstations host
+        '*.cloudworkstations.dev',
+    ]
+  }
 };
 
 export default nextConfig;
