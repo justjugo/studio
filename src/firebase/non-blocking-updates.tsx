@@ -8,6 +8,8 @@ import {
   CollectionReference,
   DocumentReference,
   SetOptions,
+  writeBatch,
+  Firestore,
 } from 'firebase/firestore';
 import { errorEmitter } from '@/firebase/error-emitter';
 import {FirestorePermissionError} from '@/firebase/errors';
@@ -87,3 +89,32 @@ export function deleteDocumentNonBlocking(docRef: DocumentReference) {
       )
     });
 }
+
+/**
+ * Performs a batch write operation to upload multiple documents at once.
+ * This is non-blocking in the UI, but the function itself is async.
+ */
+export function batchUploadNonBlocking<T>(db: Firestore, collectionPath: string, data: T[]) {
+  const batch = writeBatch(db);
+  const colRef = collection(db, collectionPath);
+
+  data.forEach((item) => {
+    const docRef = doc(colRef); // Automatically generate a new document ID
+    batch.set(docRef, item);
+  });
+
+  batch.commit().catch(error => {
+    console.error("Batch upload failed: ", error);
+    // For batch, the error is less specific. We can't easily point to one doc.
+    errorEmitter.emit(
+      'permission-error',
+      new FirestorePermissionError({
+        path: collectionPath,
+        operation: 'write', // Batch write can be considered a 'write' operation
+        requestResourceData: { info: "Batch upload failed", count: data.length },
+      })
+    );
+  });
+}
+
+    
