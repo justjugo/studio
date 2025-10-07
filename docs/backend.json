@@ -1,0 +1,605 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the TCF Prep App.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "pseudo": {
+          "type": "string",
+          "description": "User's chosen pseudonym (optional, anonymous by default)."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address (optional, for sending results).",
+          "format": "email"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Date the user account was created.",
+          "format": "date-time"
+        },
+        "lastSession": {
+          "type": "string",
+          "description": "Date of the user's last session (for respecting the 30-day interval between tests).",
+          "format": "date-time"
+        },
+        "accessibility": {
+          "type": "string",
+          "description": "Accessibility options for the user. Points to Accessibility object"
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "accessibility"
+      ]
+    },
+    "Accessibility": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Accessibility",
+      "type": "object",
+      "description": "Represents accessibility options for a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Accessibility entity."
+        },
+        "extraTime": {
+          "type": "boolean",
+          "description": "Indicates whether the user has extra time (+25% if disabled)."
+        },
+        "textAlternative": {
+          "type": "boolean",
+          "description": "Indicates whether text alternatives for audio are enabled (for visual impairment)."
+        }
+      },
+      "required": [
+        "id",
+        "extraTime",
+        "textAlternative"
+      ]
+    },
+    "Question": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Question",
+      "type": "object",
+      "description": "Represents a TCF exam question.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Question entity."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of question (oral_comprehension, language_structures, written_comprehension)."
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "CECRL level of the question (A1, A2, B1, B2, C1, C2)."
+        },
+        "content": {
+          "type": "string",
+          "description": "Reference to the QuestionContent entity."
+        },
+        "options": {
+          "type": "array",
+          "description": "Array of question options.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "correctAnswer": {
+          "type": "string",
+          "description": "ID of the correct answer (A, B, C, or D)."
+        },
+        "calibration": {
+          "type": "boolean",
+          "description": "True if the item is a calibration item (not scored, computer version)."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Explanation for the training mode."
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags for the question (e.g., dialogue, announcement, grammar, article).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Date the question was added.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "difficulty",
+        "content",
+        "options",
+        "correctAnswer",
+        "calibration",
+        "explanation",
+        "tags",
+        "createdAt"
+      ]
+    },
+    "QuestionContent": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuestionContent",
+      "type": "object",
+      "description": "Represents the content of a question.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the QuestionContent entity."
+        },
+        "text": {
+          "type": "string",
+          "description": "Text of the question (if applicable, e.g., sentences for language_structures)."
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "URL of the audio file (S3/CDN, for oral_comprehension only).",
+          "format": "uri"
+        },
+        "duration": {
+          "type": "number",
+          "description": "Audio duration in seconds (for oral_comprehension)."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "Option": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Option",
+      "type": "object",
+      "description": "Represents an option for a multiple-choice question.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Option entity."
+        },
+        "text": {
+          "type": "string",
+          "description": "Text of the option."
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ]
+    },
+    "Session": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Session",
+      "type": "object",
+      "description": "Represents a user's test session.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Session entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Session)"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of session (full - 3 tests, or single - 1 test)."
+        },
+        "epreuves": {
+          "type": "array",
+          "description": "Array of test segments within the session.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the session is completed or abandoned."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Date the session was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "type",
+        "epreuves",
+        "completed",
+        "createdAt"
+      ]
+    },
+    "Epreuve": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Epreuve",
+      "type": "object",
+      "description": "Represents a segment (épreuve) within a test session.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Epreuve entity."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of test segment (oral_comprehension, language_structures, written_comprehension)."
+        },
+        "questionIds": {
+          "type": "array",
+          "description": "List of questions asked in this segment.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "answers": {
+          "type": "array",
+          "description": "List of user's answers in this segment.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Start time of the segment.",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "End time of the segment.",
+          "format": "date-time"
+        },
+        "duration": {
+          "type": "number",
+          "description": "Actual duration of the segment in seconds."
+        },
+        "maxDuration": {
+          "type": "number",
+          "description": "Maximum duration of the segment in seconds (1500s oral, 900s structures, 2700s written)."
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "questionIds",
+        "answers",
+        "startTime",
+        "endTime",
+        "duration",
+        "maxDuration"
+      ]
+    },
+    "Answer": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Answer",
+      "type": "object",
+      "description": "Represents a user's answer to a question within a test segment.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Answer entity."
+        },
+        "questionId": {
+          "type": "string",
+          "description": "Reference to Question."
+        },
+        "selectedAnswer": {
+          "type": "string",
+          "description": "User's selected answer (A, B, C, D, or null if unanswered)."
+        },
+        "isCorrect": {
+          "type": "boolean",
+          "description": "Whether the selected answer is correct (verified upon submission)."
+        },
+        "timeSpent": {
+          "type": "number",
+          "description": "Time spent on the question in seconds."
+        }
+      },
+      "required": [
+        "id",
+        "questionId",
+        "isCorrect",
+        "timeSpent"
+      ]
+    },
+    "Result": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Result",
+      "type": "object",
+      "description": "Represents the results of a test session.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Result entity."
+        },
+        "sessionId": {
+          "type": "string",
+          "description": "Reference to Session. (Relationship: Session 1:1 Result)"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Result)"
+        },
+        "scores": {
+          "type": "array",
+          "description": "Array of scores for each test segment.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "totalScore": {
+          "type": "number",
+          "description": "Sum of raw scores."
+        },
+        "globalCefrLevel": {
+          "type": "string",
+          "description": "Estimated global CECRL level."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Date the results were generated.",
+          "format": "date-time"
+        },
+        "validUntil": {
+          "type": "string",
+          "description": "Date the results are valid until (createdAt + 2 years).",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "sessionId",
+        "userId",
+        "scores",
+        "totalScore",
+        "globalCefrLevel",
+        "createdAt",
+        "validUntil"
+      ]
+    },
+    "Score": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Score",
+      "type": "object",
+      "description": "Represents the score for a specific test segment.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Score entity."
+        },
+        "epreuve": {
+          "type": "string",
+          "description": "Type of test segment (oral_comprehension, language_structures, written_comprehension)."
+        },
+        "rawScore": {
+          "type": "number",
+          "description": "Points (1 per correct answer, excluding calibration items)."
+        },
+        "maxScore": {
+          "type": "number",
+          "description": "Maximum score (29 for oral/written, 18 for structures)."
+        },
+        "cefrLevel": {
+          "type": "string",
+          "description": "Estimated CECRL level (A1, A2, B1, B2, C1, C2)."
+        }
+      },
+      "required": [
+        "id",
+        "epreuve",
+        "rawScore",
+        "maxScore",
+        "cefrLevel"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profiles.  Path-based ownership ensures only the user can access their own profile.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/accessibility/{accessibilityId}",
+        "definition": {
+          "entityName": "Accessibility",
+          "schema": {
+            "$ref": "#/backend/entities/Accessibility"
+          },
+          "description": "Stores accessibility preferences for a user. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "accessibilityId",
+              "description": "The unique identifier of the accessibility document."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/questions/{questionId}",
+        "definition": {
+          "entityName": "Question",
+          "schema": {
+            "$ref": "#/backend/entities/Question"
+          },
+          "description": "Stores all questions for the TCF exam.  Accessible to all users (read-only).",
+          "params": [
+            {
+              "name": "questionId",
+              "description": "The unique identifier of the question."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/questionContent/{questionContentId}",
+        "definition": {
+          "entityName": "QuestionContent",
+          "schema": {
+            "$ref": "#/backend/entities/QuestionContent"
+          },
+          "description": "Stores the content of the questions. Accessible to all users.",
+          "params": [
+            {
+              "name": "questionContentId",
+              "description": "The unique identifier of the question content."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/sessions/{sessionId}",
+        "definition": {
+          "entityName": "Session",
+          "schema": {
+            "$ref": "#/backend/entities/Session"
+          },
+          "description": "Stores user's test sessions. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "sessionId",
+              "description": "The unique identifier of the session."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/sessions/{sessionId}/epreuves/{epreuveId}",
+        "definition": {
+          "entityName": "Epreuve",
+          "schema": {
+            "$ref": "#/backend/entities/Epreuve"
+          },
+          "description": "Stores epreuves in a session. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "sessionId",
+              "description": "The unique identifier of the session."
+            },
+            {
+              "name": "epreuveId",
+              "description": "The unique identifier of the epreuve."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/sessions/{sessionId}/epreuves/{epreuveId}/answers/{answerId}",
+        "definition": {
+          "entityName": "Answer",
+          "schema": {
+            "$ref": "#/backend/entities/Answer"
+          },
+          "description": "Stores a user's answer to a question within a test segment. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "sessionId",
+              "description": "The unique identifier of the session."
+            },
+            {
+              "name": "epreuveId",
+              "description": "The unique identifier of the epreuve."
+            },
+            {
+              "name": "answerId",
+              "description": "The unique identifier of the answer."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/results/{resultId}",
+        "definition": {
+          "entityName": "Result",
+          "schema": {
+            "$ref": "#/backend/entities/Result"
+          },
+          "description": "Stores the results of a test session. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "resultId",
+              "description": "The unique identifier of the result."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/results/{resultId}/scores/{scoreId}",
+        "definition": {
+          "entityName": "Score",
+          "schema": {
+            "$ref": "#/backend/entities/Score"
+          },
+          "description": "Stores the scores for each epreuve in a test session. Path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "resultId",
+              "description": "The unique identifier of the result."
+            },
+            {
+              "name": "scoreId",
+              "description": "The unique identifier of the score."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "This Firestore structure is designed to support the TCF Prep App, focusing on secure user data management, test sessions, questions, and results. The design emphasizes Authorization Independence, structural segregation, and access modeling to achieve a robust and maintainable application. Authentication is handled by Firebase Auth (password and anonymous users).\n\n**Authorization Independence:**\n\n*   User-owned data (sessions, results, accessibility settings) are stored under `/users/{userId}`. This path-based ownership eliminates the need for `get()` calls to verify ownership, ensuring atomic operations.\n*   For collaborative scenarios, if any, consider using a membership map within documents and denormalizing it to child collections for efficient access control.\n\n**Structural Segregation:**\n\n*   Each top-level collection (`/users`, `/questions`) holds documents with similar security requirements. This prevents the need for complex rule logic to differentiate access based on document content.\n\n**Access Modeling:**\n\n*   Private user data is stored under `/users/{userId}`, following path-based ownership.\n*   Questions are stored in a top-level `/questions` collection as all users should be able to access them.\n\n**QAPs (Rules are not Filters):**\n\n*   The structure enables secure `list` operations. For example, listing questions doesn't require filtering based on user roles because all documents in `/questions` are generally accessible.\n*   Sessions and results are scoped to the user via the `/users/{userId}` path. This makes list operations for these entities secure and efficient.\n\n**Invariants:**\n\n*   The design supports invariants such as ownership (via path-based ownership) and timestamps (createdAt) through explicit field enforcement in security rules.\n\nThis structure prioritizes security, scalability, and debuggability by adhering to the core design principles and strategy mandates."
+  }
+}
