@@ -71,18 +71,18 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   }, [user, isUserLoading, isAuthPage, isVerifyEmailPage, router]);
 
 
-  // If it's an auth-related page, don't show the main layout
+  // If we are still loading, and we are not on a page that is public, show loader
+  if (isUserLoading && !isAuthPage && !isVerifyEmailPage) {
+    return <Loading />;
+  }
+
+  // If its an auth page and we are not loading, show the page
   if (isAuthPage || isVerifyEmailPage) {
     return <AuthLayout>{children}</AuthLayout>;
   }
-
-  // While checking auth status and not on an auth page, show a loader
-  if (isUserLoading) {
-    return <Loading />;
-  }
   
-  // If no user is authenticated (and we're not on an auth page), the useEffect will redirect.
-  // Render a loader to prevent a flash of content.
+  // If no user is authenticated after loading, the useEffect will redirect.
+  // Render a loader to prevent a flash of the dashboard.
   if (!user) {
       return <Loading />;
   }

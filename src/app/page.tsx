@@ -3,7 +3,7 @@
 
 import { useCollection, useUser, useFirestore, useMemoFirebase } from '@/firebase';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Header } from '@/components/layout/Header';
 import {
   Card,
@@ -29,7 +29,6 @@ import type { Result } from '@/lib/types';
 
 export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
-  const router = useRouter();
   const firestore = useFirestore();
 
   const resultsCollection = useMemoFirebase(() => {
@@ -51,12 +50,6 @@ export default function DashboardPage() {
     })).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   }, [results]);
 
-
-  useEffect(() => {
-    if (!isUserLoading && !user) {
-      router.push('/login');
-    }
-  }, [user, isUserLoading, router]);
 
   if (isUserLoading || isResultsLoading || !user) {
     return <Loading />;
