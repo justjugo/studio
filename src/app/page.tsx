@@ -3,7 +3,7 @@
 
 import { useCollection, useUser, useFirestore, useMemoFirebase } from '@/firebase';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import {
   Card,
@@ -31,6 +31,11 @@ export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
   const router = useRouter();
   const firestore = useFirestore();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const resultsCollection = useMemoFirebase(() => {
     if (!user || !firestore) return null;
@@ -58,7 +63,7 @@ export default function DashboardPage() {
     }
   }, [user, isUserLoading, router]);
 
-  if (isUserLoading || isResultsLoading || !user) {
+  if (!isClient || isUserLoading || isResultsLoading || !user) {
     return <Loading />;
   }
 
