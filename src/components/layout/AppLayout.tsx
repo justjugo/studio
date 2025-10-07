@@ -29,6 +29,7 @@ import { signOut } from 'firebase/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useEffect } from 'react';
 import Loading from '@/app/loading';
+import { ThemeToggle } from '../ThemeToggle';
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
@@ -156,19 +157,22 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <SidebarFooter className='gap-4'>
             <SidebarSeparator />
             {user && (
-                 <div className="flex items-center gap-3 px-2">
-                    <Avatar className="h-9 w-9">
-                        <AvatarImage src={user.photoURL || ''} alt={user.displayName || 'User'} />
-                        <AvatarFallback>{getInitials(user.displayName || user.email)}</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                        <span className="text-sm font-semibold truncate text-sidebar-foreground">
-                            {user.displayName || 'Utilisateur anonyme'}
-                        </span>
-                        <span className="text-xs text-muted-foreground truncate">
-                            {user.email}
-                        </span>
+                 <div className="flex items-center justify-between gap-3 px-2">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-9 w-9">
+                          <AvatarImage src={user.photoURL || ''} alt={user.displayName || 'User'} />
+                          <AvatarFallback>{getInitials(user.displayName || user.email)}</AvatarFallback>
+                      </Avatar>
+                      <div className="flex flex-col overflow-hidden">
+                          <span className="text-sm font-semibold truncate text-sidebar-foreground">
+                              {user.displayName || 'Utilisateur anonyme'}
+                          </span>
+                          <span className="text-xs text-muted-foreground truncate">
+                              {user.email}
+                          </span>
+                      </div>
                     </div>
+                    <ThemeToggle />
                  </div>
             )}
           <SidebarMenu>
