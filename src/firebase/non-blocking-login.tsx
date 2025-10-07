@@ -1,3 +1,4 @@
+
 'use client';
 import {
   Auth, // Import Auth type for type hinting
@@ -15,7 +16,7 @@ export function initiateAnonymousSignIn(authInstance: Auth): void {
     console.error('Anonymous Sign-In Error:', error);
     toast({
       variant: 'destructive',
-      title: 'Anonymous sign-in failed',
+      title: 'La connexion anonyme a échoué',
       description: error.message,
     });
   });
@@ -38,15 +39,15 @@ export function initiateEmailSignUp(
     .catch(
     (error) => {
       console.error('Sign-Up Error:', error);
-      let description = 'An unexpected error occurred.';
+      let description = 'Une erreur inattendue est survenue.';
       if (error.code === 'auth/email-already-in-use') {
-        description = 'This email address is already in use.';
+        description = 'Cette adresse e-mail est déjà utilisée.';
       } else if (error.code === 'auth/weak-password') {
-        description = 'The password is too weak. Please use a stronger password.';
+        description = 'Le mot de passe est trop faible. Veuillez utiliser un mot de passe plus fort.';
       }
       toast({
         variant: 'destructive',
-        title: 'Sign-up failed',
+        title: 'L\'inscription a échoué',
         description: description,
       });
     }
@@ -63,13 +64,13 @@ export function initiateEmailSignIn(
   // CRITICAL: Call signInWithEmailAndPassword directly. Do NOT use 'await signInWithEmailAndPassword(...)'.
   signInWithEmailAndPassword(authInstance, email, password).catch((error) => {
     console.error('Sign-In Error:', error);
-    let description = 'An unexpected error occurred.';
+    let description = 'Une erreur inattendue est survenue.';
     if (error.code === 'auth/invalid-credential' || error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-      description = 'Invalid email or password. Please try again.';
+      description = 'Email ou mot de passe invalide. Veuillez réessayer.';
     }
     toast({
       variant: 'destructive',
-      title: 'Login failed',
+      title: 'La connexion a échoué',
       description: description,
     });
   });

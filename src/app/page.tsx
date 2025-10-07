@@ -76,23 +76,23 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col h-full bg-background">
-      <Header title="Dashboard" />
+      <Header title="Tableau de bord" />
       <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
         {userProgressHistory.length === 0 ? (
            <Card className="text-center p-8">
-            <CardTitle>Welcome to TCF Prep!</CardTitle>
+            <CardTitle>Bienvenue à la préparation TCF !</CardTitle>
             <CardDescription className="mt-2">
-              You haven't taken any tests yet. Start with a practice test or training to see your progress here.
+              Vous n'avez encore passé aucun test. Commencez par un test d'entraînement ou une formation pour voir vos progrès ici.
             </CardDescription>
             <div className="flex justify-center gap-4 mt-6">
                <Button asChild variant="secondary">
                 <Link href="/training">
-                  Go to Training
+                  Aller à la formation
                 </Link>
               </Button>
               <Button asChild>
                 <Link href="/practice">
-                  Start Full Practice Test <ArrowRight className="ml-2" />
+                  Commencer le test complet <ArrowRight className="ml-2" />
                 </Link>
               </Button>
             </div>
@@ -103,7 +103,7 @@ export default function DashboardPage() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Latest Score
+                    Dernier Score
                   </CardTitle>
                   <Target className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
@@ -112,42 +112,42 @@ export default function DashboardPage() {
                     {latestAttempt ? `${Math.round((latestAttempt.score / latestAttempt.totalQuestions) * 100)}%` : 'N/A'}
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    on {latestAttempt ? latestAttempt.testName : ''}
+                    sur {latestAttempt ? latestAttempt.testName : ''}
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Average Score
+                    Score Moyen
                   </CardTitle>
                   <Activity className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{Math.round(averageScore * 100)}%</div>
                   <p className="text-xs text-muted-foreground">
-                    Across all your attempts
+                    Sur toutes vos tentatives
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Tests Taken
+                    Tests Passés
                   </CardTitle>
                   <BarChart3 className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{totalTests}</div>
                   <p className="text-xs text-muted-foreground">
-                    Keep practicing!
+                    Continuez à vous entraîner !
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Time Spent
+                    Temps Passé
                   </CardTitle>
                   <Clock className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
@@ -156,7 +156,7 @@ export default function DashboardPage() {
                     --
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Time tracking coming soon
+                    Suivi du temps bientôt disponible
                   </p>
                 </CardContent>
               </Card>
@@ -164,9 +164,9 @@ export default function DashboardPage() {
             <div className="grid gap-6 lg:grid-cols-5">
               <Card className="lg:col-span-2">
                 <CardHeader>
-                  <CardTitle>Start Your Prep</CardTitle>
+                  <CardTitle>Commencez Votre Préparation</CardTitle>
                   <CardDescription>
-                    Choose a mode to begin your TCF preparation journey.
+                    Choisissez un mode pour commencer votre parcours de préparation au TCF.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col gap-4">
@@ -175,21 +175,21 @@ export default function DashboardPage() {
                       variant="secondary"
                       className="w-full justify-between h-12 text-base"
                     >
-                      Go to Training Mode <ArrowRight />
+                      Aller au mode Entraînement <ArrowRight />
                     </Button>
                   </Link>
                   <Link href="/practice" className="w-full">
                     <Button className="w-full justify-between h-12 text-base">
-                      Start Full Practice Test <ArrowRight />
+                      Commencer le test complet <ArrowRight />
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
               <Card className="lg:col-span-3">
                 <CardHeader>
-                  <CardTitle>Your Progress</CardTitle>
+                  <CardTitle>Votre Progression</CardTitle>
                   <CardDescription>
-                    Visual representation of your test scores over time.
+                    Représentation visuelle de vos scores aux tests au fil du temps.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

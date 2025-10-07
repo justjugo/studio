@@ -12,9 +12,9 @@ import { seedQuestions } from '@/lib/seed-data';
 import type { Question } from '@/lib/types';
 
 const sectionConfig: { [key: string]: { name: string; questionCount: number; title: string } } = {
-    listening: { name: 'listening', questionCount: 29, title: 'Listening Comprehension' },
-    structure: { name: 'structure', questionCount: 18, title: 'Language Structures' },
-    reading: { name: 'reading', questionCount: 29, title: 'Reading Comprehension' },
+    listening: { name: 'listening', questionCount: 29, title: 'Compréhension orale' },
+    structure: { name: 'structure', questionCount: 18, title: 'Structures de la langue' },
+    reading: { name: 'reading', questionCount: 29, title: 'Compréhension écrite' },
 };
 
 export default function TrainingSectionPage() {
@@ -33,18 +33,18 @@ export default function TrainingSectionPage() {
     if (!config) {
         return (
             <div className="flex flex-col h-full">
-                <Header title="Training Mode" />
+                <Header title="Mode Entraînement" />
                 <main className="flex-1 flex items-center justify-center text-center p-4">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Invalid Section</CardTitle>
+                            <CardTitle>Section invalide</CardTitle>
                             <CardDescription>
-                                The section you are trying to access does not exist.
+                                La section que vous essayez de consulter n'existe pas.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <Button asChild>
-                                <Link href="/training">Choose a Section</Link>
+                                <Link href="/training">Choisir une section</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -55,12 +55,12 @@ export default function TrainingSectionPage() {
 
     return (
         <div className="flex flex-col h-full">
-            <Header title={`Training: ${config.title}`} />
+            <Header title={`Entraînement: ${config.title}`} />
             <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
                 <div className="max-w-2xl mx-auto">
                      <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold font-headline">Available Tests</h2>
-                        <p className="text-muted-foreground mt-2">Select a test to begin your practice session.</p>
+                        <h2 className="text-3xl font-bold font-headline">Tests disponibles</h2>
+                        <p className="text-muted-foreground mt-2">Sélectionnez un test pour commencer votre session d'entraînement.</p>
                     </div>
                     {availableTests.length > 0 ? (
                         <div className="space-y-4">
@@ -76,7 +76,7 @@ export default function TrainingSectionPage() {
                                                 </div>
                                             </div>
                                             <div className="flex items-center text-sm font-semibold text-primary">
-                                                Start Test
+                                                Commencer le test
                                                 <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
                                             </div>
                                         </CardContent>
@@ -87,14 +87,14 @@ export default function TrainingSectionPage() {
                     ) : (
                          <Card>
                             <CardHeader className="text-center">
-                                <CardTitle>No Tests Available</CardTitle>
+                                <CardTitle>Aucun test disponible</CardTitle>
                                 <CardDescription>
-                                    There are not enough questions to create a test for this section. Please add more questions to `src/lib/questions.json`.
+                                    Il n'y a pas assez de questions pour créer un test pour cette section. Veuillez ajouter plus de questions à `src/lib/questions.json`.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="text-center">
                                 <Button asChild>
-                                    <Link href="/training">Back to Sections</Link>
+                                    <Link href="/training">Retour aux sections</Link>
                                 </Button>
                             </CardContent>
                         </Card>

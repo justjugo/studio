@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -47,15 +48,15 @@ export default function VerifyEmailPage() {
       sendEmailVerification(user)
         .then(() => {
           toast({
-            title: 'Email Sent',
-            description: 'A new verification link has been sent to your email.',
+            title: 'Email envoyé',
+            description: 'Un nouveau lien de vérification a été envoyé à votre adresse e-mail.',
           });
         })
         .catch((error) => {
           toast({
             variant: 'destructive',
-            title: 'Error',
-            description: 'Failed to resend verification email. Please try again later.',
+            title: 'Erreur',
+            description: 'Échec de l\'envoi de l\'e-mail de vérification. Veuillez réessayer plus tard.',
           });
         })
         .finally(() => {
@@ -79,15 +80,15 @@ export default function VerifyEmailPage() {
     
     if (user.emailVerified) {
       toast({
-        title: 'Success!',
-        description: 'Your email has been verified. Redirecting...',
+        title: 'Succès !',
+        description: 'Votre email a été vérifié. Redirection...',
       });
        // We manually push here to ensure immediate navigation.
       router.push('/');
     } else {
       toast({
-        title: 'Not Yet Verified',
-        description: 'Please check your inbox for the verification link.',
+        title: 'Pas encore vérifié',
+        description: 'Veuillez consulter votre boîte de réception pour le lien de vérification.',
       });
       setIsChecking(false);
     }
@@ -101,23 +102,23 @@ export default function VerifyEmailPage() {
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
             <MailCheck className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="mt-4 text-2xl">Verify Your Email</CardTitle>
+          <CardTitle className="mt-4 text-2xl">Vérifiez votre e-mail</CardTitle>
           <CardDescription>
-            We've sent a verification link to{' '}
+            Nous avons envoyé un lien de vérification à{' '}
             <span className="font-semibold text-foreground">
-              {user?.email || 'your email address'}
+              {user?.email || 'votre adresse e-mail'}
             </span>
-            . Please check your inbox (and spam folder) and follow the link to
-            activate your account.
+            . Veuillez consulter votre boîte de réception (et votre dossier de courrier indésirable) et suivre le lien pour
+            activer votre compte.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <Button onClick={handleCheckVerification} className="w-full" disabled={isChecking}>
-            {isChecking ? "Checking..." : "I've Verified My Email"}
+            {isChecking ? "Vérification..." : "J'ai vérifié mon e-mail"}
           </Button>
 
           <p className="text-sm text-muted-foreground">
-            Didn't receive the email?
+            Vous n'avez pas reçu l'e-mail ?
           </p>
 
           <Button
@@ -127,12 +128,12 @@ export default function VerifyEmailPage() {
             disabled={isResending}
           >
             <Send className="mr-2 h-4 w-4" />
-            {isResending ? 'Sending...' : 'Resend Verification Email'}
+            {isResending ? 'Envoi...' : 'Renvoyer l\'e-mail de vérification'}
           </Button>
         </CardContent>
         <CardFooter>
           <Button onClick={handleLogout} variant="link" className="w-full">
-            Use a Different Account
+            Utiliser un autre compte
           </Button>
         </CardFooter>
       </Card>

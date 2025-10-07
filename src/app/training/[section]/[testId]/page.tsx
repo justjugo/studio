@@ -76,18 +76,18 @@ export default function TrainingSessionPage() {
     if (!config || isNaN(testId)) {
         return (
             <div className="flex flex-col h-full">
-                <Header title="Training Mode" />
+                <Header title="Mode entraînement" />
                 <main className="flex-1 flex items-center justify-center text-center p-4">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Invalid Test</CardTitle>
+                            <CardTitle>Test invalide</CardTitle>
                             <CardDescription>
-                                The test you are trying to access does not exist.
+                                Le test que vous essayez de consulter n'existe pas.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <Button asChild>
-                                <Link href={`/training/${sectionSlug}`}>Choose a Test</Link>
+                                <Link href={`/training/${sectionSlug}`}>Choisir un test</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -99,18 +99,18 @@ export default function TrainingSessionPage() {
     if (!questions || questions.length === 0) {
         return (
              <div className="flex flex-col h-full">
-                <Header title={`Training: ${sectionSlug}`} />
+                <Header title={`Entraînement: ${sectionSlug}`} />
                 <main className="flex-1 flex items-center justify-center text-center p-4">
                     <Card>
                         <CardHeader>
-                            <CardTitle>No Questions Found</CardTitle>
+                            <CardTitle>Aucune question trouvée</CardTitle>
                             <CardDescription>
-                                There are no questions available for this test yet. Check your `questions.json` file.
+                                Il n'y a pas de questions disponibles pour ce test. Vérifiez votre fichier `questions.json`.
                             </CardDescription>
                         </CardHeader>
                          <CardContent>
                             <Button asChild>
-                                <Link href="/training">Back to Training</Link>
+                                <Link href="/training">Retour à l'entraînement</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -135,7 +135,7 @@ export default function TrainingSessionPage() {
             scores: [],
             validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
             type: 'training',
-            testName: `Training: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`,
+            testName: `Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`,
             answers: answers,
         };
     
@@ -178,20 +178,20 @@ export default function TrainingSessionPage() {
 
         return (
             <div className="flex flex-col h-full">
-                <Header title={`Results: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
+                <Header title={`Résultats: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
                 <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
                     <div className="max-w-3xl mx-auto space-y-6">
                         <Card>
                             <CardHeader className="text-center">
-                                <CardTitle className="text-3xl">Training Complete!</CardTitle>
+                                <CardTitle className="text-3xl">Entraînement terminé !</CardTitle>
                                 <CardDescription>
-                                    You answered {totalAnswered} out of {questions.length} questions.
+                                    Vous avez répondu à {totalAnswered} sur {questions.length} questions.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="flex flex-col items-center space-y-4">
                                 <div className="w-full max-w-sm space-y-2">
                                     <div className="flex justify-between font-medium">
-                                    <span>Overall Score</span>
+                                    <span>Score Global</span>
                                     <span>{correctCount} / {totalAnswered}</span>
                                     </div>
                                     <Progress value={scorePercentage} className="h-4" />
@@ -202,7 +202,7 @@ export default function TrainingSessionPage() {
 
                         <Card>
                             <CardHeader>
-                                <CardTitle>Review Your Answers</CardTitle>
+                                <CardTitle>Révisez vos réponses</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <Accordion type="single" collapsible className="w-full">
@@ -220,7 +220,7 @@ export default function TrainingSessionPage() {
                                                 <AccordionContent className="space-y-4 pl-10">
                                                     {!answer.isCorrect && userAnswerText && (
                                                         <div>
-                                                            <p className="font-semibold mb-2">Your Answer:</p>
+                                                            <p className="font-semibold mb-2">Votre réponse :</p>
                                                             <div className="flex items-center gap-2 p-2 bg-destructive/10 rounded-md">
                                                                 <XCircle className="h-4 w-4 text-destructive" />
                                                                 <p>{userAnswerText}</p>
@@ -228,7 +228,7 @@ export default function TrainingSessionPage() {
                                                         </div>
                                                     )}
                                                     <div>
-                                                        <p className="font-semibold mb-2">Correct Answer:</p>
+                                                        <p className="font-semibold mb-2">Réponse correcte :</p>
                                                         <div className="flex items-center gap-2 p-2 bg-green-500/10 rounded-md">
                                                             <CheckCircle2 className="h-4 w-4 text-green-600" />
                                                             <p>{correctAnswerText}</p>
@@ -237,7 +237,7 @@ export default function TrainingSessionPage() {
                                                     {answer.question.explanation && (
                                                         <Alert>
                                                             <Lightbulb className="h-4 w-4" />
-                                                            <AlertTitle>Explanation</AlertTitle>
+                                                            <AlertTitle>Explication</AlertTitle>
                                                             <AlertDescription>{answer.question.explanation}</AlertDescription>
                                                         </Alert>
                                                     )}
@@ -251,11 +251,11 @@ export default function TrainingSessionPage() {
                         
                         <div className="text-center flex gap-4 justify-center">
                             <Button size="lg" onClick={restartTraining}>
-                                <Repeat className="mr-2 h-4 w-4" /> Try Again
+                                <Repeat className="mr-2 h-4 w-4" /> Réessayer
                             </Button>
                              <Button size="lg" asChild variant="outline">
                                 <Link href={`/training/${sectionSlug}`}>
-                                    <BookOpenCheck className="mr-2 h-4 w-4" /> Back to Test List
+                                    <BookOpenCheck className="mr-2 h-4 w-4" /> Retour à la liste des tests
                                 </Link>
                             </Button>
                         </div>
@@ -267,7 +267,7 @@ export default function TrainingSessionPage() {
 
     return (
         <div className="flex flex-col h-full">
-            <Header title={`Training: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
+            <Header title={`Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
             <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
                  <div className="max-w-2xl mx-auto">
                     <div className="flex justify-between items-center mb-4">
@@ -276,7 +276,7 @@ export default function TrainingSessionPage() {
                             <span>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
                         </div>
                         <div className="text-sm text-muted-foreground">
-                            Question {currentQuestionIndex + 1} of {questions.length}
+                            Question {currentQuestionIndex + 1} sur {questions.length}
                         </div>
                     </div>
                     <Progress value={((currentQuestionIndex + 1) / questions.length) * 100} className="mb-6 h-2" />
@@ -290,7 +290,7 @@ export default function TrainingSessionPage() {
                                 {currentQuestion.audioSrc && (
                                     <audio controls className="w-full mt-4">
                                         <source src={currentQuestion.audioSrc} type="audio/mpeg" />
-                                        Your browser does not support the audio element.
+                                        Votre navigateur ne supporte pas l'élément audio.
                                     </audio>
                                 )}
                             </CardHeader>
@@ -310,7 +310,7 @@ export default function TrainingSessionPage() {
                             </CardContent>
                             <CardFooter>
                                 <Button onClick={() => handleNextQuestion(false)} disabled={!selectedOptionId} className="w-full text-lg py-6">
-                                    {currentQuestionIndex === questions.length - 1 ? 'Finish Training' : 'Next Question'}
+                                    {currentQuestionIndex === questions.length - 1 ? 'Terminer l\'entraînement' : 'Question Suivante'}
                                     <ArrowRight className="ml-2 h-5 w-5"/>
                                 </Button>
                             </CardFooter>

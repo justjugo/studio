@@ -84,10 +84,14 @@ export default function ResultsPage() {
             for (const answer of result.answers) {
                 const section = answer.question.section;
                 metrics.overall.total++;
-                metrics[section].total++;
+                if (metrics[section]) {
+                    metrics[section].total++;
+                }
                 if (answer.isCorrect) {
                     metrics.overall.correct++;
-                    metrics[section].correct++;
+                    if (metrics[section]) {
+                        metrics[section].correct++;
+                    }
                 }
             }
         }
@@ -117,18 +121,18 @@ export default function ResultsPage() {
   if (!results || results.length === 0) {
     return (
       <div className="flex flex-col h-full">
-        <Header title="Test Results" />
+        <Header title="Résultats des tests" />
         <main className="flex-1 flex items-center justify-center text-center p-4">
           <Card>
             <CardHeader>
-              <CardTitle>No Results Yet</CardTitle>
+              <CardTitle>Aucun résultat pour le moment</CardTitle>
               <CardDescription>
-                You haven't completed any tests. Your results will appear here once you do.
+                Vous n'avez terminé aucun test. Vos résultats apparaîtront ici une fois que vous l'aurez fait.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Button asChild>
-                <Link href="/practice">Start a Test</Link>
+                <Link href="/practice">Commencer un test</Link>
               </Button>
             </CardContent>
           </Card>
@@ -142,36 +146,36 @@ export default function ResultsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <Header title="Test Results" />
+      <Header title="Résultats des tests" />
       <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
         <div className="max-w-4xl mx-auto space-y-8">
           <Card>
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl">Your Overall Performance</CardTitle>
-               <CardDescription>Based on your {sortedResults.slice(0, 3).length} latest attempts.</CardDescription>
+              <CardTitle className="text-3xl">Votre performance globale</CardTitle>
+               <CardDescription>Basé sur vos {sortedResults.slice(0, 3).length} dernières tentatives.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
                 <div className="flex flex-col items-center space-y-4 p-4 bg-secondary/30 rounded-lg">
-                    <p className="text-xl font-semibold">Overall Estimated Level:</p>
+                    <p className="text-xl font-semibold">Niveau global estimé :</p>
                     <Badge className={`px-6 py-2 text-2xl font-bold ${overallCecrl.color}`}>{overallCecrl.level}</Badge>
                     <div className="w-full max-w-sm space-y-1">
                         <Progress value={overallPercentage} className="h-3" />
-                        <p className="text-center text-sm font-medium text-muted-foreground">{`${performanceMetrics.overall.correct} / ${performanceMetrics.overall.total} correct`}</p>
+                        <p className="text-center text-sm font-medium text-muted-foreground">{`${performanceMetrics.overall.correct} / ${performanceMetrics.overall.total} correctes`}</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <SectionResultCard title="Listening" icon={<Headphones className="h-6 w-6 text-primary" />} percentage={listeningPercentage} level={listeningCecrl.level} color={listeningCecrl.color} />
-                    <SectionResultCard title="Grammar" icon={<Puzzle className="h-6 w-6 text-primary" />} percentage={structurePercentage} level={structureCecrl.level} color={structureCecrl.color} />
-                    <SectionResultCard title="Reading" icon={<BookOpenText className="h-6 w-6 text-primary" />} percentage={readingPercentage} level={readingCecrl.level} color={readingCecrl.color} />
+                    <SectionResultCard title="Écoute" icon={<Headphones className="h-6 w-6 text-primary" />} percentage={listeningPercentage} level={listeningCecrl.level} color={listeningCecrl.color} />
+                    <SectionResultCard title="Grammaire" icon={<Puzzle className="h-6 w-6 text-primary" />} percentage={structurePercentage} level={structureCecrl.level} color={structureCecrl.color} />
+                    <SectionResultCard title="Lecture" icon={<BookOpenText className="h-6 w-6 text-primary" />} percentage={readingPercentage} level={readingCecrl.level} color={readingCecrl.color} />
                 </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Review Your Last Test</CardTitle>
+              <CardTitle>Révisez votre dernier test</CardTitle>
                <CardDescription>
-                  Reviewing mistakes is key to progress. Here are the incorrect answers from your last test: <span className="font-semibold">{latestResult.testName}</span>
+                  Passer en revue les erreurs est la clé du progrès. Voici les réponses incorrectes de votre dernier test : <span className="font-semibold">{latestResult.testName}</span>
                </CardDescription>
             </CardHeader>
             <CardContent>
@@ -194,14 +198,14 @@ export default function ResultsPage() {
                         </AccordionTrigger>
                         <AccordionContent className="space-y-4 pl-10">
                           <div>
-                            <p className="font-semibold mb-2">Your Answer:</p>
+                            <p className="font-semibold mb-2">Votre réponse :</p>
                             <div className="flex items-center gap-2 p-2 bg-destructive/10 rounded-md">
                               <XCircle className="h-4 w-4 text-destructive" />
-                              <p>{userAnswer?.text || <span className="italic">You did not answer this question.</span>}</p>
+                              <p>{userAnswer?.text || <span className="italic">Vous n'avez pas répondu à cette question.</span>}</p>
                             </div>
                           </div>
                           <div>
-                            <p className="font-semibold mb-2">Correct Answer:</p>
+                            <p className="font-semibold mb-2">Réponse correcte :</p>
                             <div className="flex items-center gap-2 p-2 bg-green-500/10 rounded-md">
                               <CheckCircle2 className="h-4 w-4 text-green-600" />
                               <p>{correctAnswer?.text}</p>
@@ -210,14 +214,14 @@ export default function ResultsPage() {
                            {item.question.explanation && (
                               <Alert>
                                   <Lightbulb className="h-4 w-4" />
-                                  <AlertTitle>Explanation</AlertTitle>
+                                  <AlertTitle>Explication</AlertTitle>
                                   <AlertDescription>{item.question.explanation}</AlertDescription>
                               </Alert>
                            )}
                           {item.question.explanationVideoUrl && (
                             <Button variant="link" asChild className="p-0 h-auto">
                               <a href={item.question.explanationVideoUrl} target="_blank" rel="noopener noreferrer">
-                                Watch explanation video
+                                Regarder la vidéo d'explication
                                 <ExternalLink className="ml-2 h-4 w-4" />
                               </a>
                             </Button>
@@ -230,8 +234,8 @@ export default function ResultsPage() {
                ) : (
                 <div className="text-center p-6 bg-green-500/10 rounded-lg">
                     <CheckCircle2 className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold">Congratulations!</h3>
-                    <p className="text-muted-foreground">You had no incorrect answers on your last test.</p>
+                    <h3 className="text-xl font-semibold">Félicitations !</h3>
+                    <p className="text-muted-foreground">Vous n'avez eu aucune réponse incorrecte lors de votre dernier test.</p>
                 </div>
                )}
             </CardContent>
@@ -239,7 +243,7 @@ export default function ResultsPage() {
 
           <div className="text-center">
             <Button size="lg" asChild>
-              <Link href="/">Back to Dashboard</Link>
+              <Link href="/">Retour au tableau de bord</Link>
             </Button>
           </div>
         </div>

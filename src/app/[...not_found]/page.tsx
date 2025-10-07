@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -27,15 +28,15 @@ export default function NotFound() {
           <div className="p-6">
             <h1 className="text-5xl font-extrabold font-headline text-primary">404</h1>
             <h2 className="mt-2 text-2xl font-semibold text-foreground">
-              Page Not Found
+              Page non trouvée
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Oops! The page you are looking for does not exist. It might have
-              been moved or deleted.
+              Oups ! La page que vous cherchez n'existe pas. Elle a peut-être
+              été déplacée ou supprimée.
             </p>
             <Button asChild className="mt-6">
               <Link href="/">
-                <ArrowLeft className="mr-2 h-4 w-4" /> Go Back to Dashboard
+                <ArrowLeft className="mr-2 h-4 w-4" /> Retour à l'accueil
               </Link>
             </Button>
           </div>

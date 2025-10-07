@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -46,8 +47,8 @@ export default function SignupPage() {
     if (!email || !password) {
       toast({
         variant: 'destructive',
-        title: 'Missing fields',
-        description: 'Please enter both email and password.',
+        title: 'Champs manquants',
+        description: 'Veuillez saisir votre email et votre mot de passe.',
       });
       return;
     }
@@ -58,9 +59,9 @@ export default function SignupPage() {
     <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Sign Up</CardTitle>
+          <CardTitle className="text-2xl">Inscription</CardTitle>
           <CardDescription>
-            Enter your information to create an account.
+            Entrez vos informations pour créer un compte.
           </CardDescription>
         </CardHeader>
         <form onSubmit={handleSignUp}>
@@ -77,7 +78,7 @@ export default function SignupPage() {
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Mot de passe</Label>
               <Input
                 id="password"
                 type="password"
@@ -89,12 +90,12 @@ export default function SignupPage() {
           </CardContent>
           <CardFooter className="flex-col gap-4">
             <Button className="w-full" type="submit">
-              Create account
+              Créer un compte
             </Button>
             <div className="mt-4 text-center text-sm">
-              Already have an account?{' '}
+              Vous avez déjà un compte ?{' '}
               <Link href="/login" className="underline">
-                Sign in
+                Se connecter
               </Link>
             </div>
           </CardFooter>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -89,25 +90,25 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const menuItems = [
     {
       href: '/',
-      label: 'Dashboard',
+      label: 'Tableau de bord',
       icon: LayoutDashboard,
       isActive: pathname === '/',
     },
     {
       href: '/training',
-      label: 'Training',
+      label: 'Entraînement',
       icon: Lightbulb,
       isActive: pathname.startsWith('/training'),
     },
     {
       href: '/practice',
-      label: 'Practice Test',
+      label: 'Test d\'entraînement',
       icon: ClipboardList,
       isActive: pathname.startsWith('/practice'),
     },
      {
       href: '/results',
-      label: 'Results',
+      label: 'Résultats',
       icon: BarChart3,
       isActive: pathname.startsWith('/results'),
     },
@@ -129,7 +130,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-3 p-2">
             <Logo />
             <span className="font-headline text-xl font-semibold text-primary">
-              TCF Prep
+              Prépa TCF
             </span>
           </div>
         </SidebarHeader>
@@ -162,7 +163,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                     </Avatar>
                     <div className="flex flex-col">
                         <span className="text-sm font-semibold truncate text-sidebar-foreground">
-                            {user.displayName || 'Anonymous User'}
+                            {user.displayName || 'Utilisateur anonyme'}
                         </span>
                         <span className="text-xs text-muted-foreground truncate">
                             {user.email}
@@ -174,7 +175,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" className="[&_span]:text-base" onClick={handleLogout}>
                 <LogOut />
-                <span>Logout</span>
+                <span>Déconnexion</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import './globals.css';
@@ -16,10 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <head>
-        <title>TCF Prep App</title>
-        <meta name="description" content="Your personal companion to ace the TCF exam." />
+        <title>App de Préparation TCF</title>
+        <meta name="description" content="Votre compagnon personnel pour réussir l'examen du TCF." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

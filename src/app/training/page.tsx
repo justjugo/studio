@@ -8,24 +8,24 @@ import Link from 'next/link';
 
 const sections = [
   {
-    name: 'Listening Comprehension',
+    name: 'Compréhension orale',
     slug: 'listening',
     icon: <Headphones className="h-10 w-10 text-primary" />,
-    description: "Hone your ability to understand spoken French.",
+    description: "Affinez votre capacité à comprendre le français parlé.",
     imageId: 'listening'
   },
   {
-    name: 'Language Structures',
+    name: 'Structures de la langue',
     slug: 'structure',
     icon: <Puzzle className="h-10 w-10 text-primary" />,
-    description: "Master grammar, vocabulary, and syntax.",
+    description: "Maîtrisez la grammaire, le vocabulaire et la syntaxe.",
     imageId: 'structure'
   },
   {
-    name: 'Reading Comprehension',
+    name: 'Compréhension écrite',
     slug: 'reading',
     icon: <BookOpenText className="h-10 w-10 text-primary" />,
-    description: "Improve your skills in understanding written texts.",
+    description: "Améliorez vos compétences en compréhension de textes écrits.",
     imageId: 'reading'
   },
 ];
@@ -33,12 +33,12 @@ const sections = [
 export default function TrainingPage() {
   return (
     <div className="flex flex-col h-full">
-      <Header title="Training Mode" />
+      <Header title="Mode Entraînement" />
       <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold font-headline">Choose a Section to Practice</h2>
-            <p className="text-muted-foreground mt-2">Practice questions at your own pace without any time limits.</p>
+            <h2 className="text-3xl font-bold font-headline">Choisissez une section à pratiquer</h2>
+            <p className="text-muted-foreground mt-2">Entraînez-vous sur les questions à votre rythme sans limite de temps.</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {sections.map((section) => {
@@ -67,7 +67,7 @@ export default function TrainingPage() {
                     </CardHeader>
                     <CardContent className="flex justify-end">
                        <div className="flex items-center text-sm font-semibold text-primary">
-                          Start Training
+                          Commencer l'entraînement
                           <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
                        </div>
                     </CardContent>

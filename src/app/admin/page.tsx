@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -19,8 +20,8 @@ export default function AdminPage() {
     if (!firestore) {
       toast({
         variant: 'destructive',
-        title: 'Firestore not available',
-        description: 'Please try again later.',
+        title: 'Firestore non disponible',
+        description: 'Veuillez réessayer plus tard.',
       });
       return;
     }
@@ -30,15 +31,15 @@ export default function AdminPage() {
       // that matches the expected structure.
       batchUploadNonBlocking(firestore, 'questions', seedQuestions);
       toast({
-        title: 'Database Seeding Initiated',
-        description: `Questions are being added to the database. This may take a moment.`,
+        title: 'Peuplement de la base de données initié',
+        description: `Les questions sont en cours d'ajout. Cela peut prendre un moment.`,
       });
     } catch (error) {
       console.error(error);
       toast({
         variant: 'destructive',
-        title: 'Seeding Failed',
-        description: 'Could not add questions to the database.',
+        title: 'Le peuplement a échoué',
+        description: 'Impossible d\'ajouter les questions à la base de données.',
       });
     } finally {
         // Give feedback to the user, but this doesn't guarantee completion,
@@ -49,34 +50,34 @@ export default function AdminPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <Header title="Admin Panel" />
+      <Header title="Panneau d'administration" />
       <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle>Database Management</CardTitle>
+              <CardTitle>Gestion de la base de données</CardTitle>
               <CardDescription>
-                Use this section to manage your application's data.
+                Utilisez cette section pour gérer les données de votre application.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between p-4 border rounded-lg">
                 <div>
-                  <h4 className="font-semibold">Seed Questions</h4>
+                  <h4 className="font-semibold">Peupler les questions</h4>
                   <p className="text-sm text-muted-foreground">
-                    Populate the database with initial sample questions.
+                    Remplissez la base de données avec des questions d'exemple.
                   </p>
                 </div>
                 <Button onClick={handleSeedDatabase} disabled={isSeeding}>
                   {isSeeding ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Seeding...
+                      Peuplement...
                     </>
                   ) : (
                     <>
                       <UploadCloud className="mr-2 h-4 w-4" />
-                       Seed Database
+                       Peupler la base de données
                     </>
                   )}
                 </Button>
