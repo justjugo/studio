@@ -22,6 +22,8 @@ export default function VerifyEmailPage() {
   const router = useRouter();
   const { toast } = useToast();
   const [isResending, setIsResending] = useState(false);
+  const [isChecking, setIsChecking] = useState(false);
+
 
   useEffect(() => {
     // If a verified user lands here, redirect to dashboard.
@@ -64,22 +66,31 @@ export default function VerifyEmailPage() {
 
   // Reload user data to check if email has been verified.
   // User might have verified in another tab.
-  const handleCheckVerification = () => {
-    user?.reload().then(() => {
-      // The onAuthStateChanged listener will automatically pick up the change
-      // and the useEffect will trigger the redirect if verified.
-      if (user.emailVerified) {
-        toast({
-            title: 'Success!',
-            description: 'Your email has been verified. Redirecting...',
-          });
-      } else {
-         toast({
-            title: 'Not Yet Verified',
-            description: 'Please check your inbox for the verification link.',
-          });
-      }
-    });
+  const handleCheckVerification = async () => {
+    if (!user) return;
+
+    setIsChecking(true);
+    await user.reload();
+    
+    // After reloading, the `onAuthStateChanged` listener in our `AppLayout`
+    // will get the updated user object. The `useEffect` in that component
+    // will then automatically redirect to '/' if `user.emailVerified` is true.
+    // We just need to check the local state to provide immediate feedback.
+    
+    if (user.emailVerified) {
+      toast({
+        title: 'Success!',
+        description: 'Your email has been verified. Redirecting...',
+      });
+       // We manually push here to ensure immediate navigation.
+      router.push('/');
+    } else {
+      toast({
+        title: 'Not Yet Verified',
+        description: 'Please check your inbox for the verification link.',
+      });
+      setIsChecking(false);
+    }
   };
 
 
@@ -101,8 +112,8 @@ export default function VerifyEmailPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <Button onClick={handleCheckVerification} className="w-full">
-            I've Verified My Email
+          <Button onClick={handleCheckVerification} className="w-full" disabled={isChecking}>
+            {isChecking ? "Checking..." : "I've Verified My Email"}
           </Button>
 
           <p className="text-sm text-muted-foreground">
