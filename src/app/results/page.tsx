@@ -74,7 +74,7 @@ export default function ResultsPage() {
   }
 
   const latestResult = sortedResults[0];
-  const incorrectAnswers = latestResult?.answers.filter(a => !a.isCorrect) || [];
+  const incorrectAnswers = (latestResult?.answers || []).filter(a => !a.isCorrect);
   
   const totalScoreSum = results.reduce((sum, result) => sum + result.totalScore, 0);
   const totalQuestionSum = results.reduce((sum, result) => sum + result.questionCount, 0);
