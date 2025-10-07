@@ -31,3 +31,15 @@ export interface UserProgress {
 }
 
 export type Section = 'listening' | 'reading' | 'structure';
+
+// This type represents the structure of the `Result` document in Firestore.
+export interface Result {
+  id: string;
+  sessionId: string;
+  userId: string;
+  scores: string[]; // Array of Score document IDs
+  totalScore: number;
+  globalCefrLevel: string;
+  createdAt: string; // ISO date string
+  validUntil: string; // ISO date string
+}
