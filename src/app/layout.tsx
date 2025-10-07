@@ -6,10 +6,6 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 
-function AuthLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
-}
-
 
 export default function RootLayout({
   children,
