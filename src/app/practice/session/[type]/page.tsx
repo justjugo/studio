@@ -4,7 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { seedQuestions } from '@/lib/seed-data';
-import type { Question, Result } from '@/lib/types';
+import type { Question, Result, UserAnswerForReview } from '@/lib/types';
 import Loading from '@/app/loading';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -35,12 +35,6 @@ const testConfig = {
     // Add other test types here if needed
 };
 
-type UserAnswer = {
-    question: Question;
-    selectedOptionId: string | null;
-    isCorrect: boolean;
-};
-
 export default function PracticeSessionPage() {
     const params = useParams();
     const router = useRouter();
@@ -61,7 +55,7 @@ export default function PracticeSessionPage() {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-    const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
+    const [userAnswers, setUserAnswers] = useState<UserAnswerForReview[]>([]);
     const [isFinished, setIsFinished] = useState(false);
     const [timeLeft, setTimeLeft] = useState(config?.time ?? 0);
 
@@ -131,7 +125,7 @@ export default function PracticeSessionPage() {
         );
     }
 
-    const saveResult = (answers: UserAnswer[]) => {
+    const saveResult = (answers: UserAnswerForReview[]) => {
         if (!user || !firestore || !testType) return;
     
         const correctCount = answers.filter(a => a.isCorrect).length;
@@ -147,7 +141,8 @@ export default function PracticeSessionPage() {
             scores: [],
             validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
             type: 'practice',
-            testName: config.title
+            testName: config.title,
+            answers: answers,
         };
     
         const resultsCollection = collection(firestore, 'users', user.uid, 'results');

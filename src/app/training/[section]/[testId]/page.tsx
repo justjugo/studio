@@ -4,7 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { seedQuestions } from '@/lib/seed-data';
-import type { Question, Result } from '@/lib/types';
+import type { Question, Result, UserAnswerForReview } from '@/lib/types';
 import Loading from '@/app/loading';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,12 +25,6 @@ const sectionConfig: { [key: string]: { name: string; time: number; questionCoun
     listening: { name: 'listening', time: 25 * 60, questionCount: 29 },
     structure: { name: 'structure', time: 15 * 60, questionCount: 18 },
     reading: { name: 'reading', time: 45 * 60, questionCount: 29 },
-};
-
-type UserAnswer = {
-    question: Question;
-    selectedOptionId: string | null;
-    isCorrect: boolean;
 };
 
 export default function TrainingSessionPage() {
@@ -55,7 +49,7 @@ export default function TrainingSessionPage() {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-    const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
+    const [userAnswers, setUserAnswers] = useState<UserAnswerForReview[]>([]);
     const [isFinished, setIsFinished] = useState(false);
     const [timeLeft, setTimeLeft] = useState(config?.time ?? 0);
 
@@ -125,7 +119,7 @@ export default function TrainingSessionPage() {
         );
     }
 
-    const saveResult = (answers: UserAnswer[]) => {
+    const saveResult = (answers: UserAnswerForReview[]) => {
         if (!user || !firestore) return;
     
         const correctCount = answers.filter(a => a.isCorrect).length;
@@ -141,7 +135,8 @@ export default function TrainingSessionPage() {
             scores: [],
             validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
             type: 'training',
-            testName: `Training: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`
+            testName: `Training: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`,
+            answers: answers,
         };
     
         const resultsCollection = collection(firestore, 'users', user.uid, 'results');

@@ -33,6 +33,12 @@ export interface UserProgress {
 
 export type Section = 'listening' | 'reading' | 'structure';
 
+export type UserAnswerForReview = {
+  question: Question;
+  selectedOptionId: string | null;
+  isCorrect: boolean;
+};
+
 // This type represents the structure of the `Result` document in Firestore.
 export interface Result {
   id?: string;
@@ -46,4 +52,5 @@ export interface Result {
   globalCefrLevel: string;
   createdAt: string; // ISO date string
   validUntil: string; // ISO date string
+  answers: UserAnswerForReview[];
 }
