@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "listening",
+      "description": "A person with headphones on, focused on listening.",
+      "imageUrl": "https://images.unsplash.com/photo-1752055831529-669caee003c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmVzJTIwYXVkaW98ZW58MHx8fHwxNzU5NzcwNjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "headphones audio"
+    },
+    {
+      "id": "structure",
+      "description": "Abstract blocks fitting together like a puzzle.",
+      "imageUrl": "https://picsum.photos/seed/tcf-structure/600/400",
+      "imageHint": "puzzle abstract"
+    },
+    {
+      "id": "reading",
+      "description": "An open book with text on a wooden table.",
+      "imageUrl": "https://images.unsplash.com/photo-1532348374062-fee19177e98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b3BlbiUyMGJvb2t8ZW58MHx8fHwxNzU5NzA4MDEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "open book"
+    },
+    {
+      "id": "practice-test",
+      "description": "A desk with a laptop, notebook, and a clock, ready for a test.",
+      "imageUrl": "https://picsum.photos/seed/tcf-practice/1200/400",
+      "imageHint": "desk test"
+    },
+    {
+      "id": "results",
+      "description": "A bar chart showing upward progress.",
+      "imageUrl": "https://picsum.photos/seed/tcf-results/1200/400",
+      "imageHint": "chart progress"
+    },
+    {
+      "id": "404",
+      "description": "A winding road disappearing into the fog.",
+      "imageUrl": "https://picsum.photos/seed/tcf-404/600/400",
+      "imageHint": "road fog"
+    }
+  ]
 }
