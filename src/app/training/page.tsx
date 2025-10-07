@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -43,7 +44,7 @@ export default function TrainingPage() {
             {sections.map((section) => {
               const image = PlaceHolderImages.find(img => img.id === section.imageId);
               return (
-                <Link key={section.slug} href={`/training`}>
+                <Link key={section.slug} href={`/training/${section.slug}`}>
                   <Card className="group overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2">
                     {image && (
                        <div className="overflow-hidden aspect-video">
@@ -75,7 +76,6 @@ export default function TrainingPage() {
               );
             })}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-8">(Selection currently leads back to the Training page)</p>
         </div>
       </main>
     </div>
