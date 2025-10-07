@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/layout/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -62,8 +63,7 @@ export default function PracticePage() {
               </CardContent>
               <CardFooter>
                  <Button size="lg" asChild className="w-full">
-                  {/* This would link to the actual test page */}
-                  <Link href="/results"> 
+                  <Link href="/practice/session/full"> 
                     Start Full Test <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -95,8 +95,7 @@ export default function PracticePage() {
               </CardContent>
               <CardFooter>
                 <Button size="lg" asChild className="w-full">
-                  {/* This would link to the actual test page */}
-                  <Link href="/results"> 
+                  <Link href="/practice/session/written"> 
                     Start Written Test <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -104,7 +103,6 @@ export default function PracticePage() {
             </Card>
 
           </div>
-           <p className="text-xs text-muted-foreground mt-4 text-center">(Note: Buttons currently start a mock test and show the results page)</p>
         </div>
       </main>
     </div>
