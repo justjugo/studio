@@ -3,19 +3,19 @@
     {
       "id": "listening",
       "description": "An illustration of a person with headphones on, focused on listening.",
-      "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdWRpbyUyMGxpc3RlbmluZ3xlbnwwfHx8fDE3NTk3MDc5NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/image1.png",
       "imageHint": "listening illustration"
     },
     {
       "id": "structure",
       "description": "An illustration of books and grammar concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFtbWFyJTIwYm9va3N8ZW58MHx8fHwxNzU5ODAzNzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/image2.png",
       "imageHint": "grammar illustration"
     },
     {
       "id": "reading",
       "description": "An illustration of a person reading a book.",
-      "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwYm9va3xlbnwwfHx8fDE3NTk4MDM3ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/image3.png",
       "imageHint": "reading illustration"
     },
     {
