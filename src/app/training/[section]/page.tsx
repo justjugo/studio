@@ -56,7 +56,7 @@ export default function TrainingSessionPage() {
         if (!config || isFinished) return;
 
         if (timeLeft <= 0) {
-            setIsFinished(true);
+            handleNextQuestion(true); // Force finish the test
             return;
         }
 
@@ -118,17 +118,17 @@ export default function TrainingSessionPage() {
         );
     }
     
-    const handleNextQuestion = () => {
+    const handleNextQuestion = (forceFinish = false) => {
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedOptionId === currentQuestion.correctOptionId;
         
-        setUserAnswers([...userAnswers, { question: currentQuestion, selectedOptionId, isCorrect }]);
+        setUserAnswers(prevAnswers => [...prevAnswers, { question: currentQuestion, selectedOptionId, isCorrect }]);
         
-        if (currentQuestionIndex < questions.length - 1) {
+        if (forceFinish || currentQuestionIndex >= questions.length - 1) {
+            setIsFinished(true);
+        } else {
             setCurrentQuestionIndex(prev => prev + 1);
             setSelectedOptionId(null);
-        } else {
-            setIsFinished(true);
         }
     };
     
@@ -157,6 +157,9 @@ export default function TrainingSessionPage() {
                         <Card>
                             <CardHeader className="text-center">
                                 <CardTitle className="text-3xl">Training Complete!</CardTitle>
+                                <CardDescription>
+                                    You answered {totalAnswered} out of {questions.length} questions.
+                                </CardDescription>
                             </CardHeader>
                             <CardContent className="flex flex-col items-center space-y-4">
                                 <div className="w-full max-w-sm space-y-2">
@@ -257,14 +260,21 @@ export default function TrainingSessionPage() {
                                 {currentQuestion.questionText && 
                                     <CardTitle className="text-xl">{currentQuestion.questionText}</CardTitle>
                                 }
+                                {currentQuestion.audioSrc && (
+                                    <audio controls className="w-full mt-4">
+                                        <source src={currentQuestion.audioSrc} type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                )}
                             </CardHeader>
                             <CardContent>
                                 <RadioGroup
                                     value={selectedOptionId || ''}
                                     onValueChange={setSelectedOptionId}
+                                    className="space-y-3"
                                 >
                                     {currentQuestion.options.map((option) => (
-                                        <div key={option.id} className="flex items-center space-x-3 p-4 rounded-lg border transition-all has-[:disabled]:opacity-70 has-[:disabled]:cursor-not-allowed">
+                                        <div key={option.id} className="flex items-center space-x-3 p-4 rounded-lg border transition-all has-[:disabled]:opacity-70 has-[:disabled]:cursor-not-allowed has-[:checked]:border-primary has-[:checked]:bg-primary/5">
                                             <RadioGroupItem value={option.id} id={option.id} />
                                             <Label htmlFor={option.id} className="flex-1 text-base cursor-pointer">{option.text}</Label>
                                         </div>
@@ -272,9 +282,9 @@ export default function TrainingSessionPage() {
                                 </RadioGroup>
                             </CardContent>
                             <CardFooter>
-                                <Button onClick={handleNextQuestion} disabled={!selectedOptionId} className="w-full">
+                                <Button onClick={() => handleNextQuestion(false)} disabled={!selectedOptionId} className="w-full text-lg py-6">
                                     {currentQuestionIndex === questions.length - 1 ? 'Finish Training' : 'Next Question'}
-                                    <ArrowRight className="ml-2 h-4 w-4"/>
+                                    <ArrowRight className="ml-2 h-5 w-5"/>
                                 </Button>
                             </CardFooter>
                         </Card>
