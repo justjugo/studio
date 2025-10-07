@@ -13,11 +13,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle2, ExternalLink, XCircle, AlertCircle, Lightbulb } from 'lucide-react';
+import { CheckCircle2, ExternalLink, XCircle, Lightbulb, BookOpenText, Headphones, Puzzle } from 'lucide-react';
 import Link from 'next/link';
 import { useCollection, useFirestore, useUser, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
-import type { Result, UserAnswerForReview } from '@/lib/types';
+import type { Result } from '@/lib/types';
 import Loading from '../loading';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
@@ -29,6 +29,20 @@ const getCecrlLevel = (scorePercentage: number) => {
   if (scorePercentage < 90) return { level: 'C1', color: 'bg-blue-500' };
   return { level: 'C2', color: 'bg-purple-500' };
 };
+
+const SectionResultCard = ({ title, icon, percentage, level, color }: { title: string, icon: React.ReactNode, percentage: number, level: string, color: string }) => (
+    <div className="flex flex-col items-center justify-center p-4 border rounded-lg">
+        <div className="flex items-center gap-2 mb-2">
+            {icon}
+            <CardTitle className="text-lg font-medium">{title}</CardTitle>
+        </div>
+        <Badge className={`px-3 py-1 text-md mb-2 ${color}`}>{level}</Badge>
+        <div className="w-full">
+            <Progress value={percentage} className="h-2" />
+            <p className="text-right text-sm font-semibold text-primary mt-1">{`${Math.round(percentage)}%`}</p>
+        </div>
+    </div>
+)
 
 export default function ResultsPage() {
   const { user, isUserLoading } = useUser();
@@ -45,6 +59,54 @@ export default function ResultsPage() {
     if (!results) return [];
     return results.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }, [results]);
+
+  const performanceMetrics = useMemo(() => {
+    if (!results || results.length === 0) {
+      return {
+        overall: { correct: 0, total: 0 },
+        listening: { correct: 0, total: 0 },
+        structure: { correct: 0, total: 0 },
+        reading: { correct: 0, total: 0 },
+      };
+    }
+
+    const metrics = {
+      overall: { correct: 0, total: 0 },
+      listening: { correct: 0, total: 0 },
+      structure: { correct: 0, total: 0 },
+      reading: { correct: 0, total: 0 },
+    };
+
+    for (const result of results) {
+        if (result.answers) {
+            for (const answer of result.answers) {
+                const section = answer.question.section;
+                metrics.overall.total++;
+                metrics[section].total++;
+                if (answer.isCorrect) {
+                    metrics.overall.correct++;
+                    metrics[section].correct++;
+                }
+            }
+        }
+    }
+    
+    return metrics;
+  }, [results]);
+  
+  const getPercentage = (correct: number, total: number) => {
+    return total > 0 ? (correct / total) * 100 : 0;
+  };
+
+  const overallPercentage = getPercentage(performanceMetrics.overall.correct, performanceMetrics.overall.total);
+  const listeningPercentage = getPercentage(performanceMetrics.listening.correct, performanceMetrics.listening.total);
+  const structurePercentage = getPercentage(performanceMetrics.structure.correct, performanceMetrics.structure.total);
+  const readingPercentage = getPercentage(performanceMetrics.reading.correct, performanceMetrics.reading.total);
+
+  const overallCecrl = getCecrlLevel(overallPercentage);
+  const listeningCecrl = getCecrlLevel(listeningPercentage);
+  const structureCecrl = getCecrlLevel(structurePercentage);
+  const readingCecrl = getCecrlLevel(readingPercentage);
 
   if (isUserLoading || isResultsLoading) {
     return <Loading />;
@@ -75,12 +137,6 @@ export default function ResultsPage() {
 
   const latestResult = sortedResults[0];
   const incorrectAnswers = (latestResult?.answers || []).filter(a => !a.isCorrect);
-  
-  const totalScoreSum = results.reduce((sum, result) => sum + result.totalScore, 0);
-  const totalQuestionSum = results.reduce((sum, result) => sum + result.questionCount, 0);
-  const averagePercentage = totalQuestionSum > 0 ? (totalScoreSum / totalQuestionSum) * 100 : 0;
-  
-  const cecrl = getCecrlLevel(averagePercentage);
 
   return (
     <div className="flex flex-col h-full">
@@ -92,22 +148,20 @@ export default function ResultsPage() {
               <CardTitle className="text-3xl">Your Overall Performance</CardTitle>
                <CardDescription>Based on all your {results.length} attempts.</CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col items-center space-y-4">
-              <div className="flex items-center gap-4">
-                <p className="text-xl">Estimated Level:</p>
-                <Badge
-                  className={`px-4 py-2 text-xl text-primary-foreground ${cecrl.color}`}
-                >
-                  {cecrl.level}
-                </Badge>
-              </div>
-              <div className="w-full max-w-sm space-y-2">
-                <div className="flex justify-between font-medium">
-                  <span>Average Score</span>
+            <CardContent className="space-y-6">
+                <div className="flex flex-col items-center space-y-4 p-4 bg-secondary/30 rounded-lg">
+                    <p className="text-xl font-semibold">Overall Estimated Level:</p>
+                    <Badge className={`px-6 py-2 text-2xl font-bold ${overallCecrl.color}`}>{overallCecrl.level}</Badge>
+                    <div className="w-full max-w-sm space-y-1">
+                        <Progress value={overallPercentage} className="h-3" />
+                        <p className="text-center text-sm font-medium text-muted-foreground">{`${performanceMetrics.overall.correct} / ${performanceMetrics.overall.total} correct`}</p>
+                    </div>
                 </div>
-                <Progress value={averagePercentage} className="h-4" />
-                <p className="text-right text-lg font-bold text-primary">{`${Math.round(averagePercentage)}%`}</p>
-              </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <SectionResultCard title="Listening" icon={<Headphones className="h-6 w-6 text-primary" />} percentage={listeningPercentage} level={listeningCecrl.level} color={listeningCecrl.color} />
+                    <SectionResultCard title="Grammar" icon={<Puzzle className="h-6 w-6 text-primary" />} percentage={structurePercentage} level={structureCecrl.level} color={structureCecrl.color} />
+                    <SectionResultCard title="Reading" icon={<BookOpenText className="h-6 w-6 text-primary" />} percentage={readingPercentage} level={readingCecrl.level} color={readingCecrl.color} />
+                </div>
             </CardContent>
           </Card>
 
