@@ -38,6 +38,11 @@ export default function TrainingSessionPage() {
     const config = sectionConfig[sectionSlug];
 
     const [isLoading] = useState(false);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const questions = useMemo(() => {
         if (!config || isNaN(testId)) return [];
@@ -54,7 +59,7 @@ export default function TrainingSessionPage() {
     const [timeLeft, setTimeLeft] = useState(config?.time ?? 0);
 
      useEffect(() => {
-        if (!config || isFinished) return;
+        if (!config || isFinished || !isClient) return;
 
         if (timeLeft <= 0) {
             handleNextQuestion(true); // Force finish the test
@@ -66,7 +71,7 @@ export default function TrainingSessionPage() {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [timeLeft, config, isFinished]);
+    }, [timeLeft, config, isFinished, isClient]);
 
 
     if (isLoading) {
@@ -273,7 +278,11 @@ export default function TrainingSessionPage() {
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center gap-2 text-lg font-semibold text-primary">
                             <Clock className="h-6 w-6" />
-                            <span>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
+                            {isClient ? (
+                                <span>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
+                            ) : (
+                                <span>--:--</span>
+                            )}
                         </div>
                         <div className="text-sm text-muted-foreground">
                             Question {currentQuestionIndex + 1} sur {questions.length}
