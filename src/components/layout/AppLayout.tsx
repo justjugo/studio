@@ -45,28 +45,44 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   };
   
   const isAuthPage = pathname === '/login' || pathname === '/signup';
+  const isVerifyEmailPage = pathname === '/verify-email';
 
   useEffect(() => {
     if (isUserLoading) return; // Wait until user status is resolved
 
-    if (!user && !isAuthPage) {
+    // If there's no user and they aren't on an auth page, redirect to login
+    if (!user && !isAuthPage && !isVerifyEmailPage) {
       router.push('/login');
     }
-  }, [user, isUserLoading, isAuthPage, router]);
+
+    // If there IS a user but their email is not verified,
+    // and they are NOT on the verify-email page, force them there.
+    if (user && !user.emailVerified && !isVerifyEmailPage) {
+      router.push('/verify-email');
+    }
+
+    // If the user IS verified and they land on an auth or verification page,
+    // send them to the dashboard.
+    if (user && user.emailVerified && (isAuthPage || isVerifyEmailPage)) {
+      router.push('/');
+    }
+
+  }, [user, isUserLoading, isAuthPage, isVerifyEmailPage, router]);
 
 
-  if (isAuthPage) {
+  // If it's an auth-related page, don't show the main layout
+  if (isAuthPage || isVerifyEmailPage) {
     return <AuthLayout>{children}</AuthLayout>;
   }
 
   // While checking auth status and not on an auth page, show a loader
-  if (isUserLoading && !isAuthPage) {
+  if (isUserLoading) {
     return <Loading />;
   }
   
-  // If no user and not on an auth page, the useEffect will redirect,
-  // so we can render null or a loader to avoid a flash of content.
-  if (!user && !isAuthPage) {
+  // If no user is authenticated (and we're not on an auth page), the useEffect will redirect.
+  // Render a loader to prevent a flash of content.
+  if (!user) {
       return <Loading />;
   }
 

@@ -28,12 +28,17 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (!isUserLoading && user) {
-      router.push('/');
+       if (user.emailVerified) {
+        router.push('/');
+      } else {
+        router.push('/verify-email');
+      }
     }
   }, [user, isUserLoading, router]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!auth) return;
     if (!email || !password) {
       toast({
         variant: 'destructive',
