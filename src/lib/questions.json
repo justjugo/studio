@@ -1,6 +1,48 @@
 
 [
   {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/tcf_listening_a1_sample.mp3",
+    "questionText": "Où se passe la conversation ?",
+    "options": [
+      { "id": "a", "text": "Dans une gare." },
+      { "id": "b", "text": "Dans un cinéma." },
+      { "id": "c", "text": "Dans un restaurant." },
+      { "id": "d", "text": "Dans une boulangerie." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "La conversation mentionne 'une baguette' et 'deux croissants', ce qui indique qu'elle se déroule dans une boulangerie."
+  },
+  {
+    "section": "listening",
+    "difficulty": "A2",
+    "audioSrc": "/audio/tcf_listening_a2_sample.mp3",
+    "questionText": "Quel est le problème ?",
+    "options": [
+      { "id": "a", "text": "Le train est annulé." },
+      { "id": "b", "text": "L'homme a perdu son billet." },
+      { "id": "c", "text": "Le train a du retard." },
+      { "id": "d", "text": "L'homme s'est trompé de quai." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'annonce indique que le train en provenance de Lyon aura 'un retard d'environ 20 minutes'."
+  },
+  {
+    "section": "listening",
+    "difficulty": "B1",
+    "audioSrc": "/audio/tcf_listening_b1_sample.mp3",
+    "questionText": "De quoi parle principalement le reportage ?",
+    "options": [
+      { "id": "a", "text": "D'un nouveau festival de musique." },
+      { "id": "b", "text": "D'une exposition d'art contemporain." },
+      { "id": "c", "text": "Des bienfaits du recyclage." },
+      { "id": "d", "text": "D'une initiative locale pour nettoyer les parcs." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Le reportage se concentre sur l'association 'Nettoyons notre ville' et son action dans les parcs locaux, interviewant des volontaires."
+  },
+  {
     "section": "structure",
     "difficulty": "A1",
     "questionText": "Nous ______ au marché le dimanche.",
@@ -783,5 +825,3 @@
     "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
   }
 ]
-
-    
