@@ -16,8 +16,18 @@ export default function AdminPage() {
   const [isSeeding, setIsSeeding] = useState(false);
 
   const handleSeedDatabase = () => {
+    if (!firestore) {
+      toast({
+        variant: 'destructive',
+        title: 'Firestore not available',
+        description: 'Please try again later.',
+      });
+      return;
+    }
     setIsSeeding(true);
     try {
+      // The type assertion is safe because seedQuestions now comes from a JSON file
+      // that matches the expected structure.
       batchUploadNonBlocking(firestore, 'questions', seedQuestions);
       toast({
         title: 'Database Seeding Initiated',
@@ -78,5 +88,3 @@ export default function AdminPage() {
     </div>
   );
 }
-
-    
