@@ -3,20 +3,20 @@
     {
       "id": "listening",
       "description": "A person with headphones on, focused on listening.",
-      "imageUrl": "https://images.unsplash.com/photo-1752055831529-669caee003c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmVzJTIwYXVkaW98ZW58MHx8fHwxNzU5NzcwNjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "headphones audio"
+      "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdWRpbyUyMGxpc3RlbmluZ3xlbnwwfHx8fDE3NTk3MDc5NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "audio listening"
     },
     {
       "id": "structure",
-      "description": "Abstract blocks fitting together like a puzzle.",
-      "imageUrl": "https://picsum.photos/seed/tcf-structure/600/400",
-      "imageHint": "puzzle abstract"
+      "description": "A close-up of a French grammar book.",
+      "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmVuY2glMjB0ZXh0Ym9va3xlbnwwfHx8fDE3NTk3MDgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grammar book"
     },
     {
       "id": "reading",
-      "description": "An open book with text on a wooden table.",
-      "imageUrl": "https://images.unsplash.com/photo-1532348374062-fee19177e98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b3BlbiUyMGJvb2t8ZW58MHx8fHwxNzU5NzA4MDEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "open book"
+      "description": "A person reading a French newspaper.",
+      "imageUrl": "https://images.unsplash.com/photo-1585250474322-adcf4a29a8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwbmV3c3BhcGVyfGVufDB8fHx8MTc1OTcwODAzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reading newspaper"
     },
     {
       "id": "practice-test",
