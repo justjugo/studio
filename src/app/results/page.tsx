@@ -61,7 +61,9 @@ export default function ResultsPage() {
   }, [results]);
 
   const performanceMetrics = useMemo(() => {
-    if (!results || results.length === 0) {
+    const recentResults = sortedResults.slice(0, 3);
+    
+    if (!recentResults || recentResults.length === 0) {
       return {
         overall: { correct: 0, total: 0 },
         listening: { correct: 0, total: 0 },
@@ -77,7 +79,7 @@ export default function ResultsPage() {
       reading: { correct: 0, total: 0 },
     };
 
-    for (const result of results) {
+    for (const result of recentResults) {
         if (result.answers) {
             for (const answer of result.answers) {
                 const section = answer.question.section;
@@ -92,7 +94,7 @@ export default function ResultsPage() {
     }
     
     return metrics;
-  }, [results]);
+  }, [sortedResults]);
   
   const getPercentage = (correct: number, total: number) => {
     return total > 0 ? (correct / total) * 100 : 0;
@@ -146,7 +148,7 @@ export default function ResultsPage() {
           <Card>
             <CardHeader className="text-center">
               <CardTitle className="text-3xl">Your Overall Performance</CardTitle>
-               <CardDescription>Based on all your {results.length} attempts.</CardDescription>
+               <CardDescription>Based on your {sortedResults.slice(0, 3).length} latest attempts.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
                 <div className="flex flex-col items-center space-y-4 p-4 bg-secondary/30 rounded-lg">
