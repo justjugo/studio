@@ -13,7 +13,6 @@ import {
   SidebarFooter,
   SidebarInset,
 } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
 import {
   LayoutDashboard,
   Lightbulb,
@@ -22,9 +21,29 @@ import {
   LogOut,
 } from 'lucide-react';
 import { Logo } from '../Logo';
+import { useAuth, useUser } from '@/firebase';
+import { getAuth, signOut } from 'firebase/auth';
+
+function AuthLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
+
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const { user } = useUser();
+  const auth = useAuth();
+
+  const handleLogout = () => {
+    signOut(auth);
+  };
+  
+  const isAuthPage = pathname === '/login' || pathname === '/signup';
+
+  if (isAuthPage) {
+    return <AuthLayout>{children}</AuthLayout>;
+  }
+
 
   const menuItems = [
     {
@@ -86,7 +105,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <SidebarFooter>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton size="lg" className="[&_span]:text-base">
+              <SidebarMenuButton size="lg" className="[&_span]:text-base" onClick={handleLogout}>
                 <LogOut />
                 <span>Logout</span>
               </SidebarMenuButton>

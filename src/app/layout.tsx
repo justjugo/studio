@@ -1,12 +1,14 @@
-import type { Metadata } from 'next';
+'use client';
+
 import './globals.css';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { Toaster } from '@/components/ui/toaster';
+import { FirebaseClientProvider } from '@/firebase/client-provider';
 
-export const metadata: Metadata = {
-  title: 'TCF Prep App',
-  description: 'Your personal companion to ace the TCF exam.',
-};
+function AuthLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
+
 
 export default function RootLayout({
   children,
@@ -16,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <title>TCF Prep App</title>
+        <meta name="description" content="Your personal companion to ace the TCF exam." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -24,8 +28,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <AppLayout>{children}</AppLayout>
-        <Toaster />
+        <FirebaseClientProvider>
+            <AppLayout>{children}</AppLayout>
+          <Toaster />
+        </FirebaseClientProvider>
       </body>
     </html>
   );

@@ -1,3 +1,8 @@
+'use client';
+
+import { useUser } from '@/firebase';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
 import {
   Card,
@@ -17,8 +22,22 @@ import {
   Target,
 } from 'lucide-react';
 import Link from 'next/link';
+import Loading from './loading';
 
 export default function DashboardPage() {
+  const { user, isUserLoading } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isUserLoading && !user) {
+      router.push('/login');
+    }
+  }, [user, isUserLoading, router]);
+
+  if (isUserLoading || !user) {
+    return <Loading />;
+  }
+
   const latestAttempt = userProgress.history[userProgress.history.length - 1];
   const averageScore =
     userProgress.history.length > 0
