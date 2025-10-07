@@ -2,21 +2,21 @@
   "placeholderImages": [
     {
       "id": "listening",
-      "description": "A person with headphones on, focused on listening.",
+      "description": "An illustration of a person with headphones on, focused on listening.",
       "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdWRpbyUyMGxpc3RlbmluZ3xlbnwwfHx8fDE3NTk3MDc5NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "audio listening"
+      "imageHint": "listening illustration"
     },
     {
       "id": "structure",
-      "description": "A close-up of a French grammar book.",
-      "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmVuY2glMjB0ZXh0Ym9va3xlbnwwfHx8fDE3NTk3MDgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grammar book"
+      "description": "An illustration of books and grammar concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFtbWFyJTIwYm9va3N8ZW58MHx8fHwxNzU5ODAzNzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grammar illustration"
     },
     {
       "id": "reading",
-      "description": "A person reading a French newspaper.",
-      "imageUrl": "https://images.unsplash.com/photo-1585250474322-adcf4a29a8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwbmV3c3BhcGVyfGVufDB8fHx8MTc1OTcwODAzMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "reading newspaper"
+      "description": "An illustration of a person reading a book.",
+      "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwYm9va3xlbnwwfHx8fDE3NTk4MDM3ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reading illustration"
     },
     {
       "id": "practice-test",
