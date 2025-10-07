@@ -12,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarFooter,
   SidebarInset,
+  SidebarSeparator,
 } from '@/components/ui/sidebar';
 import {
   LayoutDashboard,
@@ -22,7 +23,8 @@ import {
 } from 'lucide-react';
 import { Logo } from '../Logo';
 import { useAuth, useUser } from '@/firebase';
-import { getAuth, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
@@ -43,7 +45,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   if (isAuthPage) {
     return <AuthLayout>{children}</AuthLayout>;
   }
-
 
   const menuItems = [
     {
@@ -71,6 +72,15 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       isActive: pathname.startsWith('/results'),
     },
   ];
+
+  const getInitials = (name: string | null | undefined) => {
+    if (!name) return 'U';
+    const parts = name.split(' ');
+    if (parts.length > 1) {
+      return parts[0][0] + parts[parts.length - 1][0];
+    }
+    return name.substring(0, 2);
+  };
 
   return (
     <SidebarProvider>
@@ -102,7 +112,24 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             ))}
           </SidebarMenu>
         </SidebarContent>
-        <SidebarFooter>
+        <SidebarFooter className='gap-4'>
+            <SidebarSeparator />
+            {user && (
+                 <div className="flex items-center gap-3 px-2">
+                    <Avatar className="h-9 w-9">
+                        <AvatarImage src={user.photoURL || ''} alt={user.displayName || 'User'} />
+                        <AvatarFallback>{getInitials(user.displayName || user.email)}</AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                        <span className="text-sm font-semibold truncate text-sidebar-foreground">
+                            {user.displayName || 'Anonymous User'}
+                        </span>
+                        <span className="text-xs text-muted-foreground truncate">
+                            {user.email}
+                        </span>
+                    </div>
+                 </div>
+            )}
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" className="[&_span]:text-base" onClick={handleLogout}>
