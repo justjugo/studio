@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useCollection, useUser, useFirestore, useMemoFirebase } from '@/firebase';
@@ -23,7 +24,7 @@ import {
 import Link from 'next/link';
 import Loading from './loading';
 import { collection } from 'firebase/firestore';
-import type { Result, TestAttempt } from '@/lib/types';
+import type { Result } from '@/lib/types';
 
 
 export default function DashboardPage() {
@@ -40,23 +41,13 @@ export default function DashboardPage() {
 
   const userProgressHistory = useMemo(() => {
     if (!results) return [];
-    // Transform Firestore `Result` documents into `TestAttempt` objects
-    // This is a placeholder transformation. You might need to adjust it
-    // based on the actual structure of your `Result` documents.
     return results.map(result => ({
       id: result.id,
       date: result.createdAt, 
       score: result.totalScore,
-      // Assuming a fixed total number of questions for now
-      totalQuestions: 76, 
-      // Placeholder for timeTaken, as it's not in the Result entity
-      timeTaken: 4500, 
-      sections: {
-        // Placeholder for sections, as this requires more complex data fetching
-        listening: { score: 0, total: 29 },
-        reading: { score: 0, total: 29 },
-        structure: { score: 0, total: 18 },
-      },
+      totalQuestions: result.questionCount, 
+      timeTaken: 0, // Not tracked yet
+      testName: result.testName,
     })).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   }, [results]);
 
@@ -76,7 +67,7 @@ export default function DashboardPage() {
   const averageScore =
     userProgressHistory.length > 0
       ? userProgressHistory.reduce(
-          (acc, attempt) => acc + attempt.score / attempt.totalQuestions,
+          (acc, attempt) => acc + (attempt.score / attempt.totalQuestions),
           0
         ) / userProgressHistory.length
       : 0;
@@ -91,13 +82,20 @@ export default function DashboardPage() {
            <Card className="text-center p-8">
             <CardTitle>Welcome to TCF Prep!</CardTitle>
             <CardDescription className="mt-2">
-              You haven't taken any tests yet. Start with a practice test to see your progress here.
+              You haven't taken any tests yet. Start with a practice test or training to see your progress here.
             </CardDescription>
-            <Button asChild className="mt-6">
-              <Link href="/practice">
-                Start Full Practice Test <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
+            <div className="flex justify-center gap-4 mt-6">
+               <Button asChild variant="secondary">
+                <Link href="/training">
+                  Go to Training
+                </Link>
+              </Button>
+              <Button asChild>
+                <Link href="/practice">
+                  Start Full Practice Test <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
           </Card>
         ) : (
           <div className="space-y-8">
@@ -114,7 +112,7 @@ export default function DashboardPage() {
                     {latestAttempt ? `${Math.round((latestAttempt.score / latestAttempt.totalQuestions) * 100)}%` : 'N/A'}
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    on {latestAttempt ? new Date(latestAttempt.date).toLocaleDateString() : 'No tests taken'}
+                    on {latestAttempt ? latestAttempt.testName : ''}
                   </p>
                 </CardContent>
               </Card>
@@ -149,16 +147,16 @@ export default function DashboardPage() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Avg. Time
+                    Time Spent
                   </CardTitle>
                   <Clock className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">
-                    {latestAttempt ? `${Math.floor(latestAttempt.timeTaken / 60)}m ${latestAttempt.timeTaken % 60}s` : 'N/A'}
+                    --
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    On your last test
+                    Time tracking coming soon
                   </p>
                 </CardContent>
               </Card>

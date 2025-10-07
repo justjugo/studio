@@ -4,7 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { seedQuestions } from '@/lib/seed-data';
-import type { Question } from '@/lib/types';
+import type { Question, Result } from '@/lib/types';
 import Loading from '@/app/loading';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,6 +16,9 @@ import { Progress } from '@/components/ui/progress';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle2, XCircle, Lightbulb, ArrowRight, Clock, BookOpenCheck, Repeat } from 'lucide-react';
 import Link from 'next/link';
+import { useAuth, useFirestore, useUser } from '@/firebase';
+import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
+import { collection } from 'firebase/firestore';
 
 // Mapping URL slug to section name in database and time limits
 const sectionConfig: { [key: string]: { name: string; time: number; questionCount: number } } = {
@@ -33,6 +36,9 @@ type UserAnswer = {
 export default function TrainingSessionPage() {
     const params = useParams();
     const router = useRouter();
+    const { user } = useUser();
+    const firestore = useFirestore();
+
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const testId = typeof params.testId === 'string' ? parseInt(params.testId, 10) : NaN;
     const config = sectionConfig[sectionSlug];
@@ -118,15 +124,40 @@ export default function TrainingSessionPage() {
             </div>
         );
     }
+
+    const saveResult = (answers: UserAnswer[]) => {
+        if (!user || !firestore) return;
+    
+        const correctCount = answers.filter(a => a.isCorrect).length;
+        const totalAnswered = answers.length;
+    
+        const resultData: Omit<Result, 'id'> = {
+            userId: user.uid,
+            sessionId: `training-${sectionSlug}-${testId}-${Date.now()}`,
+            totalScore: correctCount,
+            questionCount: totalAnswered,
+            createdAt: new Date().toISOString(),
+            globalCefrLevel: 'N/A', // Not calculated for training
+            scores: [],
+            validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
+            type: 'training',
+            testName: `Training: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`
+        };
+    
+        const resultsCollection = collection(firestore, 'users', user.uid, 'results');
+        addDocumentNonBlocking(resultsCollection, resultData);
+    };
     
     const handleNextQuestion = (forceFinish = false) => {
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedOptionId === currentQuestion.correctOptionId;
         
-        setUserAnswers(prevAnswers => [...prevAnswers, { question: currentQuestion, selectedOptionId, isCorrect }]);
+        const newAnswers = [...userAnswers, { question: currentQuestion, selectedOptionId, isCorrect }];
+        setUserAnswers(newAnswers);
         
         if (forceFinish || currentQuestionIndex >= questions.length - 1) {
             setIsFinished(true);
+            saveResult(newAnswers);
         } else {
             setCurrentQuestionIndex(prev => prev + 1);
             setSelectedOptionId(null);

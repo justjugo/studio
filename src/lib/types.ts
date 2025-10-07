@@ -1,5 +1,6 @@
+
 export interface Question {
-  id?: number; // Made id optional as it's not in the JSON for local usage
+  id?: string; 
   section: 'listening' | 'reading' | 'structure';
   difficulty: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
   questionText?: string;
@@ -9,7 +10,7 @@ export interface Question {
     text: string;
   }[];
   correctOptionId: string;
-  explanation?: string; // made explanation optional
+  explanation?: string; 
   explanationVideoUrl?: string;
 }
 
@@ -34,11 +35,14 @@ export type Section = 'listening' | 'reading' | 'structure';
 
 // This type represents the structure of the `Result` document in Firestore.
 export interface Result {
-  id: string;
+  id?: string;
   sessionId: string;
   userId: string;
-  scores: string[]; // Array of Score document IDs
+  scores: any[]; // Simplified for now
   totalScore: number;
+  questionCount: number;
+  type: 'practice' | 'training';
+  testName: string;
   globalCefrLevel: string;
   createdAt: string; // ISO date string
   validUntil: string; // ISO date string

@@ -4,7 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { seedQuestions } from '@/lib/seed-data';
-import type { Question } from '@/lib/types';
+import type { Question, Result } from '@/lib/types';
 import Loading from '@/app/loading';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,8 +15,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Progress } from '@/components/ui/progress';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle2, XCircle, Lightbulb, ArrowRight, Clock, BookOpenCheck, Repeat } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { useUser, useFirestore } from '@/firebase';
+import { collection } from 'firebase/firestore';
+import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
 
 // Mapping URL slug to test configuration
 const testConfig = {
@@ -42,6 +44,8 @@ type UserAnswer = {
 export default function PracticeSessionPage() {
     const params = useParams();
     const router = useRouter();
+    const { user } = useUser();
+    const firestore = useFirestore();
     const testType = typeof params.type === 'string' && params.type in testConfig ? params.type as keyof typeof testConfig : null;
     const config = testType ? testConfig[testType] : null;
     
@@ -49,7 +53,9 @@ export default function PracticeSessionPage() {
 
     const questions = useMemo(() => {
         if (!config) return [];
-        return (seedQuestions as Question[])
+        const allQuestions = seedQuestions as Question[];
+        return allQuestions
+            .map((q, index) => ({ ...q, id: q.id ?? `q-${index}`}))
             .filter(q => config.sections.includes(q.section));
     }, [config]);
 
@@ -124,15 +130,40 @@ export default function PracticeSessionPage() {
             </div>
         );
     }
+
+    const saveResult = (answers: UserAnswer[]) => {
+        if (!user || !firestore || !testType) return;
+    
+        const correctCount = answers.filter(a => a.isCorrect).length;
+        const totalAnswered = answers.length;
+    
+        const resultData: Omit<Result, 'id'> = {
+            userId: user.uid,
+            sessionId: `practice-${testType}-${Date.now()}`,
+            totalScore: correctCount,
+            questionCount: totalAnswered,
+            createdAt: new Date().toISOString(),
+            globalCefrLevel: 'N/A', // Not calculated for training
+            scores: [],
+            validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
+            type: 'practice',
+            testName: config.title
+        };
+    
+        const resultsCollection = collection(firestore, 'users', user.uid, 'results');
+        addDocumentNonBlocking(resultsCollection, resultData);
+    };
     
     const handleNextQuestion = (forceFinish = false) => {
         const currentQuestion = questions[currentQuestionIndex];
         const isCorrect = selectedOptionId === currentQuestion.correctOptionId;
         
-        setUserAnswers(prevAnswers => [...prevAnswers, { question: currentQuestion, selectedOptionId, isCorrect }]);
+        const newAnswers = [...userAnswers, { question: currentQuestion, selectedOptionId, isCorrect }];
+        setUserAnswers(newAnswers);
         
         if (forceFinish || currentQuestionIndex >= questions.length - 1) {
             setIsFinished(true);
+            saveResult(newAnswers);
         } else {
             setCurrentQuestionIndex(prev => prev + 1);
             setSelectedOptionId(null);
