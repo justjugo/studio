@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   SidebarProvider,
   Sidebar,
@@ -20,11 +20,14 @@ import {
   ClipboardList,
   User,
   LogOut,
+  BarChart3,
 } from 'lucide-react';
 import { Logo } from '../Logo';
 import { useAuth, useUser } from '@/firebase';
 import { signOut } from 'firebase/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { useEffect } from 'react';
+import Loading from '@/app/loading';
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
@@ -33,8 +36,9 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const { user } = useUser();
+  const { user, isUserLoading } = useUser();
   const auth = useAuth();
+  const router = useRouter();
 
   const handleLogout = () => {
     signOut(auth);
@@ -42,8 +46,28 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   
   const isAuthPage = pathname === '/login' || pathname === '/signup';
 
+  useEffect(() => {
+    if (isUserLoading) return; // Wait until user status is resolved
+
+    if (!user && !isAuthPage) {
+      router.push('/login');
+    }
+  }, [user, isUserLoading, isAuthPage, router]);
+
+
   if (isAuthPage) {
     return <AuthLayout>{children}</AuthLayout>;
+  }
+
+  // While checking auth status and not on an auth page, show a loader
+  if (isUserLoading && !isAuthPage) {
+    return <Loading />;
+  }
+  
+  // If no user and not on an auth page, the useEffect will redirect,
+  // so we can render null or a loader to avoid a flash of content.
+  if (!user && !isAuthPage) {
+      return <Loading />;
   }
 
   const menuItems = [
@@ -68,7 +92,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
      {
       href: '/results',
       label: 'Results',
-      icon: User,
+      icon: BarChart3,
       isActive: pathname.startsWith('/results'),
     },
   ];
