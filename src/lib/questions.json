@@ -1,229 +1,4 @@
-
 [
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/tcf_listening_a1_sample.mp3",
-    "questionText": "Où se passe la conversation ?",
-    "options": [
-      { "id": "a", "text": "Dans une gare." },
-      { "id": "b", "text": "Dans un cinéma." },
-      { "id": "c", "text": "Dans un restaurant." },
-      { "id": "d", "text": "Dans une boulangerie." }
-    ],
-    "correctOptionId": "d",
-    "explanation": "La conversation mentionne 'une baguette' et 'deux croissants', ce qui indique qu'elle se déroule dans une boulangerie."
-  },
-  {
-    "section": "listening",
-    "difficulty": "A2",
-    "audioSrc": "/audio/tcf_listening_a2_sample.mp3",
-    "questionText": "Quel est le problème ?",
-    "options": [
-      { "id": "a", "text": "Le train est annulé." },
-      { "id": "b", "text": "L'homme a perdu son billet." },
-      { "id": "c", "text": "Le train a du retard." },
-      { "id": "d", "text": "L'homme s'est trompé de quai." }
-    ],
-    "correctOptionId": "c",
-    "explanation": "L'annonce indique que le train en provenance de Lyon aura 'un retard d'environ 20 minutes'."
-  },
-  {
-    "section": "listening",
-    "difficulty": "B1",
-    "audioSrc": "/audio/tcf_listening_b1_sample.mp3",
-    "questionText": "De quoi parle principalement le reportage ?",
-    "options": [
-      { "id": "a", "text": "D'un nouveau festival de musique." },
-      { "id": "b", "text": "D'une exposition d'art contemporain." },
-      { "id": "c", "text": "Des bienfaits du recyclage." },
-      { "id": "d", "text": "D'une initiative locale pour nettoyer les parcs." }
-    ],
-    "correctOptionId": "d",
-    "explanation": "Le reportage se concentre sur l'association 'Nettoyons notre ville' et son action dans les parcs locaux, interviewant des volontaires."
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 4 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 5 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 6 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 7 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 8 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 9 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 10 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 11 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 12 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 13 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 14 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 15 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 16 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 17 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 18 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 19 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 20 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 21 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 22 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 23 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 24 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 25 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 26 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 27 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 28 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
-  {
-    "section": "listening",
-    "difficulty": "A1",
-    "audioSrc": "/audio/placeholder.mp3",
-    "questionText": "Question 29 listening",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
-  },
   {
     "section": "structure",
     "difficulty": "A1",
@@ -539,7 +314,7 @@
   {
     "section": "structure",
     "difficulty": "B2",
-    "questionText": "Il a plu toute la nuit, si bien qu'au matin, la rivière ______.",
+    "questionText": "Il a plu toute la nuit, si bien qu'au matin, la rivière ______. ",
     "options": [
       { "id": "a", "text": "débordait" },
       { "id": "b", "text": "a débordé" },
@@ -693,6 +468,1164 @@
     "explanation": "'Tel que' est utilisé pour introduire un exemple ou une précision. Ici, 'tel que je l'ai vu' signifie 'dans l'état où je l'ai vu'."
   },
   {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Elle ______ couche à 22h.",
+    "options": [
+      { "id": "a", "text": "se" },
+      { "id": "b", "text": "me" },
+      { "id": "c", "text": "te" },
+      { "id": "d", "text": "nous" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'coucher' est réflexif quand il signifie 'aller au lit', donc il prend 'se' pour 'elle'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Tu vas à Paris ? Oui, j'______ vais demain.",
+    "options": [
+      { "id": "a", "text": "en" },
+      { "id": "b", "text": "y" },
+      { "id": "c", "text": "le" },
+      { "id": "d", "text": "la" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le pronom 'y' remplace une préposition de lieu comme 'à Paris'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Tu veux du café ? Oui, j'______ veux.",
+    "options": [
+      { "id": "a", "text": "y" },
+      { "id": "b", "text": "en" },
+      { "id": "c", "text": "le" },
+      { "id": "d", "text": "lui" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le pronom 'en' remplace une quantité indéfinie comme 'du café' (de + chose)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Le livre ______ par l'auteur en 1990.",
+    "options": [
+      { "id": "a", "text": "a écrit" },
+      { "id": "b", "text": "est écrit" },
+      { "id": "c", "text": "était écrit" },
+      { "id": "d", "text": "a été écrit" }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Au passé composé de la voix passive, on utilise 'a été' + participe passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il a dit : 'Je viendrai demain.' → Il a dit qu'il ______ le lendemain.",
+    "options": [
+      { "id": "a", "text": "viendra" },
+      { "id": "b", "text": "viendrait" },
+      { "id": "c", "text": "venait" },
+      { "id": "d", "text": "vient" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Dans le discours indirect, le futur simple se transforme en conditionnel présent."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Il court ______. (rapide)",
+    "options": [
+      { "id": "a", "text": "rapide" },
+      { "id": "b", "text": "rapid" },
+      { "id": "c", "text": "rapidement" },
+      { "id": "d", "text": "rapides" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les adverbes se forment souvent en ajoutant '-ment' à l'adjectif féminin."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Pouvez-vous me dire où ______ le musée ?",
+    "options": [
+      { "id": "a", "text": "est" },
+      { "id": "b", "text": "est le musée" },
+      { "id": "c", "text": "le musée est" },
+      { "id": "d", "text": "est-il" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans une question indirecte, il n'y a pas d'inversion sujet-verbe ; l'ordre est sujet-verbe."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Je bois ______ eau.",
+    "options": [
+      { "id": "a", "text": "de l'" },
+      { "id": "b", "text": "du" },
+      { "id": "c", "text": "le" },
+      { "id": "d", "text": "un" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Pour les substances non comptables comme 'eau' (féminin), on utilise l'article partitif 'de l'' avant voyelle."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Demain, il ______ beau.",
+    "options": [
+      { "id": "a", "text": "fera" },
+      { "id": "b", "text": "fait" },
+      { "id": "c", "text": "a fait" },
+      { "id": "d", "text": "faisait" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Au futur simple, le verbe impersonnel 'faire' (pour la météo) devient 'fera'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Quand je suis arrivé, il ______ déjà parti.",
+    "options": [
+      { "id": "a", "text": "a" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "était" },
+      { "id": "d", "text": "avait" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le plus-que-parfait pour une action antérieure au passé : auxiliaire à l'imparfait + participe passé (était parti pour verbe de mouvement avec être)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il est possible qu'il ______ hier.",
+    "options": [
+      { "id": "a", "text": "est venu" },
+      { "id": "b", "text": "vienne" },
+      { "id": "c", "text": "soit venu" },
+      { "id": "d", "text": "venait" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le subjonctif passé pour une action antérieure : auxiliaire au subjonctif présent + participe passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Hier, il ______ à la maison.",
+    "options": [
+      { "id": "a", "text": "vint" },
+      { "id": "b", "text": "vena" },
+      { "id": "c", "text": "viens" },
+      { "id": "d", "text": "venir" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le passé simple du verbe 'venir' pour 'il' est 'vint', utilisé dans les récits littéraires."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Il fallait qu'il ______ attention.",
+    "options": [
+      { "id": "a", "text": "fait" },
+      { "id": "b", "text": "fasse" },
+      { "id": "c", "text": "fît" },
+      { "id": "d", "text": "fera" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Dans un style littéraire ou formel, après un verbe au passé, on utilise l'imparfait du subjonctif : 'fît' pour 'faire'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "C'est mon livre, et c'est ______ . (à toi)",
+    "options": [
+      { "id": "a", "text": "le tien" },
+      { "id": "b", "text": "la tienne" },
+      { "id": "c", "text": "les tiens" },
+      { "id": "d", "text": "le mien" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom possessif 'le tien' remplace un nom masculin singulier appartenant à 'tu'."
+  },
+  
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "J'aime cette robe, mais je préfère ______ .",
+    "options": [
+      { "id": "a", "text": "ce" },
+      { "id": "b", "text": "celui" },
+      { "id": "c", "text": "celle" },
+      { "id": "d", "text": "ceux" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le pronom démonstratif 'celle' remplace un nom féminin singulier (robe)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Je ______ français tous les jours.",
+    "options": [
+      { "id": "a", "text": "parle" },
+      { "id": "b", "text": "parles" },
+      { "id": "c", "text": "parlons" },
+      { "id": "d", "text": "parlez" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'parler' à la première personne du singulier (je) au présent de l'indicatif est 'parle'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "C'est ______ maison de mes parents.",
+    "options": [
+      { "id": "a", "text": "le" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "l'" },
+      { "id": "d", "text": "les" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Maison' est un nom féminin singulier, donc on utilise l'article défini 'la'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "______ vous parlez français ?",
+    "options": [
+      { "id": "a", "text": "Est-ce que" },
+      { "id": "b", "text": "Ce que" },
+      { "id": "c", "text": "Pourquoi" },
+      { "id": "d", "text": "Quand" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Est-ce que' est utilisé pour former une question dans un registre courant."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Nous ______ à l’école à pied.",
+    "options": [
+      { "id": "a", "text": "va" },
+      { "id": "b", "text": "vont" },
+      { "id": "c", "text": "allons" },
+      { "id": "d", "text": "allez" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le verbe 'aller' à la première personne du pluriel (nous) au présent est 'allons'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Il n’a ______ de vélo.",
+    "options": [
+      { "id": "a", "text": "pas" },
+      { "id": "b", "text": "plus" },
+      { "id": "c", "text": "rien" },
+      { "id": "d", "text": "jamais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La négation simple avec le verbe 'avoir' utilise 'ne... pas'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Elle ______ levée tôt ce matin.",
+    "options": [
+      { "id": "a", "text": "s’est" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "a" },
+      { "id": "d", "text": "se" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe pronominal 'se lever' au passé composé utilise l’auxiliaire 'être' et s’accorde avec le sujet : 'elle s’est levée'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Nous allons ______ cinéma ce soir.",
+    "options": [
+      { "id": "a", "text": "au" },
+      { "id": "b", "text": "à" },
+      { "id": "c", "text": "dans" },
+      { "id": "d", "text": "en" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "On utilise 'au' (à + le) devant un nom masculin singulier comme 'cinéma'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Ce sont ______ amis de Paul.",
+    "options": [
+      { "id": "a", "text": "les" },
+      { "id": "b", "text": "des" },
+      { "id": "c", "text": "de" },
+      { "id": "d", "text": "d’" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "L’article défini 'les' est utilisé ici car il s’agit d’amis spécifiques (ceux de Paul)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Il travaille ______ sérieusement.",
+    "options": [
+      { "id": "a", "text": "sérieux" },
+      { "id": "b", "text": "sérieuse" },
+      { "id": "c", "text": "sérieusement" },
+      { "id": "d", "text": "sérieuses" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L’adverbe 'sérieusement' est formé à partir de l’adjectif 'sérieux' pour décrire la manière de travailler."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Tu veux du thé ? Oui, j’______ veux.",
+    "options": [
+      { "id": "a", "text": "y" },
+      { "id": "b", "text": "en" },
+      { "id": "c", "text": "le" },
+      { "id": "d", "text": "la" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le pronom 'en' remplace une quantité indéfinie comme 'du thé' (partitif)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Si tu ______ plus tôt, tu aurais vu le film.",
+    "options": [
+      { "id": "a", "text": "arrives" },
+      { "id": "b", "text": "es arrivé" },
+      { "id": "c", "text": "étais arrivé" },
+      { "id": "d", "text": "arriveras" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La structure 'si + plus-que-parfait, conditionnel passé' est utilisée pour exprimer un regret ou une hypothèse sur le passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "C’est la ville ______ j’ai grandi.",
+    "options": [
+      { "id": "a", "text": "où" },
+      { "id": "b", "text": "que" },
+      { "id": "c", "text": "qui" },
+      { "id": "d", "text": "dont" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom relatif 'où' est utilisé pour indiquer un lieu dans une proposition relative."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Il faut que nous ______ à l’heure.",
+    "options": [
+      { "id": "a", "text": "arrivons" },
+      { "id": "b", "text": "arrivions" },
+      { "id": "c", "text": "arriverons" },
+      { "id": "d", "text": "sommes arrivés" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Après 'il faut que', on utilise le subjonctif présent. Pour 'nous' et le verbe 'arriver', c’est 'arrivions'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Cette maison ______ construite en 1900.",
+    "options": [
+      { "id": "a", "text": "a été" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "était" },
+      { "id": "d", "text": "sera" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La voix passive au passé composé utilise 'a été' + participe passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Je ______ à Paris depuis cinq ans.",
+    "options": [
+      { "id": "a", "text": "habite" },
+      { "id": "b", "text": "ai habité" },
+      { "id": "c", "text": "habitais" },
+      { "id": "d", "text": "habiterai" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Pour exprimer une action commencée dans le passé et qui continue, on utilise le présent ('habite') ou le passé composé ('ai habité') avec 'depuis'. Ici, 'ai habité' est plus courant en français courant."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il m’a dit qu’il ______ demain.",
+    "options": [
+      { "id": "a", "text": "viendra" },
+      { "id": "b", "text": "viendrait" },
+      { "id": "c", "text": "vient" },
+      { "id": "d", "text": "venait" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Dans le discours indirect, le futur simple ('viendra') se transforme en conditionnel présent ('viendrait')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Avant que tu ______, appelle-moi.",
+    "options": [
+      { "id": "a", "text": "pars" },
+      { "id": "b", "text": "partes" },
+      { "id": "c", "text": "partiras" },
+      { "id": "d", "text": "es parti" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La conjonction 'avant que' est suivie du subjonctif présent pour une action future."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il parle ______ qu’il sait tout.",
+    "options": [
+      { "id": "a", "text": "comme" },
+      { "id": "b", "text": "comme si" },
+      { "id": "c", "text": "tel que" },
+      { "id": "d", "text": "pour que" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Comme si' introduit une hypothèse ou une comparaison irréelle, suivie du subjonctif ou du conditionnel."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "______ tu sois fatigué, tu dois continuer.",
+    "options": [
+      { "id": "a", "text": "Bien que" },
+      { "id": "b", "text": "Quoi que" },
+      { "id": "c", "text": "Si" },
+      { "id": "d", "text": "À moins que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Bien que' introduit une concession et est suivi du subjonctif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Si nous ______ plus tôt, nous aurons fini avant midi.",
+    "options": [
+      { "id": "a", "text": "commençons" },
+      { "id": "b", "text": "commencerons" },
+      { "id": "c", "text": "commencions" },
+      { "id": "d", "text": "avons commencé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La structure 'si + présent, futur' est utilisée pour une hypothèse réalisable dans le futur."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Jusqu’à ce qu’il ______ , nous attendrons.",
+    "options": [
+      { "id": "a", "text": "arrive" },
+      { "id": "b", "text": "arrivera" },
+      { "id": "c", "text": "soit arrivé" },
+      { "id": "d", "text": "arrivait" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Jusqu’à ce que' est suivi du subjonctif passé pour une action antérieure dans le futur."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il ______ que nous fussions prêts à temps.",
+    "options": [
+      { "id": "a", "text": "exigeait" },
+      { "id": "b", "text": "exige" },
+      { "id": "c", "text": "exigerait" },
+      { "id": "d", "text": "a exigé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans un registre formel, après 'exiger que' au passé, on utilise l’imparfait du subjonctif ('fussions')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "______ il pleuve, nous irons à la plage.",
+    "options": [
+      { "id": "a", "text": "Quoi que" },
+      { "id": "b", "text": "Même si" },
+      { "id": "c", "text": "À moins que" },
+      { "id": "d", "text": "Pour que" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Même si' introduit une concession hypothétique et est suivi du subjonctif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il est parti sans que je ______ le voir.",
+    "options": [
+      { "id": "a", "text": "puisse" },
+      { "id": "b", "text": "peux" },
+      { "id": "c", "text": "pouvais" },
+      { "id": "d", "text": "pourrai" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Sans que' est suivi du subjonctif présent pour une action non réalisée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Il ______ des années qu’il n’avait vu un tel spectacle.",
+    "options": [
+      { "id": "a", "text": "faisait" },
+      { "id": "b", "text": "fît" },
+      { "id": "c", "text": "fit" },
+      { "id": "d", "text": "fera" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "L’imparfait ('faisait') est utilisé pour une description au passé dans un registre standard."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Que n’______-tu dit plus tôt !",
+    "options": [
+      { "id": "a", "text": "eusses" },
+      { "id": "b", "text": "eus" },
+      { "id": "c", "text": "as" },
+      { "id": "d", "text": "avais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans une exclamation hypothétique au passé, 'que' + plus-que-parfait du subjonctif ('eusses') est utilisé dans un registre littéraire."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "C’est ______ qui a gagné le match.",
+    "options": [
+      { "id": "a", "text": "lui" },
+      { "id": "b", "text": "il" },
+      { "id": "c", "text": "le" },
+      { "id": "d", "text": "la" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom tonique 'lui' est utilisé après 'c’est' pour mettre l’accent sur la personne."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Je n’ai ______ de temps pour lire.",
+    "options": [
+      { "id": "a", "text": "pas" },
+      { "id": "b", "text": "plus" },
+      { "id": "c", "text": "rien" },
+      { "id": "d", "text": "jamais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La négation 'ne... pas' est utilisée avec 'de temps' pour exprimer l’absence."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Il ______ parti avant l’orage.",
+    "options": [
+      { "id": "a", "text": "est" },
+      { "id": "b", "text": "a" },
+      { "id": "c", "text": "était" },
+      { "id": "d", "text": "sera" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le plus-que-parfait ('était parti') indique une action antérieure à une autre action passée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Tu peux me prêter ton livre ? Oui, je ______ prête.",
+    "options": [
+      { "id": "a", "text": "le" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "l’" },
+      { "id": "d", "text": "les" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom 'le' remplace un nom masculin singulier comme 'livre'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Nous ______ terminé avant la réunion.",
+    "options": [
+      { "id": "a", "text": "aurons" },
+      { "id": "b", "text": "avons" },
+      { "id": "c", "text": "avions" },
+      { "id": "d", "text": "aurions" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le futur antérieur ('aurons terminé') indique une action qui sera achevée avant un moment futur."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il est parti sans ______ son nom.",
+    "options": [
+      { "id": "a", "text": "dire" },
+      { "id": "b", "text": "disant" },
+      { "id": "c", "text": "dit" },
+      { "id": "d", "text": "avoir dit" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Après 'sans', on utilise l’infinitif pour indiquer une action non réalisée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "______ il ait tort, il insiste.",
+    "options": [
+      { "id": "a", "text": "Bien que" },
+      { "id": "b", "text": "Quoique" },
+      { "id": "c", "text": "Si" },
+      { "id": "d", "text": "À moins que" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Quoique' est suivi du subjonctif et exprime une concession, comme 'bien que'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il a agi de ______ qu’on ne s’y attendait pas.",
+    "options": [
+      { "id": "a", "text": "telle sorte" },
+      { "id": "b", "text": "tel manière" },
+      { "id": "c", "text": "telle façon" },
+      { "id": "d", "text": "tel point" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L’expression correcte est 'de telle façon que' pour indiquer la manière."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Il ______ qu’il vînt à l’heure.",
+    "options": [
+      { "id": "a", "text": "voulut" },
+      { "id": "b", "text": "veut" },
+      { "id": "c", "text": "voulait" },
+      { "id": "d", "text": "voudra" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans un style littéraire, après 'vouloir que' au passé simple ('voulut'), on utilise l’imparfait du subjonctif ('vînt')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "______ la situation, il décida de partir.",
+    "options": [
+      { "id": "a", "text": "Étant donné" },
+      { "id": "b", "text": "Étant données" },
+      { "id": "c", "text": "Étant donné que" },
+      { "id": "d", "text": "Étant données que" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Étant donné que' est une locution conjonctive introduisant une cause."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Elle ______ une pomme.",
+    "options": [
+      { "id": "a", "text": "mange" },
+      { "id": "b", "text": "manges" },
+      { "id": "c", "text": "mangez" },
+      { "id": "d", "text": "mangons" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'manger' à la troisième personne du singulier (elle) au présent est 'mange'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Il ______ deux chats dans son appartement.",
+    "options": [
+      { "id": "a", "text": "a" },
+      { "id": "b", "text": "as" },
+      { "id": "c", "text": "avons" },
+      { "id": "d", "text": "ont" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'avoir' à la troisième personne du singulier (il) au présent est 'a'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "______ est votre professeur ?",
+    "options": [
+      { "id": "a", "text": "Qui" },
+      { "id": "b", "text": "Que" },
+      { "id": "c", "text": "Où" },
+      { "id": "d", "text": "Quand" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Qui' est le pronom interrogatif utilisé pour demander l’identité d’une personne en position de sujet."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Nous ______ dans une petite ville.",
+    "options": [
+      { "id": "a", "text": "habite" },
+      { "id": "b", "text": "habitons" },
+      { "id": "c", "text": "habitez" },
+      { "id": "d", "text": "habitent" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le verbe 'habiter' à la première personne du pluriel (nous) au présent est 'habitons'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "C’est ______ stylo rouge.",
+    "options": [
+      { "id": "a", "text": "un" },
+      { "id": "b", "text": "le" },
+      { "id": "c", "text": "la" },
+      { "id": "d", "text": "l’" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Stylo' est un nom masculin singulier, et ici l’article indéfini 'un' est utilisé pour un objet non spécifique."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Tu ______ à la piscine ?",
+    "options": [
+      { "id": "a", "text": "va" },
+      { "id": "b", "text": "vas" },
+      { "id": "c", "text": "vais" },
+      { "id": "d", "text": "vont" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le verbe 'aller' à la deuxième personne du singulier (tu) au présent est 'vas'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Ils se sont ______ pour le mariage.",
+    "options": [
+      { "id": "a", "text": "préparé" },
+      { "id": "b", "text": "préparés" },
+      { "id": "c", "text": "préparer" },
+      { "id": "d", "text": "préparées" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le verbe pronominal 'se préparer' au passé composé utilise l’auxiliaire 'être' et s’accorde avec le sujet 'ils' (masculin pluriel) : 'se sont préparés'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "J’ai besoin ______ crayon.",
+    "options": [
+      { "id": "a", "text": "d’un" },
+      { "id": "b", "text": "de" },
+      { "id": "c", "text": "du" },
+      { "id": "d", "text": "des" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Avec l’expression 'avoir besoin de', on utilise l’article indéfini 'd’un' pour un nom masculin singulier comme 'crayon'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Elle chante ______ bien.",
+    "options": [
+      { "id": "a", "text": "très" },
+      { "id": "b", "text": "trop" },
+      { "id": "c", "text": "beaucoup" },
+      { "id": "d", "text": "peu" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Très' est un adverbe d’intensité utilisé avec un autre adverbe, comme 'bien', pour exprimer un degré élevé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "C’est ______ voiture de mon frère.",
+    "options": [
+      { "id": "a", "text": "le" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "l’" },
+      { "id": "d", "text": "une" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Voiture' est un nom féminin singulier, donc on utilise l’article défini 'la'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Je ______ vois souvent.",
+    "options": [
+      { "id": "a", "text": "le" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "l’" },
+      { "id": "d", "text": "les" }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Le pronom 'les' remplace un complément d’objet direct pluriel, ici représentant plusieurs personnes."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Si j’______ riche, j’achèterais une maison.",
+    "options": [
+      { "id": "a", "text": "suis" },
+      { "id": "b", "text": "étais" },
+      { "id": "c", "text": "serais" },
+      { "id": "d", "text": "sois" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La structure 'si + imparfait, conditionnel présent' est utilisée pour une hypothèse irréelle dans le présent."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "C’est une histoire ______ tout le monde connaît.",
+    "options": [
+      { "id": "a", "text": "que" },
+      { "id": "b", "text": "qui" },
+      { "id": "c", "text": "dont" },
+      { "id": "d", "text": "où" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Que' est le pronom relatif utilisé comme complément d’objet direct de 'connaît'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Il est essentiel que tu ______ à temps.",
+    "options": [
+      { "id": "a", "text": "arrives" },
+      { "id": "b", "text": "arriveras" },
+      { "id": "c", "text": "arrivais" },
+      { "id": "d", "text": "arrives" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Après 'il est essentiel que', on utilise le subjonctif présent. Pour 'tu' et 'arriver', c’est 'arrives'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Cette chanson ______ composée par un artiste célèbre.",
+    "options": [
+      { "id": "a", "text": "a été" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "était" },
+      { "id": "d", "text": "sera" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La voix passive au passé composé utilise 'a été' + participe passé pour une action achevée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Je lui ______ donné un cadeau.",
+    "options": [
+      { "id": "a", "text": "ai" },
+      { "id": "b", "text": "a" },
+      { "id": "c", "text": "est" },
+      { "id": "d", "text": "suis" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'donner' au passé composé utilise l’auxiliaire 'avoir'. Avec 'je', c’est 'ai'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Elle m’a dit qu’elle ______ fatiguée.",
+    "options": [
+      { "id": "a", "text": "est" },
+      { "id": "b", "text": "était" },
+      { "id": "c", "text": "soit" },
+      { "id": "d", "text": "sera" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Dans le discours indirect, le présent ('est') devient l’imparfait ('était') si le verbe principal est au passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Tant que tu ______ pas, je reste ici.",
+    "options": [
+      { "id": "a", "text": "reviens" },
+      { "id": "b", "text": "reviennes" },
+      { "id": "c", "text": "reviendras" },
+      { "id": "d", "text": "es revenu" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Tant que' dans le sens de 'jusqu’à ce que' est suivi du subjonctif présent pour une action future."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il agit ______ il était le chef.",
+    "options": [
+      { "id": "a", "text": "comme" },
+      { "id": "b", "text": "comme si" },
+      { "id": "c", "text": "tel que" },
+      { "id": "d", "text": "de sorte que" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Comme si' introduit une hypothèse irréelle et est suivi de l’imparfait ou du conditionnel."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "______ il étudie, il ne réussira pas.",
+    "options": [
+      { "id": "a", "text": "À moins que" },
+      { "id": "b", "text": "Bien que" },
+      { "id": "c", "text": "Quoique" },
+      { "id": "d", "text": "Pour que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'À moins que' introduit une condition négative et est suivi du subjonctif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Nous ______ tout préparé avant leur arrivée.",
+    "options": [
+      { "id": "a", "text": "avons" },
+      { "id": "b", "text": "aurons" },
+      { "id": "c", "text": "avions" },
+      { "id": "d", "text": "aurions" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le futur antérieur ('aurons préparé') indique une action terminée avant un autre événement futur."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "À peine ______-il entré qu’il commença à parler.",
+    "options": [
+      { "id": "a", "text": "était" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "fut" },
+      { "id": "d", "text": "avait" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans un registre littéraire, 'à peine + imparfait' est utilisé pour indiquer une action immédiatement suivie d’une autre."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il est parti sans que nous ______ le voir.",
+    "options": [
+      { "id": "a", "text": "ayons pu" },
+      { "id": "b", "text": "pouvions" },
+      { "id": "c", "text": "puissions" },
+      { "id": "d", "text": "avons pu" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Sans que' est suivi du subjonctif passé pour une action non réalisée dans le passé."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "______ qu’il fasse beau, nous sortirons.",
+    "options": [
+      { "id": "a", "text": "Pourvu" },
+      { "id": "b", "text": "Bien que" },
+      { "id": "c", "text": "À moins que" },
+      { "id": "d", "text": "Quoique" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Pourvu que' exprime un souhait et est suivi du subjonctif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il avait exigé que nous ______ avant minuit.",
+    "options": [
+      { "id": "a", "text": "finissions" },
+      { "id": "b", "text": "finissiez" },
+      { "id": "c", "text": "finissions" },
+      { "id": "d", "text": "eussions fini" }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Dans un registre formel, après un verbe au passé comme 'avait exigé', on utilise le plus-que-parfait du subjonctif ('eussions fini')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Il ______ qu’elle fût venue plus tôt.",
+    "options": [
+      { "id": "a", "text": "voulut" },
+      { "id": "b", "text": "veut" },
+      { "id": "c", "text": "voulait" },
+      { "id": "d", "text": "voudra" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans un style littéraire, après 'vouloir que' au passé simple ('voulut'), on utilise l’imparfait du subjonctif ('fût')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Que n’______-je su cela avant !",
+    "options": [
+      { "id": "a", "text": "eusse" },
+      { "id": "b", "text": "ai" },
+      { "id": "c", "text": "savais" },
+      { "id": "d", "text": "saurais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans une exclamation hypothétique au passé, 'que' + plus-que-parfait du subjonctif ('eusse su') est utilisé dans un registre littéraire."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "C’est ______ qui m’a appelé.",
+    "options": [
+      { "id": "a", "text": "elle" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "l’" },
+      { "id": "d", "text": "lui" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom tonique 'elle' est utilisé après 'c’est' pour insister sur la personne."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Je n’ai ______ envie de sortir.",
+    "options": [
+      { "id": "a", "text": "pas" },
+      { "id": "b", "text": "plus" },
+      { "id": "c", "text": "rien" },
+      { "id": "d", "text": "jamais" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La négation 'ne... pas' est utilisée avec 'envie' pour exprimer l’absence."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Elle ______ arrivée avant le début du film.",
+    "options": [
+      { "id": "a", "text": "est" },
+      { "id": "b", "text": "a" },
+      { "id": "c", "text": "était" },
+      { "id": "d", "text": "sera" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le plus-que-parfait ('était arrivée') indique une action antérieure à une autre action passée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Je ______ donne souvent des fleurs.",
+    "options": [
+      { "id": "a", "text": "lui" },
+      { "id": "b", "text": "le" },
+      { "id": "c", "text": "la" },
+      { "id": "d", "text": "les" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le pronom 'lui' est utilisé comme complément d’objet indirect pour une personne."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Nous ______ fini le projet avant la réunion.",
+    "options": [
+      { "id": "a", "text": "aurons" },
+      { "id": "b", "text": "avons" },
+      { "id": "c", "text": "avions" },
+      { "id": "d", "text": "aurions" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le futur antérieur ('aurons fini') indique une action terminée avant un moment futur."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Il est entré sans ______ frapper.",
+    "options": [
+      { "id": "a", "text": "frapper" },
+      { "id": "b", "text": "frappant" },
+      { "id": "c", "text": "frappé" },
+      { "id": "d", "text": "avoir frappé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Après 'sans', on utilise l’infinitif pour indiquer une action non réalisée."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "______ qu’il ait menti, je lui fais confiance.",
+    "options": [
+      { "id": "a", "text": "Bien que" },
+      { "id": "b", "text": "Quoique" },
+      { "id": "c", "text": "Si" },
+      { "id": "d", "text": "À moins que" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Quoique' est suivi du subjonctif et exprime une concession, équivalent à 'bien que'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il a agi de ______ qu’on l’a félicité.",
+    "options": [
+      { "id": "a", "text": "telle sorte" },
+      { "id": "b", "text": "tel manière" },
+      { "id": "c", "text": "telle façon" },
+      { "id": "d", "text": "tel point" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L’expression 'de telle façon que' est utilisée pour indiquer la manière ou le résultat."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "Il ______ qu’elle vînt à la réunion.",
+    "options": [
+      { "id": "a", "text": "exigea" },
+      { "id": "b", "text": "exige" },
+      { "id": "c", "text": "exigerait" },
+      { "id": "d", "text": "a exigé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Dans un style littéraire, après 'exiger que' au passé simple ('exigea'), on utilise l’imparfait du subjonctif ('vînt')."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C2",
+    "questionText": "______ la gravité du problème, ils agirent rapidement.",
+    "options": [
+      { "id": "a", "text": "Vu" },
+      { "id": "b", "text": "Vues" },
+      { "id": "c", "text": "Vue" },
+      { "id": "d", "text": "Vus" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Vu' est une préposition introduisant une cause, invariante dans ce contexte."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Elle ______ une chanson.",
+    "options": [
+      { "id": "a", "text": "chante" },
+      { "id": "b", "text": "chantes" },
+      { "id": "c", "text": "chantez" },
+      { "id": "d", "text": "chantons" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'chanter' à la troisième personne du singulier (elle) au présent est 'chante'."
+  },
+  {
     "section": "reading",
     "difficulty": "A1",
     "questionText": "Lisez l'email : \"Bonjour, je voudrais réserver une table pour deux personnes ce soir à 20h. Merci, M. Dubois.\" Que veut M. Dubois ?",
@@ -765,7 +1698,7 @@
       { "id": "a", "text": "Où est le supermarché." },
       { "id": "b", "text": "S'il y a besoin de courses." },
       { "id": "c", "text": "L'heure de fermeture du magasin." },
-      { "id": "d", "text": "De l'aide pour porter les courses." }
+      { "id": "d", "text": "Un aide pour porter les courses." }
     ],
     "correctOptionId": "b",
     "explanation": "La question 'Tu as besoin de quelque chose ?' suivie d'exemples (Pain? Lait?) est une manière de demander si la personne a besoin de faire des courses."
@@ -954,56 +1887,574 @@
   },
   {
     "section": "reading",
-    "difficulty": "A1",
-    "questionText": "Question 21 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait d'un article scientifique : \"Dans le contexte de la globalisation, les échanges culturels ont connu une accélération sans précédent, favorisant une hybridation des identités qui, bien que enrichissante, pose des défis en termes de préservation des patrimoines locaux.\" Quelle est l'idée principale ?",
+    "options": [
+      { "id": "a", "text": "La globalisation détruit les cultures locales." },
+      { "id": "b", "text": "Les échanges culturels enrichissent les identités mais posent des défis." },
+      { "id": "c", "text": "Les patrimoines locaux sont préservés grâce à la globalisation." },
+      { "id": "d", "text": "Les identités hybrides sont un problème insoluble." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte mentionne l'hybridation comme enrichissante mais posant des défis pour la préservation des patrimoines."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait d'un roman : \"Le vent s'engouffrait dans les ruelles étroites, portant avec lui les murmures d'un passé oubliées, où les ombres des ancêtres semblaient danser au rythme des vagues déferlantes sur la côte rocheuse.\" Quel est le ton de ce passage ?",
+    "options": [
+      { "id": "a", "text": "Joyeux et optimiste." },
+      { "id": "b", "text": "Mélancolique et évocateur." },
+      { "id": "c", "text": "Humoristique et léger." },
+      { "id": "d", "text": "Scientifique et factuel." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les mots comme 'murmures d'un passé oubliées' et 'ombres des ancêtres' évoquent une atmosphère mélancolique et nostalgique."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'avis d'un critique d'art : \"L'exposition met en lumière la tension entre tradition et modernité, où les œuvres de l'artiste naviguent habilement entre héritage culturel et innovation formelle, invitant le spectateur à questionner les frontières de l'art contemporain.\" Quel est le point de vue du critique ?",
+    "options": [
+      { "id": "a", "text": "L'exposition est confuse et mal organisée." },
+      { "id": "b", "text": "L'artiste échoue à intégrer tradition et modernité." },
+      { "id": "c", "text": "L'exposition réussit à explorer la tension entre tradition et modernité." },
+      { "id": "d", "text": "Le spectateur est exclu du dialogue artistique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le critique décrit positivement la navigation 'habilement' entre héritage et innovation."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai philosophique : \"La notion de liberté, dans le cadre du déterminisme causal, pose un paradoxe insoluble : si chaque action est le produit d'une chaîne de causes antérieures, comment concevoir une volonté autonome qui échappe à cette déterminatio ? Pourtant, l'expérience subjective de la choix semble contredire cette logique, suggérant que la liberté pourrait résider dans la conscience de nos motivations plutôt que dans une indépendance absolue vis-à-vis des causes externes.\" Quelle est l'idée centrale ?",
+    "options": [
+      { "id": "a", "text": "La liberté est impossible dans un monde déterministe." },
+      { "id": "b", "text": "La liberté est une illusion subjective." },
+      { "id": "c", "text": "La liberté pourrait être compatible avec le déterminisme par la conscience des motivations." },
+      { "id": "d", "text": "Le déterminisme causal est réfuté par l'expérience de choix." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'auteur suggère que la liberté pourrait être dans la 'conscience de nos motivations', rendant compatible avec le déterminisme."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article économique : \"Dans le contexte de la crise climatique, les modèles de croissance basés sur l'exploitation intensive des ressources naturelles sont non seulement obsolètes mais aussi contre-productifs, car ils exacerbent les inégalités sociales et environnementales. Une transition vers une économie circulaire, où les déchets deviennent ressources, nécessite non seulement des innovations technologiques mais aussi une révision fondamentale des paradigmes consuméristes qui dominent les sociétés modernes.\" Quel est le ton de l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Optimiste et confiant dans les modèles actuels." },
+      { "id": "b", "text": "Critique envers les modèles traditionnels et plaidant pour un changement." },
+      { "id": "c", "text": "Neutre et descriptif sans opinion." },
+      { "id": "d", "text": "Pessimiste sur la possibilité de transition." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'auteur critique les modèles actuels ('obsolètes, contre-productifs') et appelle à une 'transition' et 'révision fondamentale'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte littéraire : \"Les rues de la ville, labyrinthiques et imprégnées d'une mélancolie séculaire, reflétaient l'âme tourmentée du protagoniste, qui, errant sans but, cherchait dans les ombres des façades délabrées un écho à ses propres fractures intérieures. La pluie, incessante, lavait les pavés comme pour effacer les traces d'un passé hanté, mais les souvenirs, tenaces, resurgissaient à chaque coin de rue, tissant une toile d'introspections profondes.\" Quelle est la fonction principale de la description ?",
+    "options": [
+      { "id": "a", "text": "Décrire un paysage urbain joyeux." },
+      { "id": "b", "text": "Symboliser l'état émotionnel du protagoniste." },
+      { "id": "c", "text": "Présenter des faits historiques sur la ville." },
+      { "id": "d", "text": "Critiquer l'urbanisme moderne." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La description des rues 'labyrinthiques' et 'mélancolie' reflète l'âme 'tourmentée' du protagoniste."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai sociologique : \"La digitalisation de la société a engenderé une fragmentation de l'attention collective, où les flux continus d'information, bien que démocratisant l'accès au savoir, érodent la capacité à engager des réflexions approfondies. Cette superficialité cognitive, amplifiée par les algorithmes des plateformes sociales, favorise une polarisation idéologique qui mine les fondements du débat public démocratique, appelant à une rééducation numérique pour restaurer un équilibre entre connectivité et contemplation.\" Quel est l'argument principal ?",
+    "options": [
+      { "id": "a", "text": "La digitalisation améliore toujours l'accès au savoir." },
+      { "id": "b", "text": "Les algorithmes des plateformes sont neutres." },
+      { "id": "c", "text": "La digitalisation cause une fragmentation de l'attention et nécessite une rééducation." },
+      { "id": "d", "text": "Le débat public est renforcé par la polarisation." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'auteur pointe la 'fragmentation de l'attention' et appelle à une 'rééducation numérique' pour contrer les effets négatifs."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article scientifique : \"L'intelligence artificielle, en simulant des processus cognitifs humains, soulève des questions éthiques profondes concernant l'autonomie et la responsabilité. Si un algorithme prend des décisions autonomes, qui porte la culpabilité en cas d'erreur ? Cette interrogation, ancrée dans la philosophie du droit, invite à redéfinir les cadres légaux pour intégrer les entités non-humaines, tout en préservant les principes fondamentaux de justice et d'équité dans une ère post-humaine.\" Quelle est la préoccupation centrale ?",
+    "options": [
+      { "id": "a", "text": "L'IA ne peut pas simuler les processus humains." },
+      { "id": "b", "text": "Les questions éthiques sur l'autonomie et la responsabilité de l'IA." },
+      { "id": "c", "text": "Les cadres légaux sont déjà adaptés à l'IA." },
+      { "id": "d", "text": "La justice est obsolète dans l'ère post-humaine." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte soulève les 'questions éthiques profondes concernant l'autonomie et la responsabilité' de l'IA."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte historique : \"La Renaissance, période charnière entre le Moyen Âge et l'époque moderne, a vu l'émergence d'un humanisme qui, en replaçant l'homme au centre de l'univers, a catalysé des avancées dans les arts, les sciences et la philosophie. Cependant, cette glorification de l'individu a aussi masqué les disparités sociales persistantes, où les privilèges de l'élite contrastaient avec la misère des masses, révélant les limites d'un mouvement prétendument universel.\" Quel est le point de vue de l'auteur ?",
+    "options": [
+      { "id": "a", "text": "La Renaissance était universellement beneficial." },
+      { "id": "b", "text": "L'humanisme a résolu les disparités sociales." },
+      { "id": "c", "text": "La Renaissance a des avancées mais aussi des limites dues aux disparités." },
+      { "id": "d", "text": "Le Moyen Âge était supérieur à la Renaissance." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'auteur note les 'avancées' mais révèle les 'limites' dues aux 'disparités sociales'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai linguistique : \"La langue, en tant que système dynamique, évolue sous l'influence de facteurs socioculturels, où les néologismes et les emprunts lexicaux reflètent les mutations de la société. Dans un monde globalisé, cette plasticité linguistique, bien que enrichissante, risque de diluer les particularismes idiomiques, menaçant la diversité linguistique et appelant à une vigilance accrue pour préserver les langues minoritaires.\" Quelle est l'attitude de l'auteur envers l'évolution linguistique ?",
+    "options": [
+      { "id": "a", "text": "Entièrement positive, sans risques." },
+      { "id": "b", "text": "Critique, voyant seulement des menaces." },
+      { "id": "c", "text": "Nuancée, reconnaissant enrichissement et risques." },
+      { "id": "d", "text": "Indifférente à la diversité linguistique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'auteur voit la plasticité comme 'enrichissante' mais 'risque de diluer' les particularismes, appelant à 'vigilance'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article sur l'art contemporain : \"L'art contemporain, en brisant les conventions esthétiques traditionnelles, interroge les limites de la perception et de la signification, où l'abstraction et l'installation invitent à une interprétation subjective qui défie les normes établies. Cette déconstruction, tout en libérant l'expression créative, soulève des débats sur la légitimité artistique, où la frontière entre génie et imposture devient floue, exigeant une critique nuancée pour naviguer dans ce paysage complexe.\" Quel est le rôle de l'art contemporain selon l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Respecter les conventions traditionnelles." },
+      { "id": "b", "text": "Interroger les limites de la perception et signification." },
+      { "id": "c", "text": "Éviter les débats sur la légitimité." },
+      { "id": "d", "text": "Clarifier la frontière entre génie et imposture." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'art contemporain 'brise les conventions' et 'interroge les limites de la perception et de la signification'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte sur l'écologie : \"La crise écologique contemporaine, fruit d'une anthropocentrisme exacerbé, appelle à un paradigme éco-centrique où l'humain se repositionne comme partie intégrante de l'écosystème plutôt que comme son dominateur. Cette shift conceptuel, soutenu par des approches interdisciplinaires mêlant science, philosophie et politique, nécessite une révision des modes de production et de consommation pour atténuer les impacts sur la biodiversité et assurer une durabilité intergénérationnelle.\" Quelle est la solution proposée ?",
+    "options": [
+      { "id": "a", "text": "Maintenir l'anthropocentrisme." },
+      { "id": "b", "text": "Adopter un paradigme éco-centrique avec révision des modes de vie." },
+      { "id": "c", "text": "Ignorer les impacts sur la biodiversité." },
+      { "id": "d", "text": "Limiter les approches interdisciplinaires." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'auteur appelle à un 'paradigme éco-centrique' avec 'révision des modes de production et de consommation'."
   },
   {
     "section": "reading",
     "difficulty": "A1",
-    "questionText": "Question 22 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "questionText": "Lisez l'email : \"Bonjour, j'arrive à l'aéroport à 14h. Peux-tu venir me chercher en voiture ? Merci, Lisa.\" Que demande Lisa ?",
+    "options": [
+      { "id": "a", "text": "Un billet d'avion." },
+      { "id": "b", "text": "Un taxi pour l'aéroport." },
+      { "id": "c", "text": "D'être récupérée à l'aéroport." },
+      { "id": "d", "text": "L'heure du vol." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Lisa demande 'Peux-tu venir me chercher en voiture ?', ce qui signifie qu'elle veut être récupérée à l'aéroport."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez le panneau : \"Attention : chien méchant.\" Qu'est-ce que cela signifie ?",
+    "options": [
+      { "id": "a", "text": "Le chien est gentil." },
+      { "id": "b", "text": "Il est interdit d'entrer avec un chien." },
+      { "id": "c", "text": "Le chien peut être dangereux." },
+      { "id": "d", "text": "Achetez de la nourriture pour chiens." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'expression 'chien méchant' avertit que le chien peut être agressif ou dangereux."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le début de l'article : \"Avec l'augmentation des prix de l'essence, de plus en plus de personnes optent pour les transports en commun pour se déplacer en ville.\" Quelle est la raison principale mentionnée ?",
+    "options": [
+      { "id": "a", "text": "Les transports en commun sont plus rapides." },
+      { "id": "b", "text": "Les prix de l'essence augmentent." },
+      { "id": "c", "text": "Les voitures sont interdites en ville." },
+      { "id": "d", "text": "Les gens préfèrent marcher." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article mentionne 'l'augmentation des prix de l'essence' comme raison pour choisir les transports en commun."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez cet extrait de critique de livre : \"Malgré une intrigue captivante, le développement des personnages manque de profondeur, laissant le lecteur avec un sentiment d'inachevé.\" Quel est l'avis général du critique ?",
+    "options": [
+      { "id": "a", "text": "Le livre est parfait." },
+      { "id": "b", "text": "Le livre est décevant en partie malgré une bonne intrigue." },
+      { "id": "c", "text": "Les personnages sont bien développés." },
+      { "id": "d", "text": "L'intrigue est ennuyeuse." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le critique apprécie l'intrigue mais critique le manque de profondeur des personnages, menant à un sentiment d'inachevé."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la phrase : \"La révolution industrielle a transformé les sociétés agraires en puissances économiques urbanisées, mais au prix d'inégalités sociales accrues et de dégradations environnementales.\" Que signifie cette phrase ?",
+    "options": [
+      { "id": "a", "text": "La révolution industrielle a réduit les inégalités." },
+      { "id": "b", "text": "Les sociétés agraires sont restées inchangées." },
+      { "id": "c", "text": "La révolution industrielle a apporté des changements positifs et négatifs." },
+      { "id": "d", "text": "L'urbanisation n'a pas eu d'impact économique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La phrase décrit une transformation positive (puissances économiques) mais avec des coûts (inégalités et dégradations)."
   },
   {
     "section": "reading",
     "difficulty": "A1",
-    "questionText": "Question 23 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "questionText": "Lisez le SMS : \"Je suis au parc. Apporte le ballon pour jouer au football. À tout de suite !\" Que demande l'expéditeur ?",
+    "options": [
+      { "id": "a", "text": "Où est le parc." },
+      { "id": "b", "text": "D'apporter le ballon." },
+      { "id": "c", "text": "L'heure du match." },
+      { "id": "d", "text": "Un pique-nique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'expéditeur dit 'Apporte le ballon', ce qui est une demande d'apporter le ballon pour jouer."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la note : \"Bureau fermé aujourd'hui pour raison personnelle. Réouverture demain matin.\" Quand le bureau ouvre-t-il ?",
+    "options": [
+      { "id": "a", "text": "Aujourd'hui." },
+      { "id": "b", "text": "Demain matin." },
+      { "id": "c", "text": "La semaine prochaine." },
+      { "id": "d", "text": "Jamais." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La note indique 'Réouverture demain matin'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Extrait d'un guide de voyage : \"Visitez les marchés locaux pour goûter aux produits frais et découvrir les traditions culinaires de la région.\" Que suggère le guide ?",
+    "options": [
+      { "id": "a", "text": "Éviter les marchés." },
+      { "id": "b", "text": "Goûter aux produits et découvrir les traditions." },
+      { "id": "c", "text": "Acheter seulement des souvenirs." },
+      { "id": "d", "text": "Ignorer la cuisine locale." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le guide recommande de 'goûter aux produits frais et découvrir les traditions culinaires'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Article sur la santé : \"Les experts recommandent une activité physique régulière, même modérée, pour réduire les risques de maladies cardiaques, bien que de nombreux adultes ne respectent pas ces guidelines.\" Que pense l'auteur des recommandations ?",
+    "options": [
+      { "id": "a", "text": "Elles sont inutiles." },
+      { "id": "b", "text": "Elles sont importantes mais souvent ignorées." },
+      { "id": "c", "text": "Elles sont trop strictes." },
+      { "id": "d", "text": "Elles ne concernent que les enfants." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article présente les recommandations positivement mais note qu'elles ne sont pas respectées."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Analyse économique : \"La volatilité des marchés financiers, exacerbée par les algorithmes de trading à haute fréquence, pose des risques systémiques qui pourraient précipiter une crise globale si non régulés adéquatement.\" Quelle est la préoccupation ?",
+    "options": [
+      { "id": "a", "text": "Les marchés sont stables." },
+      { "id": "b", "text": "La volatilité pose des risques si non régulée." },
+      { "id": "c", "text": "Les algorithmes réduisent les risques." },
+      { "id": "d", "text": "Les crises globales sont impossibles." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'analyse met en garde contre les risques de la volatilité due aux algorithmes sans régulation."
   },
   {
     "section": "reading",
     "difficulty": "A1",
-    "questionText": "Question 24 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "questionText": "Lisez la carte postale : \"Bonjour de Madrid ! Il fait chaud et les monuments sont magnifiques. À bientôt, Tom.\" Où est Tom ?",
+    "options": [
+      { "id": "a", "text": "À Paris." },
+      { "id": "b", "text": "À Madrid." },
+      { "id": "c", "text": "À Londres." },
+      { "id": "d", "text": "À Berlin." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Tom écrit 'Bonjour de Madrid', indiquant qu'il est à Madrid."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Annonce : \"À louer : appartement 2 pièces, centre-ville, 600 euros/mois. Tél : 01 23 45 67 89.\" Que propose l'annonce ?",
+    "options": [
+      { "id": "a", "text": "Vendre un appartement." },
+      { "id": "b", "text": "Louer un appartement." },
+      { "id": "c", "text": "Acheter un appartement." },
+      { "id": "d", "text": "Un hôtel." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'À louer' signifie que l'appartement est disponible à la location."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Recette : \"Faites bouillir l'eau, ajoutez les pâtes et cuire pendant 10 minutes. Égouttez et servez avec la sauce.\" Que faut-il faire après avoir ajouté les pâtes ?",
+    "options": [
+      { "id": "a", "text": "Ajouter la sauce immédiatement." },
+      { "id": "b", "text": "Cuire pendant 10 minutes." },
+      { "id": "c", "text": "Égoutter l'eau." },
+      { "id": "d", "text": "Manger tout de suite." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La recette dit 'cuire pendant 10 minutes' après avoir ajouté les pâtes."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Extrait d'un rapport : \"La pandémie a accéléré la digitalisation des entreprises, permettant une plus grande flexibilité, mais augmentant les risques de cyberattaques.\" Quel est l'impact positif mentionné ?",
+    "options": [
+      { "id": "a", "text": "Augmentation des risques." },
+      { "id": "b", "text": "Plus grande flexibilité." },
+      { "id": "c", "text": "Ralentissement de la digitalisation." },
+      { "id": "d", "text": "Fermeture des entreprises." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le rapport note 'permettant une plus grande flexibilité' comme impact positif."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Article sur l'éducation : \"L'intégration des technologies en classe, bien qu'innovante, requiert une formation adéquate des enseignants pour éviter une fracture numérique parmi les élèves.\" Que suggère l'article ?",
+    "options": [
+      { "id": "a", "text": "Les technologies sont inutiles en classe." },
+      { "id": "b", "text": "La formation des enseignants est essentielle." },
+      { "id": "c", "text": "Les élèves n'ont pas besoin de technologies." },
+      { "id": "d", "text": "La fracture numérique n'existe pas." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article souligne la nécessité d'une 'formation adéquate des enseignants' pour l'intégration des technologies."
   },
   {
     "section": "reading",
     "difficulty": "A1",
-    "questionText": "Question 25 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "questionText": "Menu : \"Entrée : soupe du jour. Prix : 4 euros.\" Qu'est-ce que l'entrée ?",
+    "options": [
+      { "id": "a", "text": "Un dessert." },
+      { "id": "b", "text": "Une soupe." },
+      { "id": "c", "text": "Un plat principal." },
+      { "id": "d", "text": "Une boisson." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le menu indique 'soupe du jour' comme entrée."
   },
   {
     "section": "reading",
-    "difficulty": "A1",
-    "questionText": "Question 26 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "difficulty": "A2",
+    "questionText": "Météo : \"Demain : soleil le matin, pluie l'après-midi. Températures : 20°C.\" Comment sera le temps le matin ?",
+    "options": [
+      { "id": "a", "text": "Pluvieux." },
+      { "id": "b", "text": "Ensoleillé." },
+      { "id": "c", "text": "Neigeux." },
+      { "id": "d", "text": "Venté." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La prévision dit 'soleil le matin'."
   },
   {
     "section": "reading",
-    "difficulty": "A1",
-    "questionText": "Question 27 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "difficulty": "B1",
+    "questionText": "Publicité : \"Découvrez notre nouvelle application pour apprendre les langues facilement, avec des leçons quotidiennes et des exercices interactifs.\" Quel est l'avantage principal ?",
+    "options": [
+      { "id": "a", "text": "Elle est gratuite." },
+      { "id": "b", "text": "Apprendre facilement avec leçons et exercices." },
+      { "id": "c", "text": "Pour cuisiner." },
+      { "id": "d", "text": "Pour voyager." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La pub met en avant 'apprendre les langues facilement' avec leçons et exercices."
   },
   {
     "section": "reading",
-    "difficulty": "A1",
-    "questionText": "Question 28 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "difficulty": "B2",
+    "questionText": "Courrier formel : \"Veuillez nous excuser pour le retard dans la livraison de votre commande. Nous expédions aujourd'hui.\" Que dit le courrier ?",
+    "options": [
+      { "id": "a", "text": "La commande est annulée." },
+      { "id": "b", "text": "Excuses pour le retard et expédition aujourd'hui." },
+      { "id": "c", "text": "La commande arrive demain." },
+      { "id": "d", "text": "Demande de paiement." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le courrier s'excuse pour le retard et annonce l'expédition aujourd'hui."
   },
   {
     "section": "reading",
-    "difficulty": "A1",
-    "questionText": "Question 29 reading",
-    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+    "difficulty": "C1",
+    "questionText": "Article de presse : \"La réforme éducative vise à intégrer l'intelligence artificielle dans les programmes scolaires, favorisant une adaptation aux métiers du futur, tout en suscitant des débats sur l'équité d'accès.\" Comment réagissent certains ?",
+    "options": [
+      { "id": "a", "text": "Avec enthousiasme total." },
+      { "id": "b", "text": "Avec débats sur l'équité." },
+      { "id": "c", "text": "En rejetant l'IA." },
+      { "id": "d", "text": "Sans opinion." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article mentionne des 'débats sur l'équité d'accès'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait d'un article sur la technologie : \"L'essor des véhicules autonomes promet une réduction des accidents routiers, mais soulève des questions éthiques sur la programmation des algorithmes en cas de dilemme moral.\" Quelle est l'idée principale ?",
+    "options": [
+      { "id": "a", "text": "Les véhicules autonomes augmentent les accidents." },
+      { "id": "b", "text": "Ils réduisent les accidents mais posent des questions éthiques." },
+      { "id": "c", "text": "Les algorithmes sont parfaits." },
+      { "id": "d", "text": "Les dilemmes moraux n'existent pas." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte balance les avantages (réduction des accidents) avec les défis éthiques."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait d'un roman historique : \"Les clameurs de la révolution résonnaient dans les rues pavées, où le peuple, uni par un désir de justice, défiait les bastions du pouvoir absolu, forgeant un nouveau destin au prix de sacrifices innombrables.\" Quel est le ton ?",
+    "options": [
+      { "id": "a", "text": "Comique et léger." },
+      { "id": "b", "text": "Épique et dramatique." },
+      { "id": "c", "text": "Scientifique et objectif." },
+      { "id": "d", "text": "Romantique et sentimental." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les mots comme 'clameurs', 'défiait', 'sacrifices' créent un ton épique et dramatique."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'avis d'un critique musical : \"L'album fusionne habilement jazz et électronique, créant un son innovant qui captive, bien que certains tracks manquent d'originalité par rapport aux influences évidentes.\" Quel est le point de vue ?",
+    "options": [
+      { "id": "a", "text": "L'album est un échec total." },
+      { "id": "b", "text": "Il est innovant mais avec quelques manques." },
+      { "id": "c", "text": "Tous les tracks sont originaux." },
+      { "id": "d", "text": "Le jazz domine l'électronique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le critique loue la fusion 'habilement' mais note des manques d'originalité."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai sur l'urbanisme : \"L'urbanisation accélérée des mégapoles, motivée par l'exode rural et l'attrait économique, engendre une stratification sociale exacerbée, où les enclaves de richesse côtoient des zones de précarité, nécessitant une planification inclusive pour atténuer les disparités et promouvoir une cohésion urbaine durable.\" Quelle est l'idée centrale ?",
+    "options": [
+      { "id": "a", "text": "L'urbanisation réduit les disparités." },
+      { "id": "b", "text": "Elle engendre des disparités et nécessite une planification inclusive." },
+      { "id": "c", "text": "Les mégapoles sont homogènes." },
+      { "id": "d", "text": "L'exode rural est insignifiant." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'essai décrit l'urbanisation comme causant une 'stratification sociale' et appelant à une 'planification inclusive'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article sur la psychologie : \"La résilience, capacité à rebondir face à l'adversité, est modulée par des facteurs génétiques et environnementaux, où l'éducation et le soutien social jouent un rôle pivotal dans la transformation du trauma en croissance personnelle, défiant les modèles déterministes traditionnels.\" Quel est le ton ?",
+    "options": [
+      { "id": "a", "text": "Pessimiste sur la résilience." },
+      { "id": "b", "text": "Objectif et analytique." },
+      { "id": "c", "text": "Humoristique." },
+      { "id": "d", "text": "Romantique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte analyse scientifiquement la résilience avec des termes comme 'modulée par des facteurs'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte sur l'histoire de l'art : \"Le cubisme, initié par Picasso et Braque, déconstruit la réalité en facettes géométriques, rompant avec la perspective linéaire pour offrir une vision multifacette du sujet, influençant profondément les mouvements artistiques subséquents et redéfinissant la représentation visuelle.\" Quelle est la fonction ?",
+    "options": [
+      { "id": "a", "text": "Critiquer le cubisme." },
+      { "id": "b", "text": "Décrire l'impact du cubisme sur l'art." },
+      { "id": "c", "text": "Promouvoir l'art traditionnel." },
+      { "id": "d", "text": "Ignorer les initiateurs." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte décrit le cubisme et son influence 'profonde' sur les mouvements subséquents."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai sur la globalisation : \"La globalisation économique, tout en favorisant l'interconnectivité, accentue les vulnérabilités systémiques, où une crise locale peut se propager à l'échelle mondiale, exigeant une gouvernance internationale renforcée pour mitiger les risques et promouvoir une équité distributive.\" Quel est l'argument ?",
+    "options": [
+      { "id": "a", "text": "La globalisation élimine les crises." },
+      { "id": "b", "text": "Elle accentue les vulnérabilités et nécessite une gouvernance renforcée." },
+      { "id": "c", "text": "Les crises locales restent isolées." },
+      { "id": "d", "text": "L'équité est automatique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'essai note les vulnérabilités et appelle à une 'gouvernance internationale renforcée'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article sur la bioéthique : \"Les avancées en édition génétique, comme CRISPR, ouvrent des perspectives thérapeutiques inédites, mais posent des dilemmes éthiques sur la modification du génome humain, où la ligne entre guérison et amélioration devient ténue, nécessitant un cadre réglementaire rigoureux pour prévenir les dérives eugéniques.\" Quelle est la préoccupation ?",
+    "options": [
+      { "id": "a", "text": "Les avancées sont sans risques." },
+      { "id": "b", "text": "Dilemmes éthiques sur la modification génétique." },
+      { "id": "c", "text": "Le cadre réglementaire est suffisant." },
+      { "id": "d", "text": "L'eugénisme est encouragé." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article soulève des 'dilemmes éthiques' et la nécessité d'un 'cadre réglementaire'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte sur la littérature moderne : \"La littérature postcoloniale, en déconstruisant les narratifs impérialistes, donne voix aux marginalisés, explorant les hybridités culturelles et les traumas intergénérationnels, tout en défiant les canons eurocentriques pour enrichir le discours global sur l'identité et le pouvoir.\" Quel est le rôle de la littérature postcoloniale ?",
+    "options": [
+      { "id": "a", "text": "Renforcer les narratifs impérialistes." },
+      { "id": "b", "text": "Déconstruire les narratifs et explorer les hybridités." },
+      { "id": "c", "text": "Ignorer les marginalisés." },
+      { "id": "d", "text": "Promouvoir les canons eurocentriques." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte décrit la déconstruction et l'exploration des hybridités et traumas."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un essai sur l'intelligence collective : \"L'intelligence collective, émergente des interactions en réseau, transcende les capacités individuelles, favorisant l'innovation collaborative, mais requiert des mécanismes de modération pour contrer les biais cognitifs et assurer une équité participative dans les processus décisionnels.\" Quelle est l'attitude ?",
+    "options": [
+      { "id": "a", "text": "Négative, voyant seulement des biais." },
+      { "id": "b", "text": "Nuancée, reconnaissant avantages et besoins de modération." },
+      { "id": "c", "text": "Indifférente à l'innovation." },
+      { "id": "d", "text": "Positive sans réserves." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'essai loue l'innovation mais note le besoin de modération contre les biais."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un article sur la physique quantique : \"La superposition quantique, où une particule existe dans multiples états simultanément, défie l'intuition classique, ouvrant des voies à l'informatique quantique qui promet une puissance de calcul exponentielle, tout en posant des défis en termes de décohérence et de scalabilité.\" Quel est le potentiel mentionné ?",
+    "options": [
+      { "id": "a", "text": "La superposition confirme l'intuition classique." },
+      { "id": "b", "text": "Puissance de calcul exponentielle pour l'informatique quantique." },
+      { "id": "c", "text": "Les défis sont insurmontables." },
+      { "id": "d", "text": "La décohérence est ignorée." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'article note le potentiel pour une 'puissance de calcul exponentielle'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'un texte sur la sociologie urbaine : \"Les villes intelligentes, intégrant IoT et big data pour optimiser les services, représentent un paradigme urbain futuriste, mais soulèvent des préoccupations sur la privacy et l'inclusion numérique, où les bénéfices doivent être équilibrés par des politiques éthiques pour éviter une surveillance omniprésente.\" Quelle est la préoccupation ?",
+    "options": [
+      { "id": "a", "text": "Les villes intelligentes ignorent la privacy." },
+      { "id": "b", "text": "Préoccupations sur privacy et inclusion, nécessitant politiques éthiques." },
+      { "id": "c", "text": "Les bénéfices sont minimes." },
+      { "id": "d", "text": "La surveillance est bienvenue." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte soulève des préoccupations sur 'privacy et inclusion' et appelle à des 'politiques éthiques'."
   }
 ]
