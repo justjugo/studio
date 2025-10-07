@@ -1,3 +1,4 @@
+
 [
   {
     "section": "structure",
@@ -65,6 +66,176 @@
     "explanation": "\"Quelle que soit\" est une locution qui signifie \"peu importe\" et s'accorde avec le nom qui suit (\"la difficulté\")."
   },
   {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Tu ______ un frère ou une sœur ?",
+    "options": [
+      { "id": "a", "text": "ai" },
+      { "id": "b", "text": "as" },
+      { "id": "c", "text": "a" },
+      { "id": "d", "text": "avons" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Avec 'tu', on utilise 'as' pour le verbe 'avoir' au présent."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Les enfants jouent ______ le jardin.",
+    "options": [
+      { "id": "a", "text": "à" },
+      { "id": "b", "text": "en" },
+      { "id": "c", "text": "dans" },
+      { "id": "d", "text": "sur" }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Dans' est la préposition correcte pour indiquer qu'ils sont à l'intérieur du jardin."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "C'est le livre ______ je t'ai parlé.",
+    "options": [
+      { "id": "a", "text": "que" },
+      { "id": "b", "text": "qui" },
+      { "id": "c", "text": "où" },
+      { "id": "d", "text": "dont" }
+    ],
+    "correctOptionId": "d",
+    "explanation": "On utilise 'dont' parce que la construction du verbe est 'parler de quelque chose'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Après ______ le film, nous sommes allés dîner.",
+    "options": [
+      { "id": "a", "text": "avoir vu" },
+      { "id": "b", "text": "voir" },
+      { "id": "c", "text": "vu" },
+      { "id": "d", "text": "être vu" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "On utilise l'infinitif passé ('avoir' + participe passé) après la préposition 'après' pour marquer l'antériorité."
+  },
+  {
+    "section": "structure",
+    "difficulty": "C1",
+    "questionText": "Il s'est mis à pleuvoir, ______ il a dû annuler son pique-nique.",
+    "options": [
+      { "id": "a", "text": "si bien que" },
+      { "id": "b", "text": "pour que" },
+      { "id": "c", "text": "afin que" },
+      { "id": "d", "text": "bien que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Si bien que' exprime la conséquence. La pluie a eu pour conséquence l'annulation du pique-nique."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "J'aime ______ glace à la vanille.",
+    "options": [
+      { "id": "a", "text": "le" },
+      { "id": "b", "text": "la" },
+      { "id": "c", "text": "les" },
+      { "id": "d", "text": "l'" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Glace' est un nom féminin, donc on utilise 'la'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Hier, ils ______ au cinéma.",
+    "options": [
+      { "id": "a", "text": "sont allés" },
+      { "id": "b", "text": "ont allé" },
+      { "id": "c", "text": "vont" },
+      { "id": "d", "text": "allaient" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'aller' se conjugue avec l'auxiliaire 'être' au passé composé. L'accord se fait avec le sujet 'ils' (masculin pluriel)."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Elle réussira à condition qu'elle ______ régulièrement.",
+    "options": [
+      { "id": "a", "text": "travaille" },
+      { "id": "b", "text": "travaillera" },
+      { "id": "c", "text": "travaillait" },
+      { "id": "d", "text": "a travaillé" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "La locution conjonctive 'à condition que' est suivie du subjonctif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "N'______ pas peur, tout ira bien.",
+    "options": [
+      { "id": "a", "text": "aie" },
+      { "id": "b", "text": "ayez" },
+      { "id": "c", "text": "as" },
+      { "id": "d", "text": "avez" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Ceci est la forme de l'impératif négatif, deuxième personne du pluriel (ou vouvoiement). La forme correcte pour 'avoir' est 'ayez'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A1",
+    "questionText": "Quelle heure est-il ? Il est ______.",
+    "options": [
+      { "id": "a", "text": "midi" },
+      { "id": "b", "text": "le midi" },
+      { "id": "c", "text": "à midi" },
+      { "id": "d", "text": "de midi" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Pour dire l'heure, on dit 'Il est midi' ou 'Il est minuit'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "A2",
+    "questionText": "Je n'ai ______ vu ce film.",
+    "options": [
+      { "id": "a", "text": "rien" },
+      { "id": "b", "text": "jamais" },
+      { "id": "c", "text": "personne" },
+      { "id": "d", "text": "plus" }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La négation 'ne... jamais' signifie 'at no time'."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B1",
+    "questionText": "Le médecin lui a conseillé ______ se reposer.",
+    "options": [
+      { "id": "a", "text": "de" },
+      { "id": "b", "text": "à" },
+      { "id": "c", "text": "pour" },
+      { "id": "d", "text": "que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le verbe 'conseiller' est suivi de la préposition 'de' avant un infinitif."
+  },
+  {
+    "section": "structure",
+    "difficulty": "B2",
+    "questionText": "Elle a agi ______ elle le pensait.",
+    "options": [
+      { "id": "a", "text": "comme" },
+      { "id": "b", "text": "comment" },
+      { "id": "c", "text": "quel" },
+      { "id": "d", "text": "que" }
+    ],
+    "correctOptionId": "a",
+    "explanation": "'Comme' est utilisé ici pour signifier 'de la manière que'."
+  },
+
+  {
     "section": "reading",
     "difficulty": "A1",
     "questionText": "Lisez l'email : \"Bonjour, je voudrais réserver une table pour deux personnes ce soir à 20h. Merci, M. Dubois.\" Que veut M. Dubois ?",
@@ -128,5 +299,254 @@
     ],
     "correctOptionId": "c",
     "explanation": "\"Avènement\" signifie arrivée, \"bouleversé les paradigmes\" signifie a changé les modèles, et \"rendant obsolètes\" signifie que les anciens modèles ne fonctionnent plus. La phrase décrit donc une transformation radicale."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le SMS : \"Salut, je suis au supermarché. Tu as besoin de quelque chose ? Pain ? Lait ?\" Qu'est-ce que l'expéditeur demande ?",
+    "options": [
+      { "id": "a", "text": "Où est le supermarché." },
+      { "id": "b", "text": "S'il y a besoin de courses." },
+      { "id": "c", "text": "L'heure de fermeture du magasin." },
+      { "id": "d", "text": "De l'aide pour porter les courses." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La question 'Tu as besoin de quelque chose ?' suivie d'exemples (Pain? Lait?) est une manière de demander si la personne a besoin de faire des courses."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la note : \"Fermé pour travaux du 10 au 15 août inclus. Réouverture le 16 août.\" Quand le magasin sera-t-il ouvert ?",
+    "options": [
+      { "id": "a", "text": "Le 15 août." },
+      { "id": "b", "text": "Le 10 août." },
+      { "id": "c", "text": "Le 16 août." },
+      { "id": "d", "text": "Jamais." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La note indique clairement que la réouverture aura lieu le 16 août."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Extrait d'un guide touristique : \"N'oubliez pas de goûter la spécialité locale, un plat séculaire dont la recette se transmet de génération en génération.\" Qu'est-ce qui caractérise ce plat ?",
+    "options": [
+      { "id": "a", "text": "C'est un plat nouveau et moderne." },
+      { "id": "b", "text": "C'est un plat rapide à préparer." },
+      { "id": "c", "text": "C'est un plat très ancien et traditionnel." },
+      { "id": "d", "text": "C'est un plat peu coûteux." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Séculaire' signifie qui existe depuis des siècles, et 'recette transmise de génération en génération' renforce l'idée de tradition."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Article sur l'environnement : \"Les mesures incitatives mises en place par le gouvernement, bien que louables, s'avèrent insuffisantes face à l'ampleur du défi climatique.\" Que pense l'auteur des mesures du gouvernement ?",
+    "options": [
+      { "id": "a", "text": "Elles sont parfaitement adaptées." },
+      { "id": "b", "text": "Elles sont une bonne intention, mais pas assez efficaces." },
+      { "id": "c", "text": "Elles sont totalement inutiles." },
+      { "id": "d", "text": "Elles devraient être supprimées." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Louables' signifie dignes d'éloges (une bonne intention), mais 'insuffisantes' indique qu'elles ne sont pas à la hauteur du problème."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Analyse littéraire : \"L'auteur, par un usage subtil de la prolepse, sème des indices qui ne prendront sens qu'à la toute fin du roman, conférant à l'œuvre une profondeur rétrospective.\" Quelle technique littéraire est mentionnée ?",
+    "options": [
+      { "id": "a", "text": "Le retour en arrière (flashback)." },
+      { "id": "b", "text": "L'anticipation d'événements futurs." },
+      { "id": "c", "text": "La description détaillée des personnages." },
+      { "id": "d", "text": "Le dialogue interne du narrateur." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La prolepse est une figure de style qui consiste à anticiper des événements qui se produiront plus tard dans le récit."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez la carte postale : \"Chers parents, Il fait un temps magnifique à Nice. La mer est bleue. Bises, Léo.\" Où est Léo ?",
+    "options": [
+      { "id": "a", "text": "À la montagne." },
+      { "id": "b", "text": "Dans une grande ville." },
+      { "id": "c", "text": "Au bord de la mer." },
+      { "id": "d", "text": "À la campagne." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Léo mentionne 'Nice' et 'La mer', indiquant qu'il est au bord de la mer."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Annonce : \"À vendre : vélo d'occasion, bon état. Prix : 50 euros. Contacter le 06 12 34 56 78.\" Que peut-on acheter ?",
+    "options": [
+      { "id": "a", "text": "Un vélo neuf." },
+      { "id": "b", "text": "Un vélo qui ne fonctionne pas." },
+      { "id": "c", "text": "Un vélo qui a déjà été utilisé." },
+      { "id": "d", "text": "Une voiture." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'D'occasion' signifie que l'objet a déjà eu un propriétaire précédent."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Recette de cuisine : \"Incorporez délicatement les blancs en neige à la préparation pour ne pas les casser.\" Que faut-il faire ?",
+    "options": [
+      { "id": "a", "text": "Mélanger rapidement et fortement." },
+      { "id": "b", "text": "Ajouter les blancs d'œufs montés avec soin et lenteur." },
+      { "id": "c", "text": "Faire cuire les blancs d'œufs séparément." },
+      { "id": "d", "text": "Jeter les blancs d'œufs." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "'Incorporez délicatement' et 'ne pas les casser' signifient qu'il faut mélanger doucement."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Extrait d'un contrat : \"Le preneur s'engage à restituer les lieux dans l'état où il les a trouvés, sous peine de retenue sur la caution.\" Quelle est l'obligation du locataire ?",
+    "options": [
+      { "id": "a", "text": "Payer une caution supplémentaire." },
+      { "id": "b", "text": "Faire des travaux de rénovation." },
+      { "id": "c", "text": "Rendre le logement propre et non endommagé." },
+      { "id": "d", "text": "Quitter le logement avant la date prévue." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Restituer les lieux dans l'état où il les a trouvés' signifie rendre l'appartement ou la maison dans le même état qu'au début de la location."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Article de philosophie : \"L'aporie à laquelle le penseur est confronté réside dans l'antinomie entre la liberté infinie de la conscience et le déterminisme du monde matériel.\" Quel est le problème central décrit ?",
+    "options": [
+      { "id": "a", "text": "Une solution facile et évidente." },
+      { "id": "b", "text": "Une contradiction insoluble entre deux concepts opposés." },
+      { "id": "c", "text": "La supériorité de l'esprit sur la matière." },
+      { "id": "d", "text": "Le manque de liberté dans le monde moderne." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Une 'aporie' est une difficulté logique insoluble, et une 'antinomie' est une contradiction. Le texte oppose la 'liberté infinie' et le 'déterminisme'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Menu : \"Plat du jour : Poulet rôti et frites.\" Qu'est-ce que le plat du jour ?",
+    "options": [
+      { "id": "a", "text": "Du poisson." },
+      { "id": "b", "text": "Une salade." },
+      { "id": "c", "text": "Du poulet." },
+      { "id": "d", "text": "Une soupe." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le menu indique clairement 'Poulet rôti'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Météo : \"Prévisions pour demain : nuageux le matin, éclaircies l'après-midi. Températures : 15°C.\" Comment sera le temps l'après-midi ?",
+    "options": [
+      { "id": "a", "text": "Il pleuvra toute la journée." },
+      { "id": "b", "text": "Il y aura du soleil." },
+      { "id": "c", "text": "Il fera très froid." },
+      { "id": "d", "text": "Il y aura des nuages toute la journée." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le mot 'éclaircies' signifie que le ciel se dégage et que le soleil apparaît."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Publicité : \"Notre nouveau smartphone est doté d'une autonomie exceptionnelle, vous permettant de l'utiliser deux jours durant sans le recharger.\" Quel est le principal avantage de ce téléphone ?",
+    "options": [
+      { "id": "a", "text": "Son appareil photo est de haute qualité." },
+      { "id": "b", "text": "Il est très bon marché." },
+      { "id": "c", "text": "Il est très résistant aux chocs." },
+      { "id": "d", "text": "Sa batterie dure très longtemps." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "'Autonomie exceptionnelle' et 'deux jours durant sans le recharger' sont des expressions qui désignent la longue durée de vie de la batterie."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Courrier formel : \"Sauf avis contraire de votre part, nous procéderons à l'expédition de votre commande sous 48 heures.\" Qu'implique cette phrase ?",
+    "options": [
+      { "id": "a", "text": "La commande est déjà expédiée." },
+      { "id": "b", "text": "Le client doit confirmer sa commande pour qu'elle soit envoyée." },
+      { "id": "c", "text": "L'entreprise enverra la commande automatiquement si le client ne répond pas." },
+      { "id": "d", "text": "La commande est annulée." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "'Sauf avis contraire' signifie 'à moins que vous ne disiez non'. Si le client ne fait rien, l'action décrite (l'expédition) aura lieu."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Article de presse : \"Le projet de loi a été adopté de justesse, non sans avoir suscité un tollé au sein de l'opposition, qui dénonce une manœuvre politicienne.\" Comment l'opposition a-t-elle réagi ?",
+    "options": [
+      { "id": "a", "text": "Avec indifférence." },
+      { "id": "b", "text": "Avec approbation." },
+      { "id": "c", "text": "Avec une vive indignation." },
+      { "id": "d", "text": "En proposant des amendements." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Un 'tollé' est un cri de protestation et d'indignation général. 'Dénoncer une manœuvre' confirme cette forte opposition."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 21 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 22 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 23 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 24 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 25 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 26 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 27 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 28 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Question 29 reading",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
   }
 ]
