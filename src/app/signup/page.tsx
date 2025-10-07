@@ -27,8 +27,17 @@ export default function SignupPage() {
   const { toast } = useToast();
 
   useEffect(() => {
+    // This effect now handles redirecting to verify-email page on successful signup
     if (!isUserLoading && user) {
-      router.push('/');
+      if (!user.emailVerified) {
+        // A new user has signed up but is not yet verified.
+        // The onAuthStateChanged listener in FirebaseProvider picks up the new user,
+        // and we redirect them to the verification page.
+        router.push('/verify-email');
+      } else {
+        // An already-verified user somehow landed on the signup page.
+        router.push('/');
+      }
     }
   }, [user, isUserLoading, router]);
 

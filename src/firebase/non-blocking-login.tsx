@@ -4,7 +4,7 @@ import {
   signInAnonymously,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  // Assume getAuth and app are initialized elsewhere
+  sendEmailVerification,
 } from 'firebase/auth';
 import { toast } from '@/hooks/use-toast';
 
@@ -29,7 +29,13 @@ export function initiateEmailSignUp(
   password: string
 ): void {
   // CRITICAL: Call createUserWithEmailAndPassword directly. Do NOT use 'await createUserWithEmailAndPassword(...)'.
-  createUserWithEmailAndPassword(authInstance, email, password).catch(
+  createUserWithEmailAndPassword(authInstance, email, password)
+    .then((userCredential) => {
+        if (userCredential.user) {
+            sendEmailVerification(userCredential.user);
+        }
+    })
+    .catch(
     (error) => {
       console.error('Sign-Up Error:', error);
       let description = 'An unexpected error occurred.';
