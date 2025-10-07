@@ -43,6 +43,188 @@
     "explanation": "Le reportage se concentre sur l'association 'Nettoyons notre ville' et son action dans les parcs locaux, interviewant des volontaires."
   },
   {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 4 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 5 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 6 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 7 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 8 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 9 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 10 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 11 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 12 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 13 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 14 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 15 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 16 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 17 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 18 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 19 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 20 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 21 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 22 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 23 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 24 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 25 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 26 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 27 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 28 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
+    "section": "listening",
+    "difficulty": "A1",
+    "audioSrc": "/audio/placeholder.mp3",
+    "questionText": "Question 29 listening",
+    "options": [{ "id": "a", "text": "A" }, { "id": "b", "text": "B" }, { "id": "c", "text": "C" }, { "id": "d", "text": "D" }], "correctOptionId": "a", "explanation": "Explication"
+  },
+  {
     "section": "structure",
     "difficulty": "A1",
     "questionText": "Nous ______ au marché le dimanche.",
