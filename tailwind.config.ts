@@ -65,6 +65,15 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        purple: {
+          600: '#7c3aed',
+        },
+        green: {
+          600: '#16a34a',
+        },
+        yellow: {
+          500: '#eab308',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

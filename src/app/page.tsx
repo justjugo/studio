@@ -26,6 +26,12 @@ import Loading from './loading';
 import { collection } from 'firebase/firestore';
 import type { Result } from '@/lib/types';
 
+const getScoreColor = (score: number) => {
+    if (score > 90) return 'text-purple-600';
+    if (score > 70) return 'text-green-600';
+    if (score > 40) return 'text-yellow-500';
+    return 'text-destructive';
+};
 
 export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
@@ -66,6 +72,9 @@ export default function DashboardPage() {
       : 0;
 
   const totalTests = userProgressHistory.length;
+  
+  const latestScorePercentage = latestAttempt ? Math.round((latestAttempt.score / latestAttempt.totalQuestions) * 100) : 0;
+  const averageScorePercentage = Math.round(averageScore * 100);
 
   return (
     <div className="flex flex-col h-full bg-background">
@@ -101,8 +110,8 @@ export default function DashboardPage() {
                   <Target className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">
-                    {latestAttempt ? `${Math.round((latestAttempt.score / latestAttempt.totalQuestions) * 100)}%` : 'N/A'}
+                  <div className={`text-2xl font-bold ${getScoreColor(latestScorePercentage)}`}>
+                    {latestAttempt ? `${latestScorePercentage}%` : 'N/A'}
                   </div>
                   <p className="text-xs text-muted-foreground">
                     sur {latestAttempt ? latestAttempt.testName : ''}
@@ -117,7 +126,7 @@ export default function DashboardPage() {
                   <Activity className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">{Math.round(averageScore * 100)}%</div>
+                  <div className={`text-2xl font-bold ${getScoreColor(averageScorePercentage)}`}>{averageScorePercentage}%</div>
                   <p className="text-xs text-muted-foreground">
                     Sur toutes vos tentatives
                   </p>

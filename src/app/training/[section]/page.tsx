@@ -2,7 +2,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,12 +23,30 @@ export default function TrainingSectionPage() {
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const config = sectionConfig[sectionSlug];
 
+    const [selectedLevel, setSelectedLevel] = useState<'all' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'>('all');
+    const levels: ('A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2')[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
     const availableTests = useMemo(() => {
         if (!config) return [];
-        const sectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
-        const numTests = Math.floor(sectionQuestions.length / config.questionCount);
-        return Array.from({ length: numTests }, (_, i) => i + 1);
-    }, [config]);
+        const allSectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
+
+        if (selectedLevel !== 'all') {
+            const levelQuestions = allSectionQuestions.filter(q => q.difficulty === selectedLevel);
+            if (levelQuestions.length > 0) {
+                // For a specific level, if there are any questions, create one test.
+                return [{ id: 1, name: `Test ${selectedLevel}`, questionCount: levelQuestions.length }];
+            }
+            return []; // No questions for this level.
+        } else {
+            // For 'all' levels, create tests based on the full question count.
+            const numTests = Math.floor(allSectionQuestions.length / config.questionCount);
+            return Array.from({ length: numTests }, (_, i) => ({
+                id: i + 1,
+                name: `Test #${i + 1}`,
+                questionCount: config.questionCount
+            }));
+        }
+    }, [config, selectedLevel]);
 
     if (!config) {
         return (
@@ -62,17 +80,29 @@ export default function TrainingSectionPage() {
                         <h2 className="text-3xl font-bold font-headline">Tests disponibles</h2>
                         <p className="text-muted-foreground mt-2">Sélectionnez un test pour commencer votre session d'entraînement.</p>
                     </div>
+
+                    <div className="flex justify-center flex-wrap gap-2 mb-8">
+                        <Button variant={selectedLevel === 'all' ? 'default' : 'outline'} onClick={() => setSelectedLevel('all')}>
+                            Tous les niveaux
+                        </Button>
+                        {levels.map(level => (
+                            <Button key={level} variant={selectedLevel === level ? 'default' : 'outline'} onClick={() => setSelectedLevel(level)}>
+                                {level}
+                            </Button>
+                        ))}
+                    </div>
+
                     {availableTests.length > 0 ? (
                         <div className="space-y-4">
-                            {availableTests.map(testId => (
-                                <Link key={testId} href={`/training/${sectionSlug}/${testId}`}>
+                            {availableTests.map(test => (
+                                <Link key={test.id} href={`/training/${sectionSlug}/${test.id}${selectedLevel !== 'all' ? `?level=${selectedLevel}` : ''}`}>
                                     <Card className="group transition-all duration-300 ease-in-out hover:shadow-md hover:border-primary">
                                         <CardContent className="p-4 flex items-center justify-between">
                                             <div className="flex items-center gap-4">
                                                 <ListChecks className="h-8 w-8 text-primary" />
                                                 <div>
-                                                    <h3 className="text-lg font-semibold">Test #{testId}</h3>
-                                                    <p className="text-sm text-muted-foreground">{config.questionCount} questions</p>
+                                                    <h3 className="text-lg font-semibold">{test.name}</h3>
+                                                    <p className="text-sm text-muted-foreground">{test.questionCount} questions</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-center text-sm font-semibold text-primary">
@@ -89,7 +119,7 @@ export default function TrainingSectionPage() {
                             <CardHeader className="text-center">
                                 <CardTitle>Aucun test disponible</CardTitle>
                                 <CardDescription>
-                                    Il n'y a pas assez de questions pour créer un test pour cette section. Veuillez ajouter plus de questions à `src/lib/questions.json`.
+                                    Il n'y a pas assez de questions pour créer un test pour cette section {selectedLevel !== 'all' && `au niveau ${selectedLevel}`}. Veuillez essayer un autre niveau ou ajouter plus de questions.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="text-center">

@@ -3,13 +3,23 @@
 
 import type { Result } from "@/lib/types";
 import { ChartTooltipContent, ChartContainer } from "@/components/ui/chart";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { ChartConfig } from "@/components/ui/chart";
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config'
+
+const fullConfig = resolveConfig(tailwindConfig)
+
+const getScoreColor = (score: number) => {
+    if (score > 90) return fullConfig.theme.colors.purple[600];
+    if (score > 70) return fullConfig.theme.colors.green[600];
+    if (score > 40) return fullConfig.theme.colors.yellow[500];
+    return fullConfig.theme.colors.destructive.DEFAULT;
+};
 
 const chartConfig = {
   Score: {
     label: "Score",
-    color: "hsl(var(--primary))",
   },
 } satisfies ChartConfig;
 
@@ -65,7 +75,11 @@ export default function ProgressChart({ data }: { data: ChartData[] }) {
                   labelClassName="font-bold" 
                 />}
             />
-            <Bar dataKey="Score" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="Score" radius={[4, 4, 0, 0]}>
+                {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={getScoreColor(entry.Score)} />
+                ))}
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </ChartContainer>

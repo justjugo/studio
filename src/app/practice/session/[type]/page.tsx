@@ -20,19 +20,38 @@ import { useUser, useFirestore } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
 
+// Helper function to shuffle an array
+function shuffle<T>(array: T[]): T[] {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
+
 // Mapping URL slug to test configuration
 const testConfig = {
     written: {
         title: 'Grammaire & Lecture',
-        sections: ['structure', 'reading'],
+        sections: {
+            'structure': 29,
+            'reading': 18
+        },
         time: (15 + 45) * 60, // 60 minutes total
     },
     full: {
         title: 'Test d\'entraînement complet',
-        sections: ['listening', 'structure', 'reading'],
+        sections: {
+            'listening': 29,
+            'structure': 18,
+            'reading': 29
+        },
         time: (25 + 15 + 45) * 60, // 85 minutes total
     },
-    // Add other test types here if needed
 };
 
 export default function PracticeSessionPage() {
@@ -42,7 +61,7 @@ export default function PracticeSessionPage() {
     const firestore = useFirestore();
     const testType = typeof params.type === 'string' && params.type in testConfig ? params.type as keyof typeof testConfig : null;
     const config = testType ? testConfig[testType] : null;
-    
+
     const [isLoading] = useState(false);
     const [isClient, setIsClient] = useState(false);
 
@@ -53,9 +72,59 @@ export default function PracticeSessionPage() {
     const questions = useMemo(() => {
         if (!config) return [];
         const allQuestions = seedQuestions as Question[];
-        return allQuestions
-            .map((q, index) => ({ ...q, id: q.id ?? `q-${index}`}))
-            .filter(q => config.sections.includes(q.section));
+        const difficultyLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
+        const questionsBySectionAndDifficulty: { [section: string]: { [difficulty: string]: Question[] } } = {};
+
+        // Group questions by section and then by difficulty
+        allQuestions.forEach(q => {
+            if (!questionsBySectionAndDifficulty[q.section]) {
+                questionsBySectionAndDifficulty[q.section] = {};
+            }
+            if (!questionsBySectionAndDifficulty[q.section][q.difficulty]) {
+                questionsBySectionAndDifficulty[q.section][q.difficulty] = [];
+            }
+            questionsBySectionAndDifficulty[q.section][q.difficulty].push(q);
+        });
+
+        let selectedQuestions: Question[] = [];
+        const sectionConfigs = config.sections;
+
+        // For each section in the test config
+        for (const section in sectionConfigs) {
+            const totalQuestionsForSection = sectionConfigs[section as keyof typeof sectionConfigs];
+            if (!totalQuestionsForSection) continue;
+
+            const questionsForThisSection = questionsBySectionAndDifficulty[section];
+            if (!questionsForThisSection) continue;
+
+            const baseCountPerDifficulty = Math.floor(totalQuestionsForSection / difficultyLevels.length);
+            let remainder = totalQuestionsForSection % difficultyLevels.length;
+
+            const countsPerDifficulty: { [difficulty: string]: number } = {};
+            difficultyLevels.forEach(level => {
+                countsPerDifficulty[level] = baseCountPerDifficulty;
+            });
+
+            // Distribute the remainder randomly across difficulty levels
+            const shuffledLevels = shuffle([...difficultyLevels]);
+            for (let i = 0; i < remainder; i++) {
+                countsPerDifficulty[shuffledLevels[i]]++;
+            }
+
+            // Select questions for the section based on the calculated counts for each difficulty
+            for (const difficulty of difficultyLevels) {
+                const count = countsPerDifficulty[difficulty];
+                const availableQuestions = questionsForThisSection[difficulty] || [];
+                if (availableQuestions.length > 0 && count > 0) {
+                    selectedQuestions.push(...shuffle(availableQuestions).slice(0, count));
+                }
+            }
+        }
+        
+        // Shuffle the final list of questions and assign unique IDs
+        return shuffle(selectedQuestions).map((q, index) => ({ ...q, id: `q-${index}` }));
+
     }, [config]);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -327,7 +396,7 @@ export default function PracticeSessionPage() {
                             <CardFooter>
                                 <Button onClick={() => handleNextQuestion(false)} disabled={!selectedOptionId} className="w-full text-lg py-6">
                                     {currentQuestionIndex === questions.length - 1 ? 'Terminer le test' : 'Question suivante'}
-                                    <ArrowRight className="ml-2 h-5 w-5"/>
+                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
                             </CardFooter>
                         </Card>

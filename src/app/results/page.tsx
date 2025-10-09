@@ -21,13 +21,20 @@ import type { Result } from '@/lib/types';
 import Loading from '../loading';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
+const getScoreColor = (score: number) => {
+    if (score > 90) return { text: 'text-purple-600', bg: 'bg-purple-600', badge: 'bg-purple-600' };
+    if (score > 70) return { text: 'text-green-600', bg: 'bg-green-600', badge: 'bg-green-600' };
+    if (score > 40) return { text: 'text-yellow-500', bg: 'bg-yellow-500', badge: 'bg-yellow-500 text-black' };
+    return { text: 'text-destructive', bg: 'bg-destructive', badge: 'bg-red-500' };
+};
+
 const getCecrlLevel = (scorePercentage: number) => {
-  if (scorePercentage < 20) return { level: 'A1', color: 'bg-red-500' };
-  if (scorePercentage < 40) return { level: 'A2', color: 'bg-orange-500' };
-  if (scorePercentage < 60) return { level: 'B1', color: 'bg-yellow-500 text-black' };
-  if (scorePercentage < 80) return { level: 'B2', color: 'bg-green-500' };
-  if (scorePercentage < 90) return { level: 'C1', color: 'bg-blue-500' };
-  return { level: 'C2', color: 'bg-purple-500' };
+  if (scorePercentage < 20) return 'A1';
+  if (scorePercentage < 40) return 'A2';
+  if (scorePercentage < 60) return 'B1';
+  if (scorePercentage < 80) return 'B2';
+  if (scorePercentage < 90) return 'C1';
+  return 'C2';
 };
 
 const SectionResultCard = ({ title, icon, percentage, level, color }: { title: string, icon: React.ReactNode, percentage: number, level: string, color: string }) => (
@@ -38,8 +45,8 @@ const SectionResultCard = ({ title, icon, percentage, level, color }: { title: s
         </div>
         <Badge className={`px-3 py-1 text-md mb-2 ${color}`}>{level}</Badge>
         <div className="w-full">
-            <Progress value={percentage} className="h-2" />
-            <p className="text-right text-sm font-semibold text-primary mt-1">{`${Math.round(percentage)}%`}</p>
+            <Progress value={percentage} className="h-2" indicatorClassName={getScoreColor(percentage).bg} />
+            <p className={`text-right text-sm font-semibold ${getScoreColor(percentage).text} mt-1`}>{`${Math.round(percentage)}%`}</p>
         </div>
     </div>
 )
@@ -72,7 +79,13 @@ export default function ResultsPage() {
       };
     }
 
-    const metrics = {
+    const metrics: {
+        [key: string]: { correct: number; total: number; };
+        overall: { correct: number; total: number; };
+        listening: { correct: number; total: number; };
+        structure: { correct: number; total: number; };
+        reading: { correct: number; total: number; };
+    } = {
       overall: { correct: 0, total: 0 },
       listening: { correct: 0, total: 0 },
       structure: { correct: 0, total: 0 },
@@ -113,6 +126,11 @@ export default function ResultsPage() {
   const listeningCecrl = getCecrlLevel(listeningPercentage);
   const structureCecrl = getCecrlLevel(structurePercentage);
   const readingCecrl = getCecrlLevel(readingPercentage);
+
+  const overallColor = getScoreColor(overallPercentage);
+  const listeningColor = getScoreColor(listeningPercentage);
+  const structureColor = getScoreColor(structurePercentage);
+  const readingColor = getScoreColor(readingPercentage);
 
   if (isUserLoading || isResultsLoading) {
     return <Loading />;
@@ -157,16 +175,16 @@ export default function ResultsPage() {
             <CardContent className="space-y-6">
                 <div className="flex flex-col items-center space-y-4 p-4 bg-secondary/30 rounded-lg">
                     <p className="text-xl font-semibold">Niveau global estimé :</p>
-                    <Badge className={`px-6 py-2 text-2xl font-bold ${overallCecrl.color}`}>{overallCecrl.level}</Badge>
+                    <Badge className={`px-6 py-2 text-2xl font-bold ${overallColor.badge}`}>{overallCecrl}</Badge>
                     <div className="w-full max-w-sm space-y-1">
-                        <Progress value={overallPercentage} className="h-3" />
-                        <p className="text-center text-sm font-medium text-muted-foreground">{`${performanceMetrics.overall.correct} / ${performanceMetrics.overall.total} correctes`}</p>
+                        <Progress value={overallPercentage} className="h-3" indicatorClassName={overallColor.bg} />
+                        <p className={`text-center text-sm font-medium ${overallColor.text}`}>{`${performanceMetrics.overall.correct} / ${performanceMetrics.overall.total} correctes`}</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <SectionResultCard title="Écoute" icon={<Headphones className="h-6 w-6 text-primary" />} percentage={listeningPercentage} level={listeningCecrl.level} color={listeningCecrl.color} />
-                    <SectionResultCard title="Grammaire" icon={<Puzzle className="h-6 w-6 text-primary" />} percentage={structurePercentage} level={structureCecrl.level} color={structureCecrl.color} />
-                    <SectionResultCard title="Lecture" icon={<BookOpenText className="h-6 w-6 text-primary" />} percentage={readingPercentage} level={readingCecrl.level} color={readingCecrl.color} />
+                    <SectionResultCard title="Écoute" icon={<Headphones className="h-6 w-6 text-primary" />} percentage={listeningPercentage} level={listeningCecrl} color={listeningColor.badge} />
+                    <SectionResultCard title="Grammaire" icon={<Puzzle className="h-6 w-6 text-primary" />} percentage={structurePercentage} level={structureCecrl} color={structureColor.badge} />
+                    <SectionResultCard title="Lecture" icon={<BookOpenText className="h-6 w-6 text-primary" />} percentage={readingPercentage} level={readingCecrl} color={readingColor.badge} />
                 </div>
             </CardContent>
           </Card>

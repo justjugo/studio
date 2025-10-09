@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { seedQuestions } from '@/lib/seed-data';
 import type { Question, Result, UserAnswerForReview } from '@/lib/types';
 import Loading from '@/app/loading';
@@ -30,11 +30,13 @@ const sectionConfig: { [key: string]: { name: string; time: number; questionCoun
 export default function TrainingSessionPage() {
     const params = useParams();
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { user } = useUser();
     const firestore = useFirestore();
 
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const testId = typeof params.testId === 'string' ? parseInt(params.testId, 10) : NaN;
+    const level = searchParams.get('level') as 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | null;
     const config = sectionConfig[sectionSlug];
 
     const [isLoading] = useState(false);
@@ -46,11 +48,16 @@ export default function TrainingSessionPage() {
 
     const questions = useMemo(() => {
         if (!config || isNaN(testId)) return [];
-        const sectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
-        const startIndex = (testId - 1) * config.questionCount;
-        const endIndex = startIndex + config.questionCount;
-        return sectionQuestions.slice(startIndex, endIndex);
-    }, [config, testId]);
+        let sectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
+
+        if (level) {
+            return sectionQuestions.filter(q => q.difficulty === level);
+        } else {
+            const startIndex = (testId - 1) * config.questionCount;
+            const endIndex = startIndex + config.questionCount;
+            return sectionQuestions.slice(startIndex, endIndex);
+        }
+    }, [config, testId, level]);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -136,11 +143,11 @@ export default function TrainingSessionPage() {
             totalScore: correctCount,
             questionCount: totalAnswered,
             createdAt: new Date().toISOString(),
-            globalCefrLevel: 'N/A', // Not calculated for training
+            globalCefrLevel: level ?? 'N/A',
             scores: [],
             validUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 2)).toISOString(),
             type: 'training',
-            testName: `Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}`,
+            testName: `Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} #${testId}${level ? ` (${level})` : ''}`,
             answers: answers,
         };
     
@@ -175,15 +182,24 @@ export default function TrainingSessionPage() {
     const currentQuestion = questions[currentQuestionIndex];
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
+    const testName = `Test #${testId}${level ? ` (${level})` : ''}`;
+
+    const getScoreColor = (score: number) => {
+        if (score > 90) return { text: 'text-purple-600', bg: 'bg-purple-600' };
+        if (score > 70) return { text: 'text-green-600', bg: 'bg-green-600' };
+        if (score > 40) return { text: 'text-yellow-500', bg: 'bg-yellow-500' };
+        return { text: 'text-destructive', bg: 'bg-destructive' };
+    };
 
     if (isFinished) {
         const correctCount = userAnswers.filter(a => a.isCorrect).length;
         const totalAnswered = userAnswers.length;
         const scorePercentage = totalAnswered > 0 ? (correctCount / totalAnswered) * 100 : 0;
+        const { text: scoreTextColor, bg: scoreBgColor } = getScoreColor(scorePercentage);
 
         return (
             <div className="flex flex-col h-full">
-                <Header title={`Résultats: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
+                <Header title={`Résultats: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - ${testName}`} />
                 <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
                     <div className="max-w-3xl mx-auto space-y-6">
                         <Card>
@@ -199,8 +215,8 @@ export default function TrainingSessionPage() {
                                     <span>Score Global</span>
                                     <span>{correctCount} / {totalAnswered}</span>
                                     </div>
-                                    <Progress value={scorePercentage} className="h-4" />
-                                    <p className="text-right text-lg font-bold text-primary">{`${Math.round(scorePercentage)}%`}</p>
+                                    <Progress value={scorePercentage} className="h-4" indicatorClassName={scoreBgColor} />
+                                    <p className={`text-right text-lg font-bold ${scoreTextColor}`}>{`${Math.round(scorePercentage)}%`}</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -272,7 +288,7 @@ export default function TrainingSessionPage() {
 
     return (
         <div className="flex flex-col h-full">
-            <Header title={`Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - Test #${testId}`} />
+            <Header title={`Entraînement: ${sectionSlug.charAt(0).toUpperCase() + sectionSlug.slice(1)} - ${testName}`} />
             <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
                  <div className="max-w-2xl mx-auto">
                     <div className="flex justify-between items-center mb-4">

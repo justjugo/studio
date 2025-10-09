@@ -18,7 +18,7 @@ export function Header({ title, children, className }: HeaderProps) {
     <header className={cn("flex h-20 items-center justify-between border-b bg-card px-4 md:px-6", className)}>
       <div className="flex items-center gap-4">
         {isMobile && (
-          <SidebarTrigger className="h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20">
+          <SidebarTrigger className="ml-[-1rem] h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20">
             <Menu className="h-6 w-6" />
           </SidebarTrigger>
         )}

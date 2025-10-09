@@ -633,6 +633,8 @@
       { "id": "c", "text": "fît" },
       { "id": "d", "text": "fera" }
     ],
+
+    
     "correctOptionId": "c",
     "explanation": "Dans un style littéraire ou formel, après un verbe au passé, on utilise l'imparfait du subjonctif : 'fît' pour 'faire'."
   },
