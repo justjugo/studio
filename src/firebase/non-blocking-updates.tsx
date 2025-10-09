@@ -5,8 +5,11 @@ import {
   addDoc,
   updateDoc,
   deleteDoc,
+  collection,
+  doc,
   CollectionReference,
   DocumentReference,
+  DocumentData,
   SetOptions,
   writeBatch,
   Firestore,
@@ -94,7 +97,7 @@ export function deleteDocumentNonBlocking(docRef: DocumentReference) {
  * Performs a batch write operation to upload multiple documents at once.
  * This is non-blocking in the UI, but the function itself is async.
  */
-export function batchUploadNonBlocking<T>(db: Firestore, collectionPath: string, data: T[]) {
+export function batchUploadNonBlocking<T extends DocumentData>(db: Firestore, collectionPath: string, data: T[]) {
   const batch = writeBatch(db);
   const colRef = collection(db, collectionPath);
 
@@ -116,5 +119,3 @@ export function batchUploadNonBlocking<T>(db: Firestore, collectionPath: string,
     );
   });
 }
-
-    
