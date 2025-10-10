@@ -2,7 +2,7 @@ import type { Question, UserProgress } from '@/lib/types';
 
 export const questions: Question[] = [
   {
-    id: 1,
+    id: '1',
     section: 'listening',
     difficulty: 'A1',
     audioSrc: '/audio/sample.mp3',
@@ -17,7 +17,7 @@ export const questions: Question[] = [
     explanationVideoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   },
   {
-    id: 2,
+    id: '2',
     section: 'structure',
     difficulty: 'A2',
     questionText: 'Je ______ du piano tous les jours.',
@@ -30,10 +30,10 @@ export const questions: Question[] = [
     correctOptionId: 'a',
   },
   {
-    id: 3,
+    id: '3',
     section: 'reading',
     difficulty: 'B1',
-    questionText: 'Lisez le texte. Quel est le but principal de l\'auteur?',
+    questionText: 'Lisez le texte. Quel est le but principal de l\"auteur?',
     options: [
       { id: 'a', text: 'Informer sur un événement' },
       { id: 'b', text: 'Donner son opinion' },
@@ -44,7 +44,7 @@ export const questions: Question[] = [
     explanationVideoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   },
   {
-    id: 4,
+    id: '4',
     section: 'structure',
     difficulty: 'B2',
     questionText: 'Il faut que vous ______ plus attentif.',
@@ -57,20 +57,20 @@ export const questions: Question[] = [
     correctOptionId: 'b',
   },
   {
-      id: 5,
+      id: '5',
       section: 'reading',
       difficulty: 'C1',
-      questionText: 'Quelle est l\'inférence principale que l\'on peut tirer du dernier paragraphe?',
+      questionText: 'Quelle est l\"inférence principale que l\"on peut tirer du dernier paragraphe?',
       options: [
-          { id: 'a', text: 'La situation va s\'améliorer' },
-          { id: 'b', text: 'L\'auteur est pessimiste' },
+          { id: 'a', text: 'La situation va s\"améliorer' },
+          { id: 'b', text: 'L\"auteur est pessimiste' },
           { id: 'c', text: 'Il manque des informations' },
           { id: 'd', text: 'Une action immédiate est requise' },
       ],
       correctOptionId: 'd',
   },
   {
-      id: 6,
+      id: '6',
       section: 'listening',
       difficulty: 'B1',
       audioSrc: '/audio/sample2.mp3',
