@@ -1,15 +1,19 @@
 
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
-import { useMemo, useState } from 'react';
+import { useParams } from 'next/navigation';
+import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ListChecks } from 'lucide-react';
+import { ArrowRight, ListChecks, Lock } from 'lucide-react';
 import { seedQuestions } from '@/lib/seed-data';
 import type { Question } from '@/lib/types';
+import { useUser } from '@/firebase/provider';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { cn } from '@/lib/utils';
 
 const sectionConfig: { [key: string]: { name: string; questionCount: number; title: string } } = {
     listening: { name: 'listening', questionCount: 29, title: 'Compréhension orale' },
@@ -19,34 +23,60 @@ const sectionConfig: { [key: string]: { name: string; questionCount: number; tit
 
 export default function TrainingSectionPage() {
     const params = useParams();
-    const router = useRouter();
+    const { user } = useUser();
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const config = sectionConfig[sectionSlug];
 
-    const [selectedLevel, setSelectedLevel] = useState<'all' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'>('all');
+    const [isPaidUser, setIsPaidUser] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [selectedLevel, setSelectedLevel] = useState<'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'>('A1');
     const levels: ('A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2')[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
+    const isRestrictedListening = sectionSlug === 'listening' && !isPaidUser;
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+             if (!user) {
+                setIsPaidUser(false);
+                setIsLoading(false);
+                return;
+            }
+            const db = getFirestore();
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+            if (userDoc.exists() && userDoc.data().role === 'paiduser') {
+                setIsPaidUser(true);
+            } else {
+                setIsPaidUser(false);
+            }
+            setIsLoading(false);
+        };
+
+        fetchUserData();
+    }, [user]);
+
+    useEffect(() => {
+        if (!isLoading && isRestrictedListening) {
+            setSelectedLevel('A1');
+        }
+    }, [isLoading, isRestrictedListening]);
 
     const availableTests = useMemo(() => {
         if (!config) return [];
+        
         const allSectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
 
-        if (selectedLevel !== 'all') {
-            const levelQuestions = allSectionQuestions.filter(q => q.difficulty === selectedLevel);
-            if (levelQuestions.length > 0) {
-                // For a specific level, if there are any questions, create one test.
-                return [{ id: 1, name: `Test ${selectedLevel}`, questionCount: levelQuestions.length }];
-            }
-            return []; // No questions for this level.
-        } else {
-            // For 'all' levels, create tests based on the full question count.
-            const numTests = Math.floor(allSectionQuestions.length / config.questionCount);
-            return Array.from({ length: numTests }, (_, i) => ({
-                id: i + 1,
-                name: `Test #${i + 1}`,
-                questionCount: config.questionCount
-            }));
+        const levelQuestions = allSectionQuestions.filter(q => q.difficulty === selectedLevel);
+        if (levelQuestions.length > 0) {
+            return [{ id: 1, name: `Test ${selectedLevel}`, questionCount: levelQuestions.length }];
         }
+        return [];
+
     }, [config, selectedLevel]);
+
+    if (isLoading) {
+        return <div>Chargement...</div>; // Or a proper loading spinner
+    }
 
     if (!config) {
         return (
@@ -78,16 +108,32 @@ export default function TrainingSectionPage() {
                 <div className="max-w-2xl mx-auto">
                      <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold font-headline">Tests disponibles</h2>
-                        <p className="text-muted-foreground mt-2">Sélectionnez un test pour commencer votre session d'entraînement.</p>
+                        <p className="text-muted-foreground mt-2">Sélectionnez un niveau pour voir les tests disponibles.</p>
                     </div>
 
+                    {isRestrictedListening && (
+                        <Alert className="mb-8 border-yellow-500/50 text-yellow-700">
+                            <AlertTitle className="text-yellow-800">Accès limité</AlertTitle>
+                            <AlertDescription>
+                                En tant qu'utilisateur gratuit, votre accès à la section d'écoute est limité au niveau A1. Passez à premium pour débloquer tous les niveaux.
+                                <Button asChild size="sm" className="ml-4"> 
+                                    <Link href="/premium">Passez à Premium</Link>
+                                </Button>
+                            </AlertDescription>
+                        </Alert>
+                    )}
+
                     <div className="flex justify-center flex-wrap gap-2 mb-8">
-                        <Button variant={selectedLevel === 'all' ? 'default' : 'outline'} onClick={() => setSelectedLevel('all')}>
-                            Tous les niveaux
-                        </Button>
                         {levels.map(level => (
-                            <Button key={level} variant={selectedLevel === level ? 'default' : 'outline'} onClick={() => setSelectedLevel(level)}>
+                            <Button 
+                                key={level} 
+                                variant={selectedLevel === level ? 'default' : 'outline'} 
+                                onClick={() => setSelectedLevel(level)}
+                                disabled={isRestrictedListening && level !== 'A1'}
+                                className={cn(isRestrictedListening && level !== 'A1' && "cursor-not-allowed")}
+                            >
                                 {level}
+                                {isRestrictedListening && level !== 'A1' && <Lock className="h-4 w-4 ml-2"/>}
                             </Button>
                         ))}
                     </div>
@@ -95,7 +141,7 @@ export default function TrainingSectionPage() {
                     {availableTests.length > 0 ? (
                         <div className="space-y-4">
                             {availableTests.map(test => (
-                                <Link key={test.id} href={`/training/${sectionSlug}/${test.id}${selectedLevel !== 'all' ? `?level=${selectedLevel}` : ''}`}>
+                                <Link key={test.id} href={`/training/${sectionSlug}/${test.id}?level=${selectedLevel}`}>
                                     <Card className="group transition-all duration-300 ease-in-out hover:shadow-md hover:border-primary">
                                         <CardContent className="p-4 flex items-center justify-between">
                                             <div className="flex items-center gap-4">
@@ -119,14 +165,9 @@ export default function TrainingSectionPage() {
                             <CardHeader className="text-center">
                                 <CardTitle>Aucun test disponible</CardTitle>
                                 <CardDescription>
-                                    Il n'y a pas assez de questions pour créer un test pour cette section {selectedLevel !== 'all' && `au niveau ${selectedLevel}`}. Veuillez essayer un autre niveau ou ajouter plus de questions.
+                                    Il n'y a pas de questions disponibles pour le niveau {selectedLevel}. Veuillez sélectionner un autre niveau.
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="text-center">
-                                <Button asChild>
-                                    <Link href="/training">Retour aux sections</Link>
-                                </Button>
-                            </CardContent>
                         </Card>
                     )}
                 </div>

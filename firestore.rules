@@ -1,211 +1,74 @@
-/**
- * @file Firestore Security Rules for the TCF Prep App.
- *
- * Core Philosophy:
- * This ruleset enforces a strict user-ownership model for personal data (profiles, sessions, results)
- * while allowing public read access to shared resources like questions.
- *
- * Data Structure:
- * - User data is nested under /users/{userId} for private storage.
- * - Questions are stored in the top-level /questions collection for public access.
- * - Sessions and Results are stored under /users/{userId} to ensure data privacy.
- *
- * Key Security Decisions:
- * - Users can only access their own data.
- * - Questions are publicly readable.
- * - User listing is not allowed.
- *
- * Denormalization for Authorization:
- *  -  User-owned data (sessions, results, accessibility settings) are stored under `/users/{userId}`.
- * This path-based ownership eliminates the need for `get()` calls to verify ownership, ensuring atomic operations.
- */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    /**
-     * @description Allows users to read and write their own profile data.
-     * @path /users/{userId}
-     * @allow (create) User with ID matching auth.uid can create their profile.
-     * @deny (create) User with ID not matching auth.uid cannot create profile.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their profile.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete profile.
-     * @principle Enforces document ownership for writes.
-     */
+    // --- Helper Functions ---
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Fetches the user's document data
+    function getUserData(userId) {
+      return get(/databases/$(database)/documents/users/$(userId)).data;
+    }
+
+    // Checks if the user has the 'paiduser' role
+    function isPaidUser(userId) {
+      return getUserData(userId).role == 'paiduser';
+    }
+
+    // Checks if at least 24 hours have passed since the last session
+    function isDailyLimitRespected(lastSessionTimestamp) {
+      // If there's no timestamp, it's the user's first session.
+      if (lastSessionTimestamp == null) {
+        return true;
+      }
+      // Check if the current time is more than 24 hours after the last session.
+      return request.time.toMillis() - lastSessionTimestamp.toMillis() > 24 * 60 * 60 * 1000;
+    }
+
+    // --- Rule Definitions ---
+
+    // USER PROFILE
     match /users/{userId} {
-      function isOwner(userId) {
-        return request.auth != null && request.auth.uid == userId;
-      }
-      function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
-      }
+      allow get: if isOwner(userId);
+      
+      // On create, a new user must be assigned the 'user' role.
+      allow create: if isOwner(userId) && request.resource.data.role == 'user';
 
-      allow create: if isOwner(userId) && request.resource.data.id == userId;
-      allow get, list: if isOwner(userId);
-      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
-      allow delete: if isExistingOwner(userId);
+      // A user cannot change their own role. This must be done by a server process.
+      // They can update other fields, but the 'role' must remain the same.
+      allow update: if isOwner(userId) && request.resource.data.role == resource.data.role;
+
+      // No one can list all users.
+      allow list: if false;
     }
 
-    /**
-     * @description Allows users to read and write their own accessibility preferences.
-     * @path /users/{userId}/accessibility/{accessibilityId}
-     * @allow (create) User with ID matching auth.uid can create their accessibility document.
-     * @deny (create) User with ID not matching auth.uid cannot create accessibility document.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their accessibility document.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete accessibility document.
-     * @principle Enforces document ownership for writes.
-     */
-    match /users/{userId}/accessibility/{accessibilityId} {
-        function isOwner(userId) {
-          return request.auth != null && request.auth.uid == userId;
-        }
-        function isExistingOwner(userId) {
-            return isOwner(userId) && resource != null;
-        }
+    // USER SUBCOLLECTIONS (including 'testSessions')
+    match /users/{userId}/{collection}/{docId} {
+      // Owners can read any of their own documents.
+      allow read: if isOwner(userId);
 
-        allow create: if isOwner(userId);
-        allow get, list: if isOwner(userId);
-        allow update: if isExistingOwner(userId);
-        allow delete: if isExistingOwner(userId);
+      // Specific rule for creating new test sessions
+      allow create: if isOwner(userId) &&
+                     (collection == 'testSessions'
+                       ? (isPaidUser(userId) || isDailyLimitRespected(getUserData(userId).lastSessionTimestamp))
+                       : true); // Allow create for other collections
+
+      // Allow updates and deletes by the owner.
+      allow update, delete, write: if isOwner(userId);
     }
 
-    /**
-     * @description Allows anyone to read questions, but restricts creation, updating, and deletion.
-     * @path /questions/{questionId}
-     * @allow (get, list) Any user can read questions.
-     * @deny (create, update, delete) No one can create, update, or delete questions via the client.
-     * @principle Provides public read access while restricting write access.
-     */
+    // PUBLIC COLLECTIONS
     match /questions/{questionId} {
       allow get, list: if true;
-      allow create, update, delete: if false;
     }
-
-    /**
-     * @description Allows anyone to read question content, but restricts creation, updating, and deletion.
-     * @path /questionContent/{questionContentId}
-     * @allow (get, list) Any user can read question content.
-     * @deny (create, update, delete) No one can create, update, or delete question content via the client.
-     * @principle Provides public read access while restricting write access.
-     */
     match /questionContent/{questionContentId} {
-          allow get, list: if true;
-          allow create, update, delete: if false;
+      allow get, list: if true;
     }
-
-    /**
-     * @description Allows users to read and write their own session data.
-     * @path /users/{userId}/sessions/{sessionId}
-     * @allow (create) User with ID matching auth.uid can create their session.
-     * @deny (create) User with ID not matching auth.uid cannot create session.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their session.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete session.
-     * @principle Enforces document ownership for writes.
-     */
-    match /users/{userId}/sessions/{sessionId} {
-      function isOwner(userId) {
-        return request.auth != null && request.auth.uid == userId;
-      }
-      function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
-      }
-
-      allow create: if isOwner(userId) && request.resource.data.userId == userId;
-      allow get, list: if isOwner(userId);
-      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
-      allow delete: if isExistingOwner(userId);
-    }
-
-    /**
-     * @description Allows users to read and write their own epreuve data.
-     * @path /users/{userId}/sessions/{sessionId}/epreuves/{epreuveId}
-     * @allow (create) User with ID matching auth.uid can create their epreuve.
-     * @deny (create) User with ID not matching auth.uid cannot create epreuve.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their epreuve.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete epreuve.
-     * @principle Enforces document ownership for writes.
-     */
-    match /users/{userId}/sessions/{sessionId}/epreuves/{epreuveId} {
-          function isOwner(userId) {
-            return request.auth != null && request.auth.uid == userId;
-          }
-          function isExistingOwner(userId) {
-              return isOwner(userId) && resource != null;
-          }
-
-          allow create: if isOwner(userId);
-          allow get, list: if isOwner(userId);
-          allow update: if isExistingOwner(userId);
-          allow delete: if isExistingOwner(userId);
-    }
-
-    /**
-     * @description Allows users to read and write their own answer data.
-     * @path /users/{userId}/sessions/{sessionId}/epreuves/{epreuveId}/answers/{answerId}
-     * @allow (create) User with ID matching auth.uid can create their answer.
-     * @deny (create) User with ID not matching auth.uid cannot create answer.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their answer.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete answer.
-     * @principle Enforces document ownership for writes.
-     */
-    match /users/{userId}/sessions/{sessionId}/epreuves/{epreuveId}/answers/{answerId} {
-          function isOwner(userId) {
-            return request.auth != null && request.auth.uid == userId;
-          }
-          function isExistingOwner(userId) {
-              return isOwner(userId) && resource != null;
-          }
-
-          allow create: if isOwner(userId);
-          allow get, list: if isOwner(userId);
-          allow update: if isExistingOwner(userId);
-          allow delete: if isExistingOwner(userId);
-    }
-
-    /**
-     * @description Allows users to read and write their own result data.
-     * @path /users/{userId}/results/{resultId}
-     * @allow (create) User with ID matching auth.uid can create their result.
-     * @deny (create) User with ID not matching auth.uid cannot create result.
-     * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their result.
-     * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete result.
-     * @principle Enforces document ownership for writes.
-     */
-    match /users/{userId}/results/{resultId} {
-      function isOwner(userId) {
-        return request.auth != null && request.auth.uid == userId;
-      }
-      function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
-      }
-
-      allow create: if isOwner(userId) && request.resource.data.userId == userId;
-      allow get, list: if isOwner(userId);
-      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
-      allow delete: if isExistingOwner(userId);
-    }
-
-       /**
-        * @description Allows users to read and write their own score data.
-        * @path /users/{userId}/results/{resultId}/scores/{scoreId}
-        * @allow (create) User with ID matching auth.uid can create their score.
-        * @deny (create) User with ID not matching auth.uid cannot create score.
-        * @allow (get, list, update, delete) User with ID matching auth.uid can read, update, or delete their score.
-        * @deny (get, list, update, delete) User with ID not matching auth.uid cannot read, update, or delete score.
-        * @principle Enforces document ownership for writes.
-        */
-    match /users/{userId}/results/{resultId}/scores/{scoreId} {
-            function isOwner(userId) {
-              return request.auth != null && request.auth.uid == userId;
-            }
-            function isExistingOwner(userId) {
-                return isOwner(userId) && resource != null;
-            }
-
-            allow create: if isOwner(userId);
-            allow get, list: if isOwner(userId);
-            allow update: if isExistingOwner(userId);
-            allow delete: if isExistingOwner(userId);
-      }
   }
 }

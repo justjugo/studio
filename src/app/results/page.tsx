@@ -68,7 +68,7 @@ export default function ResultsPage() {
   }, [results]);
 
   const performanceMetrics = useMemo(() => {
-    const recentResults = sortedResults.slice(0, 3);
+    const recentResults = sortedResults.slice(0, 1);
     
     if (!recentResults || recentResults.length === 0) {
       return {
@@ -170,7 +170,7 @@ export default function ResultsPage() {
           <Card>
             <CardHeader className="text-center">
               <CardTitle className="text-3xl">Votre performance globale</CardTitle>
-               <CardDescription>Basé sur vos {sortedResults.slice(0, 3).length} dernières tentatives.</CardDescription>
+               <CardDescription>Basé sur votre dernière tentative.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
                 <div className="flex flex-col items-center space-y-4 p-4 bg-secondary/30 rounded-lg">
@@ -230,9 +230,9 @@ export default function ResultsPage() {
                             </div>
                           </div>
                            {item.question.explanation && (
-                              <Alert>
-                                  <Lightbulb className="h-4 w-4" />
-                                  <AlertTitle>Explication</AlertTitle>
+                              <Alert className="border-blue-500/50">
+                                  <Lightbulb className="h-4 w-4 text-blue-500" />
+                                  <AlertTitle className="text-blue-600">Explication</AlertTitle>
                                   <AlertDescription>{item.question.explanation}</AlertDescription>
                               </Alert>
                            )}

@@ -1,5 +1,2287 @@
 [
   {
+    "section": "listening",
+    "difficulty": "A1",
+    "imageSrc": "https://res.cloudinary.com/ddjxffgyd/image/upload/v1760279707/2025-10-12_15h34_28_dqnztc.png",
+    "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760278933/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_1_usixyn.wav",
+    "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+    "options": [
+      { "id": "a", "text": "A" },
+      { "id": "b", "text": "B" },
+      { "id": "c", "text": "C" },
+      { "id": "d", "text": "D" }
+    ],
+    "correctOptionId": "c"
+    }
+,  
+{
+  "section": "listening",
+  "difficulty": "A1",
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760281036/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_2_u6iw0i.wav",
+  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "options": [
+    { "id": "a", "text": "A" },
+    { "id": "b", "text": "B" },
+    { "id": "c", "text": "C" },
+    { "id": "d", "text": "D" }
+  ],
+  "correctOptionId": "a"
+}
+,  {
+  "section": "listening",
+  "difficulty": "A1",
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760281819/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_3_igairc.wav",
+  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "options": [
+    { "id": "a", "text": "A" },
+    { "id": "b", "text": "B" },
+    { "id": "c", "text": "C" },
+    { "id": "d", "text": "D" }
+  ],
+  "correctOptionId": "a"
+}
+, 
+{
+  "section": "listening",
+  "difficulty": "A2",
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760282335/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_4_ndwxrb.wav",
+  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "options": [
+    { "id": "a", "text": "A" },
+    { "id": "b", "text": "B" },
+    { "id": "c", "text": "C" },
+    { "id": "d", "text": "D" }
+  ],
+  "correctOptionId": "d"
+}
+, 
+{
+  "section": "listening",
+  "difficulty": "A2",
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760282614/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_5_nvoofu.wav",
+  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "options": [
+    { "id": "a", "text": "A" },
+    { "id": "b", "text": "B" },
+    { "id": "c", "text": "C" },
+    { "id": "d", "text": "D" }
+  ],
+  "correctOptionId": "a"
+}
+, {
+  "section": "listening",
+  "difficulty": "B1",
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760283185/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_6_ivdgv9.wav",
+  "questionText": " Qu'annonce ce message ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le départ imminent du bus n° 562."
+    },
+    {
+      "id": "b",
+      "text": "L'ouverture d'un nouveau guichet à la gare."
+    },
+    {
+      "id": "c",
+      "text": "L'annulation d'un bus et la procédure de remboursement."
+    },
+    {
+      "id": "d",
+      "text": "Un changement de quai pour le bus n° 562."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le message mentionne clairement 'l'annulation du bus' et invite les passagers à se rendre au guichet 'pour être remboursés'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760283433/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_7_gqvy5e.wav",
+  "questionText": " Que propose Laurent à Émilie ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "De l'aider à refaire son CV."
+    },
+    {
+      "id": "b",
+      "text": "Un endroit où elle peut postuler pour un emploi."
+    },
+    {
+      "id": "c",
+      "text": "De lui prêter de l'argent."
+    },
+    {
+      "id": "d",
+      "text": "De lui présenter le cousin."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Émilie cherche un emploi de serveuse et Laurent lui propose de contacter son cousin qui a besoin d'une personne pour le service."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760283859/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_8_nrvmwa.wav",
+  "questionText": " Que montre Louise à Caroline ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un nouveau film à regarder."
+    },
+    {
+      "id": "b",
+      "text": "Un tableau du peintre Rodolphe Vanderbilt."
+    },
+    {
+      "id": "c",
+      "text": "Un trou sur la robe qu'elle lui a prêtée."
+    },
+    {
+      "id": "d",
+      "text": "Un cadeau qu'elle a acheté."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Louise dit : 'je rêve ou bien il y a un trou de cigarettes là ? Mais oui, quelle horreur.' Cela concerne la robe que Caroline vient de lui rendre."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760284122/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_9_aoj5zp.wav",
+  "questionText": "Combien y a-t-il d'élèves russes dans la classe ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Beaucoup d'élèves russes."
+    },
+    {
+      "id": "b",
+      "text": "Plusieurs élèves russes."
+    },
+    {
+      "id": "c",
+      "text": "Un peu de Russes (toutes des femmes)."
+    },
+    {
+      "id": "d",
+      "text": "Environ 25 élèves russes."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'extrait dit : 'plusieurs japonais et coréen et **un peu de russes toutes des femmes**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760284315/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_10_zsh20l.wav",
+  "questionText": "Que doit faire la personne suite à ce message ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Se rendre directement à l'hôpital."
+    },
+    {
+      "id": "b",
+      "text": "Rappeler le secrétariat pour confirmer le rendez-vous."
+    },
+    {
+      "id": "c",
+      "text": "Se présenter au scanner le 27 mars à 10 heures sans confirmation."
+    },
+    {
+      "id": "d",
+      "text": "Annuler le rendez-vous si elle n'est pas disponible."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le message se termine par : 'Si oui, merci de rappeler le secrétariat pour enregistrer le rendez-vous.' (Si elle est disponible)."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760284603/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_11_pmkycx.wav",
+  "questionText": " Quelle est la priorité de la personne ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le travail."
+    },
+    {
+      "id": "b",
+      "text": "La famille."
+    },
+    {
+      "id": "c",
+      "text": "Les repas et les fêtes."
+    },
+    {
+      "id": "d",
+      "text": "Les petites choses positives."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "L'invité déclare : 'Pour moi, c'est **le travail avant tout** qui me rend heureux. Bien sûr ma famille compte beaucoup pour moi...'"
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760284822/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_12_jv459w.wav",
+  "questionText": "Pour quelles raisons la personne accepte-t-elle d'aller à Paris ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pour aller au musée du Louvre et flâner."
+    },
+    {
+      "id": "b",
+      "text": "Pour aller au musée et prendre le train."
+    },
+    {
+      "id": "c",
+      "text": "Pour avoir un temps de repos et aller à l'opéra."
+    },
+    {
+      "id": "d",
+      "text": "Pour avoir un temps de repos et changer les idées."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "La personne mentionne le besoin d'une 'bonne escapade pour me changer les idées' (temps de repos) et ajoute vouloir 'surtout aller voir un spectacle à l'opéra', ce qui est l'action qui sera immédiatement réservée ('je réserve le train et l'opéra tout de suite')."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760285068/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_13_hmpkzl.wav",
+  "questionText": "Bernard Blanchet est directeur d'une école primaire qui a la particularité d'accueillir des élèves sourds et malentendants. Quelle est la particularité de Bernard Blanchet ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il est lui-même sourd et muet."
+    },
+    {
+      "id": "b",
+      "text": "Il est directeur d'une école publique gratuite."
+    },
+    {
+      "id": "c",
+      "text": "Il maîtrise la langue des signes depuis son plus jeune âge."
+    },
+    {
+      "id": "d",
+      "text": "Il est le seul enseignant à maîtriser la langue des signes."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il dit : 'Je la maîtrise moi-même depuis mon plus jeune âge puisque mon père est sourd et muet de naissance...'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760288282/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_14_kfgrtx.wav",
+  "questionText": "Que va faire Audrey ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Elle va lire son roman préféré."
+    },
+    {
+      "id": "b",
+      "text": "Elle va rencontrer un écrivain et acheter un livre."
+    },
+    {
+      "id": "c",
+      "text": "Elle va se faire belle et se rendre au Salon du livre."
+    },
+    {
+      "id": "d",
+      "text": "Elle va à une exposition de peinture."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Elle dit : 'Je finis de me faire une beauté et **j'y vais**' (au Salon du livre). Les autres options sont des actions qui ont été faites ou qui font partie du contexte."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760288587/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_15_rmvgij.wav",
+  "questionText": " L'enseigne Moda Nous propose :",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un recyclage de tous les types de vêtements."
+    },
+    {
+      "id": "b",
+      "text": "Un service de recyclage en échange d'un bon d'achat pour un jeans."
+    },
+    {
+      "id": "c",
+      "text": "Un coupon de 5 euros pour l'achat de sous-vêtements."
+    },
+    {
+      "id": "d",
+      "text": "Un coupon pour chaque article donné."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'enseigne propose 'des bornes pour recycler les vêtements' et donne 'un coupon de 5 euros de réduction pour l'achat d'un jeans en boutique' pour 'un don de vêtements composé d'un ou plusieurs articles'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760288929/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_16_ofqtfk.wav",
+  "questionText": "   Pourquoi le père ne peut-il pas inscrire sa fille au cours de foot ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Parce qu'il n'y a pas d'équipes féminines dans le club."
+    },
+    {
+      "id": "b",
+      "text": "Parce que l'équipe est complète."
+    },
+    {
+      "id": "c",
+      "text": "Parce que le club n'a pas assez de jeunes inscrites pour former un groupe."
+    },
+    {
+      "id": "d",
+      "text": "Parce qu'elle est trop jeune."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'interlocuteur dit : 'Malheureusement nous ne pouvons pas encore ouvrir un cours pour cette tranche d'âge car **nous n'avons pas assez d'inscriptions. Il manque cinq jeunes**.'"
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760289182/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_17_cvotoa.wav",
+  "questionText": " Sur quoi le docteur Valayroubal intervient-il ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sur les douleurs abdominales."
+    },
+    {
+      "id": "b",
+      "text": "Sur le diagnostic de la migraine."
+    },
+    {
+      "id": "c",
+      "text": "Sur la fatigue et la somnolence."
+    },
+    {
+      "id": "d",
+      "text": "Sur l'âge des patients."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le docteur est interrogé sur ce qui 'distingue la migraine d'une céphalée classique' et il répond en listant les **caractéristiques de la migraine**, ce qui correspond à son diagnostic et à sa définition."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760289510/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_18_o2mkak.wav",
+  "questionText": "Les deux équipes décrites par Monsieur Jacquin sont :",
+  "options": [
+    {
+      "id": "a",
+      "text": "La NASA et l'Union Européenne."
+    },
+    {
+      "id": "b",
+      "text": "La France et les États-Unis."
+    },
+    {
+      "id": "c",
+      "text": "Les deux entreprises aérospatiales des hommes les plus riches du monde."
+    },
+    {
+      "id": "d",
+      "text": "La Russie et les États-Unis."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il parle d'une 'bataille qui fait rage entre **deux des hommes les plus riches du monde**' et de 'deux puissances états-uniennes', faisant allusion aux sociétés privées comme SpaceX (Elon Musk) et Blue Origin (Jeff Bezos)."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760289750/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_19_eocgq9.wav",
+  "questionText": "Quel est le problème de Janine Bérard ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Elle n'a pas reçu sa lettre d'information."
+    },
+    {
+      "id": "b",
+      "text": "Elle n'arrive pas à avoir les coordonnées de son ex-conjoint."
+    },
+    {
+      "id": "c",
+      "text": "Elle reçoit toujours les factures mobiles de son ex-conjoint."
+    },
+    {
+      "id": "d",
+      "text": "L'entreprise Mobile Facile refuse de lui donner le statut de titulaire du compte."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Elle dit : 'il serait bien gentil de **stopper les envois de ses factures à mon domicile**... je serai dans l'obligation de saisir le tribunal'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760290029/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_20_kizuyb.wav",
+  "questionText": " Quelle est la place de la télévision dans les foyers français ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Elle est détrônée par Internet."
+    },
+    {
+      "id": "b",
+      "text": "Elle est regardée par la plupart des Français après une longue journée."
+    },
+    {
+      "id": "c",
+      "text": "Elle a une place privilégiée malgré la concurrence d'Internet."
+    },
+    {
+      "id": "d",
+      "text": "Elle n'est plus considérée comme un passe-temps agréable."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'expert affirme que 'le petit écran [a] une **place privilégiée**', puis reconnaît qu'Internet 'rattrape à vitesse grand V la télévision' mais qu'elle n'a pas encore perdu son prestige (au moment de l'interview)."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760290613/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_21_ovzetw.wav",
+  "questionText": "De quoi parle cette audio ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "De la fugue d'une mineure et de son retour."
+    },
+    {
+      "id": "b",
+      "text": "D'une alerte enlèvement diffusée sur les réseaux sociaux."
+    },
+    {
+      "id": "c",
+      "text": "D'une opération de recherche menée par la gendarmerie."
+    },
+    {
+      "id": "d",
+      "text": "De l'instabilité et la dépression d'une enfant."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "L'audio résume l'événement en parlant du 'heureux dénouement' de la recherche d'une enfant qui 'avait déjà fugué à plusieurs reprises', ce qui correspond à l'histoire d'une fugue et de son issue positive."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760290840/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_22_bdwpn7.wav",
+  "questionText": " Quelle est la particularité du film présenté ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il peut être regardé par 100 000 milliards de spectateurs en même temps."
+    },
+    {
+      "id": "b",
+      "text": "Il permet de piloter un ordinateur avec des casques EEG."
+    },
+    {
+      "id": "c",
+      "text": "Il adapte son contenu en fonction des émotions du spectateur."
+    },
+    {
+      "id": "d",
+      "text": "Il interconnecte les cerveaux des êtres humains."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'audio explique que 'l'influx nerveux des spectateurs... est analysé par ordinateur. Selon les activités émotionnelles qui seront mesurées, certaines scènes... vont se transformer'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760291080/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_23_ns3klz.wav",
+  "questionText": " Quel est l'objet de cet entretien ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La protection des abeilles."
+    },
+    {
+      "id": "b",
+      "text": "Le décodage de la danse des abeilles."
+    },
+    {
+      "id": "c",
+      "text": "Les capacités cognitives des abeilles."
+    },
+    {
+      "id": "d",
+      "text": "Le code de communication des abeilles."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Le journaliste demande : 'j'aimerais bien qu'on comprenne **à quel point elles communiquent et comment elles communiquent**... c'est cette danse qui leur permet de communiquer'. L'expert décrit ensuite ce 'code partagé par toutes les abeilles de la ruche'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760292074/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_24_rsp9bc.wav",
+  "questionText": "Que pense la société française du travail des femmes pendant la Première Guerre mondiale ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Elle encourage le travail des femmes pour l'effort de guerre."
+    },
+    {
+      "id": "b",
+      "text": "Elle ne se soucie pas de la concurrence entre travailleurs."
+    },
+    {
+      "id": "c",
+      "text": "Elle y est majoritairement favorable, sauf les médecins."
+    },
+    {
+      "id": "d",
+      "text": "Elle s'inquiète des conséquences sociales et morales de ce nouveau rôle."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Le texte indique que 'la société contemporaine de l'époque **s'inquiète des effets** de l'entrée des femmes dans ces secteurs masculin... en termes d'effets sur... la **masculinisation des femmes et ses effets moraux et sociaux**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760292491/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_25_tiqtfj.wav",
+  "questionText": "Dans cet audio, on nous informe:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Que la première grève des coiffeurs a eu lieu en mars à cause d'une taxe."
+    },
+    {
+      "id": "b",
+      "text": "Que les clients se précipitent pour anticiper une possible deuxième grève."
+    },
+    {
+      "id": "c",
+      "text": "Que les coiffeurs ferment de nouveau en signe de protestation."
+    },
+    {
+      "id": "d",
+      "text": "Que les clients ont peur des cheveux blancs."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le document sonore commence par la phrase : 'Les clients se précipitent chez le coiffeur pour anticiper une possible **deuxième grève**' et explique que les gens craignent de revivre la situation de mars dernier où les salons étaient fermés pendant deux mois, ce qui provoque un **boom de réservation en urgence** à la moindre annonce."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760292722/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_26_f0ymyf.wav",
+  "questionText": " Dans cet audio, on apprend que :",
+  "options": [
+    {
+      "id": "a",
+      "text": "Les acheteurs sont considérés comme de vrais nobles par l'État."
+    },
+    {
+      "id": "b",
+      "text": "On peut obtenir un titre de prestige en échange d'une somme d'argent."
+    },
+    {
+      "id": "c",
+      "text": "Le fondateur a lui-même dessiné 52 000 blasons."
+    },
+    {
+      "id": "d",
+      "text": "Les fonds sont réinvestis dans la création de la confrérie des mousquetaires."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'audio commence par demander : 'Vous avez envie de devenir chevalier, baron ou vicomte ?' puis explique qu'on peut 's'acheter un titre de noblesse' pour '7 500 euros pour être baron ou comte' et que c'est un 'signe de prestige facile à acquérir'."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760293308/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_27_pvecn8.wav",
+  "questionText": "L'énoncé promotionnel de la Compagnie du Pain d'Épices, qui insiste sur 'le meilleur du savoir-faire français' et la 'qualité des matières premières', cherche implicitement à établir :",
+  "options": [
+    {
+      "id": "a",
+      "text": "Une allégeance stricte aux produits mono-catégoriels traditionnels de l'Alsace."
+    },
+    {
+      "id": "b",
+      "text": "Une distinction par l'**exigence artisanale** comme paradigme de son positionnement commercial."
+    },
+    {
+      "id": "c",
+      "text": "L'éviction manifeste de tout produit issu de filières d'approvisionnement non nationales."
+    },
+    {
+      "id": "d",
+      "text": "La primauté du caractère gustatif sur toute considération éthique ou économique."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "La réponse B utilise un vocabulaire C2 ('allégeance stricte', 'paradigme', 'éviction manifeste') pour paraphraser l'idée de qualité et de savoir-faire (exigence artisanale) qui définit la stratégie de l'entreprise (positionnement commercial)."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760293632/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_28_umydbp.wav",
+  "questionText": "Compte tenu de l'énumération des critères d'Eugénie (culture, humour, créativité, physique sans calvitie, pas d'enfants en bas âge), quelle semble être la **posture fondamentale** de sa démarche de recherche ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Une disposition à la concession si le profil esthétique s'avère conforme à ses exigences."
+    },
+    {
+      "id": "b",
+      "text": "La recherche d'une **adéquation sans compromis** à un archétype de maturité et d'ascendance."
+    },
+    {
+      "id": "c",
+      "text": "Une aspiration contradictoire entre l'artisticité souhaitée et le rejet de la frivolité des loisirs."
+    },
+    {
+      "id": "d",
+      "text": "Une tentative désespérée de substituer un nouveau noyau familial à celui qu'elle a quitté."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "La réponse B est la seule à traduire la nature très exigeante et restrictive des critères. Elle cherche une 'adéquation sans compromis' à son 'archétype' (modèle idéal), le refus des petits enfants marquant une volonté de 'maturité et d'ascendance' (pas de nouvelles contraintes parentales)."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760293941/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_29_qjw2k4.wav",
+  "questionText": "En extrapolant la conclusion du chercheur, l'établissement d'une 'similarité humain-animal' agit comme un **préalable épistémologique** qui permet :",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'assignation de droits anthropomorphes, en dépit de leur altérité biologique fondamentale."
+    },
+    {
+      "id": "b",
+      "text": "Une révision fondamentale des catégorisations morales binaires (humain/non-humain)."
+    },
+    {
+      "id": "c",
+      "text": "L'exaltation de la solidarité envers les seuls animaux de compagnie, excluant l'élevage."
+    },
+    {
+      "id": "d",
+      "text": "L'augmentation des **considérations éthiques** en dissolvant l'opposition entre les espèces."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "La réponse D est la plus précise au niveau C2. Elle utilise le vocabulaire 'considérations éthiques' pour l'idée de 'considérations morales accrues' et 'dissolvant l'opposition entre les espèces' pour l'idée de similarité, démontrant que la compassion est liée au fait de les considérer comme proches (dissolution de l'opposition)."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307950/Sans_titre1_uhnirw.wav",
+  "questionText": "Quand est le rendez-vous ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ce soir à dix heures."
+    },
+    {
+      "id": "b",
+      "text": "Demain matin à dix heures."
+    },
+    {
+      "id": "c",
+      "text": "Demain soir au café."
+    },
+    {
+      "id": "d",
+      "text": "Aujourd'hui à dix heures."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Marc dit : 'notre rendez-vous est **demain à dix heures**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307950/Sans_titre_2_gh7qn2.wav",
+  "questionText": "Quelle information est nouvelle ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le train est annulé."
+    },
+    {
+      "id": "b",
+      "text": "L'heure de départ est modifiée."
+    },
+    {
+      "id": "c",
+      "text": "La destination est changée."
+    },
+    {
+      "id": "d",
+      "text": "Le quai de départ est le numéro 3."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'annonce indique que le train 'partira finalement de la **voie numéro 3**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307953/Sans_titre3_res1lc.wav",
+  "questionText": "Que cherche l'homme ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le supermarché."
+    },
+    {
+      "id": "b",
+      "text": "Une pharmacie."
+    },
+    {
+      "id": "c",
+      "text": "Où est le feu rouge."
+    },
+    {
+      "id": "d",
+      "text": "La boulangerie."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'homme dit : 'Excusez-moi, où est **la boulangerie** la plus proche ?'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307956/Sans_titre4_yst2vp.wav",
+  "questionText": "Quel temps fait-il l'après-midi ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il pleut."
+    },
+    {
+      "id": "b",
+      "text": "Il y a du soleil."
+    },
+    {
+      "id": "c",
+      "text": "Il y a du vent."
+    },
+    {
+      "id": "d",
+      "text": "Le ciel est bleu."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "L'audio dit : 'Il y aura de **la pluie** tout l'après-midi'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307958/Sans_titre5_dq613p.wav",
+  "questionText": "Que demande le docteur Lenoir ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "D'attendre avant de le rappeler."
+    },
+    {
+      "id": "b",
+      "text": "De changer l'heure du rendez-vous."
+    },
+    {
+      "id": "c",
+      "text": "De confirmer ou d'annuler la consultation."
+    },
+    {
+      "id": "d",
+      "text": "De venir immédiatement."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le docteur dit : 'Pourriez-vous me rappeler... pour **confirmer ou annuler** ?'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307959/Sans_titre6_tafcw5.wav",
+  "questionText": "Que conseille la femme à l'homme ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "De l'acheter rapidement."
+    },
+    {
+      "id": "b",
+      "text": "D'attendre la période de soldes."
+    },
+    {
+      "id": "c",
+      "text": "De chercher un autre magasin."
+    },
+    {
+      "id": "d",
+      "text": "De demander une réduction."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "La femme dit : 'Oui, tu devrais **attendre les soldes**, dans deux semaines'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307962/Sans_titre7_w1gpbh.wav",
+  "questionText": "Quel événement a eu lieu hier soir ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un accident de train."
+    },
+    {
+      "id": "b",
+      "text": "Une explosion à la gare."
+    },
+    {
+      "id": "c",
+      "text": "Un feu dans un logement."
+    },
+    {
+      "id": "d",
+      "text": "Un rassemblement de pompiers."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'audio mentionne qu'un '**petit incendie** s'est déclaré dans un appartement'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307964/Sans_titre8_b5adzp.wav",
+  "questionText": "Quel est l'inconvénient de cet appartement ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il est petit."
+    },
+    {
+      "id": "b",
+      "text": "Il est sombre."
+    },
+    {
+      "id": "c",
+      "text": "Il est mal situé."
+    },
+    {
+      "id": "d",
+      "text": "Il ne possède pas de balcon."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'audio dit : 'Il n'y a **pas de balcon**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307967/Sans_titre9_vozcmp.wav",
+  "questionText": "Selon l'audio, quelle est la première étape pour un déménagement réussi ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Étiqueter toutes les boîtes."
+    },
+    {
+      "id": "b",
+      "text": "Réserver un camion."
+    },
+    {
+      "id": "c",
+      "text": "Commencer à faire les cartons un mois avant."
+    },
+    {
+      "id": "d",
+      "text": "Savoir où sont les objets importants."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'audio dit : 'la première chose est de commencer à **faire les cartons au moins un mois à l'avance**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307969/Sans_titre10_zr8ikf.wav",
+  "questionText": "Que doit-on faire pour obtenir une réduction sur les billets ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Acheter un billet le jour du festival."
+    },
+    {
+      "id": "b",
+      "text": "Les acheter avant le 20 juillet."
+    },
+    {
+      "id": "c",
+      "text": "Justifier de son statut d'étudiant."
+    },
+    {
+      "id": "d",
+      "text": "Les acheter uniquement en ligne."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'offre est 'avec une réduction de 15% pour les **étudiants**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760307987/Sans_titre11_diqjsu.wav",
+  "questionText": "Quel est l'avantage principal du vélo électrique mentionné par l'expert ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il est très performant."
+    },
+    {
+      "id": "b",
+      "text": "Il est produit localement."
+    },
+    {
+      "id": "c",
+      "text": "Il réduit les pollutions en milieu urbain."
+    },
+    {
+      "id": "d",
+      "text": "Il est moins coûteux que les autres transports."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'expert dit : 'Il permet de **réduire la pollution sonore et atmosphérique en ville**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308078/Sans_titre12_f6dks0.wav",
+  "questionText": "Quelle est la dernière chose à vérifier avant de lancer l'impression ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La lumière bleue clignote."
+    },
+    {
+      "id": "b",
+      "text": "Le niveau d'encre."
+    },
+    {
+      "id": "c",
+      "text": "Le papier est inséré."
+    },
+    {
+      "id": "d",
+      "text": "Le bouton vert est enclenché."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "La consigne se termine par : 'N'oubliez pas de **vérifier le niveau d'encre** !'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308088/Sans_titre13_fkywge.wav",
+  "questionText": "Quel est le sentiment dominant des Français à l'égard de la cuisine étrangère ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ils la jugent plus saine que la cuisine traditionnelle."
+    },
+    {
+      "id": "b",
+      "text": "Ils la préfèrent aux plats de leur enfance."
+    },
+    {
+      "id": "c",
+      "text": "Ils la consomment, mais restent attachés aux plats nationaux."
+    },
+    {
+      "id": "d",
+      "text": "Ils rejettent toute nouveauté culinaire."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'audio dit que les Français sont 'très attachés à leur tradition culinaire' même si 'les plats étrangers gagnent en popularité'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308089/Sans_titre14_ed6bul.wav",
+  "questionText": "Quel est le sujet principal de la critique exprimée dans ce message ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La mauvaise qualité des produits alimentaires."
+    },
+    {
+      "id": "b",
+      "text": "Le manque d'engagement du gouvernement pour les associations."
+    },
+    {
+      "id": "c",
+      "text": "Le comportement des supermarchés vis-à-vis des invendus."
+    },
+    {
+      "id": "d",
+      "text": "Le manque de financement des associations caritatives."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le message critique les 'nombreux supermarchés' qui 'continuent de **jeter des produits** encore consommables'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308094/Sans_titre15_v7rzs5.wav",
+  "questionText": "Quel est le principal défi lié au télétravail mentionné dans ce document ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le manque d'autonomie des employés."
+    },
+    {
+      "id": "b",
+      "text": "La gestion de la surcharge de travail par les entreprises."
+    },
+    {
+      "id": "c",
+      "text": "Les conséquences sur l'équilibre social et la déconnexion."
+    },
+    {
+      "id": "d",
+      "text": "La difficulté à élaborer de nouvelles chartes de travail."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le document évoque 'l'**isolement social** et la **difficulté à déconnecter**' comme des 'effets pervers'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308095/Sans_titre16_j3ycc1.wav",
+  "questionText": "Que critique l'orateur concernant l'industrie technologique ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le manque de performance des nouveaux appareils."
+    },
+    {
+      "id": "b",
+      "text": "Le manque de recherche en innovation."
+    },
+    {
+      "id": "c",
+      "text": "Le modèle économique de l'obsolescence programmée."
+    },
+    {
+      "id": "d",
+      "text": "La mauvaise gestion des ressources de production."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'orateur critique que 'beaucoup d'appareils sont aujourd'hui conçus pour être remplacés, ce qui génère une **obsolescence programmée**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308109/Sans_titre17_mjg8yl.wav",
+  "questionText": "Sur quel point les deux personnes s'accordent-elles ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le système de formation actuel est parfait."
+    },
+    {
+      "id": "b",
+      "text": "L'État ne finance aucune formation pour adultes."
+    },
+    {
+      "id": "c",
+      "text": "Le Compte Personnel de Formation doit être supprimé."
+    },
+    {
+      "id": "d",
+      "text": "La gestion du système de formation est trop complexe."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "La seconde personne dit : 'je reconnais que le système n'est **pas assez lisible et que les démarches sont trop lourdes**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308102/Sans_titre18_mpmykd.wav",
+  "questionText": "À quoi la préparation mentale est-elle comparée en importance ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "À la résilience face à l'échec."
+    },
+    {
+      "id": "b",
+      "text": "À l'entraînement physique."
+    },
+    {
+      "id": "c",
+      "text": "À la gestion de la pression."
+    },
+    {
+      "id": "d",
+      "text": "À la visualisation de la victoire."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'audio dit que la préparation mentale est devenue 'aussi importante que l'**entraînement physique**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308102/Sans_titre19_ia21qe.wav",
+  "questionText": "Pourquoi cet homme est-il revenu dans la capitale ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il préférait le bruit et la pollution à la solitude."
+    },
+    {
+      "id": "b",
+      "text": "Il n'a pas trouvé de services à la campagne."
+    },
+    {
+      "id": "c",
+      "text": "La campagne n'était pas assez calme."
+    },
+    {
+      "id": "d",
+      "text": "Il a trouvé que l'isolement était plus difficile que la ville."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'homme 's'est vite rendu compte que **la solitude et le manque de services... étaient plus difficiles à supporter**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308111/Sans_titre20_swmhcf.wav",
+  "questionText": "Quelle est la condition pour bénéficier de cette offre ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Être déjà client de la banque."
+    },
+    {
+      "id": "b",
+      "text": "Ouvrir un livret avant la fin du mois."
+    },
+    {
+      "id": "c",
+      "text": "Domicilier son salaire dans la banque."
+    },
+    {
+      "id": "d",
+      "text": "Avoir un taux d'intérêt supérieur à 3,5%."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'offre est valable sur les livrets 'ouverts **avant la fin du mois**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308106/Sans_titre21_qgqayj.wav",
+  "questionText": "Quel est l'avantage principal du livre audio mentionné par le rapport ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il est plus sain que la lecture traditionnelle."
+    },
+    {
+      "id": "b",
+      "text": "Il permet de lire tout en réalisant une autre activité."
+    },
+    {
+      "id": "c",
+      "text": "Il attire un public plus large."
+    },
+    {
+      "id": "d",
+      "text": "Il est plus rapide à consommer qu'un livre papier."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le livre audio permet de '**lire' en faisant autre chose, comme le sport ou le ménage**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308109/Sans_titre22_rvtrki.wav",
+  "questionText": "Quelle est la précaution essentielle à prendre avant la mise à jour ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Éteindre l'appareil pendant 30 minutes."
+    },
+    {
+      "id": "b",
+      "text": "Ne pas utiliser le disque dur externe."
+    },
+    {
+      "id": "c",
+      "text": "Sauvegarder les données."
+    },
+    {
+      "id": "d",
+      "text": "S'assurer que l'appareil est allumé."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "La consigne insiste : 'vous devez obligatoirement **sauvegarder toutes vos données** sur un disque dur externe'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308112/Sans_titre23_u04od9.wav",
+  "questionText": "Selon l'éditorialiste, quel facteur rend la désinformation si dangereuse ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le manque de vérification par les journalistes."
+    },
+    {
+      "id": "b",
+      "text": "La rapidité de sa diffusion."
+    },
+    {
+      "id": "c",
+      "text": "Le contenu manifestement faux."
+    },
+    {
+      "id": "d",
+      "text": "L'absence de processus critique chez les utilisateurs."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le problème majeur est 'la **vélocité avec laquelle elle se propage**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308114/Sans_titre24_wcuzmi.wav",
+  "questionText": "Quel concept l'Anthropocène force-t-il à remettre en question, selon l'orateur ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La pérennité de l'activité humaine."
+    },
+    {
+      "id": "b",
+      "text": "L'intégration de la politique et de l'économie."
+    },
+    {
+      "id": "c",
+      "text": "Notre perception de la géologie."
+    },
+    {
+      "id": "d",
+      "text": "Notre rapport aux conséquences à long terme."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'ère 'nous oblige à **repenser notre rapport au temps long**' car les conséquences ne seront 'pleinement perceptibles que dans des siècles'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308118/Sans_titre25_rv3lca.wav",
+  "questionText": "Quel est l'objet du désaccord entre les économistes mentionnés ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'augmentation des inégalités."
+    },
+    {
+      "id": "b",
+      "text": "La taxation excessive de tous les citoyens."
+    },
+    {
+      "id": "c",
+      "text": "Le principe de l'exil fiscal."
+    },
+    {
+      "id": "d",
+      "text": "L'impact des impôts progressifs sur l'économie."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Le désaccord porte sur 'l'**efficacité des impôts progressifs**' et leurs conséquences (inégalités vs. investissement)."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308119/Sans_titre26_kh0exz.wav",
+  "questionText": "Qu'est-ce qui confère, avant tout, sa valeur à une œuvre d'art selon cet extrait ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La beauté intrinsèque de l'œuvre."
+    },
+    {
+      "id": "b",
+      "text": "Le fait qu'elle soit dérangeante."
+    },
+    {
+      "id": "c",
+      "text": "Sa capacité à susciter une remise en question."
+    },
+    {
+      "id": "d",
+      "text": "La volonté de l'artiste de représenter la laideur."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'art se définit par 'sa capacité à **interroger le réel**' et nous contraindre à une 'réflexion sur notre propre humanité'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308123/Sans_titre27_zrgwvm.wav",
+  "questionText": "Qu'est-ce qui est explicitement épargné par la critique de l'auteur ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'ensemble de la scénographie."
+    },
+    {
+      "id": "b",
+      "text": "L'éclairage des œuvres."
+    },
+    {
+      "id": "c",
+      "text": "L'organisation muséographique."
+    },
+    {
+      "id": "d",
+      "text": "La première salle d'exposition."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'auteur dit : 'Seule la **scénographie initiale de la salle d'accueil** échappe à la critique'."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308124/Sans_titre28_w4iuiy.wav",
+  "questionText": "Quel est le paradoxe de la posture du personnage ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il est indifférent à une existence absurde."
+    },
+    {
+      "id": "b",
+      "text": "Son calme est un masque pour une hypersensibilité."
+    },
+    {
+      "id": "c",
+      "text": "Son ironie est jugée suprême par son entourage."
+    },
+    {
+      "id": "d",
+      "text": "Il utilise une carapace pour exprimer sa désinvolture."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Son 'stoïcisme' (calme) n'était 'qu'une **exacerbation de sa sensibilité masquée**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760308128/Sans_titre29_wubmzl.wav",
+  "questionText": "Quel est le danger principal en cas de déséquilibre entre les deux composantes mentionnées ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Une chute de l'autorité législative."
+    },
+    {
+      "id": "b",
+      "text": "L'instauration d'une forme de tyrannie."
+    },
+    {
+      "id": "c",
+      "text": "La rupture de l'ordre social."
+    },
+    {
+      "id": "d",
+      "text": "L'absence de vigilance citoyenne."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'orateur conclut que 'L'une sans l'autre mène inéluctablement à une forme de **tyrannie insidieuse**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377343/Q1_voxk3w.wav",
+  "questionText": "Où Paul demande-t-il à Sophie de l'attendre ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "À l'entrée de la gare."
+    },
+    {
+      "id": "b",
+      "text": "Près des taxis."
+    },
+    {
+      "id": "c",
+      "text": "Dans le train."
+    },
+    {
+      "id": "d",
+      "text": "Une heure plus tard."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Paul dit : 'Peux-tu m'attendre **près des taxis** ?'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377348/Q2_ga3ihg.wav",
+  "questionText": "Où se trouve le bouton d'allumage ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sur le côté de l'écran."
+    },
+    {
+      "id": "b",
+      "text": "En haut à droite de l'écran."
+    },
+    {
+      "id": "c",
+      "text": "En bas à droite de l'écran."
+    },
+    {
+      "id": "d",
+      "text": "Sous l'ordinateur."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'instruction dit : 'appuyez sur le gros bouton rond **en bas à droite de l'écran**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377344/Q3_qhn9r4.wav",
+  "questionText": "Quel est le prix du journal ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Deux euros."
+    },
+    {
+      "id": "b",
+      "text": "Deux euros cinquante."
+    },
+    {
+      "id": "c",
+      "text": "Cinquante centimes."
+    },
+    {
+      "id": "d",
+      "text": "Trois euros."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le vendeur dit : 'Cela fera **deux euros cinquante**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377348/Q4_e1ygge.wav",
+  "questionText": "Que doit faire la personne pour avoir l'adresse ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Venir samedi à 20 heures."
+    },
+    {
+      "id": "b",
+      "text": "Téléphoner pour confirmer sa venue."
+    },
+    {
+      "id": "c",
+      "text": "Appeler après la fête."
+    },
+    {
+      "id": "d",
+      "text": "Demander l'adresse avant de téléphoner."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'invitation dit : '**Appelle-moi si tu peux venir et si tu as besoin de l'adresse**'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377348/Q5_qzlmwu.wav",
+  "questionText": "Quand Mme Dubois sera-t-elle de retour ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Avant le 15."
+    },
+    {
+      "id": "b",
+      "text": "Lundi prochain."
+    },
+    {
+      "id": "c",
+      "text": "Après le 15."
+    },
+    {
+      "id": "d",
+      "text": "Elle n'est pas en vacances."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Mme Dubois dit : 'Je suis en vacances **jusqu'à lundi prochain, le 15**'. Elle est donc de retour le lundi 15."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377353/Q6_k9nvmc.wav",
+  "questionText": "Qu'y a-t-il après le musée ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le grand pont."
+    },
+    {
+      "id": "b",
+      "text": "Une rue à droite."
+    },
+    {
+      "id": "c",
+      "text": "Une banque."
+    },
+    {
+      "id": "d",
+      "text": "Le musée est à côté de la banque."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'indication est : 'vous le verrez sur votre gauche, **juste après la banque**'. Donc le musée est à côté de la banque."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377348/Q7_fxlaoq.wav",
+  "questionText": "Que doit-on obligatoirement porter ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Des chaussures adaptées."
+    },
+    {
+      "id": "b",
+      "text": "Un bonnet de bain."
+    },
+    {
+      "id": "c",
+      "text": "Un vêtement léger."
+    },
+    {
+      "id": "d",
+      "text": "Des maillots de bain."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "La règle dit : '**le bonnet de bain est obligatoire** pour tous'."
+},
+{
+  "section": "listening",
+  "difficulty": "A2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377351/Q8_rk9cjm.wav",
+  "questionText": "Quelle est la cause du problème du locuteur ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un manque de communication."
+    },
+    {
+      "id": "b",
+      "text": "La musique forte le matin."
+    },
+    {
+      "id": "c",
+      "text": "Le bruit du voisin la nuit."
+    },
+    {
+      "id": "d",
+      "text": "Les disputes avec son voisin."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le locuteur se plaint : '**Mon voisin fait trop de bruit le matin** ! Dès 6 heures, il écoute de la musique très fort'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377352/Q9_jotzqv.wav",
+  "questionText": "Quel est le conseil le plus important pour combattre la fatigue ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Dormir plus."
+    },
+    {
+      "id": "b",
+      "text": "Boire de l'eau."
+    },
+    {
+      "id": "c",
+      "text": "Avoir une activité physique quotidienne."
+    },
+    {
+      "id": "d",
+      "text": "Manger équilibré."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Les conseils sont : 'privilégier un sommeil régulier, de boire beaucoup d'eau, et **surtout, de faire au moins 30 minutes d'exercice physique**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377358/Q10_zhkrsc.wav",
+  "questionText": "Quel est le risque principal lié aux chauffages d'appoint ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Les risques de brûlure pour les enfants."
+    },
+    {
+      "id": "b",
+      "text": "Les accidents domestiques."
+    },
+    {
+      "id": "c",
+      "text": "Le fonctionnement sans surveillance."
+    },
+    {
+      "id": "d",
+      "text": "L'usure des appareils."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'audio dit que de nombreux **accidents domestiques** sont liés aux chauffages d'appoint. Les autres options sont des causes ou des précautions."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377357/Q11_ufcnay.wav",
+  "questionText": "Qu'est-ce qui est regretté dans les nouveaux films de science-fiction ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Le manque d'effets spéciaux."
+    },
+    {
+      "id": "b",
+      "text": "Le scénario est trop complexe."
+    },
+    {
+      "id": "c",
+      "text": "La qualité des images."
+    },
+    {
+      "id": "d",
+      "text": "La faiblesse du scénario par rapport à l'image."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "L'orateur dit qu'ils sont 'trop basés sur les effets spéciaux et **pas assez sur le scénario**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377356/Q12_fvwkjg.wav",
+  "questionText": "Comment savoir si un site est sécurisé pour un paiement ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Vérifier le nom du site internet."
+    },
+    {
+      "id": "b",
+      "text": "Il doit être utilisé avec une carte bancaire."
+    },
+    {
+      "id": "c",
+      "text": "L'adresse doit commencer par 'https'."
+    },
+    {
+      "id": "d",
+      "text": "Il ne doit pas y avoir de danger."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'audio dit : 'Si l'adresse ne commence pas par **'https', cela signifie que la connexion n'est pas sécurisée**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377359/Q13_wlgejg.wav",
+  "questionText": "Comment le locuteur perçoit-il le temps passé dans les transports ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Comme un moment de stress et d'ennui."
+    },
+    {
+      "id": "b",
+      "text": "Comme une opportunité de détente et de productivité."
+    },
+    {
+      "id": "c",
+      "text": "Comme un temps perdu dans la frénésie du quotidien."
+    },
+    {
+      "id": "d",
+      "text": "Comme un luxe réservé à certains."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le locuteur dit que c'est un '**moment de calme**' utilisé pour '**lire, écouter des podcasts ou simplement planifier ma journée**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377363/Q14_kdvpgp.wav",
+  "questionText": "Quel est le changement que le voyage a provoqué chez le locuteur ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il a décidé de déménager en Asie."
+    },
+    {
+      "id": "b",
+      "text": "Il a accordé moins d'importance au matériel."
+    },
+    {
+      "id": "c",
+      "text": "Il est devenu plus riche."
+    },
+    {
+      "id": "d",
+      "text": "Il a compris que les gens étaient plus heureux en Asie."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Il a réalisé que '**la simplicité était une forme de richesse**' et 'le confort matériel n'est pas une priorité là-bas'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377367/Q15_rpfpll.wav",
+  "questionText": "Quelles sont les deux causes de l'inflation mentionnées ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La crise énergétique et la pénurie de main d'œuvre."
+    },
+    {
+      "id": "b",
+      "text": "Le manque d'épargne et les bas salaires."
+    },
+    {
+      "id": "c",
+      "text": "Le choc sur l'offre et l'augmentation de la consommation."
+    },
+    {
+      "id": "d",
+      "text": "La hausse des prix et le manque de production."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'inflation est causée par 'un choc à la fois sur l'**offre** (pénurie de matières premières) et la **demande** (consommation accrue)'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377366/Q16_w8jwnw.wav",
+  "questionText": "Quel est l'argument principal de la seconde personne ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'interdiction des véhicules polluants est une mauvaise idée."
+    },
+    {
+      "id": "b",
+      "text": "Les mesures sont injustes sans solutions de remplacement accessibles."
+    },
+    {
+      "id": "c",
+      "text": "Les voitures électriques sont trop chères."
+    },
+    {
+      "id": "d",
+      "text": "Les centres-villes doivent être prioritaires."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Elle insiste sur 'l'**absence d'alternatives abordables**' et que la '**justice sociale doit être prioritaire**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377368/Q17_twc6bl.wav",
+  "questionText": "Outre la perturbation du sommeil, quel est l'autre risque mentionné pour la santé des yeux ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "La fatigue visuelle permanente."
+    },
+    {
+      "id": "b",
+      "text": "L'accélération du vieillissement de la rétine."
+    },
+    {
+      "id": "c",
+      "text": "La surexposition aux écrans en général."
+    },
+    {
+      "id": "d",
+      "text": "Le manque de sommeil."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "L'étude montre que l'exposition peut 'accélérer la **dégénérescence maculaire**' (vieillissement de la rétine)."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377368/Q18_h2yrsl.wav",
+  "questionText": "Quelle méthode pédagogique caractérise le professeur Duprée ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Une approche classique basée sur la transmission directe du savoir."
+    },
+    {
+      "id": "b",
+      "text": "Une méthode trop exigeante pour les étudiants."
+    },
+    {
+      "id": "c",
+      "text": "Une pédagogie qui guide les élèves vers l'autonomie et la découverte."
+    },
+    {
+      "id": "d",
+      "text": "Une approche où il ne donne jamais la solution."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il ne donne jamais la solution, mais 'préférant **guider l'étudiant vers la découverte par lui-même**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377369/Q19_ilicip.wav",
+  "questionText": "Que recommande l'auteur en remplacement des cadeaux matériels ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Les fêtes de fin d'année."
+    },
+    {
+      "id": "b",
+      "text": "Des emballages recyclables."
+    },
+    {
+      "id": "c",
+      "text": "Des moments partagés et des expériences."
+    },
+    {
+      "id": "d",
+      "text": "Une consommation plus soutenue."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il est temps de revenir à l'essentiel : des **expériences, du temps passé ensemble**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377375/Q20_ambhnx.wav",
+  "questionText": "Qui est considéré comme responsable de l'action contre le changement climatique ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Les gouvernements uniquement."
+    },
+    {
+      "id": "b",
+      "text": "Les citoyens dont les choix sont primordiaux."
+    },
+    {
+      "id": "c",
+      "text": "Les gouvernements et les citoyens, de manière conjointe."
+    },
+    {
+      "id": "d",
+      "text": "L'orientation du marché avant tout."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "La responsabilité incombe à la fois aux **gouvernements**... et aux **citoyens**... L'idée est d'agir à tous les niveaux, **simultanément**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377379/Q21_pxcwkx.wav",
+  "questionText": "Quel était l'état du savoir avant l'imprimerie ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Il était libre et accessible à tous."
+    },
+    {
+      "id": "b",
+      "text": "Il était rare et réservé aux membres de l'élite."
+    },
+    {
+      "id": "c",
+      "text": "Il n'existait que sous forme orale."
+    },
+    {
+      "id": "d",
+      "text": "Il était diffusé par Gutenberg."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le savoir était **réservé à une élite**... Le livre, copié à la main, était un **objet rare et précieux**'."
+},
+{
+  "section": "listening",
+  "difficulty": "B2",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377377/Q22_milxtq.wav",
+  "questionText": "Quel document ne doit pas être une photocopie ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'attestation de sécurité sociale."
+    },
+    {
+      "id": "b",
+      "text": "La feuille de soins."
+    },
+    {
+      "id": "c",
+      "text": "Les factures."
+    },
+    {
+      "id": "d",
+      "text": "Le formulaire de demande."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il faut joindre à la demande 'les **originaux des factures**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377379/Q23_hw14tb.wav",
+  "questionText": "Selon l'éditorialiste, quelle est la limite de la liberté d'expression ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Les propos considérés comme haineux."
+    },
+    {
+      "id": "b",
+      "text": "L'absence de civilité."
+    },
+    {
+      "id": "c",
+      "text": "L'incitation à la violence."
+    },
+    {
+      "id": "d",
+      "text": "Le manque de nuance."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "La limite est claire : 'la liberté d'expression s'arrête là où commence l'**incitation à la violence**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377381/Q24_rm1kng.wav",
+  "questionText": "Quelle est la conséquence psychologique principale du syndrome de l'imposteur ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "L'incapacité à frauder."
+    },
+    {
+      "id": "b",
+      "text": "Une forme de timidité."
+    },
+    {
+      "id": "c",
+      "text": "Un état de stress lié au déni de ses réussites."
+    },
+    {
+      "id": "d",
+      "text": "Une attribution systématique de son succès à la chance."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le syndrome résulte en 'un **état d'anxiété permanent** et une **incapacité à internaliser ses propres mérites**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377379/Q25_icd6yp.wav",
+  "questionText": "Qu'est-ce que le minimalisme permet de libérer ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un choix éclairé."
+    },
+    {
+      "id": "b",
+      "text": "Une ascèse forcée."
+    },
+    {
+      "id": "c",
+      "text": "De l'espace physique et psychique."
+    },
+    {
+      "id": "d",
+      "text": "L'énergie nécessaire à l'accumulation matérielle."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le minimalisme permet de se défaire du superflu 'pour **libérer de l'énergie et de l'espace mental**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377385/Q26_rurta3.wav",
+  "questionText": "Quel est le rôle principal de l'utopie dans l'action humaine ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Atteindre un lieu inaccessible."
+    },
+    {
+      "id": "b",
+      "text": "Nourrir la politique."
+    },
+    {
+      "id": "c",
+      "text": "Fournir une direction pour le progrès."
+    },
+    {
+      "id": "d",
+      "text": "Créer un écart entre le rêve et la réalité."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "L'utopie 'sert de **boussole à l'action politique**... pour **orienter nos pas dans une direction plus juste**'."
+},
+{
+  "section": "listening",
+  "difficulty": "C1",
+  
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377387/Q27_ilqlbf.wav",
+  "questionText": "Quel est l'élément que le vinyle offre en plus du son numérique ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Une meilleure clarté sonore."
+    },
+    {
+      "id": "b",
+      "text": "Une expérience plus immersive et tactile."
+    },
+    {
+      "id": "c",
+      "text": "Un format analogique."
+    },
+    {
+      "id": "d",
+      "text": "L'aspect nostalgique."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Le support lui-même confère une **expérience d'écoute plus immersive et cérémonielle**."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377386/Q28_bhbdri.wav",
+  "questionText": "Quelle était la principale illusion du personnage ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Que le stoïcisme est une carapace."
+    },
+    {
+      "id": "b",
+      "text": "L'idée que son existence était absurde."
+    },
+    {
+      "id": "c",
+      "text": "Le fait d'être maître de son propre destin."
+    },
+    {
+      "id": "d",
+      "text": "L'indifférence affichée."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Il s'était toujours cru **maître de sa barque (de son destin)**, alors qu'il n'était qu'une feuille."
+},
+{
+  "section": "listening",
+  "difficulty": "C2",
+ 
+  "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760377387/Q29_ijvcaf.wav",
+  "questionText": "Quel est le danger principal d'une décentralisation mal gérée ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Un retour à la bureaucratie nationale."
+    },
+    {
+      "id": "b",
+      "text": "La lourdeur des processus."
+    },
+    {
+      "id": "c",
+      "text": "L'établissement de systèmes locaux opaques et partiaux."
+    },
+    {
+      "id": "d",
+      "text": "Un risque de perte d'autorité législative."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Le risque est de substituer une bureaucratie transparente 'à une multitude de **féodalités locales opaques et sujettes au clientélisme**'."
+},
+  {
     "section": "structure",
     "difficulty": "A1",
     "questionText": "Nous ______ au marché le dimanche.",
@@ -2458,5 +4740,1868 @@
     ],
     "correctOptionId": "b",
     "explanation": "Le texte soulève des préoccupations sur 'privacy et inclusion' et appelle à des 'politiques éthiques'."
+  },{
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez l'avis affiché : \"Magasin fermé pour inventaire du 10 au 15 septembre. Réouverture le lundi 16 septembre à 9h00.\" Quand le magasin ouvre-t-il à nouveau ses portes ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le 10 septembre."
+      },
+      {
+        "id": "b",
+        "text": "Le 15 septembre."
+      },
+      {
+        "id": "c",
+        "text": "Le 16 septembre."
+      },
+      {
+        "id": "d",
+        "text": "À 9h00 le 15 septembre."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le texte indique clairement la 'Réouverture le lundi 16 septembre'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez la carte postale : \"Chers parents, Je suis bien arrivée à Nice. Il fait très beau et je vais à la plage tous les jours. Je rentre samedi soir. Grosses bises. Clara.\" Quel est le programme de Clara à Nice ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elle va visiter la famille."
+      },
+      {
+        "id": "b",
+        "text": "Elle profite du soleil à la plage."
+      },
+      {
+        "id": "c",
+        "text": "Elle rentre déjà samedi."
+      },
+      {
+        "id": "d",
+        "text": "Elle a un temps froid."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Clara écrit qu'elle 'va à la plage tous les jours' car 'il fait très beau'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le panneau : \"Parking réservé uniquement aux résidents de l'immeuble. Tout véhicule non autorisé sera retiré par la fourrière.\" Quelle est la conséquence pour un véhicule mal garé ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Il reçoit une amende."
+      },
+      {
+        "id": "b",
+        "text": "Il est réservé à l'immeuble."
+      },
+      {
+        "id": "c",
+        "text": "Il est emmené par la fourrière."
+      },
+      {
+        "id": "d",
+        "text": "Il doit payer un parking."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le panneau prévient que tout véhicule non autorisé 'sera retiré par la fourrière'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le message électronique : \"Objet : Rendez-vous. Bonjour, Confirmez-moi l'heure de la réunion de ce mercredi : 14h00 ou 15h00 ? Merci. Thomas.\" Que demande Thomas ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "De changer l'objet de la réunion."
+      },
+      {
+        "id": "b",
+        "text": "La date de la réunion."
+      },
+      {
+        "id": "c",
+        "text": "La confirmation de l'heure."
+      },
+      {
+        "id": "d",
+        "text": "De commencer à 14h00."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Thomas demande de 'Confirmez-moi l'heure de la réunion'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'extrait de brochure : \"Pour les voyages en train avec des enfants de moins de 12 ans, vous bénéficiez d'une réduction de 50 % sur le prix du billet si vous réservez 48 heures à l'avance. Le minimum est de deux adultes par famille.\" Quelles sont les deux conditions pour obtenir la réduction ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Réserver 48h avant et voyager avec un enfant de 12 ans ou plus."
+      },
+      {
+        "id": "b",
+        "text": "Être au moins deux adultes et avoir un enfant de moins de 12 ans."
+      },
+      {
+        "id": "c",
+        "text": "Voyager avec deux adultes et avoir une réduction de 50%."
+      },
+      {
+        "id": "d",
+        "text": "Réserver au minimum deux jours à l'avance et être une famille."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les conditions sont la réservation 48h à l'avance ET la présence d'enfants de moins de 12 ans ET le minimum de deux adultes."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la fiche produit : \"Ce téléphone portable est léger et facile à utiliser. Il possède un appareil photo de 12 mégapixels et une autonomie de 24 heures en conversation. Attention : le chargeur est vendu séparément.\" Quel élément manque dans l'achat standard ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "L'appareil photo de 12 mégapixels."
+      },
+      {
+        "id": "b",
+        "text": "Le chargeur de batterie."
+      },
+      {
+        "id": "c",
+        "text": "Une autonomie de 24 heures."
+      },
+      {
+        "id": "d",
+        "text": "Le mode d'emploi."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La fiche précise : 'Attention : le **chargeur est vendu séparément**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'annulation : \"Nous vous informons que le concert de ce soir, prévu à 20h30, est reporté à la semaine prochaine, vendredi, à cause d'un problème technique imprévu. Les billets restent valables.\" Quelle est la nouvelle date du concert ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ce soir à 20h30."
+      },
+      {
+        "id": "b",
+        "text": "La semaine prochaine, vendredi."
+      },
+      {
+        "id": "c",
+        "text": "À cause d'un problème technique."
+      },
+      {
+        "id": "d",
+        "text": "La semaine prochaine à 20h30."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le concert est 'reporté à la **semaine prochaine, vendredi**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la petite annonce : \"À vendre : voiture familiale, année 2018, couleur bleue. Climatisée. 70 000 km. Bon état général. Prix à débattre. Contactez Monsieur Dupond au 06 11 22 33 44 après 18h.\" Quel élément est négociable ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "L'année de la voiture."
+      },
+      {
+        "id": "b",
+        "text": "L'état général."
+      },
+      {
+        "id": "c",
+        "text": "Le nombre de kilomètres."
+      },
+      {
+        "id": "d",
+        "text": "Le montant de la vente."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "L'annonce mentionne 'Prix à débattre', ce qui signifie que le prix est négociable."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'extrait d'article : \"La tendance du 'zéro déchet' n'est pas qu'une mode : c'est une philosophie qui vise à réduire sa production de déchets. Cela passe par l'achat en vrac, le refus du plastique, et la réparation des objets au lieu de leur remplacement systématique.\" Quel est l'objectif de la philosophie 'zéro déchet' ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Acheter en vrac et refuser le plastique."
+      },
+      {
+        "id": "b",
+        "text": "Réduire la quantité de détritus produits."
+      },
+      {
+        "id": "c",
+        "text": "Remplacer systématiquement les objets cassés."
+      },
+      {
+        "id": "d",
+        "text": "Être à la mode."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "C'est une philosophie qui 'vise à **réduire sa production de déchets**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article de presse : \"Le marché immobilier continue de ralentir dans les grandes métropoles. Les taux d'intérêt élevés découragent les acheteurs. Cependant, les prix ne baissent que très légèrement car le nombre de biens à vendre est trop faible face à la demande toujours forte.\" Pourquoi la baisse des prix est-elle faible ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Les taux d'intérêt sont bas."
+      },
+      {
+        "id": "b",
+        "text": "Il y a trop de maisons à vendre."
+      },
+      {
+        "id": "c",
+        "text": "La demande reste supérieure à l'offre."
+      },
+      {
+        "id": "d",
+        "text": "Le marché est dynamique."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les prix ne baissent que légèrement car le nombre de biens à vendre est 'trop faible **face à la demande toujours forte**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez la consigne de sécurité : \"En cas d'incendie dans l'hôtel, veuillez emprunter les escaliers et ne jamais utiliser l'ascenseur. Rejoignez le point de rassemblement situé sur la place du Marché et attendez les instructions des équipes de sécurité.\" Où les clients doivent-ils attendre les équipes de sécurité ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dans l'ascenseur de l'hôtel."
+      },
+      {
+        "id": "b",
+        "text": "Devant l'hôtel."
+      },
+      {
+        "id": "c",
+        "text": "Sur la place du Marché."
+      },
+      {
+        "id": "d",
+        "text": "Au niveau de l'escalier."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les clients doivent 'Rejoindre le **point de rassemblement situé sur la place du Marché**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le témoignage : \"J'ai commencé le yoga pour la souplesse, mais j'ai surtout découvert un moyen formidable de gérer mon stress. Les exercices de respiration m'aident à me concentrer et à prendre du recul sur les problèmes professionnels. Je le recommande à tous ceux qui sont surmenés.\" Qu'est-ce qui a été le plus bénéfique pour le locuteur dans le yoga ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sa souplesse accrue."
+      },
+      {
+        "id": "b",
+        "text": "La gestion du stress et la concentration."
+      },
+      {
+        "id": "c",
+        "text": "Les problèmes professionnels."
+      },
+      {
+        "id": "d",
+        "text": "Les exercices de respiration."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Il dit avoir **surtout** découvert 'un moyen formidable de **gérer mon stress**' et que les exercices l'aident à 'se **concentrer**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le règlement : \"Tout utilisateur d'un vélo en libre-service doit être âgé d'au moins 16 ans. Un casque est fortement recommandé. En cas d'accident responsable, les frais de réparation seront à la charge de l'utilisateur.\" Que se passe-t-il si un utilisateur cause un dommage au vélo ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le casque est obligatoire."
+      },
+      {
+        "id": "b",
+        "text": "Il doit payer pour les réparations."
+      },
+      {
+        "id": "c",
+        "text": "L'utilisateur doit avoir 16 ans."
+      },
+      {
+        "id": "d",
+        "text": "Il est considéré comme non responsable."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "En cas d'accident responsable, '**les frais de réparation seront à la charge de l'utilisateur**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez la comparaison : \"Les films des années 80 sont souvent critiqués pour leurs effets spéciaux rudimentaires, mais ils compensaient ce manque par des scénarios originaux et des dialogues percutants. C'est l'inverse des blockbusters actuels, visuellement parfaits mais souvent creux.\" Qu'est-ce qui est considéré comme la force des films des années 80 ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Leur qualité visuelle."
+      },
+      {
+        "id": "b",
+        "text": "Leurs effets spéciaux rudimentaires."
+      },
+      {
+        "id": "c",
+        "text": "La profondeur de l'histoire et des échanges."
+      },
+      {
+        "id": "d",
+        "text": "L'inverse des blockbusters actuels."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Ils compensaient le manque d'effets spéciaux par des '**scénarios originaux et des dialogues percutants**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse sociale : \"Le phénomène de 'déconnexion numérique' est devenu un enjeu de société. Contrairement à une idée reçue, ce n'est pas le temps passé en ligne qui est le problème, mais l'incapacité à choisir quand et comment interagir, transformant le smartphone en une obligation permanente.\" Quelle est la véritable nature du problème de la 'déconnexion numérique' selon l'auteur ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le temps excessif passé sur le smartphone."
+      },
+      {
+        "id": "b",
+        "text": "La difficulté à maîtriser ses interactions en ligne."
+      },
+      {
+        "id": "c",
+        "text": "Le fait que le smartphone soit devenu une obligation."
+      },
+      {
+        "id": "d",
+        "text": "Un enjeu de société."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le problème est l'**incapacité à choisir quand et comment interagir**', ce qui fait du smartphone une obligation permanente."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait de rapport : \"La relocalisation des industries n'est viable que si elle est accompagnée d'investissements massifs dans la formation professionnelle. Sans cela, le coût de la main d'œuvre locale, plus élevé qu'à l'étranger, annihilera rapidement tout avantage compétitif.\" Quelle est la condition essentielle pour que la relocalisation soit efficace ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Avoir une main d'œuvre moins chère qu'à l'étranger."
+      },
+      {
+        "id": "b",
+        "text": "Accompagner la démarche par des efforts sur l'éducation au travail."
+      },
+      {
+        "id": "c",
+        "text": "Annuler rapidement l'avantage compétitif."
+      },
+      {
+        "id": "d",
+        "text": "Éviter les investissements massifs."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La relocalisation est viable si elle est accompagnée d'investissements massifs dans la **formation professionnelle**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la critique littéraire : \"Le dernier roman de Lemaire est une fresque historique ambitieuse qui pêche par sa densité. Le style est éblouissant, mais l'abondance des détails historiques finit par submerger le lecteur, diluant l'intrigue et rendant l'identification aux personnages difficile.\" Quel est le défaut du roman selon le critique ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "L'absence de détails historiques."
+      },
+      {
+        "id": "b",
+        "text": "Le style d'écriture est trop faible."
+      },
+      {
+        "id": "c",
+        "text": "Un excès de contenu historique qui nuit à l'histoire et à l'empathie."
+      },
+      {
+        "id": "d",
+        "text": "Le roman n'est pas une fresque historique."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'abondance des détails historiques finit par **submerger le lecteur, diluant l'intrigue** et rendant l'identification difficile."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la synthèse journalistique : \"Les énergies renouvelables sont désormais compétitives face aux énergies fossiles. Le principal obstacle à leur expansion n'est plus économique, mais logistique : comment stocker l'électricité produite lorsque le soleil ne brille pas ou que le vent ne souffle pas ?\" Quel est le principal défi actuel des énergies renouvelables ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Leur coût économique."
+      },
+      {
+        "id": "b",
+        "text": "La nécessité d'avoir du soleil et du vent."
+      },
+      {
+        "id": "c",
+        "text": "Le problème du stockage de l'énergie produite."
+      },
+      {
+        "id": "d",
+        "text": "Le manque de compétitivité face aux énergies fossiles."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'obstacle est logistique : '**comment stocker l'électricité produite** lorsque le soleil ne brille pas ou que le vent ne souffle pas ?'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le plaidoyer : \"Il est temps de reconsidérer la place des sciences humaines à l'université. Trop souvent reléguées au second plan, elles sont pourtant essentielles pour former des citoyens critiques, capables de décrypter la complexité du monde, une compétence bien plus précieuse que la simple technicité.\" Quel argument est donné pour valoriser les sciences humaines ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elles sont au second plan."
+      },
+      {
+        "id": "b",
+        "text": "Elles développent l'esprit critique et l'analyse du monde."
+      },
+      {
+        "id": "c",
+        "text": "Elles forment à la technicité."
+      },
+      {
+        "id": "d",
+        "text": "Elles sont plus précieuses que les autres sciences."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Elles sont essentielles pour former des **citoyens critiques, capables de décrypter la complexité du monde**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le document administratif : \"L'obtention de la subvention est soumise à un plafond de revenus fixé à 30 000 € par an pour une personne seule. Les demandeurs doivent également justifier d'une résidence fiscale établie dans le pays depuis au moins cinq ans sans interruption.\" Quelle est la condition de durée pour l'obtention de la subvention ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Avoir des revenus inférieurs à 30 000 €."
+      },
+      {
+        "id": "b",
+        "text": "Être résident fiscal depuis au moins cinq ans."
+      },
+      {
+        "id": "c",
+        "text": "Être une personne seule."
+      },
+      {
+        "id": "d",
+        "text": "Justifier une résidence fiscale."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les demandeurs doivent justifier d'une résidence fiscale établie dans le pays depuis **au moins cinq ans sans interruption**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la chronique politique : \"La réforme promise s'avère être un compromis timoré. L'opposition la juge insuffisante, et même la majorité, qui a dû faire des concessions sur des points clés, peine à y voir une véritable victoire. Au final, personne n'y trouve pleinement son compte.\" Quel est le sentiment général face à cette réforme ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Une victoire totale de la majorité."
+      },
+      {
+        "id": "b",
+        "text": "Une solution ambitieuse pour tout le monde."
+      },
+      {
+        "id": "c",
+        "text": "Une déception et un manque de satisfaction généralisé."
+      },
+      {
+        "id": "d",
+        "text": "Un texte jugé suffisant par l'opposition."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'opposition la juge insuffisante, la majorité ne voit pas de victoire. '**Au final, personne n'y trouve pleinement son compte**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la déclaration : \"L'intelligence artificielle ne remplacera pas l'humain, mais elle augmentera ses capacités. Les métiers de demain ne seront pas 'contre' l'IA, mais 'avec' elle, exigeant une adaptabilité et une capacité d'analyse critique que la machine ne possède pas.\" Que devront faire les travailleurs de demain face à l'IA ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Remplacer l'IA par des tâches manuelles."
+      },
+      {
+        "id": "b",
+        "text": "Travailler en opposition à l'IA."
+      },
+      {
+        "id": "c",
+        "text": "Développer des compétences d'analyse et d'adaptation."
+      },
+      {
+        "id": "d",
+        "text": "Avoir les mêmes capacités que la machine."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les métiers de demain exigeront une **adaptabilité et une capacité d'analyse critique** que la machine ne possède pas."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'essai philosophique : \"La postmodernité a érodé les 'grands récits' universels qui donnaient un sens à l'existence. Cette fragmentation, si elle libère l'individu des dogmes, le confronte aussi à une vacuité existentielle qui génère l'anxiété et le besoin paradoxal de nouvelles formes d'appartenance rigides.\" Quel est l'effet pervers de la 'libération' de l'individu ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le besoin de dogmes et de grands récits."
+      },
+      {
+        "id": "b",
+        "text": "L'érosion des dogmes et la fragmentation."
+      },
+      {
+        "id": "c",
+        "text": "L'émergence d'un sentiment de vide et d'angoisse."
+      },
+      {
+        "id": "d",
+        "text": "La disparition de l'anxiété."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La fragmentation confronte l'individu à une **vacuité existentielle qui génère l'anxiété**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait de séminaire : \"L'épistémologie de la recherche qualitative exige une réflexivité constante. Le chercheur doit interroger ses propres biais et sa positionnalité pour éviter que ses présupposés n'altèrent la collecte et l'interprétation des données. C'est un exercice d'humilité méthodologique.\" Qu'est-ce qui est essentiel au chercheur en recherche qualitative ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "La transformation des données."
+      },
+      {
+        "id": "b",
+        "text": "La mise en question de ses propres idées et jugements."
+      },
+      {
+        "id": "c",
+        "text": "L'exercice d'une humilité totale."
+      },
+      {
+        "id": "d",
+        "text": "L'interrogation des données collectées."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La réflexivité constante exige que le chercheur **interroge ses propres biais et sa positionnalité** (ses propres idées)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'analyse géopolitique : \"Le concept de souveraineté numérique est une antithèse de l'internet ouvert tel que conçu initialement. Il exprime la volonté des États de reprendre le contrôle des flux d'information, non pas pour censurer, mais pour se prémunir contre la dépendance technologique et l'ingérence étrangère.\" Quel est le but principal de la souveraineté numérique pour les États ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Censurer l'information en ligne."
+      },
+      {
+        "id": "b",
+        "text": "Maintenir un internet totalement ouvert."
+      },
+      {
+        "id": "c",
+        "text": "Se protéger contre les influences et les fragilités technologiques externes."
+      },
+      {
+        "id": "d",
+        "text": "Reprendre le contrôle des flux d'information."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le but est de '**se prémunir contre la dépendance technologique et l'ingérence étrangère**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la critique d'art : \"L'œuvre de Dubois n'est pas une simple provocation, mais une déconstruction ironique de l'institution muséale. En exposant des objets du quotidien sans aucune transformation, elle force le spectateur à réévaluer la frontière arbitraire entre l'art et le trivial, interrogeant le processus de sacralisation.\" Quel est l'effet de l'œuvre sur le spectateur ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Il est simplement choqué par la provocation."
+      },
+      {
+        "id": "b",
+        "text": "Il est amené à réfléchir à ce qui définit l'art."
+      },
+      {
+        "id": "c",
+        "text": "Il ne voit qu'une déconstruction ironique."
+      },
+      {
+        "id": "d",
+        "text": "Il ne fait pas la différence entre l'art et le quotidien."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'œuvre 'force le spectateur à **réévaluer la frontière arbitraire entre l'art et le trivial**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la chronologie : \"Le passage à la semaine de quatre jours est une expérimentation qui divise. Ses partisans insistent sur la productivité accrue et l'amélioration du bien-être. Ses détracteurs, en revanche, craignent une augmentation du temps de travail journalier, annulant l'effet bénéfique sur l'équilibre personnel.\" Quel est l'argument principal des opposants à la semaine de quatre jours ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "La productivité ne s'améliore pas."
+      },
+      {
+        "id": "b",
+        "text": "Le temps de travail quotidien devient trop long."
+      },
+      {
+        "id": "c",
+        "text": "Le bien-être des employés diminue."
+      },
+      {
+        "id": "d",
+        "text": "L'expérimentation divise."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Ses détracteurs **craignent une augmentation du temps de travail journalier**, annulant l'effet bénéfique sur l'équilibre personnel."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait de traité : \"La résilience systémique d'une société ne se mesure pas à sa capacité à éviter les crises, mais à la vélocité avec laquelle elle parvient à réorienter ses structures après un choc. Cela implique une plasticité institutionnelle et une culture de l'adaptabilité, plutôt qu'une rigidité dogmatique.\" Comment se manifeste la résilience d'une société selon l'auteur ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Par la rigidité de ses institutions face au choc."
+      },
+      {
+        "id": "b",
+        "text": "Par la rapidité à s'adapter et à changer ses organisations après une difficulté."
+      },
+      {
+        "id": "c",
+        "text": "Par sa capacité à éviter totalement les crises."
+      },
+      {
+        "id": "d",
+        "text": "Par une culture dogmatique."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Elle se mesure à la **vélocité avec laquelle elle parvient à réorienter ses structures après un choc**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'analyse linguistique : \"Le néologisme, fruit d'une nécessité expressive ou d'une simple coquetterie lexicale, témoigne de la nature profondément dynamique de la langue. Il n'est un danger pour la pureté de celle-ci que pour ceux qui confondent la vitalité d'un idiome avec sa momification dans un corpus normatif.\" Selon ce texte, qui considère le néologisme comme un danger ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ceux qui aiment la vitalité de la langue."
+      },
+      {
+        "id": "b",
+        "text": "Les locuteurs qui inventent de nouveaux mots."
+      },
+      {
+        "id": "c",
+        "text": "Ceux qui privilégient les règles strictes à l'évolution de la langue."
+      },
+      {
+        "id": "d",
+        "text": "Ceux qui confondent la langue avec un corpus normatif."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le danger n'existe que pour ceux qui confondent la vitalité avec sa **momification dans un corpus normatif** (ceux qui privilégient les règles strictes)."
+  },
+
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez l'affiche : \"Vente Flash de livres pour enfants. Aujourd'hui seulement : tout à 5 euros. Paiement en espèces uniquement.\" Quel est le prix de tous les livres ?",
+    "options": [
+      { "id": "a", "text": "Le paiement est en espèces." },
+      { "id": "b", "text": "Ils coûtent 5 euros." },
+      { "id": "c", "text": "Ils ne sont pas chers." },
+      { "id": "d", "text": "C'est une vente de livres." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'affiche indique clairement : 'tout à 5 euros'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le message vocal : \"Bonjour, c'est Marc. Rappelle-moi s'il te plaît. Il est 10h00, et j'aimerais parler de la réunion de demain.\" Que demande Marc ?",
+    "options": [
+      { "id": "a", "text": "Une information sur l'heure." },
+      { "id": "b", "text": "De le rappeler pour la réunion." },
+      { "id": "c", "text": "De parler maintenant." },
+      { "id": "d", "text": "De préparer la réunion." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Marc dit : 'Rappelle-moi s'il te plaît. [...] j'aimerais parler de la réunion de demain'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le panneau : \"Ouverture de la piscine de 10h00 à 18h00. Fermé le dimanche.\" Quel jour la piscine n'est-elle pas ouverte ?",
+    "options": [
+      { "id": "a", "text": "Le matin à 10h00." },
+      { "id": "b", "text": "Tous les jours." },
+      { "id": "c", "text": "Le dimanche." },
+      { "id": "d", "text": "Après 18h00." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le panneau stipule : 'Fermé le dimanche'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez l'étiquette : \"Lait demi-écrémé. Date limite de consommation : 20/12/2025. À conserver au frais après ouverture.\" Que doit-on faire avec le lait une fois ouvert ?",
+    "options": [
+      { "id": "a", "text": "Le boire avant le 20/12/2025." },
+      { "id": "b", "text": "Le mettre au réfrigérateur." },
+      { "id": "c", "text": "Le laisser à température ambiante." },
+      { "id": "d", "text": "Le jeter." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La consigne est : 'À conserver au frais après ouverture'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'extrait de mail : \"Merci de noter que les bureaux seront exceptionnellement fermés le 1er mai pour cause de jour férié. Les activités reprendront le 2 mai à l'horaire habituel. Veuillez anticiper vos demandes.\" Quel est le motif de la fermeture des bureaux ?",
+    "options": [
+      { "id": "a", "text": "Ils anticipent les demandes." },
+      { "id": "b", "text": "C'est la fête du 1er mai." },
+      { "id": "c", "text": "Un problème technique." },
+      { "id": "d", "text": "Un horaire habituel." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La fermeture est 'pour cause de **jour férié**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la fiche d'hôtel : \"Le petit déjeuner est servi de 7h00 à 9h30 au restaurant. Le WiFi gratuit est disponible dans toutes les chambres. La clé doit être rendue à la réception avant midi le jour du départ.\" Que peut-on obtenir gratuitement ?",
+    "options": [
+      { "id": "a", "text": "Le petit déjeuner." },
+      { "id": "b", "text": "L'accès à internet dans la chambre." },
+      { "id": "c", "text": "La clé de l'hôtel." },
+      { "id": "d", "text": "La nuitée." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le texte mentionne que le '**WiFi gratuit est disponible dans toutes les chambres**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'alerte météo : \"Attention, fortes pluies attendues sur la région Nord-Est à partir de 15h00. Les usagers de la route sont priés de réduire leur vitesse. Retour à la normale prévu pour la soirée.\" Quelle est la recommandation pour les automobilistes ?",
+    "options": [
+      { "id": "a", "text": "Ne pas sortir après 15h00." },
+      { "id": "b", "text": "Prévoir de rouler moins vite." },
+      { "id": "c", "text": "Se diriger vers le Nord-Est." },
+      { "id": "d", "text": "Anticiper la soirée." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les usagers de la route sont priés de **réduire leur vitesse**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'annonce de transport : \"Le bus 42 en direction de la gare est annulé en raison d'un problème technique. Les passagers sont invités à prendre la ligne 12, qui effectue le même trajet toutes les 10 minutes.\" Que doivent faire les passagers du bus 42 ?",
+    "options": [
+      { "id": "a", "text": "Attendre le bus 42." },
+      { "id": "b", "text": "Prendre un bus qui passe souvent." },
+      { "id": "c", "text": "Marcher jusqu'à la gare." },
+      { "id": "d", "text": "Utiliser la ligne 12." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Les passagers sont invités à **prendre la ligne 12**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'extrait de blog : \"Les films documentaires sur la nature sont essentiels. Ils nous rappellent la fragilité de l'environnement et l'impact de nos modes de vie. Regarder ces images magnifiques est un premier pas vers une prise de conscience nécessaire.\" Quel est le rôle principal des films documentaires sur la nature selon l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Montrer des images magnifiques." },
+      { "id": "b", "text": "Être un premier pas pour le spectateur." },
+      { "id": "c", "text": "Sensibiliser à la faiblesse de l'environnement." },
+      { "id": "d", "text": "Rappeler l'impact des modes de vie." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Ils nous rappellent la **fragilité de l'environnement** et mènent à une **prise de conscience nécessaire**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le conseil financier : \"Avant de contracter un prêt, il est crucial de comparer les taux d'intérêt proposés par plusieurs banques. Ne vous contentez pas de l'offre de votre banque principale. Une différence minime sur le taux peut représenter des milliers d'euros sur la durée totale.\" Quel est l'avertissement principal concernant le prêt ?",
+    "options": [
+      { "id": "a", "text": "Ne jamais faire confiance à sa banque principale." },
+      { "id": "b", "text": "Le taux d'intérêt est le seul élément à comparer." },
+      { "id": "c", "text": "Même un petit écart de taux a une grande conséquence financière." },
+      { "id": "d", "text": "Les taux sont tous différents." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le texte insiste sur le fait qu'une **différence minime sur le taux peut représenter des milliers d'euros**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez la règle d'accès à un parc : \"Le Parc National est ouvert au public de 8h00 à 20h00. Les chiens doivent être tenus en laisse. Il est strictement interdit de faire du feu ou de camper en dehors des zones balisées prévues à cet effet.\" Qu'est-il permis de faire à l'intérieur du parc ?",
+    "options": [
+      { "id": "a", "text": "Faire un feu pour cuisiner." },
+      { "id": "b", "text": "Laisser son chien courir librement." },
+      { "id": "c", "text": "Camper dans les zones non indiquées." },
+      { "id": "d", "text": "Dormir dans les zones de camping désignées." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Il est **interdit** de camper en **dehors** des zones balisées. Il est donc permis de camper *dans* les zones balisées."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article sur l'alimentation : \"Le jeûne intermittent est devenu populaire. Il ne s'agit pas de manger moins en quantité, mais de concentrer la période de repas sur quelques heures par jour. Les bénéfices sur l'énergie sont souvent cités, mais son efficacité à long terme n'est pas encore scientifiquement prouvée.\" Qu'est-ce qui n'est pas encore certain concernant le jeûne intermittent ?",
+    "options": [
+      { "id": "a", "text": "Sa popularité." },
+      { "id": "b", "text": "Le fait de manger moins en quantité." },
+      { "id": "c", "text": "La concentration des repas sur quelques heures." },
+      { "id": "d", "text": "Ses effets sur une longue durée." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Son **efficacité à long terme n'est pas encore scientifiquement prouvée**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'avis sur un produit : \"J'ai acheté ce robot aspirateur le mois dernier. Il est très performant sur les sols durs, mais il a du mal avec les tapis épais. L'autonomie est bonne, mais l'application mobile pour le programmer est trop compliquée à utiliser.\" Quel est le double inconvénient principal du robot aspirateur ?",
+    "options": [
+      { "id": "a", "text": "L'autonomie et les sols durs." },
+      { "id": "b", "text": "Les tapis épais et l'application mobile." },
+      { "id": "c", "text": "La performance et l'application mobile." },
+      { "id": "d", "text": "L'achat le mois dernier." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Il 'a **du mal avec les tapis épais**' et 'l'**application mobile** pour le programmer est **trop compliquée**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le sondage : \"L'usage des réseaux sociaux chez les jeunes (15-25 ans) a augmenté de 15 % en un an. Cependant, 60 % des sondés affirment qu'ils aimeraient passer moins de temps en ligne s'ils trouvaient d'autres activités satisfaisantes.\" Quelle condition est nécessaire pour que les jeunes se déconnectent ?",
+    "options": [
+      { "id": "a", "text": "Que l'usage des réseaux diminue." },
+      { "id": "b", "text": "Trouver des loisirs qui leur plaisent davantage." },
+      { "id": "c", "text": "Que les réseaux sociaux augmentent de 15%." },
+      { "id": "d", "text": "Passer plus de temps en ligne." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Ils aimeraient se déconnecter **s'ils trouvaient d'autres activités satisfaisantes**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait de débat : \"L'enseignement à distance offre une flexibilité sans précédent, notamment pour les adultes en reconversion professionnelle. Néanmoins, il exige de l'étudiant une discipline de fer et une capacité à travailler en autonomie, ce qui n'est pas le cas pour tout le monde.\" Quel est l'inconvénient de l'enseignement à distance ?",
+    "options": [
+      { "id": "a", "text": "Il n'est pas flexible." },
+      { "id": "b", "text": "Il s'adresse uniquement aux adultes en reconversion." },
+      { "id": "c", "text": "Il demande une grande autodiscipline." },
+      { "id": "d", "text": "Il n'est pas adapté au monde professionnel." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il exige de l'étudiant une **discipline de fer et une capacité à travailler en autonomie**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le rapport économique : \"La crise sanitaire a révélé la fragilité des chaînes d'approvisionnement mondiales, trop dépendantes d'un petit nombre de producteurs. Pour garantir la sécurité des consommateurs, il est impératif que les États diversifient leurs sources et investissent dans des stocks stratégiques.\" Que doivent faire les États pour améliorer la sécurité des consommateurs ?",
+    "options": [
+      { "id": "a", "text": "Se limiter à un petit nombre de producteurs." },
+      { "id": "b", "text": "Accroître la fragilité des chaînes d'approvisionnement." },
+      { "id": "c", "text": "Multiplier les fournisseurs et créer des réserves." },
+      { "id": "d", "text": "Révéler la crise sanitaire." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il est impératif que les États **diversifient leurs sources et investissent dans des stocks stratégiques**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la critique de film : \"Le réalisateur nous livre une œuvre puissante mais inégale. Si la mise en scène des scènes d'action est virtuose, la partie dialoguée est desservie par une écriture paresseuse qui ne parvient jamais à conférer de la profondeur psychologique aux personnages principaux.\" Qu'est-ce qui est critiqué dans ce film ?",
+    "options": [
+      { "id": "a", "text": "La qualité de la mise en scène des actions." },
+      { "id": "b", "text": "L'absence de travail sur le caractère des personnages." },
+      { "id": "c", "text": "Le manque de scènes d'action." },
+      { "id": "d", "text": "Le fait que l'œuvre soit puissante." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La partie dialoguée 'ne parvient jamais à conférer de la **profondeur psychologique aux personnages**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse sociale : \"Le télétravail a transformé la relation au bureau. Le lien social s'est distendu, mais en contrepartie, de nombreux employés ont gagné en qualité de vie, ne subissant plus le stress des transports. L'enjeu est de trouver un équilibre qui préserve à la fois l'efficacité collective et le bien-être individuel.\" Quel est l'objectif futur du télétravail selon l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Supprimer le stress des transports." },
+      { "id": "b", "text": "Restaurer complètement le lien social au bureau." },
+      { "id": "c", "text": "Faire le bon compromis entre résultats et satisfaction personnelle." },
+      { "id": "d", "text": "Accroître l'efficacité collective." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'enjeu est de trouver un **équilibre qui préserve à la fois l'efficacité collective et le bien-être individuel**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la note de service : \"À compter du mois prochain, le système de gestion des congés sera entièrement informatisé. Les demandes devront être soumises au moins deux semaines avant la date souhaitée, sous peine d'être automatiquement refusées. Une formation d'une heure sera proposée à tous les salariés concernés.\" Quelle est la conséquence d'une demande de congé tardive ?",
+    "options": [
+      { "id": "a", "text": "L'employé devra suivre une formation d'une heure." },
+      { "id": "b", "text": "Le système sera entièrement informatisé." },
+      { "id": "c", "text": "Le congé sera automatiquement rejeté." },
+      { "id": "d", "text": "La demande sera traitée manuellement." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les demandes soumises tardivement risquent d'**être automatiquement refusées**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait de manuel : \"Les théories climato-sceptiques, bien que marginales au sein de la communauté scientifique, parviennent à maintenir un doute dans l'opinion publique grâce à leur forte présence sur les réseaux sociaux. Cette désinformation affecte la volonté politique d'adopter des mesures énergiques.\" Quel est l'impact de la présence en ligne des climato-sceptiques ?",
+    "options": [
+      { "id": "a", "text": "Elle renforce l'unité de la communauté scientifique." },
+      { "id": "b", "text": "Elle marginalise les réseaux sociaux." },
+      { "id": "c", "text": "Elle crée l'hésitation dans le public et freine l'action politique." },
+      { "id": "d", "text": "Elle pousse à l'adoption de mesures énergiques." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Ils parviennent à **maintenir un doute dans l'opinion publique**... affectant la **volonté politique**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la recommandation : \"Pour rédiger un CV efficace, il ne suffit pas de lister ses expériences. Il est primordial d'adapter chaque CV à l'offre d'emploi spécifique en utilisant les mots-clés du poste. Cela montre au recruteur que le candidat a ciblé son effort et comprend les besoins de l'entreprise.\" Quelle est l'approche recommandée pour rédiger un CV ?",
+    "options": [
+      { "id": "a", "text": "Ne pas lister ses expériences." },
+      { "id": "b", "text": "Utiliser un seul CV générique." },
+      { "id": "c", "text": "Personnaliser le document selon le poste visé." },
+      { "id": "d", "text": "Se contenter de lister ses expériences." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il est primordial d'**adapter chaque CV à l'offre d'emploi spécifique**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait de contrat : \"L'employé est tenu à une clause de confidentialité absolue concernant les informations stratégiques de la société, et ce, y compris après la rupture du contrat de travail. Toute violation de cette clause entraînera des poursuites judiciaires immédiates, sans préavis.\" À quel moment l'employé doit-il respecter le secret professionnel ?",
+    "options": [
+      { "id": "a", "text": "Uniquement pendant l'exécution de son contrat." },
+      { "id": "b", "text": "Seulement si le contrat n'est pas rompu." },
+      { "id": "c", "text": "Toujours, même après avoir quitté l'entreprise." },
+      { "id": "d", "text": "Jusqu'à la fin de la période de préavis." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La clause est applicable '**y compris après la rupture du contrat de travail**'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'essai linguistique : \"Le purisme linguistique, souvent justifié par la volonté de préserver la « pureté » d'une langue face aux anglicismes et aux néologismes, est paradoxalement une entrave à sa vitalité. Une langue n'est pas un monument figé, mais un organisme vivant qui s'enrichit par l'hybridation. Refuser cette dynamique, c'est préférer l'érudition à l'expressivité populaire, risquant ainsi l'obsolescence.\" Quel est le danger du purisme linguistique selon l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Il favorise les anglicismes et les néologismes." },
+      { "id": "b", "text": "Il fige la langue et risque de la rendre désuète." },
+      { "id": "c", "text": "Il met en danger l'expressivité populaire." },
+      { "id": "d", "text": "Il prouve que la langue est un organisme vivant." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Refuser la dynamique de l'hybridation, c'est préférer l'érudition... **risquant ainsi l'obsolescence** (le fait d'être désuet)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'analyse politique : \"La démocratie contemporaine souffre d'un déficit de légitimité, non pas en raison d'un désintérêt des citoyens, mais d'une **désillusion** face à la **logique de l'alternance**. Les électeurs ont le sentiment que les programmes des partis au pouvoir, qu'ils soient de gauche ou de droite, convergent inéluctablement vers une gestion technocratique, ce qui nourrit l'abstentionnisme plutôt que l'engagement critique.\" Qu'est-ce qui explique le manque de légitimité de la démocratie ?",
+    "options": [
+      { "id": "a", "text": "Le manque d'engagement critique des citoyens." },
+      { "id": "b", "text": "La déception face au manque de différence entre les programmes politiques." },
+      { "id": "c", "d'text": "L'augmentation de l'abstentionnisme chez les électeurs." },
+      { "id": "d", "text": "Un désintérêt des citoyens pour la politique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La désillusion provient du sentiment que les programmes... **convergent inéluctablement vers une gestion technocratique** (le manque de différence)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la critique littéraire : \"Le dernier recueil de poésie de Valmont est une œuvre d'une **subtilité déconcertante**. Il ne s'agit pas de vers lyriques ou épiques, mais d'une tentative **hermétique** de saisir l'indicible. Par une fragmentation syntaxique et une économie du verbe, l'auteur cherche à déconstruire le langage pour atteindre un sens plus primitif, exigeant ainsi une **complicité** et une réactivité intellectuelle maximale de la part du lecteur.\" Que requiert cette œuvre de poésie de la part du lecteur ?",
+    "options": [
+      { "id": "a", "text": "Un goût pour le lyrisme et l'épique." },
+      { "id": "b", "text": "Une capacité à comprendre l'indicible et le sens primitif." },
+      { "id": "c", "text": "Un effort actif d'interprétation et de participation intellectuelle." },
+      { "id": "d", "text": "Une connaissance de la fragmentation syntaxique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'œuvre exige une **complicité et une réactivité intellectuelle maximale** de la part du lecteur."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la thèse en sociologie : \"L'urbanisme moderne est souvent critiqué pour son incapacité à créer du **lien social spontané**. En privilégiant les grands ensembles et la séparation fonctionnelle des zones (travail, habitation, loisirs), on a éradiqué le **lieu intermédiaire** (la petite place, la rue commerçante du quartier) qui, historiquement, permettait l'interaction fortuite entre les habitants. La conception de la ville est passée de l'organique au mécanique.\" Qu'est-ce qui a été perdu dans la conception moderne des villes ?",
+    "options": [
+      { "id": "a", "text": "La séparation fonctionnelle des zones." },
+      { "id": "b", "text": "Le lien social spontané." },
+      { "id": "c", "text": "La dimension organique de la ville." },
+      { "id": "d", "text": "Les espaces qui favorisent les rencontres inattendues." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "On a éradiqué le **lieu intermédiaire** (...) qui permettait l'**interaction fortuite** entre les habitants (les rencontres inattendues)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait de conférence : \"L'éthique de l'intelligence artificielle ne peut se limiter à l'encadrement des données personnelles. Elle doit avant tout aborder la question de l'**opacité algorithmique**. Les systèmes apprenants prennent des décisions cruciales (crédit, emploi, justice) sur la base de critères que même leurs concepteurs peinent à expliciter. Il est impératif de garantir un droit à l'explication pour éviter que l'IA ne devienne une boîte noire génératrice d'inégalités systémiques.\" Quelle est la priorité de l'éthique de l'IA ?",
+    "options": [
+      { "id": "a", "text": "Éviter les inégalités systémiques." },
+      { "id": "b", "text": "Encadrer les données personnelles." },
+      { "id": "c", "text": "Gérer la difficulté à comprendre les mécanismes de décision des algorithmes." },
+      { "id": "d", "text": "S'assurer que les concepteurs peuvent expliquer leurs critères." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Elle doit avant tout aborder la question de l'**opacité algorithmique** (...) dont les critères peinent à être expliqués."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez le traité philosophique : \"La quête humaine d'une **vérité absolue** est une aporie fondamentale. Dès lors que l'on admet la **contingence radicale** de toute proposition et la nature intrinsèquement interprétative de la connaissance, la prétention à l'universalité s'effondre. Le réel n'est plus un référent monolithique, mais un **conglomérat hétérogène** d'expériences subjectives. Le rôle de la pensée contemporaine est d'opérer la **dédogmatisation** de ces certitudes résiduelles, non pour sombrer dans le nihilisme, mais pour instaurer un scepticisme constructif, seule garantie d'une lucidité intellectuelle pérenne.\" Quel est le but de la pensée contemporaine face aux anciennes certitudes ?",
+    "options": [
+      { "id": "a", "text": "Prouver la validité de la vérité absolue." },
+      { "id": "b", "text": "Remplacer l'universalité par un référent monolithique." },
+      { "id": "c", "text": "Détruire les dogmes pour atteindre une lucidité durable." },
+      { "id": "d", "text": "Sombrer dans le nihilisme." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le rôle est d'opérer la **dédogmatisation** de ces certitudes (...) pour instaurer un scepticisme constructif, seule garantie d'une **lucidité intellectuelle pérenne**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'extrait d'une analyse critique : \"Le concept de **progrès**, tel qu'il fut forgé aux Lumières, repose sur une **téléologie** historique désormais caduque. L'idée que l'humanité avance inéluctablement vers un stade supérieur est une illusion consolatrice face à la **réversibilité** des acquis. La prise de conscience écologique, notamment, force à une réévaluation du terme : le 'progrès' pourrait n'être qu'une expansion technologique dont les **effets collatéraux** sapent les conditions mêmes de la survie collective. Il est temps d'abandonner cette métaphysique historique pour embrasser une **pensée post-téléologique**, ancrée dans la gestion du risque plutôt que dans l'optimisme béat.\" Qu'est-ce qui remet en question la notion traditionnelle de progrès ?",
+    "options": [
+      { "id": "a", "text": "La capacité de l'humanité à avancer inéluctablement vers un stade supérieur." },
+      { "id": "b", "text": "Les acquis des Lumières qui reposent sur une téléologie historique." },
+      { "id": "c", "text": "L'impact environnemental des avancées technologiques." },
+      { "id": "d", "text": "Le besoin d'une pensée post-téléologique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La prise de conscience écologique... montre que les **effets collatéraux** (du progrès) **sapent les conditions mêmes de la survie collective**."
+  },
+
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez l'annonce : \"Cours de cuisine. Apprenez à faire du pain. Chaque samedi à 14h00. Inscription obligatoire par email avant vendredi.\" Quand a lieu le cours ?",
+    "options": [
+      { "id": "a", "text": "Le vendredi après-midi." },
+      { "id": "b", "text": "Le samedi après-midi." },
+      { "id": "c", "text": "Toute la semaine." },
+      { "id": "d", "text": "Le matin à 14h00." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le cours a lieu : 'Chaque samedi à 14h00'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le message : \"Bonjour. Votre colis sera livré demain matin entre 8h00 et 12h00. Si vous n'êtes pas là, le livreur laissera un avis de passage.\" À quelle heure le colis arrivera-t-il ?",
+    "options": [
+      { "id": "a", "text": "Entre midi et 8h00." },
+      { "id": "b", "text": "Cet après-midi." },
+      { "id": "c", "text": "Demain avant midi." },
+      { "id": "d", "text": "Après 12h00." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le colis sera livré : 'demain matin entre 8h00 et 12h00'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le panneau : \"Bibliothèque. Silence absolu demandé. Éteignez votre téléphone. Pas de nourriture ni boisson.\" Que doit faire le visiteur avec son téléphone ?",
+    "options": [
+      { "id": "a", "text": "Le laisser allumé." },
+      { "id": "b", "text": "L'éteindre." },
+      { "id": "c", "text": "Manger." },
+      { "id": "d", "text": "Parler doucement." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le panneau indique : 'Éteignez votre téléphone'."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez la publicité : \"Nouvelles chaussures de sport 'Flash'. Légères et confortables. Disponibles en rouge, bleu ou noir. Prix : 79 €.\" Quelle couleur n'est pas disponible pour ces chaussures ?",
+    "options": [
+      { "id": "a", "text": "Rouge." },
+      { "id": "b", "text": "Jaune." },
+      { "id": "c", "text": "Bleu." },
+      { "id": "d", "text": "Noir." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les couleurs disponibles sont rouge, bleu ou noir. Jaune n'est pas mentionné."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la note : \"Il est rappelé à tout le personnel que l'utilisation du téléphone portable personnel à des fins non professionnelles doit être limitée aux pauses. Les appels longs et bruyants sont interdits dans les espaces communs.\" Quand est-il permis d'utiliser son téléphone personnel ?",
+    "options": [
+      { "id": "a", "text": "Seulement pendant les moments de repos." },
+      { "id": "b", "text": "N'importe quand, si c'est pour le travail." },
+      { "id": "c", "text": "Dans les espaces communs." },
+      { "id": "d", "text": "Pour des appels longs." }
+    ],
+    "correctOptionId": "a",
+    "explanation": "L'utilisation doit être **limitée aux pauses**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez les conditions : \"Abonnement 'Fitness Plus'. 30 € par mois. Résiliation possible après 6 mois d'engagement. L'accès aux cours collectifs est inclus dans le prix. Carte d'identité obligatoire pour l'inscription.\" Que faut-il pour pouvoir arrêter l'abonnement ?",
+    "options": [
+      { "id": "a", "text": "Payer 30 €." },
+      { "id": "b", "text": "Participer aux cours collectifs." },
+      { "id": "c", "text": "Être inscrit depuis au moins six mois." },
+      { "id": "d", "text": "Avoir une carte d'identité." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La résiliation est possible **après 6 mois d'engagement**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'avis : \"J'ai acheté cet ordinateur portable pour mes études. Il est rapide et léger, mais l'écran est un peu petit pour regarder des films. C'est un bon produit pour le prix, mais la batterie ne tient que 4 heures.\" Quel est le principal inconvénient de cet ordinateur ?",
+    "options": [
+      { "id": "a", "text": "Il est rapide et léger." },
+      { "id": "b", "text": "Son écran est trop grand." },
+      { "id": "c", "text": "Son autonomie n'est que de 4 heures." },
+      { "id": "d", "text": "Il est trop cher." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La **batterie ne tient que 4 heures**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez les consignes : \"La visite guidée du château commence à 11h00 précises à l'entrée principale. Il est obligatoire d'arriver 10 minutes à l'avance. Les photos sans flash sont autorisées à l'intérieur.\" Quel est l'horaire de rendez-vous pour la visite ?",
+    "options": [
+      { "id": "a", "text": "À 11h00, à l'entrée principale." },
+      { "id": "b", "text": "À 11h10, à l'intérieur." },
+      { "id": "c", "text": "À 10h50, à l'entrée principale." },
+      { "id": "d", "text": "Quand on veut, avec flash." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La visite commence à 11h00, et il est obligatoire d'arriver **10 minutes à l'avance**, soit à 10h50."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article : \"Un sommeil insuffisant est souvent sous-estimé. Il ne cause pas seulement de la fatigue, mais il réduit aussi significativement la capacité de concentration et de mémorisation. À long terme, le manque de sommeil peut affecter les prises de décision complexes. Il est donc recommandé d'établir une routine de coucher stricte.\" Quel est le principal danger du manque de sommeil sur les capacités cognitives ?",
+    "options": [
+      { "id": "a", "text": "Il provoque la fatigue." },
+      { "id": "b", "text": "Il affecte la mémorisation et la concentration." },
+      { "id": "c", "text": "Il rend la routine de coucher stricte." },
+      { "id": "d", "text": "Il empêche de dormir suffisamment." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Il **réduit aussi significativement la capacité de concentration et de mémorisation**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le texte : \"Les voitures électriques, bien que plus écologiques en matière d'émissions de CO2 à l'usage, posent le problème de l'approvisionnement en matières premières pour leurs batteries. De plus, leur prix d'achat reste élevé, ce qui freine leur adoption par les ménages aux revenus modestes.\" Quel est le double inconvénient des voitures électriques ?",
+    "options": [
+      { "id": "a", "text": "Elles n'émettent pas de CO2 et sont chères." },
+      { "id": "b", "text": "Elles sont écologiques et nécessitent une batterie." },
+      { "id": "c", "text": "Elles sont chères et l'extraction des matières premières est problématique." },
+      { "id": "d", "text": "Elles sont peu adoptées par les ménages modestes." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Elles posent le problème de l'**approvisionnement en matières premières** et leur **prix d'achat reste élevé**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article : \"Choisir un bon stage ne se résume pas à l'entreprise. Il faut s'assurer que les missions proposées correspondent réellement à vos objectifs de formation. Un stage doit être une expérience apprenante, et non un simple emploi sous-payé pour effectuer des tâches sans intérêt pédagogique.\" Quel est le critère essentiel d'un stage réussi ?",
+    "options": [
+      { "id": "a", "text": "Être bien payé." },
+      { "id": "b", "text": "Effectuer des tâches simples." },
+      { "id": "c", "text": "Travailler dans une grande entreprise." },
+      { "id": "d", "text": "La correspondance entre les tâches et les objectifs d'apprentissage." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Il faut s'assurer que les missions proposées **correspondent réellement à vos objectifs de formation**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'extrait : \"Beaucoup négligent le petit-déjeuner, par manque de temps ou par mauvaise habitude. Or, il est le carburant du matin. Sauter ce repas conduit souvent à une baisse de vigilance vers 11h00 et à une surcompensation alimentaire au repas suivant. Un petit-déjeuner équilibré est donc la clé d'une bonne journée.\" Quelle est la conséquence immédiate de l'absence de petit-déjeuner ?",
+    "options": [
+      { "id": "a", "text": "Une mauvaise habitude." },
+      { "id": "b", "text": "Une consommation excessive au déjeuner." },
+      { "id": "c", "text": "Un manque de temps." },
+      { "id": "d", "text": "Une alimentation trop équilibrée." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Sauter ce repas conduit souvent à une baisse de vigilance... et à une **surcompensation alimentaire au repas suivant**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'annonce : \"Le festival des arts de rue aura lieu du 15 au 17 juillet. Les spectacles sont gratuits et se dérouleront dans le centre-ville. Attention, la circulation automobile sera coupée dans les rues principales pendant les représentations, y compris le soir.\" Quel est l'impact du festival sur la vie quotidienne des habitants ?",
+    "options": [
+      { "id": "a", "text": "Les spectacles sont payants." },
+      { "id": "b", "text": "La circulation automobile sera interrompue dans certaines rues." },
+      { "id": "c","text": "Il ne se passe que pendant la journée." },
+      { "id": "d", "text": "Le festival n'a lieu qu'au centre-ville." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La **circulation automobile sera coupée dans les rues principales** pendant les représentations."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez la note : \"À partir du mois prochain, le tri des déchets sera simplifié. Tous les emballages en plastique, quel que soit leur type (pot de yaourt, barquette, film), devront être déposés dans le bac jaune avec les cartons et les papiers. Le verre et les ordures ménagères conservent leurs bacs habituels.\" Qu'est-ce qui change dans la nouvelle règle de recyclage ?",
+    "options": [
+      { "id": "a", "text": "Les cartons et les papiers vont dans le bac des ordures ménagères." },
+      { "id": "b", "text": "Seuls les films plastiques sont acceptés dans le bac jaune." },
+      { "id": "c", "text": "Tous les types d'emballages en plastique peuvent être mis dans le bac jaune." },
+      { "id": "d", "text": "Le tri des déchets devient plus compliqué." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "**Tous les emballages en plastique, quel que soit leur type** (...) devront être déposés dans le bac jaune."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait : \"De nombreuses études tendent à prouver que l'écoute de musique classique en arrière-plan favorise la concentration et la mémorisation durant les tâches cognitives répétitives. Cependant, il est démontré que l'écoute active de musiques complexes ou l'écoute de chansons avec des paroles peut au contraire devenir un facteur de distraction. Il faut donc choisir son accompagnement musical avec discernement.\" Quel type de musique est bénéfique pour le travail ?",
+    "options": [
+      { "id": "a", "text": "Les chansons avec des paroles complexes." },
+      { "id": "b", "text": "La musique classique écoutée sans attention particulière." },
+      { "id": "c", "text": "Toute forme de musique activement écoutée." },
+      { "id": "d", "text": "La musique complexe ou lyrique." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'écoute de **musique classique en arrière-plan favorise la concentration**... l'écoute active de musiques complexes en revanche est une distraction."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le rapport : \"Le marché immobilier urbain connaît un ralentissement, principalement dû à la hausse des taux d'intérêt qui rend l'accès au crédit plus difficile. Si les prix des appartements anciens ne baissent pas significativement, la demande, elle, se reporte massivement sur les maisons en périphérie, modifiant ainsi l'équilibre traditionnel du marché.\" Quelle est la conséquence directe de la hausse des taux d'intérêt ?",
+    "options": [
+      { "id": "a", "text": "Une baisse significative des prix des appartements anciens." },
+      { "id": "b", "text": "Une augmentation de la demande pour les appartements urbains." },
+      { "id": "c", "text": "Un report de l'achat vers les maisons éloignées des centres." },
+      { "id": "d", "text": "Un meilleur accès au crédit." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La demande se **reporte massivement sur les maisons en périphérie**, en raison de la difficulté d'accès au crédit."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse : \"La désaffection du public pour les musées traditionnels s'explique souvent par une muséographie désuète, privilégiant l'accumulation d'objets au détriment de l'expérience interactive. Les jeunes visiteurs, habitués à l'immédiateté numérique, attendent désormais des lieux d'exposition qu'ils racontent une histoire et stimulent leur participation, plutôt que de présenter une simple vitrine d'archives.\" Quel est le reproche fait aux musées traditionnels ?",
+    "options": [
+      { "id": "a", "text": "Ils sont trop interactifs." },
+      { "id": "b", "text": "Ils n'ont pas assez d'archives." },
+      { "id": "c", "text": "Ils manquent de dynamisme et d'engagement pour le visiteur." },
+      { "id": "d", "text": "Ils sont trop axés sur l'expérience interactive." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Ils privilégient l'accumulation d'objets au détriment de l'**expérience interactive**... Les visiteurs attendent que l'exposition raconte une histoire et **stimule leur participation**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait : \"Dans un environnement médiatique saturé, la responsabilité des médias traditionnels n'est plus seulement de rapporter l'information, mais de **défendre l'intégrité factuelle**. Face à la rapidité de propagation des fausses nouvelles sur les plateformes sociales, le journalisme d'investigation doit devenir une force de **vérification** et d'éducation du public, sans quoi la crédibilité de l'ensemble du champ informationnel sera compromise.\" Quelle est la double mission du journalisme face aux fausses nouvelles ?",
+    "options": [
+      { "id": "a", "text": "Rapporter l'information rapidement et saturer l'environnement médiatique." },
+      { "id": "b", "text": "Se contenter de vérifier l'information." },
+      { "id": "c", "text": "Vérifier les faits et former le public à la crédibilité de l'information." },
+      { "id": "d", "text": "Compromettre l'intégrité factuelle." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le journalisme doit devenir une force de **vérification et d'éducation du public**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse : \"L'architecture moderne, avec sa quête de lignes épurées et de matériaux standardisés, a souvent échoué à intégrer la dimension humaine et locale. Les grands ensembles en béton, conçus pour l'efficacité, sont souvent perçus comme des espaces déshumanisés, coupés du contexte historique et climatique. Le défi actuel est de réintroduire l'**esthétique du lieu** et des matériaux biosourcés sans sacrifier l'innovation technique.\" Quel est le défaut majeur de l'architecture moderne, d'après l'auteur ?",
+    "options": [
+      { "id": "a", "text": "Son intégration trop parfaite au contexte historique." },
+      { "id": "b", "text": "Son manque d'efficacité technique." },
+      { "id": "c", "text": "Sa tendance à ignorer le lien avec les personnes et l'environnement local." },
+      { "id": "d", "text": "Le fait qu'elle utilise des matériaux biosourcés." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Elle a souvent échoué à **intégrer la dimension humaine et locale**... perçus comme des espaces **déshumanisés**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez la recommandation : \"Améliorer le service client ne passe pas uniquement par la rapidité de réponse. La clé réside dans la **personnalisation de l'échange** et la **résolution au premier contact**. Un conseiller doit avoir l'autonomie nécessaire pour prendre des décisions sans transférer l'appel, montrant ainsi au client que son problème est traité de manière prioritaire et efficace.\" Quel est l'élément le plus important pour un service client efficace ?",
+    "options": [
+      { "id": "a", "text": "Le fait de répondre rapidement." },
+      { "id": "b", "text": "Le fait de ne jamais transférer l'appel." },
+      { "id": "c", "text": "La capacité de traiter le problème immédiatement et de façon individuelle." },
+      { "id": "d", "text": "Une grande autonomie des conseillers." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La clé réside dans la **personnalisation de l'échange et la résolution au premier contact**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'article : \"L'utilisation des données personnelles par les entreprises de la 'tech' soulève de sérieuses préoccupations éthiques. Bien que ces données soient souvent 'anonymisées', leur agrégation permet de reconstituer des profils très précis, influençant tout, de la publicité ciblée aux décisions d'assurance. Il est urgent d'établir des cadres légaux plus stricts qui garantissent une réelle souveraineté de l'individu sur ses informations privées.\" Quel est le danger de l'agrégation des données anonymisées ?",
+    "options": [
+      { "id": "a", "text": "Elle empêche la publicité ciblée." },
+      { "id": "b", "text": "Elle permet de recréer des identités précises qui peuvent être utilisées pour influencer l'individu." },
+      { "id": "c", "text": "Elle pose des problèmes légaux." },
+      { "id": "d", "text": "Elle permet aux individus de garder leur souveraineté." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Leur agrégation permet de **reconstituer des profils très précis**, influençant... les décisions d'assurance."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le rapport : \"L'accès universel à l'eau potable demeure l'un des défis majeurs du XXIe siècle. Si des progrès considérables ont été réalisés en zone urbaine, le problème persiste dans de nombreuses régions rurales, souvent aggravé par le changement climatique et le manque d'infrastructures. La solution nécessite non seulement des investissements massifs, mais aussi une gestion locale décentralisée et durable de la ressource.\" Quel est l'obstacle principal à l'accès à l'eau potable dans les zones rurales ?",
+    "options": [
+      { "id": "a", "text": "Le manque de progrès en zone urbaine." },
+      { "id": "b", "text": "L'absence d'infrastructures et le climat." },
+      { "id": "c", "text": "La gestion locale de la ressource." },
+      { "id": "d", "text": "Le manque d'investissements." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Le problème est **souvent aggravé par le changement climatique et le manque d'infrastructures**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait : \"L'idéologie **néolibérale**, en postulant l'individu comme un entrepreneur de soi-même, a érigé l'autonomie et la performance en impératifs moraux. Cette injonction à la réussite personnelle tend à **dépolitiser** l'échec, le réduisant à une simple déficience individuelle plutôt qu'à une conséquence systémique. Il en résulte un effacement progressif de la notion de **solidarité collective** au profit d'une compétition généralisée, rendant toute critique structurelle inaudible, car elle est perçue comme un aveu de faiblesse personnelle. Cette culture de l'individualisme n'est pas une simple évolution sociale, mais bien une construction idéologique qui neutralise la contestation.\" Quel est le reproche principal fait à l'idéologie néolibérale ?",
+    "options": [
+      { "id": "a", "text": "D'encourager la compétition généralisée au lieu de la performance individuelle." },
+      { "id": "b", "text": "D'avoir érigé la réussite personnelle comme un impératif moral." },
+      { "id": "c", "text": "De transformer l'échec en faute individuelle et de détruire la solidarité." },
+      { "id": "d", "text": "D'encourager l'autonomie et la performance chez les entrepreneurs." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Cette injonction à la réussite personnelle tend à **dépolitiser l'échec**, (...) il en résulte un effacement progressif de la notion de **solidarité collective**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'essai : \"L'**épistémologie** de la science a longtemps reposé sur le mythe de l'observation pure, c'est-à-dire l'idée qu'un chercheur peut aborder le réel sans aucun **a priori** théorique. Or, l'histoire des sciences démontre l'inverse : toute expérience est précédée d'un **cadre conceptuel** qui oriente la question et définit ce qui est pertinent d'observer. La science n'est pas la découverte d'un fait brut, mais une **construction interprétative** qui filtre le réel à travers ses propres postulats méthodologiques. La rupture épistémologique réside dans la reconnaissance que l'objectivité est un idéal régulateur, et non une réalité de l'expérience scientifique immédiate. Cette reconnaissance force à la modestie, sans pour autant sombrer dans le relativisme, car le consensus scientifique conserve son pouvoir de validation.\" Quelle est la principale idée réfutée par l'auteur concernant la science ?",
+    "options": [
+      { "id": "a", "text": "L'idée que la science est une construction interprétative." },
+      { "id": "b", "text": "Le fait que le consensus scientifique est important." },
+      { "id": "c", "text": "La possibilité d'observer la réalité sans aucune idée préconçue." },
+      { "id": "d", "text": "La modestie du chercheur." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'auteur réfute le **mythe de l'observation pure**, l'idée qu'un chercheur peut aborder le réel **sans aucun a priori théorique**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la réflexion : \"La notion d'**héritage** dans l'art contemporain est un champ de tensions. Les artistes actuels ne peuvent ignorer la **tradition canonique**, mais ils ne peuvent non plus s'y soumettre sans perdre leur pertinence. La création est souvent un acte de **déformation constructive**, où l'on cite l'œuvre passée pour mieux la subvertir, voire la nier. L'originalité réside alors non pas dans l'absence de filiation, qui est une chimère, mais dans la manière dont cette filiation est **agressivement interrogée** et réinscrite dans un contexte sémantique nouveau. C'est un dialogue critique, pas une vénération. Le rôle du critique d'art est de décrypter cette subversion plutôt que d'évaluer la qualité technique pure de la reproduction. \" Quel est le rôle de la tradition dans l'art contemporain ?",
+    "options": [
+      { "id": "a", "text": "Elle doit être ignorée pour atteindre l'originalité pure." },
+      { "id": "b", "text": "Elle doit être citée pour mieux la vénérer." },
+      { "id": "c", "text": "Elle sert de point de départ pour une remise en question créative et critique." },
+      { "id": "d", "text": "Elle est un champ de tensions qui empêche l'originalité." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La création est un acte de **déformation constructive**, où l'on **cite l'œuvre passée pour mieux la subvertir**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'analyse : \"La surconsommation d'information dans nos sociétés hyper-connectées mène à une forme de **'paralysie par l'analyse'**. En ayant accès à une quantité exponentielle de données et de points de vue contradictoires, l'individu se retrouve dans l'incapacité de synthétiser ou de hiérarchiser les urgences, ce qui aboutit à une **forme d'apathie** plutôt qu'à un citoyen éclairé. Cette surcharge informationnelle n'est pas un gain de liberté, mais une nouvelle contrainte cognitive qui favorise le **découragement** et le repli sur des certitudes simplistes. Le discernement devient la compétence rare, supplantée par la vélocité du flux de données. Le vrai enjeu n'est plus l'accès, mais la **gestion de l'abondance**.\" Quelle est la conséquence de l'abondance d'information sur l'individu ?",
+    "options": [
+      { "id": "a", "text": "Elle augmente le discernement et la liberté de l'individu." },
+      { "id": "b", "text": "Elle rend l'individu incapable de décider ou d'agir, et l'encourage au repli." },
+      { "id": "c", "text": "Elle favorise la vélocité du flux de données." },
+      { "id": "d", "text": "Elle permet de hiérarchiser plus facilement les urgences." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'individu se retrouve dans l'**incapacité de synthétiser** (...) ce qui aboutit à une **forme d'apathie** plutôt qu'à un citoyen éclairé."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait : \"La **philosophie du langage** nous enseigne que tout énoncé est irrémédiablement lié à la **subjectivité** de celui qui l'articule. Contrairement à une vision positiviste, les mots ne sont pas de simples étiquettes neutres sur des objets préexistants. Ils sont des outils de **structuration du réel**, des filtres à travers lesquels nous percevons et construisons notre monde. Tenter d'éliminer toute trace du 'je' dans le discours, c'est se priver de la richesse du **point de vue situé**, et céder à l'illusion d'une objectivité chimérique. La vraie clarté ne passe pas par l'effacement, mais par l'**explicitation** de la position de l'énonciateur. L'enjeu est alors de déconstruire la neutralité pour retrouver le sens véritable.\" Que se passe-t-il si l'on cherche à rendre le discours totalement neutre ?",
+    "options": [
+      { "id": "a", "text": "On atteint une objectivité totale et la clarté véritable." },
+      { "id": "b", "text": "On renforce la subjectivité de l'énonciateur." },
+      { "id": "c", "text": "On perd la perspective personnelle et on tombe dans une illusion de neutralité." },
+      { "id": "d", "text": "Les mots redeviennent des étiquettes neutres." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Tenter d'éliminer toute trace du 'je' (...) c'est se priver de la richesse du **point de vue situé**, et céder à l'**illusion d'une objectivité chimérique**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez le traité : \"L'**ontologie** de l'existence, dans le champ post-structuraliste, réfute toute fondation **transcendantale** de l'être. L'existence n'est pas une essence préétablie à laquelle l'individu devrait se conformer, mais un processus de **'devenir-multiple'** sans télos ni finalité. L'identité, loin d'être un noyau stable, est une **sédimentation labile** de forces et de discours, une intersection de trajectoires plutôt qu'un point fixe. L'affranchissement passe par la reconnaissance de cette **instabilité constitutive**, exigeant une pensée nomade capable de naviguer dans l'incertitude et de déjouer les tentatives de **totalisation** normative. Il faut substituer à la question 'Qui suis-je ?' celle, plus opératoire, 'Que puis-je devenir ?', acceptant la fragmentation comme condition première de la liberté radicale.\" Quel est le postulat central de l'ontologie post-structuraliste concernant l'identité ?",
+    "options": [
+      { "id": "a", "text": "Elle est un noyau stable, fondé sur une essence transcendantale." },
+      { "id": "b", "text": "Elle est un processus d'affranchissement qui mène à une totalisation normative." },
+      { "id": "c", "text": "Elle est instable, fragmentaire, et toujours en construction, sans objectif prédéfini." },
+      { "id": "d", "text": "Elle doit se conformer à une finalité préétablie." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "L'existence n'est pas une essence préétablie, mais un processus de '**devenir-multiple**' sans finalité. L'identité est une **sédimentation labile** et une **instabilité constitutive**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez l'analyse : \"La **filiation entre causalité et déterminisme** dans le champ des sciences humaines doit être maniée avec une extrême prudence épistémologique. La complexité des systèmes sociaux ne permet pas d'établir une **relation biunivoque** entre une cause unique et son effet. Les phénomènes sont plutôt le produit d'une **multicausalité réticulaire** où l'événement émerge d'une conjonction de facteurs probabilistes et non d'une nécessité déductive. Affirmer un déterminisme absolu reviendrait à **réifier** l'action humaine, ignorant la dimension d'agency et la possibilité de bifurcations imprévues. La posture scientifique la plus rigoureuse est celle qui intègre l'**indétermination** comme paramètre intrinsèque, substituant la modélisation des tendances à la prédiction d'une trajectoire unique.\" Qu'est-ce qui est considéré comme la posture scientifique la plus rigoureuse dans les sciences humaines ?",
+    "options": [
+      { "id": "a", "text": "La nécessité d'établir un déterminisme absolu basé sur une cause unique." },
+      { "id": "b", "text": "L'établissement d'une relation biunivoque entre une cause et son effet." },
+      { "id": "c", "text": "Le fait de prévoir les actions humaines et d'ignorer les indéterminations." },
+      { "id": "d", "text": "L'acceptation que l'indétermination fait partie du système et la modélisation des tendances." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "La posture scientifique la plus rigoureuse est celle qui intègre l'**indétermination comme paramètre intrinsèque**, substituant la **modélisation des tendances** à la prédiction..."
+  },
+
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez les instructions : \"Cafetière électrique. 1. Remplir le réservoir d'eau. 2. Mettre du café moulu dans le filtre. 3. Appuyer sur le bouton ON/OFF. Attendre 5 minutes.\" Que faut-il faire avant d'appuyer sur le bouton ?",
+    "options": [
+      { "id": "a", "text": "Attendre 5 minutes." },
+      { "id": "b", "text": "Remplir le filtre d'eau." },
+      { "id": "c", "text": "Mettre le café et l'eau." },
+      { "id": "d", "text": "Éteindre la cafetière." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il faut d'abord 'Remplir le réservoir d'eau' et 'Mettre du café moulu dans le filtre' (étapes 1 et 2)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le message : \"Attention, le train 734 Paris-Lyon est annulé suite à un problème technique. Les passagers sont priés de se rendre au guichet pour prendre un billet pour le train de 16h30.\" Que doivent faire les passagers ?",
+    "options": [
+      { "id": "a", "text": "Prendre le train 734." },
+      { "id": "b", "text": "Aller à Lyon." },
+      { "id": "c", "text": "Changer de billet au guichet." },
+      { "id": "d", "text": "Attendre 16h30." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les passagers sont priés de **se rendre au guichet** pour prendre un billet pour le train de 16h30."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez le panneau : \"Aire de jeux pour enfants de 3 à 8 ans. Surveillance parentale obligatoire. Interdit aux chiens.\" Qui doit surveiller les enfants ?",
+    "options": [
+      { "id": "a", "text": "Les chiens." },
+      { "id": "b", "text": "Les enfants." },
+      { "id": "c", "text": "Les adultes." },
+      { "id": "d", "text": "Le personnel du parc." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La **surveillance parentale obligatoire** signifie que les parents (adultes) doivent surveiller."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A1",
+    "questionText": "Lisez la liste de courses : \"Lait, pain, beurre, pommes (2kg), lessive.\" Quel produit est acheté en kilo ?",
+    "options": [
+      { "id": "a", "text": "Le lait." },
+      { "id": "b", "text": "Le pain." },
+      { "id": "c", "text": "Les pommes." },
+      { "id": "d", "text": "La lessive." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les **pommes (2kg)** sont mesurées en kilos."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'annonce : \"Location de vélos en libre-service. Premier quart d'heure gratuit. Ensuite : 1 € par heure. Carte bancaire nécessaire pour le dépôt de garantie de 50 €.\" Combien coûte une utilisation de 45 minutes ?",
+    "options": [
+      { "id": "a", "text": "1 euro." },
+      { "id": "b", "text": "50 euros." },
+      { "id": "c", "text": "2 euros." },
+      { "id": "d", "text": "C'est gratuit." }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Le premier quart d'heure est gratuit (45 - 15 = 30 minutes payantes). 1 € par heure, soit 1 € pour 30 minutes. Le coût est donc de 1 €."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez l'alerte : \"Votre mot de passe est faible. Il doit contenir au moins 8 caractères, inclure des majuscules, des minuscules et un chiffre. Veuillez le modifier immédiatement dans la rubrique 'Paramètres de sécurité'.\" Quelle est la condition minimale pour le nouveau mot de passe ?",
+    "options": [
+      { "id": "a", "text": "Qu'il soit modifié dans la rubrique 'Paramètres'." },
+      { "id": "b", "text": "Qu'il contienne des lettres et des chiffres." },
+      { "id": "c", "text": "Qu'il soit fort et très long." },
+      { "id": "d", "text": "Qu'il soit un mot de passe." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Il doit contenir **au moins 8 caractères, inclure des majuscules, des minuscules et un chiffre** (donc des lettres et des chiffres)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez la note : \"Le pique-nique est prévu à 13h00. La météo annonce un ciel nuageux le matin, puis un soleil radieux après-midi. Nous le maintenons, mais prévoyons une couverture pour le sol qui pourrait être humide. Pas de risque de pluie.\" Quel est le seul désagrément attendu pour le pique-nique ?",
+    "options": [
+      { "id": "a", "text": "Le risque de pluie." },
+      { "id": "b", "text": "Le ciel nuageux à 13h00." },
+      { "id": "c", "text": "L'humidité possible du sol." },
+      { "id": "d", "text": "L'annulation du pique-nique." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il est recommandé de prévoir une couverture pour le sol qui **pourrait être humide**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "A2",
+    "questionText": "Lisez le courriel : \"Cher Monsieur Dubois, je vous écris pour annuler notre entretien de ce mardi à 14h00. Un imprévu m'oblige à m'absenter. Je vous recontacterai la semaine prochaine pour proposer une nouvelle date. Cordialement, Sophie Lenoir.\" Que propose Sophie Lenoir ?",
+    "options": [
+      { "id": "a", "text": "D'annuler définitivement l'entretien." },
+      { "id": "b", "text": "De revoir Monsieur Dubois ce mardi." },
+      { "id": "c", "text": "De fixer un autre jour de rendez-vous bientôt." },
+      { "id": "d", "text": "De s'absenter." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Elle annonce : **Je vous recontacterai la semaine prochaine pour proposer une nouvelle date**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article : \"Les couleurs ont un impact souvent négligé sur notre psychologie. Le bleu est généralement associé au calme et à la productivité, c'est pourquoi il est privilégié dans les bureaux. Le rouge, en revanche, est stimulant, mais il doit être utilisé avec modération car il peut générer du stress. Le jaune, quant à lui, favorise l'optimisme et la créativité.\" Quelle couleur est recommandée pour un environnement de travail calme et efficace ?",
+    "options": [
+      { "id": "a", "text": "Le jaune." },
+      { "id": "b", "text": "Le bleu." }, 
+      { "id": "c", "text": "Le rouge." },
+      { "id": "d", "text": "Toutes les couleurs." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "**Le bleu est généralement associé au calme et à la productivité**, c'est pourquoi il est privilégié dans les bureaux."
+},
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez les étapes : \"Adopter un animal. 1. Remplir le questionnaire de pré-adoption. 2. Avoir un entretien téléphonique avec un bénévole. 3. Visiter l'animal dans sa famille d'accueil pour une première rencontre. 4. Signer le contrat d'adoption et accueillir l'animal.\" Que se passe-t-il après l'entretien téléphonique ?",
+    "options": [
+      { "id": "a", "text": "La signature du contrat." },
+      { "id": "b", "text": "Le remplissage du questionnaire." },
+      { "id": "c", "text": "Le bénévole vient chez vous." },
+      { "id": "d", "text": "La rencontre avec l'animal dans son lieu de vie temporaire." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "L'étape 3 est de **Visiter l'animal dans sa famille d'accueil**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez le texte : \"Les livres numériques (e-books) offrent une portabilité et une capacité de stockage imbattables, ce qui est très pratique en voyage. Cependant, certains lecteurs regrettent la sensation tactile du papier et le fait que les e-books sollicitent davantage les yeux que les livres classiques. C'est donc un choix personnel entre le confort physique et le côté pratique.\" Quel est le principal avantage des livres numériques par rapport aux livres papier ?",
+    "options": [
+      { "id": "a", "text": "La sensation tactile." },
+      { "id": "b", "text": "Le confort visuel." },
+      { "id": "c", "text": "La facilité de transport de nombreux ouvrages." },
+      { "id": "d", "text": "Le côté personnel." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Les e-books offrent une **portabilité et une capacité de stockage imbattables**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez les conseils : \"Pour maîtriser un budget de voyage, la règle d'or est la planification. Fixez un montant quotidien maximum pour l'hébergement et un autre pour les repas. Évitez les restaurants touristiques chers. L'autre astuce est de payer en monnaie locale pour éviter les frais de change abusifs de votre banque.\" Quel est le meilleur moyen d'éviter les frais inutiles ?",
+    "options": [
+      { "id": "a", "text": "Éviter les restaurants chers." },
+      { "id": "b", "text": "Bien planifier son voyage." },
+      { "id": "c", "text": "Fixer un montant pour l'hébergement." },
+      { "id": "d", "text": "Utiliser la monnaie du pays visité pour les paiements." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "L'autre astuce est de **payer en monnaie locale pour éviter les frais de change abusifs**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'article : \"Les cours du soir connaissent un succès grandissant, notamment auprès des actifs souhaitant acquérir de nouvelles compétences sans mettre leur carrière en pause. Cette formule, qui demande beaucoup d'énergie, offre une grande flexibilité et permet d'obtenir des diplômes reconnus, facilitant ainsi les reconversions professionnelles ou les promotions internes.\" Pourquoi les cours du soir sont-ils populaires auprès des professionnels ?",
+    "options": [
+      { "id": "a", "text": "Ils ne demandent pas beaucoup d'énergie." },
+      { "id": "b", "text": "Ils permettent de changer de métier ou d'évoluer en gardant son emploi." },
+      { "id": "c", "text": "Ils sont très flexibles." },
+      { "id": "d", "text": "Ils mettent la carrière en pause." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Ils permettent d'**acquérir de nouvelles compétences sans mettre leur carrière en pause** et facilitent ainsi les **reconversions professionnelles ou les promotions internes**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B1",
+    "questionText": "Lisez l'avis : \"J'ai été déçu par le nouveau jeu 'Aventuriers du Temps'. Si les graphismes sont à couper le souffle, l'histoire est banale et les dialogues entre les personnages sont interminables. Après 5 heures de jeu, je n'ai toujours pas compris l'objectif principal de ma mission. Je recommande d'attendre une promotion avant d'acheter.\" Quel est le principal défaut de ce jeu vidéo ?",
+    "options": [
+      { "id": "a", "text": "Ses graphismes." },
+      { "id": "b", "text": "Le manque de clarté de l'intrigue et les dialogues trop longs." },
+      { "id": "c", "text": "Son prix est trop bas." },
+      { "id": "d", "text": "Le fait que le joueur n'arrive pas à la fin." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "L'**histoire est banale** et les **dialogues entre les personnages sont interminables**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait : \"La **cybersécurité** ne doit plus être considérée comme un luxe réservé aux grandes entreprises, mais comme une nécessité vitale pour les PME. Leurs systèmes, souvent moins protégés, constituent une cible privilégiée pour les rançongiciels. Le risque financier et la perte de données stratégiques qui en résultent peuvent menacer la pérennité même de la structure. Il est donc impératif d'investir dans la formation des employés et l'adoption de protocoles de sauvegarde réguliers et externalisés.\" Quelle est l'approche recommandée pour la cybersécurité des PME ?",
+    "options": [
+      { "id": "a", "text": "Laisser la cybersécurité aux grandes entreprises." },
+      { "id": "b", "text": "Se concentrer uniquement sur les pertes financières." },
+      { "id": "c", "text": "Investir dans la formation et effectuer des sauvegardes régulières à distance." },
+      { "id": "d", "text": "Ne pas considérer la cybersécurité comme vitale." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il est impératif d'**investir dans la formation des employés et l'adoption de protocoles de sauvegarde réguliers et externalisés**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse : \"Le **plagiat académique** n'est pas seulement un problème éthique; il représente une falsification du processus d'apprentissage et de l'évaluation des compétences. Pour le contrer efficacement, les institutions doivent non seulement utiliser des logiciels de détection sophistiqués, mais aussi revoir les modalités d'évaluation, privilégiant les travaux personnels basés sur la réflexion critique plutôt que la compilation d'informations trouvées en ligne.\" Que faut-il faire pour lutter contre le plagiat, en plus des logiciels ?",
+    "options": [
+      { "id": "a", "text": "Falsifier le processus d'apprentissage." },
+      { "id": "b", "text": "Privilégier la compilation d'informations en ligne." },
+      { "id": "c", "text": "Réduire la fréquence des évaluations." },
+      { "id": "d", "text": "Modifier les types de travaux demandés pour valoriser la pensée individuelle." }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Il faut **revoir les modalités d'évaluation, privilégiant les travaux personnels basés sur la réflexion critique**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait : \"La **gouvernance mondiale** a montré ses limites lors de la dernière pandémie. La lenteur des mécanismes de prise de décision, combinée à une absence de **péréquation** dans la distribution des ressources, a exacerbé les inégalités entre pays riches et pays pauvres. L'urgence est de réformer les organisations internationales pour conférer une plus grande **agilité** aux réponses sanitaires et garantir un accès équitable aux traitements et vaccins.\" Quel est le défaut majeur de la gouvernance mondiale en temps de crise ?",
+    "options": [
+      { "id": "a", "text": "L'agilité et la rapidité des mécanismes de décision." },
+      { "id": "b", "text": "La difficulté à assurer une distribution juste et rapide des ressources." },
+      { "id": "c", "text": "La seule prise de décision des pays riches." },
+      { "id": "d", "text": "Le manque d'organisations internationales." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "La **lenteur des mécanismes de prise de décision**, combinée à une **absence de péréquation dans la distribution des ressources**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse : \"L'**obsolescence programmée**, en réduisant la durée de vie des produits, est un frein majeur à l'**économie circulaire**. Elle encourage le renouvellement constant des biens, épuise les ressources naturelles et augmente le volume de déchets électroniques. Pour y remédier, il est nécessaire d'imposer des normes de **réparabilité** plus strictes aux fabricants et d'intégrer un indice de durabilité clair dès l'achat par le consommateur.\" Quelle est la double solution proposée pour contrer l'obsolescence programmée ?",
+    "options": [
+      { "id": "a", "text": "Augmenter le volume de déchets électroniques." },
+      { "id": "b", "text": "Épuiser les ressources naturelles." },
+      { "id": "c", "text": "Réglementer la réparabilité des produits et afficher leur durabilité." },
+      { "id": "d", "text": "Encourager le renouvellement constant des biens." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Il est nécessaire d'**imposer des normes de réparabilité plus strictes** et d'**intégrer un indice de durabilité clair**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'extrait : \"Le mouvement **Slow Food** n'est pas un simple retour à une cuisine traditionnelle, mais une contestation philosophique de l'uniformisation du goût imposée par l'industrie agroalimentaire. Il valorise la **biodiversité** culinaire, la traçabilité des ingrédients et le plaisir de prendre son temps pour cuisiner et manger. Ce mouvement prône un acte de résistance contre la **fast-culture** qui dévalorise la convivialité et la connaissance du produit.\" Quel est l'objectif philosophique du mouvement Slow Food ?",
+    "options": [
+      { "id": "a", "text": "Promouvoir l'industrie agroalimentaire." },
+      { "id": "b", "text": "S'opposer à la standardisation de l'alimentation et revaloriser le plaisir et la connaissance des produits." },
+      { "id": "c", "text": "Revenir uniquement à la cuisine traditionnelle." },
+      { "id": "d", "text": "Réduire la convivialité." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "C'est une **contestation philosophique de l'uniformisation du goût** et il valorise la **convivialité et la connaissance du produit**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le texte : \"Le rôle des **ONG** dans l'aide humanitaire est souvent ambigu. Si elles comblent des lacunes laissées par les États défaillants, leur prolifération et leur dépendance au financement privé soulèvent des questions sur leur **neutralité** et leur **pérennité**. Pour garantir une efficacité maximale, elles doivent impérativement renforcer leur **coordination** sur le terrain et se soumettre à une évaluation indépendante et transparente de leurs actions.\" Quel est le problème soulevé par le fonctionnement actuel des ONG ?",
+    "options": [
+      { "id": "a", "text": "Elles sont trop neutres et trop durables." },
+      { "id": "b", "text": "Elles dépendent trop du financement public." },
+      { "id": "c", "text": "Leur grand nombre et leur financement privé menacent leur impartialité et leur stabilité." },
+      { "id": "d", "text": "Leur manque d'évaluation indépendante." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Leur **prolifération et leur dépendance au financement privé soulèvent des questions sur leur neutralité et leur pérennité**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez l'analyse : \"L'histoire de la presse montre que le problème des **Fake News** n'est pas nouveau. Ce qui a changé, c'est l'**accélération** et la **viralité** de leur diffusion via les plateformes numériques. Auparavant, la presse écrite offrait un temps de décantation et une responsabilité éditoriale qui permettaient de filtrer la désinformation. Aujourd'hui, la rapidité l'emporte sur l'exactitude, rendant la **vérification** post-factuelle souvent inefficace face à l'ampleur des dégâts déjà causés.\" Quel est le changement majeur qui aggrave le problème des fausses nouvelles ?",
+    "options": [
+      { "id": "a", "text": "La disparition de la presse écrite." },
+      { "id": "b", "text": "La lenteur de la diffusion." },
+      { "id": "c", "text": "La vitesse et l'étendue de leur propagation en ligne." },
+      { "id": "d", "text": "Le manque de responsabilité éditoriale de la presse." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Ce qui a changé, c'est l'**accélération et la viralité de leur diffusion via les plateformes numériques**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "B2",
+    "questionText": "Lisez le rapport : \"La **surpêche** en Méditerranée est le symptôme d'une gestion des ressources obsolète. Elle menace non seulement la biodiversité marine, mais aussi l'économie des petits pêcheurs locaux face aux flottes industrielles. La solution ne réside pas dans l'interdiction totale, mais dans l'établissement de **quotas** stricts basés sur la science, la création de **zones marines protégées** étendues et une **péréquation** juste des aides pour favoriser une pêche artisanale et durable.\" Quel est le principal effet de la surpêche, au-delà de l'impact environnemental ?",
+    "options": [
+      { "id": "a", "text": "Elle favorise les flottes industrielles au détriment des petits pêcheurs." },
+      { "id": "b", "text": "Elle permet de créer de nouvelles zones marines protégées." },
+      { "id": "c", "text": "Elle favorise une pêche artisanale et durable." },
+      { "id": "d", "text": "Elle résout les problèmes de gestion des ressources." }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Elle menace (...) l'économie des petits pêcheurs locaux **face aux flottes industrielles**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait : \"La **diaspora culturelle**, loin d'être un simple phénomène de déplacement géographique, est un espace **sémantique** où la mémoire collective est à la fois préservée et altérée. L'exil force à une **réinterprétation sélective** du passé, érigeant certaines figures symboliques en totems identitaires, tout en négligeant d'autres aspects de la tradition. Le défi pour les communautés diasporiques n'est pas de maintenir une 'pureté' illusoire de leur culture d'origine, mais d'intégrer les **contingences** du pays d'accueil dans une dynamique de **créolisation**. C'est dans cette hybridation, souvent génératrice de tensions, que réside la véritable vitalité d'une culture en mouvement, offrant un miroir critique à la culture sédentaire majoritaire.\" Quelle est la condition essentielle de la vitalité de la culture diasporique ?",
+    "options": [
+      { "id": "a", "text": "Maintenir la 'pureté' illusoire de sa culture d'origine." },
+      { "id": "b", "text": "Se soumettre aux exigences sémantiques du pays d'accueil." },
+      { "id": "c", "text": "Intégrer les influences locales dans un processus d'hybridation créative." },
+      { "id": "d", "text": "Négliger les figures symboliques du passé." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le défi (...) est d'**intégrer les contingences du pays d'accueil dans une dynamique de créolisation**. C'est dans cette **hybridation** que réside la véritable vitalité."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez la critique : \"La **biotechnologie** moderne, capable d'intervenir sur le **génome** du vivant, ouvre un champ de possibilités scientifiques sans précédent, mais soulève un dilemme **déontologique** fondamental. La frontière entre la réparation du vivant (thérapie génique) et son amélioration (eugénisme technologique) est ténue. Faut-il réguler l'usage de ces outils par le seul critère de la **faisabilité technique**, ou l'encadrer par une éthique de la **prudence** qui intègre la notion de **patrimoine biologique** inaliénable ? La question n'est plus 'Pouvons-nous le faire ?', mais 'Devons-nous le faire ?', ce qui impose une **réflexion métaphysique** sur la définition même de la nature humaine, au-delà des seuls bénéfices médicaux immédiats.\" Quelle est l'interrogation éthique centrale soulevée par la biotechnologie ?",
+    "options": [
+      { "id": "a", "text": "Le critère de la faisabilité technique." },
+      { "id": "b", "text": "La possibilité d'améliorer le vivant." },
+      { "id": "c", "text": "La distinction entre soigner et chercher à améliorer la nature humaine et la nécessité de définir ce qu'est l'humain." },
+      { "id": "d", "text": "Le fait que les bénéfices médicaux soient immédiats." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La frontière entre la **réparation du vivant** et son **amélioration** est ténue (...) ce qui impose une **réflexion métaphysique** sur la définition même de la nature humaine."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'analyse : \"La figure de l'**anti-héros** littéraire, centrale dans la **narratologie** contemporaine, révèle une **désaffection** pour l'archétype classique de la vertu. L'anti-héros, par son ambivalence morale et ses motivations souvent triviales, reflète les **fissures** de l'individu post-moderne, écartelé entre l'idéal collectif et la pulsion égoïste. Son intérêt ne réside pas dans l'accomplissement d'un destin grandiose, mais dans sa capacité à nous confronter à notre propre **médiocrité existentielle**, forçant le lecteur à une **identification non cathartique**, mais plutôt réflexive et dérangeante. La fonction narrative n'est plus l'élévation, mais l'introspection critique de la condition humaine ordinaire.\" Qu'est-ce qui rend l'anti-héros pertinent pour le lecteur contemporain ?",
+    "options": [
+      { "id": "a", "text": "Son destin grandiose et son accomplissement de la vertu." },
+      { "id": "b", "text": "Son ambivalence morale qui lui permet d'accomplir son destin." },
+      { "id": "c", "text": "Sa capacité à forcer le lecteur à réfléchir sur ses propres faiblesses." },
+      { "id": "d", "text": "La simplicité et la neutralité de sa fonction narrative." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Son intérêt (...) réside dans sa capacité à nous **confronter à notre propre médiocrité existentielle**, forçant le lecteur à une **identification non cathartique**, mais plutôt réflexive."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'extrait : \"L'efficacité de la **péréquation fiscale**, mécanisme visant à réduire les disparités de richesse entre les collectivités territoriales, est souvent débattue. Si l'objectif est d'assurer une **justice distributive** et d'éviter que la qualité des services publics ne dépende du seul **assise foncière** locale, la mise en œuvre est complexe. Les détracteurs soulignent que cette **solidarité forcée** peut désinciter les régions riches à l'effort fiscal, tandis que les régions bénéficiaires peuvent développer une **dépendance** aux subventions. L'équité territoriale ne passe pas uniquement par la redistribution des moyens, mais par la **capacitation** des territoires défavorisés à générer leur propre richesse fiscale de manière pérenne, un objectif que la péréquation, par sa nature même, peine à atteindre.\" Quel est l'effet pervers (non intentionnel) de la péréquation fiscale ?",
+    "options": [
+      { "id": "a", "text": "Elle encourage les régions à l'effort fiscal." },
+      { "id": "b", "text": "Elle conduit les régions bénéficiaires à une dépendance financière au lieu de générer leur propre richesse." },
+      { "id": "c", "text": "Elle simplifie la justice distributive." },
+      { "id": "d", "text": "Elle assure une assise foncière locale." }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Les régions bénéficiaires peuvent développer une **dépendance aux subventions**, et la péréquation peine à atteindre la **capacitation** (capacité à générer sa propre richesse)."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C1",
+    "questionText": "Lisez l'étude : \"Les **heuristiques** de jugement, ces **raccourcis mentaux** que nous utilisons pour prendre des décisions rapides en situation d'incertitude, sont à la fois des outils d'efficience cognitive et des sources d'erreurs systématiques, ou **biais cognitifs**. L'heuristique de représentativité, par exemple, nous pousse à juger un individu ou un événement sur la base d'un stéréotype sans tenir compte de la probabilité statistique. La psychologie décisionnelle montre que l'individu 'rationnel' est en réalité un **'satisficer'** – cherchant une solution 'suffisamment bonne' plutôt que 'parfaitement optimale'. La conscience de ces biais, plus que leur élimination, est la première étape pour une **métacognition** plus rigoureuse et une meilleure anticipation des erreurs d'inférence.\" Quelle est la double nature des heuristiques de jugement ?",
+    "options": [
+      { "id": "a", "text": "Elles sont des outils d'élimination des biais cognitifs." },
+      { "id": "b", "text": "Elles sont une source d'erreurs systématiques et un signe de la rationalité de l'individu." },
+      { "id": "c", "text": "Elles permettent d'être à la fois rapides et efficaces, mais créent des erreurs prévisibles." },
+      { "id": "d", "text": "Elles prouvent que l'individu est toujours parfaitement optimal dans ses choix." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Elles sont à la fois des outils d'**efficience cognitive** et des sources d'**erreurs systématiques**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez le traité : \"L'**esthétique de la ruine** dans l'art post-moderne transcende la simple mélancolie romantique pour s'inscrire dans une réflexion sur l'**entropie** et l'épuisement des récits. La ruine n'est plus le vestige d'un passé glorieux, mais le symbole d'une **finitude structurelle**, la preuve matérielle de l'échec inhérent à toute ambition de **totalité architecturale ou idéologique**. En exposant la décrépitude et l'altération, l'artiste opère une **démystification** de l'idée de permanence, affirmant le caractère transitoire de toute production humaine. L'art contemporain, par cet éloge paradoxal de la déchéance, devient une **critique ontologique** de la modernité et de ses promesses illusoires de progrès linéaire. L'objet détruit ou incomplet est ainsi élevé au rang de **signifiant** primordial, porteur d'une vérité plus acerbe que l'œuvre achevée.\" Quel est le sens profond de la ruine dans l'art post-moderne ?",
+    "options": [
+      { "id": "a", "text": "C'est un vestige mélancolique d'un passé glorieux et un éloge de la permanence." },
+      { "id": "b", "text": "C'est la preuve que l'art moderne n'a pas réussi à achever ses œuvres." },
+      { "id": "c", "text": "C'est un symbole de la finitude, de l'échec des grandes idéologies et de la nature transitoire de toute création." },
+      { "id": "d", "text": "C'est une affirmation de l'idée de permanence et de progrès linéaire." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "La ruine est le **symbole d'une finitude structurelle**, la preuve matérielle de l'**échec inhérent à toute ambition de totalité**... et affirme le caractère **transitoire de toute production humaine**."
+  },
+  {
+    "section": "reading",
+    "difficulty": "C2",
+    "questionText": "Lisez la réflexion : \"Le **changement paradigmatique** en physique théorique ne s'opère pas par la simple accumulation de données empiriques. Il résulte d'une crise de la **doxa** scientifique, lorsque le **cadre conceptuel** établi, ou **paradigme**, devient incapable d'intégrer des anomalies persistantes sans recourir à des hypothèses *ad hoc* intenables. Le nouveau paradigme n'est pas une simple amélioration, mais une **réorganisation radicale** des catégories de pensée, rendant les concepts de l'ancienne théorie **mutuellement incommensurables** avec ceux de la nouvelle. La transition est ainsi moins une démarche logique qu'une **conversion herméneutique** collective de la communauté scientifique, un saut conceptuel qui redéfinit fondamentalement la question 'Qu'est-ce que le réel ?'. La véritable difficulté de la **révolution scientifique** est d'opérer ce basculement *apriori* du regard.\" Quel est l'élément qui caractérise le plus un changement paradigmatique ?",
+    "options": [
+      { "id": "a", "text": "L'accumulation de données empiriques qui confirment l'ancienne théorie." },
+      { "id": "b", "text": "Une simple amélioration des anciennes catégories de pensée." },
+      { "id": "c", "text": "Une crise du cadre conceptuel qui mène à une réorganisation radicale des catégories de pensée et à une incompréhension entre l'ancienne et la nouvelle théorie." },
+      { "id": "d", "text": "Une démarche purement logique basée sur des hypothèses ad hoc." }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Le nouveau paradigme est une **réorganisation radicale des catégories de pensée**, rendant les concepts de l'ancienne théorie **mutuellement incommensurables** avec ceux de la nouvelle, suite à une **crise de la doxa** (cadre conceptuel)."
   }
+
+
+
+
+
 ]

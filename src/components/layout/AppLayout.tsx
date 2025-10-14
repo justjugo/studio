@@ -4,7 +4,6 @@
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import {
-  SidebarProvider,
   Sidebar,
   SidebarHeader,
   SidebarContent,
@@ -14,6 +13,8 @@ import {
   SidebarFooter,
   SidebarInset,
   SidebarSeparator,
+  SidebarToggle,
+  // useSidebar, // Removed this import as it's not needed here anymore
 } from '@/components/ui/sidebar';
 import {
   LayoutDashboard,
@@ -30,6 +31,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useEffect } from 'react';
 import Loading from '@/app/loading';
 import { ThemeToggle } from '../ThemeToggle';
+// import { useMainSidebarControl } from '@/context/MainSidebarControlContext'; // Removed as AppLayout doesn't directly control it
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
@@ -41,6 +43,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const { user, isUserLoading } = useUser();
   const auth = useAuth();
   const router = useRouter();
+  // const { setOpen } = useSidebar(); // Removed this line
 
   const handleLogout = () => {
     signOut(auth);
@@ -48,6 +51,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   
   const isAuthPage = pathname === '/login' || pathname === '/signup';
   const isVerifyEmailPage = pathname === '/verify-email';
+  // const isPracticePage = pathname.startsWith('/practice'); // Not directly used for sidebar control here anymore
 
   useEffect(() => {
     if (isUserLoading) return; // Wait until user status is resolved
@@ -71,6 +75,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   }, [user, isUserLoading, isAuthPage, isVerifyEmailPage, router]);
 
+  // Removed: Control the main sidebar's open state based on whether it's a practice page
+  // useEffect(() => {
+  //   setOpen(!isPracticePage);
+  // }, [isPracticePage, setOpen]);
 
   // If its an auth page and we are not loading, show the page
   if (isAuthPage || isVerifyEmailPage) {
@@ -114,12 +122,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <SidebarProvider>
-      <Sidebar>
-        <SidebarHeader>
+    <> 
+      <Sidebar collapsible="offcanvas">
+        <SidebarHeader className="group-data-[collapsible=icon]:justify-center">
           <div className="flex items-center gap-3 p-2">
             <Logo />
-            <span className="font-headline text-xl font-semibold text-primary">
+            <span className="font-headline text-xl font-semibold text-primary group-data-[state=collapsed]:hidden">
               Prépa TCF
             </span>
           </div>
@@ -133,6 +141,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                   isActive={item.isActive}
                   size="lg"
                   className="[&_span]:text-base"
+                  tooltip={item.label}
                 >
                   <Link href={item.href}>
                     <item.icon />
@@ -143,10 +152,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             ))}
           </SidebarMenu>
         </SidebarContent>
-        <SidebarFooter className='gap-4'>
+        <SidebarFooter className='gap-4 group-data-[collapsible=icon]:justify-center'>
             <SidebarSeparator />
+            <div className="flex items-center justify-center">
+              <SidebarToggle />
+            </div>
             {user && (
-                 <div className="flex items-center justify-between gap-3 px-2">
+                 <div className="flex items-center justify-between gap-3 px-2 group-data-[state=collapsed]:hidden">
                     <div className="flex items-center gap-3">
                       <Avatar className="h-9 w-9">
                           <AvatarImage src={user.photoURL || ''} alt={user.displayName || 'User'} />
@@ -166,7 +178,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             )}
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton size="lg" className="[&_span]:text-base" onClick={handleLogout}>
+              <SidebarMenuButton size="lg" className="[&_span]:text-base" onClick={handleLogout} tooltip="Déconnexion">
                 <LogOut />
                 <span>Déconnexion</span>
               </SidebarMenuButton>
@@ -175,6 +187,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>{isUserLoading || !user ? <Loading /> : children}</SidebarInset>
-    </SidebarProvider>
+    </>
   );
 }

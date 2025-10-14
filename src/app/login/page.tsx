@@ -52,8 +52,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-sm">
+    <div className="relative flex min-h-screen items-center justify-center bg-cover bg-center p-4" style={{backgroundImage: "url('https://images.unsplash.com/photo-1502602898657-3e91760c0337?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}}>
+      <div className="absolute inset-0 bg-black/50 z-0" />
+      <Card className="w-full max-w-sm z-10">
         <CardHeader>
           <CardTitle className="text-2xl">Connexion</CardTitle>
           <CardDescription>

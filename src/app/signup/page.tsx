@@ -28,21 +28,19 @@ export default function SignupPage() {
   const { toast } = useToast();
 
   useEffect(() => {
-    // This effect now handles redirecting to verify-email page on successful signup
+    // This effect handles redirecting to the correct page after login/signup.
     if (!isUserLoading && user) {
       if (!user.emailVerified) {
         // A new user has signed up but is not yet verified.
-        // The onAuthStateChanged listener in FirebaseProvider picks up the new user,
-        // and we redirect them to the verification page.
         router.push('/verify-email');
       } else {
-        // An already-verified user somehow landed on the signup page.
+        // An already-verified user landed on the signup page.
         router.push('/');
       }
     }
   }, [user, isUserLoading, router]);
 
-  const handleSignUp = (e: React.FormEvent) => {
+  const handleSignUp = async (e: React.FormEvent) => { // Make the handler async
     e.preventDefault();
     if (!email || !password) {
       toast({
@@ -52,12 +50,20 @@ export default function SignupPage() {
       });
       return;
     }
-    initiateEmailSignUp(auth, email, password);
+    try {
+      // Wait for the entire sign-up process to complete
+      await initiateEmailSignUp(auth, email, password);
+      // The useEffect will now safely handle the redirect
+    } catch (error) {
+      // Errors are already handled and toasted in initiateEmailSignUp
+      // No additional error handling is needed here unless you want to.
+    }
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-sm">
+    <div className="relative flex min-h-screen items-center justify-center bg-cover bg-center p-4" style={{backgroundImage: "url('https://images.unsplash.com/photo-1502602898657-3e91760c0337?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}}>
+      <div className="absolute inset-0 bg-black/50 z-0" />
+      <Card className="w-full max-w-sm z-10">
         <CardHeader>
           <CardTitle className="text-2xl">Inscription</CardTitle>
           <CardDescription>

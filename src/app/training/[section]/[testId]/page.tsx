@@ -19,13 +19,15 @@ import Link from 'next/link';
 import { useAuth, useFirestore, useUser } from '@/firebase';
 import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
 import { collection } from 'firebase/firestore';
+import { useSidebar } from '@/components/ui/sidebar';
 
-// Mapping URL slug to section name in database and time limits
 const sectionConfig: { [key: string]: { name: string; time: number; questionCount: number } } = {
     listening: { name: 'listening', time: 25 * 60, questionCount: 29 },
     structure: { name: 'structure', time: 15 * 60, questionCount: 18 },
     reading: { name: 'reading', time: 45 * 60, questionCount: 29 },
 };
+
+const QUESTION_TIMER_DURATION = 30; // 30 seconds
 
 export default function TrainingSessionPage() {
     const params = useParams();
@@ -33,6 +35,7 @@ export default function TrainingSessionPage() {
     const searchParams = useSearchParams();
     const { user } = useUser();
     const firestore = useFirestore();
+    const { setOpen } = useSidebar();
 
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const testId = typeof params.testId === 'string' ? parseInt(params.testId, 10) : NaN;
@@ -41,10 +44,20 @@ export default function TrainingSessionPage() {
 
     const [isLoading] = useState(false);
     const [isClient, setIsClient] = useState(false);
+    const [audioHasEnded, setAudioHasEnded] = useState(false);
+    const [questionTimer, setQuestionTimer] = useState(QUESTION_TIMER_DURATION);
+    const [isQuestionTimerActive, setIsQuestionTimerActive] = useState(false);
 
     useEffect(() => {
         setIsClient(true);
     }, []);
+
+    useEffect(() => {
+        setOpen(false);
+        return () => {
+            setOpen(true);
+        }
+    }, [setOpen]);
 
     const questions = useMemo(() => {
         if (!config || isNaN(testId)) return [];
@@ -65,7 +78,14 @@ export default function TrainingSessionPage() {
     const [isFinished, setIsFinished] = useState(false);
     const [timeLeft, setTimeLeft] = useState(config?.time ?? 0);
 
-     useEffect(() => {
+    useEffect(() => {
+        setAudioHasEnded(false);
+        setIsQuestionTimerActive(false);
+        setQuestionTimer(QUESTION_TIMER_DURATION);
+    }, [currentQuestionIndex]);
+
+    // Main test timer
+    useEffect(() => {
         if (!config || isFinished || !isClient) return;
 
         if (timeLeft <= 0) {
@@ -79,6 +99,22 @@ export default function TrainingSessionPage() {
 
         return () => clearInterval(timer);
     }, [timeLeft, config, isFinished, isClient]);
+
+    // 30-second timer for listening questions
+    useEffect(() => {
+        if (!isQuestionTimerActive || isFinished) return;
+
+        if (questionTimer <= 0) {
+            handleNextQuestion(); // Move to next question
+            return;
+        }
+
+        const timer = setInterval(() => {
+            setQuestionTimer((prev) => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [questionTimer, isQuestionTimerActive, isFinished]);
 
 
     if (isLoading) {
@@ -189,6 +225,11 @@ export default function TrainingSessionPage() {
         if (score > 70) return { text: 'text-green-600', bg: 'bg-green-600' };
         if (score > 40) return { text: 'text-yellow-500', bg: 'bg-yellow-500' };
         return { text: 'text-destructive', bg: 'bg-destructive' };
+    };
+
+    const handleAudioEnded = () => {
+        setAudioHasEnded(true);
+        setIsQuestionTimerActive(true);
     };
 
     if (isFinished) {
@@ -309,14 +350,40 @@ export default function TrainingSessionPage() {
                     {currentQuestion && (
                         <Card>
                             <CardHeader>
+                                {currentQuestion.imageSrc && (
+                                    <div className="mb-4 rounded-lg overflow-hidden">
+                                        <img src={currentQuestion.imageSrc} alt="Question context" className="w-full h-auto object-cover" />
+                                    </div>
+                                )}
                                 {currentQuestion.questionText && 
                                     <CardTitle className="text-xl">{currentQuestion.questionText}</CardTitle>
                                 }
                                 {currentQuestion.audioSrc && (
-                                    <audio controls className="w-full mt-4">
-                                        <source src={currentQuestion.audioSrc} type="audio/mpeg" />
-                                        Votre navigateur ne supporte pas l'élément audio.
-                                    </audio>
+                                    <>
+                                        {sectionSlug === 'listening' ? (
+                                            !audioHasEnded ? (
+                                                <audio
+                                                    key={currentQuestion.audioSrc}
+                                                    controls
+                                                    autoPlay
+                                                    onEnded={handleAudioEnded}
+                                                    className="w-full mt-4"
+                                                >
+                                                    <source src={currentQuestion.audioSrc} type="audio/mpeg" />
+                                                    Votre navigateur ne supporte pas l'élément audio.
+                                                </audio>
+                                            ) : (
+                                                <div className="text-center text-muted-foreground mt-4 p-4 border rounded-md">
+                                                    Vous avez déjà écouté cet audio.
+                                                </div>
+                                            )
+                                        ) : (
+                                            <audio key={currentQuestion.audioSrc} controls autoPlay className="w-full mt-4">
+                                                <source src={currentQuestion.audioSrc} type="audio/mpeg" />
+                                                Votre navigateur ne supporte pas l'élément audio.
+                                            </audio>
+                                        )}
+                                    </>
                                 )}
                             </CardHeader>
                             <CardContent>
@@ -333,7 +400,13 @@ export default function TrainingSessionPage() {
                                     ))}
                                 </RadioGroup>
                             </CardContent>
-                            <CardFooter>
+                            <CardFooter className="flex justify-between items-center">
+                                {isQuestionTimerActive && sectionSlug === 'listening' && (
+                                    <div className="flex items-center gap-2 text-lg font-semibold text-destructive animate-pulse">
+                                        <Clock className="h-6 w-6" />
+                                        <span>00:{String(questionTimer).padStart(2, '0')}</span>
+                                    </div>
+                                )}
                                 <Button onClick={() => handleNextQuestion(false)} disabled={!selectedOptionId} className="w-full text-lg py-6">
                                     {currentQuestionIndex === questions.length - 1 ? 'Terminer l\'entraînement' : 'Question Suivante'}
                                     <ArrowRight className="ml-2 h-5 w-5"/>
