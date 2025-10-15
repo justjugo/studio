@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -11,16 +10,13 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarFooter,
-  SidebarInset,
   SidebarSeparator,
-  SidebarToggle,
-  // useSidebar, // Removed this import as it's not needed here anymore
+  SidebarInset,
 } from '@/components/ui/sidebar';
 import {
   LayoutDashboard,
   Lightbulb,
   ClipboardList,
-  User,
   LogOut,
   BarChart3,
 } from 'lucide-react';
@@ -31,19 +27,16 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useEffect } from 'react';
 import Loading from '@/app/loading';
 import { ThemeToggle } from '../ThemeToggle';
-// import { useMainSidebarControl } from '@/context/MainSidebarControlContext'; // Removed as AppLayout doesn't directly control it
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { user, isUserLoading } = useUser();
   const auth = useAuth();
   const router = useRouter();
-  // const { setOpen } = useSidebar(); // Removed this line
 
   const handleLogout = () => {
     signOut(auth);
@@ -51,36 +44,24 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   
   const isAuthPage = pathname === '/login' || pathname === '/signup';
   const isVerifyEmailPage = pathname === '/verify-email';
-  // const isPracticePage = pathname.startsWith('/practice'); // Not directly used for sidebar control here anymore
 
   useEffect(() => {
-    if (isUserLoading) return; // Wait until user status is resolved
+    if (isUserLoading) return;
 
-    // If there's no user and they aren't on an auth page, redirect to login
     if (!user && !isAuthPage && !isVerifyEmailPage) {
       router.push('/login');
     }
 
-    // If there IS a user but their email is not verified,
-    // and they are NOT on the verify-email page, force them there.
     if (user && !user.emailVerified && !isVerifyEmailPage) {
       router.push('/verify-email');
     }
 
-    // If the user IS verified and they land on an auth or verification page,
-    // send them to the dashboard.
     if (user && user.emailVerified && (isAuthPage || isVerifyEmailPage)) {
       router.push('/');
     }
 
   }, [user, isUserLoading, isAuthPage, isVerifyEmailPage, router]);
 
-  // Removed: Control the main sidebar's open state based on whether it's a practice page
-  // useEffect(() => {
-  //   setOpen(!isPracticePage);
-  // }, [isPracticePage, setOpen]);
-
-  // If its an auth page and we are not loading, show the page
   if (isAuthPage || isVerifyEmailPage) {
     return <AuthLayout>{children}</AuthLayout>;
   }
@@ -122,9 +103,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <> 
-      <Sidebar collapsible="offcanvas">
-        <SidebarHeader className="group-data-[collapsible=icon]:justify-center">
+    <>
+      <Sidebar>
+        <SidebarHeader>
           <div className="flex items-center gap-3 p-2">
             <Logo />
             <span className="font-headline text-xl font-semibold text-primary group-data-[state=collapsed]:hidden">
@@ -152,11 +133,8 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             ))}
           </SidebarMenu>
         </SidebarContent>
-        <SidebarFooter className='gap-4 group-data-[collapsible=icon]:justify-center'>
+        <SidebarFooter className='gap-4'>
             <SidebarSeparator />
-            <div className="flex items-center justify-center">
-              <SidebarToggle />
-            </div>
             {user && (
                  <div className="flex items-center justify-between gap-3 px-2 group-data-[state=collapsed]:hidden">
                     <div className="flex items-center gap-3">
@@ -186,7 +164,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           </SidebarMenu>
         </SidebarFooter>
       </Sidebar>
-      <SidebarInset>{isUserLoading || !user ? <Loading /> : children}</SidebarInset>
+      <SidebarInset>
+        {isUserLoading || !user ? <Loading /> : children}
+      </SidebarInset>
     </>
   );
 }
