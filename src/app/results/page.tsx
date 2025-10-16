@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import {
   Accordion,
@@ -13,11 +13,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle2, ExternalLink, XCircle, Lightbulb, BookOpenText, Headphones, Puzzle } from 'lucide-react';
+import { CheckCircle2, ExternalLink, XCircle, Lightbulb, BookOpenText, Headphones, Puzzle, MessageSquareWarning, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { useCollection, useFirestore, useUser, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
-import type { Result } from '@/lib/types';
+import type { Result, UserAnswerForReview } from '@/lib/types';
 import Loading from '../loading';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
@@ -54,6 +54,9 @@ const SectionResultCard = ({ title, icon, percentage, level, color }: { title: s
 export default function ResultsPage() {
   const { user, isUserLoading } = useUser();
   const firestore = useFirestore();
+  const [reportingItems, setReportingItems] = useState<number[]>([]);
+  const [reportedItems, setReportedItems] = useState<number[]>([]);
+  const [aiFeedback, setAiFeedback] = useState<{ [key: number]: string }>({});
 
   const resultsCollection = useMemoFirebase(() => {
     if (!user || !firestore) return null;
@@ -66,6 +69,45 @@ export default function ResultsPage() {
     if (!results) return [];
     return results.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }, [results]);
+
+    const handleReportError = async (item: UserAnswerForReview, index: number) => {
+        setReportingItems(prev => [...prev, index]);
+        const userAnswer = item.question.options.find(o => o.id === item.selectedOptionId);
+        const correctAnswer = item.question.options.find(o => o.id === item.question.correctOptionId);
+
+        const payload = {
+            question: item.question.questionText,
+            userAnswer: userAnswer?.text || 'No answer provided',
+            correctAnswer: correctAnswer?.text,
+            explanation: item.question.explanation
+        };
+
+        try {
+            const response = await fetch('https://n8n-m1ji.onrender.com/webhook/2483479c-d8b9-472f-8be5-16afb425ffd0', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (response.ok) {
+                const aiExplanation = await response.text();
+                if (aiExplanation) {
+                    setAiFeedback(prev => ({...prev, [index]: aiExplanation}));
+                }
+                setReportedItems(prev => [...prev, index]);
+            } else {
+                console.error('Failed to report error. Status:', response.status, response.statusText);
+                alert('There was an issue sending the report. Please check the console for details. This may be a CORS issue from the server.');
+            }
+        } catch (error) {
+            console.error('Error reporting issue:', error);
+            alert('An unexpected error occurred. This might be due to a network issue or a CORS policy. Please check the browser console for more information.');
+        } finally {
+            setReportingItems(prev => prev.filter(i => i !== index));
+        }
+    };
 
   const performanceMetrics = useMemo(() => {
     const recentResults = sortedResults.slice(0, 1);
@@ -145,7 +187,7 @@ export default function ResultsPage() {
             <CardHeader>
               <CardTitle>Aucun résultat pour le moment</CardTitle>
               <CardDescription>
-                Vous n'avez terminé aucun test. Vos résultats apparaîtront ici une fois que vous l'aurez fait.
+                Vous n\'avez terminé aucun test. Vos résultats apparaîtront ici une fois que vous l\'aurez fait.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -219,7 +261,7 @@ export default function ResultsPage() {
                             <p className="font-semibold mb-2">Votre réponse :</p>
                             <div className="flex items-center gap-2 p-2 bg-destructive/10 rounded-md">
                               <XCircle className="h-4 w-4 text-destructive" />
-                              <p>{userAnswer?.text || <span className="italic">Vous n'avez pas répondu à cette question.</span>}</p>
+                              <p>{userAnswer?.text || <span className="italic">Vous n\'avez pas répondu à cette question.</span>}</p>
                             </div>
                           </div>
                           <div>
@@ -239,10 +281,45 @@ export default function ResultsPage() {
                           {item.question.explanationVideoUrl && (
                             <Button variant="link" asChild className="p-0 h-auto">
                               <a href={item.question.explanationVideoUrl} target="_blank" rel="noopener noreferrer">
-                                Regarder la vidéo d'explication
+                                Regarder la vidéo d\'explication
                                 <ExternalLink className="ml-2 h-4 w-4" />
                               </a>
                             </Button>
+                          )}
+                          {item.question.section === 'structure' && (
+                            <div className="space-y-2 pt-2">
+                                <Button 
+                                    variant="ghost" 
+                                    size="sm"
+                                    className="text-yellow-600 hover:bg-yellow-100 hover:text-yellow-700"
+                                    onClick={() => handleReportError(item, index)}
+                                    disabled={reportingItems.includes(index) || reportedItems.includes(index)}
+                                >
+                                    {reportingItems.includes(index) ? (
+                                        <>
+                                            <Sparkles className="mr-2 h-4 w-4 animate-spin" />
+                                            Analyse en cours...
+                                        </>
+                                    ) : reportedItems.includes(index) ? (
+                                        <>
+                                            <CheckCircle2 className="mr-2 h-4 w-4" />
+                                            Rapport envoyé!
+                                        </>
+                                    ) : (
+                                        <>
+                                            <MessageSquareWarning className="mr-2 h-4 w-4" />
+                                            Correction par l'IA
+                                        </>
+                                    )}
+                                </Button>
+                                {aiFeedback[index] && (
+                                     <Alert className="border-purple-500/50">
+                                        <Sparkles className="h-4 w-4 text-purple-500" />
+                                        <AlertTitle className="text-purple-600">Correction de l'IA</AlertTitle>
+                                        <AlertDescription>{aiFeedback[index]}</AlertDescription>
+                                    </Alert>
+                                )}
+                            </div>
                           )}
                         </AccordionContent>
                       </AccordionItem>
@@ -253,7 +330,7 @@ export default function ResultsPage() {
                 <div className="text-center p-6 bg-green-500/10 rounded-lg">
                     <CheckCircle2 className="h-12 w-12 text-green-600 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold">Félicitations !</h3>
-                    <p className="text-muted-foreground">Vous n'avez eu aucune réponse incorrecte lors de votre dernier test.</p>
+                    <p className="text-muted-foreground">Vous n\'avez eu aucune réponse incorrecte lors de votre dernier test.</p>
                 </div>
                )}
             </CardContent>
