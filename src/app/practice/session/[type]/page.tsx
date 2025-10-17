@@ -40,8 +40,8 @@ const testConfig = {
     written: {
         title: 'Grammaire & Lecture',
         sections: {
-            'structure': 29,
-            'reading': 18
+            'structure': 18,
+            'reading': 29
         },
         time: (15 + 45) * 60, // 60 minutes total
     },
@@ -228,7 +228,7 @@ function PracticeSessionContent() {
     if (!config) {
         return (
             <div className="flex flex-col h-full">
-                <Header title="Test d'entraînement" />
+                <Header title="Test d'entraînement" showChatButton={false} />
                 <main className="flex-1 flex items-center justify-center text-center p-4">
                     <Card>
                         <CardHeader>
@@ -251,7 +251,7 @@ function PracticeSessionContent() {
     if (!questions || questions.length === 0) {
         return (
              <div className="flex flex-col h-full">
-                <Header title={`Pratique: ${config.title}`} />
+                <Header title={`Pratique: ${config.title}`} showChatButton={false} />
                 <main className="flex-1 flex items-center justify-center text-center p-4">
                     <Card>
                         <CardHeader>
@@ -469,7 +469,7 @@ function PracticeSessionContent() {
 
         return (
             <div className="flex flex-col h-full">
-                <Header title={`Résultats: ${config.title}`} />
+                <Header title={`Résultats: ${config.title}`} showChatButton={false} />
                 <div className='flex flex-1'>
                     <SidebarProvider>
                         <QuestionSidebarWrapper />
@@ -529,8 +529,8 @@ function PracticeSessionContent() {
                                                             <div>
                                                                 <p className="font-semibold mb-2">Réponse correcte :</p>
                                                                 <div className="flex items-center gap-2 p-2 bg-green-500/10 rounded-md">
-                                                                    <CheckCircle2 className="h-4 w-4 text-green-600" />
-                                                                    <p>{correctAnswerText}</p>
+                                                                        <CheckCircle2 className="h-4 w-4 text-green-600" />
+                                                                        <p>{correctAnswerText}</p>
                                                                 </div>
                                                             </div>
                                                             {answer.question.explanation && (
@@ -583,7 +583,7 @@ function PracticeSessionContent() {
 
     return (
         <div className="flex flex-col h-full">
-            <Header title={`Pratique: ${config.title}`} />
+            <Header title={`Pratique: ${config.title}`} showChatButton={false} />
             <div className='flex flex-1'>
                 <SidebarProvider> {/* This SidebarProvider is for the question sidebar */}
                     <QuestionSidebarWrapper />

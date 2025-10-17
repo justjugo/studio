@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/firebase/provider';
-import { getFirestore, doc, getDoc, updateDoc, Timestamp } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, updateDoc, Timestamp, setDoc } from 'firebase/firestore';
 import { Header } from '@/components/layout/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -47,80 +47,87 @@ export default function PracticePage() {
       let userData = null;
       if (userDoc.exists()) {
         userData = userDoc.data();
-        if (userData.role === 'paiduser') {
-          paid = true;
-        }
+        paid = userData.role === 'paiduser';
       }
       setIsPaidUser(paid);
 
-      if (paid) {
-        setSessionStatus({
-          full: { canStart: true, message: '' },
-          written: { canStart: true, message: '' },
-        });
-      } else {
-        const now = new Date();
-        const newStatus: { [key: string]: { canStart: boolean; message: string } } = {
-          full: { canStart: false, message: 'Passez à Premium pour débloquer' },
-          written: { canStart: false, message: '' }
-        };
+      const now = new Date();
+      const newStatus: { [key: string]: { canStart: boolean; message: string } } = {
+        full: { canStart: false, message: '' },
+        written: { canStart: false, message: '' },
+      };
 
-        const lastSession = userData?.[`lastSession_written`]?.toDate();
-        if (!lastSession) {
+      // Full test logic
+      if (paid) {
+        newStatus.full = { canStart: true, message: '' };
+      } else {
+          const lastFullSession = userData?.lastSession_full?.toDate();
+          if (!lastFullSession) {
+              newStatus.full = { canStart: true, message: '' };
+          } else {
+              const diff = now.getTime() - lastFullSession.getTime();
+              const daysPassed = diff / (1000 * 60 * 60 * 24);
+              if (daysPassed >= 7) {
+                  newStatus.full = { canStart: true, message: '' };
+              } else {
+                  const daysRemaining = Math.ceil(7 - daysPassed);
+                  newStatus.full = { canStart: false, message: `Prochain test dans ${daysRemaining} jours` };
+              }
+          }
+      }
+
+      // Written test logic (24h cooldown for free users)
+      if(paid) {
+        newStatus.written = { canStart: true, message: '' };
+      } else {
+        const lastWrittenSession = userData?.[`lastSession_written`]?.toDate();
+        if (!lastWrittenSession) {
           newStatus.written = { canStart: true, message: '' };
         } else {
-          const diff = now.getTime() - lastSession.getTime();
+          const diff = now.getTime() - lastWrittenSession.getTime();
           const hoursPassed = diff / (1000 * 60 * 60);
 
           if (hoursPassed >= 24) {
             newStatus.written = { canStart: true, message: '' };
           } else {
             const hoursRemaining = Math.ceil(24 - hoursPassed);
-            newStatus.written = { canStart: false, message: `Prochaine session dans ${hoursRemaining}h.` };
+            newStatus.written = { canStart: false, message: `Prochaine session dans ${hoursRemaining}h` };
           }
         }
-        setSessionStatus(newStatus);
       }
+
+      setSessionStatus(newStatus);
       setIsLoading(false);
     };
 
     fetchUserAndSetStatus();
   }, [user]);
 
-  const handleStartSession = async (sessionType: string) => {
+  const handleStartSession = async (sessionType: 'full' | 'written') => {
     if (!user) {
       toast({
         variant: 'destructive',
         title: 'Non connecté',
         description: 'Vous devez être connecté pour démarrer une session.',
-        action: <Button asChild size="sm"><Link href="/auth">Se connecter</Link></Button>
+        action: <Button asChild size="sm"><Link href="/login">Se connecter</Link></Button>
       });
       return;
     }
 
     if (!sessionStatus[sessionType]?.canStart) {
-      const description = sessionType === 'full' && !isPaidUser
-        ? 'Le test complet est réservé aux membres premium.'
-        : sessionStatus[sessionType]?.message || 'Vous ne pouvez pas encore commencer cette session.';
-      
-      toast({
-        variant: 'destructive',
-        title: sessionType === 'full' && !isPaidUser ? 'Accès Premium Requis' : 'Limite atteinte',
-        description: description,
-        action: sessionType === 'full' && !isPaidUser ? <Button asChild size="sm"><Link href="/premium">Voir Premium</Link></Button> : undefined,
-      });
-      return;
+        router.push('/premium');
+        return;
     }
     
     const db = getFirestore();
     const userDocRef = doc(db, 'users', user.uid);
     try {
-      if (!isPaidUser && sessionType === 'written') {
-        await updateDoc(userDocRef, {
-          [`lastSession_${sessionType}`]: Timestamp.now(),
-        });
-      }
-      router.push(`/practice/session/${sessionType}`);
+        // Always update the timestamp when a session is started
+        await setDoc(userDocRef, {
+            [`lastSession_${sessionType}`]: Timestamp.now(),
+        }, { merge: true });
+
+        router.push(`/practice/session/${sessionType}`);
     } catch (error) {
       console.error('Error starting session:', error);
       toast({
@@ -155,15 +162,10 @@ export default function PracticePage() {
 
         <div className="p-4 md:p-6 lg:p-8">
           <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
-            <Card className={cn("flex flex-col", !isPaidUser && "border-2 border-amber-500/80")}>
+            <Card className={cn("flex flex-col")}>
               <CardHeader>
                  <div className="flex justify-between items-center">
                     <CardTitle className="text-2xl">Test d'entraînement complet</CardTitle>
-                    {!isPaidUser && (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800">
-                           Premium
-                        </span>
-                    )}
                  </div>
                 <CardDescription>Les trois sections obligatoires.</CardDescription>
               </CardHeader>
@@ -190,13 +192,22 @@ export default function PracticePage() {
                 </div>
               </CardContent>
               <CardFooter>
-                 <Button size="lg" className="w-full" onClick={() => handleStartSession('full')} disabled={isLoading || !sessionStatus.full.canStart}>
-                  {isLoading ? 'Chargement...' : sessionStatus.full.canStart ? (
-                    <>
-                      Commencer le test complet <ArrowRight className="ml-2 h-5 w-5" />
-                    </>
-                  ) :  <><Lock className="mr-2 h-4 w-4"/> {sessionStatus.full.message}</>}
-                </Button>
+                {isLoading ? (
+                  <Button size="lg" className="w-full" disabled>
+                    Chargement...
+                  </Button>
+                ) : sessionStatus.full.canStart ? (
+                  <Button size="lg" className="w-full" onClick={() => handleStartSession('full')}>
+                    Commencer le test complet <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                ) : (
+                  <Button asChild size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                    <Link href="/premium">
+                      <Lock className="mr-2 h-4 w-4" />
+                      {sessionStatus.full.message} - Passez à Premium
+                    </Link>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
 
@@ -224,13 +235,22 @@ export default function PracticePage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button size="lg" className="w-full" onClick={() => handleStartSession('written')} disabled={isLoading || !sessionStatus.written.canStart}>
-                   {isLoading ? 'Chargement...' : sessionStatus.written.canStart ? (
-                    <>
-                      Commencer le test écrit <ArrowRight className="ml-2 h-5 w-5" />
-                    </>
-                  ) : sessionStatus.written.message}
-                </Button>
+                {isLoading ? (
+                  <Button size="lg" className="w-full" disabled>
+                    Chargement...
+                  </Button>
+                ) : sessionStatus.written.canStart ? (
+                  <Button size="lg" className="w-full" onClick={() => handleStartSession('written')}>
+                    Commencer le test écrit <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                ) : (
+                  <Button asChild size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                    <Link href="/premium">
+                      <Lock className="mr-2 h-4 w-4" />
+                       {sessionStatus.written.message} - Passez à Premium
+                    </Link>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
 

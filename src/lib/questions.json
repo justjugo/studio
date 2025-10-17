@@ -4,7 +4,7 @@
     "difficulty": "A1",
     "imageSrc": "https://res.cloudinary.com/ddjxffgyd/image/upload/v1760279707/2025-10-12_15h34_28_dqnztc.png",
     "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760278933/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_1_usixyn.wav",
-    "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+    "questionText": "choisissez la bonne réponse",
     "options": [
       { "id": "a", "text": "A" },
       { "id": "b", "text": "B" },
@@ -18,7 +18,7 @@
   "section": "listening",
   "difficulty": "A1",
   "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760281036/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_2_u6iw0i.wav",
-  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "questionText": "choisissez la bonne réponse",
   "options": [
     { "id": "a", "text": "A" },
     { "id": "b", "text": "B" },
@@ -31,7 +31,7 @@
   "section": "listening",
   "difficulty": "A1",
   "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760281819/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_3_igairc.wav",
-  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "questionText": "choisissez la bonne réponse",
   "options": [
     { "id": "a", "text": "A" },
     { "id": "b", "text": "B" },
@@ -45,7 +45,7 @@
   "section": "listening",
   "difficulty": "A2",
   "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760282335/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_4_ndwxrb.wav",
-  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "questionText": "choisissez la bonne réponse",
   "options": [
     { "id": "a", "text": "A" },
     { "id": "b", "text": "B" },
@@ -59,7 +59,7 @@
   "section": "listening",
   "difficulty": "A2",
   "audioSrc": "https://res.cloudinary.com/ddjxffgyd/video/upload/v1760282614/TCF_Compr%C3%A9hension_orale_Test_-_1_mp3cut.net_5_nvoofu.wav",
-  "questionText": "Regardez l'image et écoutez la conversation. Où sont-ils ?",
+  "questionText": "choisissez la bonne réponse",
   "options": [
     { "id": "a", "text": "A" },
     { "id": "b", "text": "B" },
@@ -2312,7 +2312,7 @@
     "difficulty": "B1",
     "questionText": "Si j'avais su, je ne ______ pas venu.",
     "options": [
-      { "id": "a", "text": "serais" },
+      { "id": "a", "text": "étais" },
       { "id": "b", "text": "serai" },
       { "id": "c", "text": "suis" },
       { "id": "d", "text": "serais" }
@@ -2830,15 +2830,15 @@
   {
     "section": "structure",
     "difficulty": "B1",
-    "questionText": "Pouvez-vous me dire où ______ le musée ?",
+    "questionText": "Pouvez-vous me dire où ______ ?",
     "options": [
-      { "id": "a", "text": "est" },
-      { "id": "b", "text": "est le musée" },
-      { "id": "c", "text": "le musée est" },
-      { "id": "d", "text": "est-il" }
+      { "id": "a", "text": "est le musée" },
+      { "id": "b", "text": "le musée est" },
+      { "id": "c", "text": "est-il le musée" },
+      { "id": "d", "text": "le musée" }
     ],
-    "correctOptionId": "a",
-    "explanation": "Dans une question indirecte, il n'y a pas d'inversion sujet-verbe ; l'ordre est sujet-verbe."
+    "correctOptionId": "b",
+    "explanation": "Dans une question indirecte introduite par 'Pouvez-vous me dire...', l'ordre des mots est sujet + verbe. La bonne réponse est donc 'le musée est'."
   },
   {
     "section": "structure",
@@ -2908,17 +2908,17 @@
   {
     "section": "structure",
     "difficulty": "C2",
-    "questionText": "Il fallait qu'il ______ attention.",
+    "questionText": "______ ses efforts fussent louables, le résultat final n'a pas été à la hauteur.",
     "options": [
-      { "id": "a", "text": "fait" },
-      { "id": "b", "text": "fasse" },
-      { "id": "c", "text": "fît" },
-      { "id": "d", "text": "fera" }
+      { "id": "a", "text": "Bien que" },
+  { "id": "b", "text": "Malgré que" },
+  { "id": "c", "text": "Quoique" },
+  { "id": "d", "text": "Même si" }
     ],
 
     
     "correctOptionId": "c",
-    "explanation": "Dans un style littéraire ou formel, après un verbe au passé, on utilise l'imparfait du subjonctif : 'fît' pour 'faire'."
+    "explanation": "La conjonction 'Quoique', tout comme 'Bien que', exprime la concession et est toujours suivie du subjonctif. 'Même si' est suivi de l'indicatif, et 'Malgré que' est une forme incorrecte."
   },
   {
     "section": "structure",
@@ -3132,15 +3132,15 @@
   {
     "section": "structure",
     "difficulty": "B1",
-    "questionText": "Je ______ à Paris depuis cinq ans.",
+    "questionText": "J'habite à Paris ______ cinq ans.",
     "options": [
-      { "id": "a", "text": "habite" },
-      { "id": "b", "text": "ai habité" },
-      { "id": "c", "text": "habitais" },
-      { "id": "d", "text": "habiterai" }
+      { "id": "a", "text": "depuis" },
+  { "id": "b", "text": "pendant" },
+  { "id": "c", "text": "il y a" },
+  { "id": "d", "text": "dans" }
     ],
-    "correctOptionId": "b",
-    "explanation": "Pour exprimer une action commencée dans le passé et qui continue, on utilise le présent ('habite') ou le passé composé ('ai habité') avec 'depuis'. Ici, 'ai habité' est plus courant en français courant."
+    "correctOptionId": "a",
+    "explanation": "Pour exprimer une action qui a commencé dans le passé et qui continue dans le présent, on utilise le présent de l'indicatif avec 'depuis'."
   },
   {
     "section": "structure",
@@ -3275,15 +3275,15 @@
   {
     "section": "structure",
     "difficulty": "C2",
-    "questionText": "Que n’______-tu dit plus tôt !",
+    "questionText": "Il doutait que nous ______ terminer le projet à temps.",
     "options": [
-      { "id": "a", "text": "eusses" },
-      { "id": "b", "text": "eus" },
-      { "id": "c", "text": "as" },
-      { "id": "d", "text": "avais" }
+      { "id": "a", "text": "pourrions" },
+      { "id": "b", "text": "pouvions" },
+      { "id": "c", "text": "puissions" },
+      { "id": "d", "text": "ayons pu" }
     ],
-    "correctOptionId": "a",
-    "explanation": "Dans une exclamation hypothétique au passé, 'que' + plus-que-parfait du subjonctif ('eusses') est utilisé dans un registre littéraire."
+    "correctOptionId": "c",
+    "explanation": "L'expression 'douter que' est suivie du subjonctif. Comme le verbe principal ('doutait') est au passé, la concordance des temps s'applique. Pour une action simultanée ou future par rapport au verbe principal, on utilise le subjonctif présent. La forme correcte est donc 'puissions'."
   },
   {
     "section": "structure",
@@ -3392,15 +3392,15 @@
   {
     "section": "structure",
     "difficulty": "C2",
-    "questionText": "Il ______ qu’il vînt à l’heure.",
+    "questionText": "À peine ______-il entré que la lumière s'est éteinte.",
     "options": [
-      { "id": "a", "text": "voulut" },
-      { "id": "b", "text": "veut" },
-      { "id": "c", "text": "voulait" },
-      { "id": "d", "text": "voudra" }
+      { "id": "a", "text": "était" },
+      { "id": "b", "text": "est" },
+      { "id": "c", "text": "avait" },
+      { "id": "d", "text": "fut" }
     ],
     "correctOptionId": "a",
-    "explanation": "Dans un style littéraire, après 'vouloir que' au passé simple ('voulut'), on utilise l’imparfait du subjonctif ('vînt')."
+    "explanation": "La locution 'À peine... que...' est souvent utilisée avec le plus-que-parfait de l'indicatif et une inversion sujet-verbe pour exprimer une action qui est immédiatement suivie par une autre. La forme correcte est 'À peine était-il entré...'"
   },
   {
     "section": "structure",
@@ -3412,8 +3412,8 @@
       { "id": "c", "text": "Étant donné que" },
       { "id": "d", "text": "Étant données que" }
     ],
-    "correctOptionId": "c",
-    "explanation": "'Étant donné que' est une locution conjonctive introduisant une cause."
+    "correctOptionId": "a",
+    "explanation": "On utilise Étant donné devant un nom (comme 'la situation')."
   },
   {
     "section": "structure",
@@ -3873,15 +3873,15 @@
   {
     "section": "structure",
     "difficulty": "C2",
-    "questionText": "Il ______ qu’elle vînt à la réunion.",
+    "questionText": "C'est un principe de base ______ je ne dérogerai jamais.",
     "options": [
-      { "id": "a", "text": "exigea" },
-      { "id": "b", "text": "exige" },
-      { "id": "c", "text": "exigerait" },
-      { "id": "d", "text": "a exigé" }
+      { "id": "a", "text": "dont" },
+      { "id": "b", "text": "auquel" },
+      { "id": "c", "text": "lequel" },
+      { "id": "d", "text": "que" }
     ],
-    "correctOptionId": "a",
-    "explanation": "Dans un style littéraire, après 'exiger que' au passé simple ('exigea'), on utilise l’imparfait du subjonctif ('vînt')."
+    "correctOptionId": "b",
+    "explanation": "Le verbe 'déroger' se construit avec la préposition 'à'. Le pronom relatif doit donc intégrer cette préposition. Comme 'principe' est masculin, on utilise 'auquel' (à + lequel)."
   },
   {
     "section": "structure",

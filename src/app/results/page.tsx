@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
 import {
   Accordion,
@@ -13,10 +13,10 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle2, ExternalLink, XCircle, Lightbulb, BookOpenText, Headphones, Puzzle, MessageSquareWarning, Sparkles } from 'lucide-react';
+import { CheckCircle2, ExternalLink, XCircle, Lightbulb, BookOpenText, Headphones, Puzzle, MessageSquareWarning, Sparkles, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { useCollection, useFirestore, useUser, useMemoFirebase } from '@/firebase';
-import { collection } from 'firebase/firestore';
+import { collection, doc, getDoc } from 'firebase/firestore';
 import type { Result, UserAnswerForReview } from '@/lib/types';
 import Loading from '../loading';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
@@ -57,6 +57,20 @@ export default function ResultsPage() {
   const [reportingItems, setReportingItems] = useState<number[]>([]);
   const [reportedItems, setReportedItems] = useState<number[]>([]);
   const [aiFeedback, setAiFeedback] = useState<{ [key: number]: string }>({});
+  const [isPaidUser, setIsPaidUser] = useState(false);
+
+  useEffect(() => {
+    const fetchUserRole = async () => {
+      if (user && firestore) {
+        const userDocRef = doc(firestore, 'users', user.uid);
+        const userDoc = await getDoc(userDocRef);
+        if (userDoc.exists() && userDoc.data().role === 'paiduser') {
+          setIsPaidUser(true);
+        }
+      }
+    };
+    fetchUserRole();
+  }, [user, firestore]);
 
   const resultsCollection = useMemoFirebase(() => {
     if (!user || !firestore) return null;
@@ -293,9 +307,14 @@ export default function ResultsPage() {
                                     size="sm"
                                     className="text-yellow-600 hover:bg-yellow-100 hover:text-yellow-700"
                                     onClick={() => handleReportError(item, index)}
-                                    disabled={reportingItems.includes(index) || reportedItems.includes(index)}
+                                    disabled={!isPaidUser || reportingItems.includes(index) || reportedItems.includes(index)}
                                 >
-                                    {reportingItems.includes(index) ? (
+                                    {!isPaidUser ? (
+                                        <>
+                                            <Lock className="mr-2 h-4 w-4" />
+                                            Correction par l'IA
+                                        </>
+                                    ) : reportingItems.includes(index) ? (
                                         <>
                                             <Sparkles className="mr-2 h-4 w-4 animate-spin" />
                                             Analyse en cours...
@@ -303,7 +322,7 @@ export default function ResultsPage() {
                                     ) : reportedItems.includes(index) ? (
                                         <>
                                             <CheckCircle2 className="mr-2 h-4 w-4" />
-                                            Rapport envoyé!
+                                            Correction reçue!
                                         </>
                                     ) : (
                                         <>
@@ -312,7 +331,19 @@ export default function ResultsPage() {
                                         </>
                                     )}
                                 </Button>
-                                {aiFeedback[index] && (
+                                 {!isPaidUser && (
+                                    <Alert className="mt-2 border-purple-500/50 text-purple-700">
+                                        <Sparkles className="h-4 w-4 !text-purple-600" />
+                                        <AlertTitle className="font-semibold text-purple-600">Fonctionnalité Premium</AlertTitle>
+                                        <AlertDescription className="text-purple-600/90 flex items-center justify-between">
+                                            <span>Passez à un compte premium pour obtenir des explications détaillées et personnalisées sur vos erreurs de grammaire grâce à notre IA.</span>
+                                            <Button asChild size="sm" className="ml-4">
+                                                <Link href="/premium">Passez à Premium</Link>
+                                            </Button>
+                                        </AlertDescription>
+                                    </Alert>
+                                )}
+                                {isPaidUser && aiFeedback[index] && (
                                      <Alert className="border-purple-500/50">
                                         <Sparkles className="h-4 w-4 text-purple-500" />
                                         <AlertTitle className="text-purple-600">Correction de l'IA</AlertTitle>

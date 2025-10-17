@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
@@ -11,9 +11,10 @@ import { ArrowRight, ListChecks, Lock } from 'lucide-react';
 import { seedQuestions } from '@/lib/seed-data';
 import type { Question } from '@/lib/types';
 import { useUser } from '@/firebase/provider';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, Timestamp, setDoc } from 'firebase/firestore';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
 
 const sectionConfig: { [key: string]: { name: string; questionCount: number; title: string } } = {
     listening: { name: 'listening', questionCount: 29, title: 'Compréhension orale' },
@@ -23,6 +24,8 @@ const sectionConfig: { [key: string]: { name: string; questionCount: number; tit
 
 export default function TrainingSectionPage() {
     const params = useParams();
+    const router = useRouter();
+    const { toast } = useToast();
     const { user } = useUser();
     const sectionSlug = typeof params.section === 'string' ? params.section : '';
     const config = sectionConfig[sectionSlug];
@@ -31,12 +34,11 @@ export default function TrainingSectionPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedLevel, setSelectedLevel] = useState<'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'>('A1');
     const levels: ('A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2')[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
-
     const isRestrictedListening = sectionSlug === 'listening' && !isPaidUser;
 
     useEffect(() => {
-        const fetchUserData = async () => {
-             if (!user) {
+        const fetchUserRole = async () => {
+            if (!user) {
                 setIsPaidUser(false);
                 setIsLoading(false);
                 return;
@@ -44,6 +46,7 @@ export default function TrainingSectionPage() {
             const db = getFirestore();
             const userDocRef = doc(db, 'users', user.uid);
             const userDoc = await getDoc(userDocRef);
+
             if (userDoc.exists() && userDoc.data().role === 'paiduser') {
                 setIsPaidUser(true);
             } else {
@@ -52,8 +55,64 @@ export default function TrainingSectionPage() {
             setIsLoading(false);
         };
 
-        fetchUserData();
+        fetchUserRole();
     }, [user]);
+
+
+    const handleTestStart = async (testId: number, level: string) => {
+        if (!user) {
+            toast({
+                title: "Connexion requise",
+                description: "Vous devez être connecté pour commencer un entraînement.",
+                action: <Button asChild><Link href="/login">Se connecter</Link></Button>,
+                variant: 'destructive'
+            });
+            return;
+        }
+        
+        // For non-paid users, check the cooldown period just before starting the test.
+        if (!isPaidUser) {
+            const db = getFirestore();
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                const lastTrainingTimestamp = userData.lastTraining?.[sectionSlug];
+
+                if (lastTrainingTimestamp) {
+                    const now = new Date();
+                    const lastTrainingDate = lastTrainingTimestamp.toDate();
+                    const diff = now.getTime() - lastTrainingDate.getTime();
+                    const hoursPassed = diff / (1000 * 60 * 60);
+
+                    if (hoursPassed < 24) {
+                        const hoursRemaining = Math.ceil(24 - hoursPassed);
+                        toast({
+                            title: "Limite atteinte",
+                            description: `Vous avez déjà fait un entraînement dans cette section. Veuillez réessayer dans ${hoursRemaining}h. Passez à Premium pour un accès illimité.`,
+                            action: <Button asChild><Link href="/premium">Voir Premium</Link></Button>,
+                            variant: 'destructive'
+                        });
+                        return; // Stop the process
+                    }
+                }
+            }
+            
+            // If cooldown has passed or doesn't exist, update the timestamp and proceed.
+            try {
+                await setDoc(userDocRef, { 
+                    lastTraining: { ...((userDoc.data()?.lastTraining || {})), [sectionSlug]: Timestamp.now() }
+                }, { merge: true });
+            } catch (error) {
+                console.error("Failed to update last training time", error);
+                toast({ title: "Erreur", description: "Impossible de sauvegarder votre progression. Veuillez réessayer.", variant: 'destructive' });
+                return;
+            }
+        }
+
+        router.push(`/training/${sectionSlug}/${testId}?level=${level}`);
+    };
 
     useEffect(() => {
         if (!isLoading && isRestrictedListening) {
@@ -63,19 +122,16 @@ export default function TrainingSectionPage() {
 
     const availableTests = useMemo(() => {
         if (!config) return [];
-        
         const allSectionQuestions = (seedQuestions as Question[]).filter(q => q.section === config.name);
-
         const levelQuestions = allSectionQuestions.filter(q => q.difficulty === selectedLevel);
         if (levelQuestions.length > 0) {
             return [{ id: 1, name: `Test ${selectedLevel}`, questionCount: levelQuestions.length }];
         }
         return [];
-
     }, [config, selectedLevel]);
 
     if (isLoading) {
-        return <div>Chargement...</div>; // Or a proper loading spinner
+        return <div>Chargement...</div>; 
     }
 
     if (!config) {
@@ -122,7 +178,7 @@ export default function TrainingSectionPage() {
                             </AlertDescription>
                         </Alert>
                     )}
-
+                  
                     <div className="flex justify-center flex-wrap gap-2 mb-8">
                         {levels.map(level => (
                             <Button 
@@ -141,23 +197,25 @@ export default function TrainingSectionPage() {
                     {availableTests.length > 0 ? (
                         <div className="space-y-4">
                             {availableTests.map(test => (
-                                <Link key={test.id} href={`/training/${sectionSlug}/${test.id}?level=${selectedLevel}`}>
-                                    <Card className="group transition-all duration-300 ease-in-out hover:shadow-md hover:border-primary">
-                                        <CardContent className="p-4 flex items-center justify-between">
-                                            <div className="flex items-center gap-4">
-                                                <ListChecks className="h-8 w-8 text-primary" />
-                                                <div>
-                                                    <h3 className="text-lg font-semibold">{test.name}</h3>
-                                                    <p className="text-sm text-muted-foreground">{test.questionCount} questions</p>
-                                                </div>
+                                <Card 
+                                    key={test.id} 
+                                    onClick={() => handleTestStart(test.id, selectedLevel)} 
+                                    className={cn("group transition-all duration-300 ease-in-out hover:shadow-md hover:border-primary cursor-pointer")}
+                                >
+                                    <CardContent className="p-4 flex items-center justify-between">
+                                        <div className="flex items-center gap-4">
+                                            <ListChecks className="h-8 w-8 text-primary" />
+                                            <div>
+                                                <h3 className="text-lg font-semibold">{test.name}</h3>
+                                                <p className="text-sm text-muted-foreground">{test.questionCount} questions</p>
                                             </div>
-                                            <div className="flex items-center text-sm font-semibold text-primary">
-                                                Commencer le test
-                                                <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </Link>
+                                        </div>
+                                        <div className="flex items-center text-sm font-semibold text-primary">
+                                            Commencer le test
+                                            <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                        </div>
+                                    </CardContent>
+                                </Card>
                             ))}
                         </div>
                     ) : (
