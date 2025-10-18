@@ -34,6 +34,15 @@ const getScoreColor = (score: number) => {
     return 'text-destructive';
 };
 
+const getCecrlLevel = (scorePercentage: number) => {
+  if (scorePercentage < 20) return 'A1';
+  if (scorePercentage < 40) return 'A2';
+  if (scorePercentage < 60) return 'B1';
+  if (scorePercentage < 80) return 'B2';
+  if (scorePercentage < 90) return 'C1';
+  return 'C2';
+};
+
 export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
   const firestore = useFirestore();
@@ -77,6 +86,9 @@ export default function DashboardPage() {
   const latestScorePercentage = latestAttempt ? Math.round((latestAttempt.score / latestAttempt.totalQuestions) * 100) : 0;
   const averageScorePercentage = Math.round(averageScore * 100);
 
+  const latestCecrlLevel = getCecrlLevel(latestScorePercentage);
+  const averageCecrlLevel = getCecrlLevel(averageScorePercentage);
+
   return (
     <div className="flex flex-col h-full bg-background">
       <Header title="Tableau de bord" />
@@ -112,7 +124,7 @@ export default function DashboardPage() {
                 </CardHeader>
                 <CardContent>
                   <div className={`text-2xl font-bold ${getScoreColor(latestScorePercentage)}`}>
-                    {latestAttempt ? `${latestScorePercentage}%` : 'N/A'}
+                    {latestAttempt ? latestCecrlLevel : 'N/A'}
                   </div>
                   <p className="text-xs text-muted-foreground">
                     sur {latestAttempt ? latestAttempt.testName : ''}
@@ -127,7 +139,7 @@ export default function DashboardPage() {
                   <Activity className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
                 <CardContent>
-                  <div className={`text-2xl font-bold ${getScoreColor(averageScorePercentage)}`}>{averageScorePercentage}%</div>
+                  <div className={`text-2xl font-bold ${getScoreColor(averageScorePercentage)}`}>{averageCecrlLevel}</div>
                   <p className="text-xs text-muted-foreground">
                     Sur toutes vos tentatives
                   </p>
